@@ -168,6 +168,10 @@ const Header = () => {
           </div>
           
           <div className="flex items-center gap-4">
+            <a href="tel:+13803240878" className="hidden lg:flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <Phone className="w-4 h-4" />
+              <span>Or call: <span className="font-semibold text-foreground">380-324-0878</span> (24/7)</span>
+            </a>
             <a href="tel:+13803240878" className="lg:hidden flex items-center justify-center w-10 h-10 rounded-full bg-secondary text-primary">
               <Phone className="w-5 h-5" />
             </a>
