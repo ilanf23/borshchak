@@ -93,6 +93,7 @@ const ProcessSection = () => {
                   <button
                     key={index}
                     onClick={() => setActiveStep(index)}
+                    onMouseEnter={() => setActiveStep(index)}
                     className="flex flex-col items-center group focus:outline-none"
                   >
                     <div 
