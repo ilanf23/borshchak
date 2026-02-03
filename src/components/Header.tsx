@@ -32,11 +32,11 @@ const Header = () => {
       <div className="container">
         {/* Main navigation */}
         <nav className="flex items-center justify-between py-4">
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center shrink-0">
             <img 
               src={logo} 
               alt="Borshchak Law Group" 
-              className="h-10 md:h-12 w-auto"
+              className="h-10 md:h-12 w-auto object-contain"
             />
           </Link>
           
