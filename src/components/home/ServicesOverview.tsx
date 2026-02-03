@@ -24,22 +24,14 @@ const services = [
 const ServicesOverview = () => {
   return (
     <section className="section-padding overflow-hidden">
-      <div className="flex flex-col lg:flex-row items-stretch gap-0">
-        {/* Image on left - bleeds to edge */}
-        <div className="lg:w-1/2 w-full relative">
-          <div className="lg:absolute lg:right-0 lg:top-0 lg:bottom-0 lg:left-[-50vw] lg:w-[calc(100%+50vw)]">
+      <div className="flex flex-col lg:flex-row items-center gap-0">
+        {/* Image on left - bleeds to edge, contains full image */}
+        <div className="lg:w-1/2 w-full">
+          <div className="lg:ml-[calc(-50vw+50%)] lg:w-[calc(100%+50vw-50%)]">
             <img 
               src={justiceStatue} 
               alt="Lady Justice statue with scales" 
-              className="w-full h-full object-cover lg:rounded-r-xl"
-            />
-          </div>
-          {/* Placeholder for layout on desktop */}
-          <div className="lg:invisible visible">
-            <img 
-              src={justiceStatue} 
-              alt="" 
-              className="w-full h-auto object-cover"
+              className="w-full h-auto object-contain lg:rounded-r-xl"
             />
           </div>
         </div>
