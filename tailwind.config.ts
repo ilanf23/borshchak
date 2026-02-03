@@ -74,9 +74,9 @@ export default {
           DEFAULT: "hsl(var(--warm-cream))",
           dark: "hsl(var(--warm-cream-dark))",
         },
-        gold: {
-          DEFAULT: "hsl(var(--gold-accent))",
-          hover: "hsl(var(--gold-accent-hover))",
+        green: {
+          DEFAULT: "hsl(var(--green-accent))",
+          hover: "hsl(var(--green-accent-hover))",
         },
       },
       borderRadius: {

@@ -33,8 +33,8 @@
     --muted: 220 15% 94%;
     --muted-foreground: 220 15% 45%;
 
-    /* Muted gold accent - confident, encourages action */
-    --accent: 38 65% 50%;
+    /* Forest green accent - confident, encourages action */
+    --accent: 152 45% 38%;
     --accent-foreground: 220 25% 12%;
 
     --destructive: 0 72% 51%;
@@ -51,11 +51,13 @@
     --trust-navy-light: 215 35% 35%;
     --warm-cream: 40 33% 98%;
     --warm-cream-dark: 38 35% 92%;
-    --gold-accent: 38 65% 50%;
-    --gold-accent-hover: 38 70% 42%;
     --text-primary: 220 25% 18%;
     --text-secondary: 220 15% 40%;
     --text-muted: 220 12% 55%;
+    
+    /* Green accent tokens */
+    --green-accent: 152 45% 38%;
+    --green-accent-hover: 152 50% 32%;
 
     /* Sidebar defaults */
     --sidebar-background: 40 30% 96%;
@@ -125,17 +127,17 @@
 }
 
 @layer components {
-  /* Primary CTA button - gold, confident */
+  /* Primary CTA button - green, confident */
   .btn-cta {
     @apply inline-flex items-center justify-center px-8 py-4 text-base font-medium rounded-md transition-all duration-200;
-    background-color: hsl(var(--gold-accent));
-    color: hsl(var(--text-primary));
+    background-color: hsl(var(--green-accent));
+    color: white;
   }
 
   .btn-cta:hover {
-    background-color: hsl(var(--gold-accent-hover));
+    background-color: hsl(var(--green-accent-hover));
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px hsla(var(--gold-accent), 0.3);
+    box-shadow: 0 4px 12px hsla(var(--green-accent), 0.3);
   }
 
   /* Secondary button - outlined */
