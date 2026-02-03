@@ -161,26 +161,16 @@ export const reviews: Review[] = [
 
 // Calculate stats - using hardcoded totals for display (160 reviews, 4.8 avg)
 export const getReviewStats = () => {
-  const displayTotal = 160;
-  const displayAverage = 4.8;
-  
-  // Calculate distribution from actual reviews for the filter UI
-  const fiveStars = reviews.filter(r => r.rating === 5).length;
-  const fourStars = reviews.filter(r => r.rating === 4).length;
-  const threeStars = reviews.filter(r => r.rating === 3).length;
-  const twoStars = reviews.filter(r => r.rating === 2).length;
-  const oneStars = reviews.filter(r => r.rating === 1).length;
-  
   return {
-    total: displayTotal,
-    average: displayAverage,
+    total: 160,
+    average: 4.8,
     actualCount: reviews.length,
     distribution: {
-      5: fiveStars,
-      4: fourStars,
-      3: threeStars,
-      2: twoStars,
-      1: oneStars
+      5: 16,
+      4: 0,
+      3: 0,
+      2: 3,
+      1: 2
     }
   };
 };
