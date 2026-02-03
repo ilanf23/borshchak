@@ -4,18 +4,28 @@ const AwardLogos = () => {
   return (
     <section className="py-8 bg-background border-b border-border/50 overflow-hidden">
       <div className="relative flex">
-        <div className="flex shrink-0 animate-marquee">
+        <div className="flex shrink-0 animate-marquee items-center">
           <img 
             src={awardLogos} 
             alt="Awards and Recognition" 
-            className="h-16 md:h-24 w-auto object-contain"
+            className="h-16 md:h-24 object-contain"
+          />
+          <img 
+            src={awardLogos} 
+            alt="Awards and Recognition" 
+            className="h-16 md:h-24 object-contain"
           />
         </div>
-        <div className="flex shrink-0 animate-marquee">
+        <div className="flex shrink-0 animate-marquee items-center">
           <img 
             src={awardLogos} 
             alt="Awards and Recognition" 
-            className="h-16 md:h-24 w-auto object-contain"
+            className="h-16 md:h-24 object-contain"
+          />
+          <img 
+            src={awardLogos} 
+            alt="Awards and Recognition" 
+            className="h-16 md:h-24 object-contain"
           />
         </div>
       </div>
