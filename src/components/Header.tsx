@@ -8,9 +8,9 @@ const Header = () => {
       <div className="container">
         {/* Top bar */}
         <div className="hidden md:flex items-center justify-end gap-6 py-2 text-sm text-muted-foreground border-b border-border/50">
-          <a href="tel:+16145551234" className="flex items-center gap-2 hover:text-foreground transition-colors">
+          <a href="tel:+13803240878" className="flex items-center gap-2 hover:text-foreground transition-colors">
             <Phone className="w-4 h-4" />
-            (614) 555-1234
+            380-324-0878
           </a>
           <span>Columbus, Ohio</span>
         </div>
@@ -47,7 +47,7 @@ const Header = () => {
           </div>
           
           <div className="flex items-center gap-4">
-            <a href="tel:+16145551234" className="lg:hidden flex items-center justify-center w-10 h-10 rounded-full bg-secondary text-primary">
+            <a href="tel:+13803240878" className="lg:hidden flex items-center justify-center w-10 h-10 rounded-full bg-secondary text-primary">
               <Phone className="w-5 h-5" />
             </a>
             <Link to="/contact" className="btn-cta text-sm px-5 py-2.5">

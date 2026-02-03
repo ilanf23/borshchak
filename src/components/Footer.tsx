@@ -15,12 +15,12 @@ const Footer = () => {
               className="h-10 w-auto mb-4 brightness-0 invert"
             />
             <p className="text-primary-foreground/70 text-sm leading-relaxed mb-6">
-              Trusted family law advocates serving Columbus and Central Ohio families for over 25 years.
+              Award-winning family law advocates serving Columbus and Central Ohio.
             </p>
             <div className="space-y-3">
-              <a href="tel:+16145551234" className="flex items-center gap-3 text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+              <a href="tel:+13803240878" className="flex items-center gap-3 text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                 <Phone className="w-4 h-4" />
-                (614) 555-1234
+                380-324-0878
               </a>
               <a href="mailto:info@borshchaklawgroup.com" className="flex items-center gap-3 text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                 <Mail className="w-4 h-4" />
