@@ -1,29 +1,17 @@
-import { Scale, Award, Users, MapPin } from "lucide-react";
+import { Star } from "lucide-react";
 
-const stats = [
+const testimonials = [
   {
-    icon: Scale,
-    value: "25+",
-    label: "Years in Practice",
-    description: "Serving Columbus families since 1998"
+    quote: "Best decision I ever made was reaching out to Dmitriy.",
+    author: "Google Review"
   },
   {
-    icon: Users,
-    value: "500+",
-    label: "Families Helped",
-    description: "Successful resolutions across Central Ohio"
+    quote: "He removed all the stress and put it on his shoulders.",
+    author: "Google Review"
   },
   {
-    icon: Award,
-    value: "4.9",
-    label: "Client Rating",
-    description: "Based on verified client reviews"
-  },
-  {
-    icon: MapPin,
-    value: "Franklin",
-    label: "County Focus",
-    description: "Deep knowledge of local courts"
+    quote: "Professional, empathetic, and always responsive.",
+    author: "Google Review"
   }
 ];
 
@@ -31,19 +19,29 @@ const TrustBlock = () => {
   return (
     <section className="section-padding-sm bg-card border-y border-border">
       <div className="container">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-secondary mb-4">
-                <stat.icon className="w-6 h-6 text-primary" />
-              </div>
-              <div className="font-serif text-3xl md:text-4xl font-semibold text-primary mb-1">
-                {stat.value}
-              </div>
-              <div className="font-medium text-foreground mb-1">{stat.label}</div>
-              <p className="text-xs text-muted-foreground">{stat.description}</p>
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+          {/* Google Rating */}
+          <div className="flex items-center gap-4">
+            <div className="flex items-center gap-1">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-5 h-5 fill-accent text-accent" />
+              ))}
             </div>
-          ))}
+            <div>
+              <p className="font-semibold text-foreground">147+ Reviews • 4.8 Stars</p>
+              <p className="text-sm text-muted-foreground">on Google</p>
+            </div>
+          </div>
+          
+          {/* Testimonials */}
+          <div className="flex flex-col md:flex-row gap-6 lg:gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="max-w-xs">
+                <p className="text-sm text-foreground italic mb-1">"{testimonial.quote}"</p>
+                <p className="text-xs text-muted-foreground">— {testimonial.author}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
