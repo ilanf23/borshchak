@@ -14,15 +14,6 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container">
-        {/* Top bar */}
-        <div className="hidden md:flex items-center justify-end gap-6 py-2 text-sm text-muted-foreground border-b border-border/50">
-          <a href="tel:+13803240878" className="flex items-center gap-2 hover:text-foreground transition-colors">
-            <Phone className="w-4 h-4" />
-            380-324-0878
-          </a>
-          <span>Columbus, Ohio</span>
-        </div>
-        
         {/* Main navigation */}
         <nav className="flex items-center justify-between py-4">
           <Link to="/" className="flex items-center">
