@@ -175,7 +175,7 @@ const Header = () => {
               <Calendar className="w-4 h-4 mr-2" />
               Free Consultation
             </Link>
-            <a href="tel:+13803240878" className="hidden lg:flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <a href="tel:+13803240878" className="hidden lg:flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap">
               <Phone className="w-4 h-4" />
               <span>Or call: <span className="font-semibold text-foreground">380-324-0878</span> (24/7)</span>
             </a>
