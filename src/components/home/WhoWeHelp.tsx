@@ -39,12 +39,12 @@ const WhoWeHelp = () => {
         
         <div className="grid md:grid-cols-3 gap-6">
           {personas.map((persona, index) => (
-            <div key={index} className="card-elevated text-center bg-accent/10 backdrop-blur-sm border-accent/20">
-              <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-accent/20 mb-5">
-                <persona.icon className="w-7 h-7 text-accent" />
+            <div key={index} className="card-elevated text-center bg-accent/90 backdrop-blur-md border-accent/30">
+              <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-background/20 mb-5">
+                <persona.icon className="w-7 h-7 text-background" />
               </div>
-              <h3 className="heading-subsection mb-3">{persona.title}</h3>
-              <p className="text-body-sm">{persona.description}</p>
+              <h3 className="heading-subsection mb-3 text-background">{persona.title}</h3>
+              <p className="text-body-sm text-background/90">{persona.description}</p>
             </div>
           ))}
         </div>
