@@ -2,10 +2,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/home/HeroSection";
 import AwardLogos from "@/components/home/AwardLogos";
-import TrustBlock from "@/components/home/TrustBlock";
 import WhoWeHelp from "@/components/home/WhoWeHelp";
 import VideoSection from "@/components/home/VideoSection";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
+import GoogleReviews from "@/components/home/GoogleReviews";
 import ServicesOverview from "@/components/home/ServicesOverview";
 import ProcessSection from "@/components/home/ProcessSection";
 import FAQSection from "@/components/home/FAQSection";
@@ -21,7 +21,7 @@ const Index = () => {
         <WhoWeHelp />
         <VideoSection />
         <WhyChooseUs />
-        <TrustBlock />
+        <GoogleReviews />
         <ServicesOverview />
         <ProcessSection />
         <FAQSection />
