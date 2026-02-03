@@ -5,18 +5,22 @@ import justiceStatue from "@/assets/law-hero-image.png";
 const services = [
   {
     title: "Divorce & Legal Separation",
+    description: "Navigate the divorce process with clarity. We handle contested and uncontested divorces, legal separations, and post-decree modifications.",
     href: "/divorce"
   },
   {
     title: "Child Custody & Parenting Plans",
+    description: "Protect your relationship with your children. We advocate for fair custody arrangements and parenting time that prioritize your child's wellbeing.",
     href: "/custody"
   },
   {
     title: "Property & Asset Division",
+    description: "Ensure equitable division of marital assets. We handle complex cases involving businesses, retirement accounts, and real estate.",
     href: "/assets"
   },
   {
     title: "Mediation & Alternative Resolution",
+    description: "Resolve disputes outside the courtroom. Our mediation services save time, reduce costs, and preserve relationships.",
     href: "/mediation"
   }
 ];
@@ -44,11 +48,14 @@ const ServicesOverview = () => {
                 <Link 
                   key={index} 
                   to={service.href}
-                  className="card-bordered group hover:bg-card hover:shadow-sm transition-all duration-200 text-center py-8"
+                  className="card-bordered group hover:bg-card hover:shadow-sm transition-all duration-200 py-6 px-6 text-left"
                 >
                   <h3 className="font-medium text-foreground group-hover:text-primary transition-colors mb-2">
                     {service.title}
                   </h3>
+                  <p className="text-sm text-muted-foreground mb-3 line-clamp-2">
+                    {service.description}
+                  </p>
                   <span className="inline-flex items-center text-sm text-muted-foreground group-hover:text-primary transition-colors">
                     Learn more <ArrowRight className="w-4 h-4 ml-1" />
                   </span>
