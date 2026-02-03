@@ -193,7 +193,7 @@ const Header = () => {
             </button>
             <a href="tel:+13803240878" className="hidden lg:flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap">
               <Phone className="w-4 h-4" />
-              <span>Or call: <span className="font-semibold text-foreground">380-324-0878</span> (24/7)</span>
+              <span>Or call: <span className="font-semibold text-foreground">380-324-0878</span></span>
             </a>
             
             {/* Mobile Menu */}
@@ -286,7 +286,7 @@ const Header = () => {
                     </button>
                     <a href="tel:+13803240878" className="flex items-center justify-center gap-2 mt-4 text-sm text-muted-foreground">
                       <Phone className="w-4 h-4" />
-                      <span>380-324-0878 (24/7)</span>
+                      <span>380-324-0878</span>
                     </a>
                   </div>
                 </nav>

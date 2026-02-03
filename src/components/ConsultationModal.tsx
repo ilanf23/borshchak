@@ -184,8 +184,7 @@ const ConsultationModal = ({ open, onOpenChange }: ConsultationModalProps) => {
                     Or call us directly:{" "}
                     <a href="tel:+13803240878" className="font-medium text-primary hover:underline">
                       380-324-0878
-                    </a>{" "}
-                    (24/7)
+                    </a>
                   </p>
                 </div>
               </form>

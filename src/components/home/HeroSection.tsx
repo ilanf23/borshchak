@@ -38,7 +38,7 @@ const HeroSection = () => {
           {/* Secondary */}
           <a href="tel:+13803240878" className="inline-flex items-center gap-2 text-white/80 hover:text-white transition-colors">
             <Phone className="w-4 h-4" />
-            <span>Or call: <span className="font-medium text-white">380-324-0878</span> (24/7)</span>
+            <span>Or call: <span className="font-medium text-white">380-324-0878</span></span>
           </a>
         </div>
       </div>
