@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 const GoogleReviews = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const [filterRating, setFilterRating] = useState<number | null>(null);
-  const reviewsPerPage = 6;
+  const reviewsPerPage = 3;
   
   const stats = useMemo(() => getReviewStats(), []);
   
@@ -93,7 +93,10 @@ const GoogleReviews = () => {
               return (
                 <button
                   key={rating}
-                  onClick={() => setFilterRating(isActive ? null : rating)}
+                  onClick={() => {
+                    setFilterRating(isActive ? null : rating);
+                    setCurrentPage(0);
+                  }}
                   className={cn(
                     "flex items-center gap-3 w-full group transition-opacity",
                     filterRating !== null && !isActive && "opacity-40"
@@ -118,7 +121,10 @@ const GoogleReviews = () => {
 
           {filterRating && (
             <button
-              onClick={() => setFilterRating(null)}
+              onClick={() => {
+                setFilterRating(null);
+                setCurrentPage(0);
+              }}
               className="text-sm text-primary hover:underline mb-4"
             >
               Clear filter
@@ -126,93 +132,68 @@ const GoogleReviews = () => {
           )}
         </div>
 
-        {/* Reviews Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-          {currentReviews.map((review, index) => (
-            <div
-              key={review.id}
-              className="bg-background rounded-xl p-6 shadow-sm border border-border hover:shadow-md transition-shadow animate-fade-in"
-              style={{ animationDelay: `${index * 50}ms` }}
-            >
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-semibold">
-                  {review.name.charAt(0)}
-                </div>
-                <div className="flex-1 min-w-0">
-                  <h4 className="font-medium text-foreground truncate">{review.name}</h4>
-                  <div className="flex items-center gap-2 mt-1">
-                    {renderStars(review.rating)}
-                    <span className="text-xs text-muted-foreground">{review.date}</span>
-                  </div>
-                  {review.isLocalGuide && (
-                    <span className="text-xs text-muted-foreground">
-                      Local Guide · {review.reviewCount}
-                    </span>
-                  )}
-                </div>
-              </div>
-              
-              <div className="relative">
-                <Quote className="absolute -top-1 -left-1 w-6 h-6 text-primary/10" />
-                <p className="text-muted-foreground text-sm leading-relaxed pl-4 line-clamp-4">
-                  {review.text}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Pagination */}
-        <div className="flex items-center justify-center gap-4">
+        {/* Reviews Carousel with Side Arrows */}
+        <div className="relative flex items-center">
+          {/* Left Arrow */}
           <button
             onClick={prevPage}
-            className="p-2 rounded-full bg-secondary hover:bg-secondary/80 text-foreground transition-colors"
+            className="absolute left-0 z-10 -ml-4 lg:-ml-6 p-3 rounded-full bg-background shadow-lg border border-border hover:bg-secondary text-foreground transition-colors"
             aria-label="Previous reviews"
           >
-            <ChevronLeft className="w-5 h-5" />
+            <ChevronLeft className="w-6 h-6" />
           </button>
-          
-          <div className="flex items-center gap-2">
-            {Array.from({ length: Math.min(totalPages, 7) }).map((_, i) => {
-              let pageNum = i;
-              if (totalPages > 7) {
-                if (currentPage < 4) {
-                  pageNum = i;
-                } else if (currentPage > totalPages - 5) {
-                  pageNum = totalPages - 7 + i;
-                } else {
-                  pageNum = currentPage - 3 + i;
-                }
-              }
-              
-              return (
-                <button
-                  key={pageNum}
-                  onClick={() => setCurrentPage(pageNum)}
-                  className={cn(
-                    "w-8 h-8 rounded-full text-sm font-medium transition-colors",
-                    currentPage === pageNum
-                      ? "bg-primary text-primary-foreground"
-                      : "bg-secondary hover:bg-secondary/80 text-foreground"
-                  )}
+
+          {/* Reviews Grid */}
+          <div className="flex-1 mx-8 lg:mx-12">
+            <div className="grid md:grid-cols-3 gap-6">
+              {currentReviews.map((review, index) => (
+                <div
+                  key={review.id}
+                  className="bg-background rounded-xl p-6 shadow-sm border border-border hover:shadow-md transition-shadow animate-fade-in"
+                  style={{ animationDelay: `${index * 50}ms` }}
                 >
-                  {pageNum + 1}
-                </button>
-              );
-            })}
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-semibold flex-shrink-0">
+                      {review.name.charAt(0)}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h4 className="font-medium text-foreground truncate">{review.name}</h4>
+                      <div className="flex items-center gap-2 mt-1">
+                        {renderStars(review.rating)}
+                        <span className="text-xs text-muted-foreground">{review.date}</span>
+                      </div>
+                      {review.isLocalGuide && (
+                        <span className="text-xs text-muted-foreground">
+                          Local Guide · {review.reviewCount}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                  
+                  <div className="relative">
+                    <Quote className="absolute -top-1 -left-1 w-6 h-6 text-primary/10" />
+                    <p className="text-muted-foreground text-sm leading-relaxed pl-4 line-clamp-4">
+                      {review.text}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-          
+
+          {/* Right Arrow */}
           <button
             onClick={nextPage}
-            className="p-2 rounded-full bg-secondary hover:bg-secondary/80 text-foreground transition-colors"
+            className="absolute right-0 z-10 -mr-4 lg:-mr-6 p-3 rounded-full bg-background shadow-lg border border-border hover:bg-secondary text-foreground transition-colors"
             aria-label="Next reviews"
           >
-            <ChevronRight className="w-5 h-5" />
+            <ChevronRight className="w-6 h-6" />
           </button>
         </div>
 
-        <p className="text-center text-sm text-muted-foreground mt-6">
-          Showing {currentPage * reviewsPerPage + 1}-{Math.min((currentPage + 1) * reviewsPerPage, filteredReviews.length)} of {filteredReviews.length} reviews
+        {/* Page indicator */}
+        <p className="text-center text-sm text-muted-foreground mt-8">
+          {currentPage + 1} of {totalPages} · {filteredReviews.length} reviews
         </p>
       </div>
     </section>
