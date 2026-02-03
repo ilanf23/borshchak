@@ -1,11 +1,18 @@
 import { useState, useMemo } from "react";
 import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
-import { reviews, getReviewStats } from "@/data/reviews";
+import { reviews, getReviewStats, Review } from "@/data/reviews";
 import { cn } from "@/lib/utils";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 const GoogleReviews = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const [filterRating, setFilterRating] = useState<number | null>(null);
+  const [selectedReview, setSelectedReview] = useState<Review | null>(null);
   const reviewsPerPage = 3;
   
   const stats = useMemo(() => getReviewStats(), []);
@@ -149,7 +156,8 @@ const GoogleReviews = () => {
               {currentReviews.map((review, index) => (
                 <div
                   key={review.id}
-                  className="bg-background rounded-xl p-6 shadow-sm border border-border hover:shadow-md transition-shadow animate-fade-in"
+                  onClick={() => setSelectedReview(review)}
+                  className="bg-background rounded-xl p-6 shadow-sm border border-border hover:shadow-md transition-shadow animate-fade-in cursor-pointer"
                   style={{ animationDelay: `${index * 50}ms` }}
                 >
                   <div className="flex items-start gap-4 mb-4">
@@ -195,6 +203,35 @@ const GoogleReviews = () => {
         <p className="text-center text-sm text-muted-foreground mt-8">
           {currentPage + 1} of {totalPages} · {filteredReviews.length} reviews
         </p>
+
+        {/* Review Detail Modal */}
+        <Dialog open={!!selectedReview} onOpenChange={() => setSelectedReview(null)}>
+          <DialogContent className="max-w-lg">
+            {selectedReview && (
+              <>
+                <DialogHeader>
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-semibold text-lg">
+                      {selectedReview.name.charAt(0)}
+                    </div>
+                    <div>
+                      <DialogTitle className="text-left">{selectedReview.name}</DialogTitle>
+                      <div className="flex items-center gap-2 mt-1">
+                        {renderStars(selectedReview.rating)}
+                        <span className="text-xs text-muted-foreground">{selectedReview.date}</span>
+                      </div>
+                    </div>
+                  </div>
+                </DialogHeader>
+                <div className="mt-4">
+                  <p className="text-muted-foreground leading-relaxed">
+                    {selectedReview.text}
+                  </p>
+                </div>
+              </>
+            )}
+          </DialogContent>
+        </Dialog>
       </div>
     </section>
   );
