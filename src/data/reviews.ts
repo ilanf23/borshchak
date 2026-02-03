@@ -114,6 +114,48 @@ export const reviews: Review[] = [
     rating: 5,
     date: "1 year ago",
     text: "From day one Dmitriy has been all-in on my divorce… resulted in a fair outcome that I was very pleased with."
+  },
+  {
+    id: 16,
+    name: "Svetlana Plachkova",
+    rating: 5,
+    date: "3 years ago",
+    text: "Dmitriy Borshchak is a competent and professional lawyer who cares about his clients… Dmitriy Borshchak is the best lawyer!"
+  },
+  {
+    id: 17,
+    name: "Brett Rothfuss",
+    rating: 5,
+    date: "8 months ago",
+    text: "10+ stars… What a great comfort to have a professional that understands and will counsel you through this process."
+  },
+  {
+    id: 18,
+    name: "Kate Oakley",
+    rating: 5,
+    date: "2 years ago",
+    text: "He told me the stress was on his shoulders… I put my life into Dmitriy's hands… He really made me feel protected."
+  },
+  {
+    id: 19,
+    name: "Patrick Ngene",
+    rating: 1,
+    date: "4 years ago",
+    text: "Jonathan Pope couldn't get that right… Never respond to emails… I basically paid him to work against me."
+  },
+  {
+    id: 20,
+    name: "MoneyCallin Shh",
+    rating: 2,
+    date: "6 years ago",
+    text: "Waited 2.5 hours… promised follow up… never heard anything… It's disappointing."
+  },
+  {
+    id: 21,
+    name: "Zorcholhs",
+    rating: 2,
+    date: "1 year ago",
+    text: "Efficient about taking money… slow to respond and missed deadlines."
   }
 ];
 
