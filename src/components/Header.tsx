@@ -1,6 +1,14 @@
-import { Phone, Calendar } from "lucide-react";
+import { Phone, Calendar, ChevronDown, Menu } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
 
 const Header = () => {
   return (
@@ -25,25 +33,147 @@ const Header = () => {
             />
           </Link>
           
-          <div className="hidden lg:flex items-center gap-8">
-            <Link to="/divorce" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-              Divorce
-            </Link>
-            <Link to="/custody" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-              Custody
-            </Link>
-            <Link to="/assets" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-              Property Division
-            </Link>
-            <Link to="/mediation" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-              Mediation
-            </Link>
-            <Link to="/about" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-              About
-            </Link>
-            <Link to="/process" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-              Our Process
-            </Link>
+          <div className="hidden lg:flex items-center">
+            <NavigationMenu>
+              <NavigationMenuList className="gap-2">
+                {/* Attorneys Dropdown */}
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="bg-transparent text-sm font-medium text-foreground hover:text-primary">
+                    Attorneys
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent className="bg-background border border-border shadow-lg">
+                    <ul className="w-48 p-2">
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link 
+                            to="/about" 
+                            className="block px-4 py-2 text-sm text-foreground hover:bg-secondary rounded-md transition-colors"
+                          >
+                            Our Team
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link 
+                            to="/about" 
+                            className="block px-4 py-2 text-sm text-foreground hover:bg-secondary rounded-md transition-colors"
+                          >
+                            Dmitriy Borshchak
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+
+                {/* Legal Services Dropdown */}
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="bg-transparent text-sm font-medium text-foreground hover:text-primary">
+                    Legal Services
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent className="bg-background border border-border shadow-lg">
+                    <ul className="w-56 p-2">
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link 
+                            to="/divorce" 
+                            className="block px-4 py-2 text-sm text-foreground hover:bg-secondary rounded-md transition-colors"
+                          >
+                            Divorce & Legal Separation
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link 
+                            to="/custody" 
+                            className="block px-4 py-2 text-sm text-foreground hover:bg-secondary rounded-md transition-colors"
+                          >
+                            Child Custody
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link 
+                            to="/assets" 
+                            className="block px-4 py-2 text-sm text-foreground hover:bg-secondary rounded-md transition-colors"
+                          >
+                            Property Division
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link 
+                            to="/mediation" 
+                            className="block px-4 py-2 text-sm text-foreground hover:bg-secondary rounded-md transition-colors"
+                          >
+                            Mediation
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+
+                {/* Testimonials */}
+                <NavigationMenuItem>
+                  <NavigationMenuLink asChild>
+                    <Link 
+                      to="/resources" 
+                      className="inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
+                    >
+                      Testimonials
+                    </Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+
+                {/* Blog */}
+                <NavigationMenuItem>
+                  <NavigationMenuLink asChild>
+                    <Link 
+                      to="/resources" 
+                      className="inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
+                    >
+                      Blog
+                    </Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+
+                {/* Contact Dropdown */}
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="bg-transparent text-sm font-medium text-foreground hover:text-primary">
+                    Contact
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent className="bg-background border border-border shadow-lg">
+                    <ul className="w-48 p-2">
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link 
+                            to="/contact" 
+                            className="block px-4 py-2 text-sm text-foreground hover:bg-secondary rounded-md transition-colors"
+                          >
+                            Contact Us
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link 
+                            to="/process" 
+                            className="block px-4 py-2 text-sm text-foreground hover:bg-secondary rounded-md transition-colors"
+                          >
+                            Our Process
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
           </div>
           
           <div className="flex items-center gap-4">
