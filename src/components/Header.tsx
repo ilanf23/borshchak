@@ -1,5 +1,6 @@
 import { Phone, Calendar, ChevronDown, Menu } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import logo from "@/assets/logo.png";
 import {
   NavigationMenu,
@@ -9,8 +10,21 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container">
@@ -171,7 +185,7 @@ const Header = () => {
             <a href="tel:+13803240878" className="lg:hidden flex items-center justify-center w-10 h-10 rounded-full bg-secondary text-primary">
               <Phone className="w-5 h-5" />
             </a>
-            <Link to="/contact" className="btn-cta text-sm px-5 py-2.5 whitespace-nowrap">
+            <Link to="/contact" className="hidden sm:flex btn-cta text-sm px-5 py-2.5 whitespace-nowrap">
               <Calendar className="w-4 h-4 mr-2" />
               Free Consultation
             </Link>
@@ -179,6 +193,101 @@ const Header = () => {
               <Phone className="w-4 h-4" />
               <span>Or call: <span className="font-semibold text-foreground">380-324-0878</span> (24/7)</span>
             </a>
+            
+            {/* Mobile Menu */}
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild className="lg:hidden">
+                <button className="flex items-center justify-center w-10 h-10 rounded-md hover:bg-secondary transition-colors">
+                  <Menu className="w-6 h-6" />
+                </button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[300px] sm:w-[350px]">
+                <SheetHeader>
+                  <SheetTitle>
+                    <img src={logo} alt="Borshchak Law Group" className="h-10 w-auto" />
+                  </SheetTitle>
+                </SheetHeader>
+                <nav className="flex flex-col gap-2 mt-8">
+                  {/* Attorneys */}
+                  <Collapsible>
+                    <CollapsibleTrigger className="flex items-center justify-between w-full py-3 px-2 text-left font-medium hover:bg-secondary rounded-md transition-colors">
+                      Attorneys
+                      <ChevronDown className="w-4 h-4" />
+                    </CollapsibleTrigger>
+                    <CollapsibleContent className="pl-4">
+                      <Link to="/about" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-muted-foreground hover:text-foreground transition-colors">
+                        Our Team
+                      </Link>
+                      <Link to="/about" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-muted-foreground hover:text-foreground transition-colors">
+                        Dmitriy Borshchak
+                      </Link>
+                    </CollapsibleContent>
+                  </Collapsible>
+
+                  {/* Legal Services */}
+                  <Collapsible>
+                    <CollapsibleTrigger className="flex items-center justify-between w-full py-3 px-2 text-left font-medium hover:bg-secondary rounded-md transition-colors">
+                      Legal Services
+                      <ChevronDown className="w-4 h-4" />
+                    </CollapsibleTrigger>
+                    <CollapsibleContent className="pl-4">
+                      <Link to="/divorce" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-muted-foreground hover:text-foreground transition-colors">
+                        Divorce & Legal Separation
+                      </Link>
+                      <Link to="/custody" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-muted-foreground hover:text-foreground transition-colors">
+                        Child Custody
+                      </Link>
+                      <Link to="/assets" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-muted-foreground hover:text-foreground transition-colors">
+                        Property Division
+                      </Link>
+                      <Link to="/mediation" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-muted-foreground hover:text-foreground transition-colors">
+                        Mediation
+                      </Link>
+                    </CollapsibleContent>
+                  </Collapsible>
+
+                  {/* Simple Links */}
+                  <Link to="/resources" onClick={() => setIsOpen(false)} className="py-3 px-2 font-medium hover:bg-secondary rounded-md transition-colors">
+                    Testimonials
+                  </Link>
+                  <Link to="/resources" onClick={() => setIsOpen(false)} className="py-3 px-2 font-medium hover:bg-secondary rounded-md transition-colors">
+                    Blog
+                  </Link>
+
+                  {/* Contact */}
+                  <Collapsible>
+                    <CollapsibleTrigger className="flex items-center justify-between w-full py-3 px-2 text-left font-medium hover:bg-secondary rounded-md transition-colors">
+                      Contact
+                      <ChevronDown className="w-4 h-4" />
+                    </CollapsibleTrigger>
+                    <CollapsibleContent className="pl-4">
+                      <Link to="/contact" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-muted-foreground hover:text-foreground transition-colors">
+                        Contact Us
+                      </Link>
+                      <Link to="/process" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-muted-foreground hover:text-foreground transition-colors">
+                        Our Process
+                      </Link>
+                    </CollapsibleContent>
+                  </Collapsible>
+
+                  {/* CTA */}
+                  <div className="mt-6 pt-6 border-t border-border">
+                    <Link 
+                      to="/contact" 
+                      onClick={() => setIsOpen(false)}
+                      className="btn-cta w-full justify-center text-sm px-5 py-3"
+                    >
+                      <Calendar className="w-4 h-4 mr-2" />
+                      Free Consultation
+                    </Link>
+                    <a href="tel:+13803240878" className="flex items-center justify-center gap-2 mt-4 text-sm text-muted-foreground">
+                      <Phone className="w-4 h-4" />
+                      <span>380-324-0878 (24/7)</span>
+                    </a>
+                  </div>
+                </nav>
+              </SheetContent>
+            </Sheet>
           </div>
         </nav>
       </div>
