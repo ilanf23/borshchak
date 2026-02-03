@@ -20,8 +20,8 @@ const Index = () => {
         <AwardLogos />
         <WhoWeHelp />
         <VideoSection />
-        <TrustBlock />
         <WhyChooseUs />
+        <TrustBlock />
         <ServicesOverview />
         <ProcessSection />
         <FAQSection />
