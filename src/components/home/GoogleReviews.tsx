@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { reviews, getReviewStats, Review } from "@/data/reviews";
 import { cn } from "@/lib/utils";
 import {
@@ -178,12 +178,9 @@ const GoogleReviews = () => {
                     </div>
                   </div>
                   
-                  <div className="relative">
-                    <Quote className="absolute -top-1 -left-1 w-6 h-6 text-primary/10" />
-                    <p className="text-muted-foreground text-sm leading-relaxed pl-4 line-clamp-4">
-                      {review.text}
-                    </p>
-                  </div>
+                  <p className="text-muted-foreground text-sm leading-relaxed line-clamp-4">
+                    {review.text}
+                  </p>
                 </div>
               ))}
             </div>
