@@ -1,5 +1,5 @@
 import { Users, Briefcase, AlertTriangle } from "lucide-react";
-import whoWeHelpBg from "@/assets/who-we-help-bg.jpg";
+import whoWeHelpBg from "@/assets/who-we-help-family.png";
 
 const personas = [
   {
