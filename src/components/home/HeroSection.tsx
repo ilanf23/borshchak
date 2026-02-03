@@ -13,7 +13,7 @@ const HeroSection = () => {
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300%] h-[300%] md:w-[150%] md:h-[150%] pointer-events-none"
         />
         {/* Overlay */}
-        <div className="absolute inset-0 bg-primary/70" />
+        <div className="absolute inset-0 bg-black/40" />
       </div>
 
       <div className="container relative z-10">
