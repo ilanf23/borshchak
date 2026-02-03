@@ -1,10 +1,10 @@
-import { UserCheck, MessageCircle, Target, Heart, Star, Quote } from "lucide-react";
+import { UserCheck, MessageCircle, Target, Heart, Star } from "lucide-react";
 
 const differentiators = [
   {
     icon: UserCheck,
     title: "Direct Access to Your Attorney",
-    description: "You work directly with Dmitriy—not passed to juniors or paralegals.",
+    description: "You work directly with Dmitriy, not passed to juniors or paralegals.",
     stat: "100%",
     statLabel: "of clients work directly with Dmitriy"
   },
@@ -51,12 +51,12 @@ const WhyChooseUs = () => {
             Why Clients Choose Borshchak Law Group
           </h2>
           <p className="text-primary-foreground/70 max-w-2xl mx-auto">
-            These aren't marketing claims—they're what our clients consistently say in their reviews.
+            These are what our clients consistently say in their reviews.
           </p>
         </div>
         
         {/* Differentiators Grid */}
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {differentiators.map((item, index) => (
             <div 
               key={index} 
@@ -77,22 +77,6 @@ const WhyChooseUs = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Testimonial Quote */}
-        <div className="max-w-3xl mx-auto text-center">
-          <div className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-2xl p-8">
-            <Quote className="w-10 h-10 text-accent/40 mx-auto mb-4" />
-            <blockquote className="text-xl md:text-2xl font-serif text-primary-foreground leading-relaxed mb-4">
-              "Dmitriy was always available when I needed him. He explained everything clearly and made a very stressful process manageable."
-            </blockquote>
-            <div className="flex items-center justify-center gap-1 text-accent mb-2">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-5 h-5 fill-accent" />
-              ))}
-            </div>
-            <p className="text-primary-foreground/60 text-sm">— Verified Google Review</p>
-          </div>
         </div>
       </div>
     </section>
