@@ -29,7 +29,7 @@ const WhoWeHelp = () => {
           alt="" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-background/85" />
+        <div className="absolute inset-0 bg-background/60" />
       </div>
       
       <div className="container relative z-10">
