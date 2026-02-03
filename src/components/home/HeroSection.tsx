@@ -31,13 +31,15 @@ const HeroSection = () => {
             </a>
           </div>
           
-          {/* Office Image */}
+          {/* Video */}
           <div className="relative hidden lg:block">
             <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-2xl">
-              <img 
-                src={heroImage} 
-                alt="Borshchak Law Group office in Columbus, Ohio" 
-                className="w-full h-full object-cover"
+              <iframe
+                src="https://www.youtube.com/embed/GbBf903XVh4?autoplay=1&mute=1&loop=1&playlist=GbBf903XVh4&controls=0&showinfo=0&rel=0&modestbranding=1"
+                title="Borshchak Law Group"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full object-cover pointer-events-none"
               />
             </div>
           </div>
