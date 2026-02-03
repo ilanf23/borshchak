@@ -1,7 +1,9 @@
 import { Calendar } from "lucide-react";
-import { Link } from "react-router-dom";
+import { useConsultation } from "@/contexts/ConsultationContext";
 
 const FinalCTA = () => {
+  const { openConsultation } = useConsultation();
+
   return (
     <section className="section-padding bg-secondary/50">
       <div className="container max-w-2xl text-center">
@@ -12,10 +14,10 @@ const FinalCTA = () => {
           Family law is one of the most personal and stressful areas of law. We walk with you through every stage, protect your interests, and help you make clear decisions during a difficult time.
         </p>
         
-        <Link to="/contact" className="btn-cta text-lg px-10 py-4">
+        <button onClick={openConsultation} className="btn-cta text-lg px-10 py-4">
           <Calendar className="w-5 h-5 mr-2" />
           Schedule Your Free Consultation
-        </Link>
+        </button>
       </div>
     </section>
   );

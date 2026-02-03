@@ -2,6 +2,7 @@ import { Phone, Calendar, ChevronDown, Menu } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import logo from "@/assets/logo.png";
+import { useConsultation } from "@/contexts/ConsultationContext";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -25,6 +26,7 @@ import {
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { openConsultation } = useConsultation();
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container">
@@ -185,10 +187,10 @@ const Header = () => {
             <a href="tel:+13803240878" className="lg:hidden flex items-center justify-center w-10 h-10 rounded-full bg-secondary text-primary">
               <Phone className="w-5 h-5" />
             </a>
-            <Link to="/contact" className="hidden sm:flex btn-cta text-sm px-5 py-2.5 whitespace-nowrap">
+            <button onClick={openConsultation} className="hidden sm:flex btn-cta text-sm px-5 py-2.5 whitespace-nowrap">
               <Calendar className="w-4 h-4 mr-2" />
               Free Consultation
-            </Link>
+            </button>
             <a href="tel:+13803240878" className="hidden lg:flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap">
               <Phone className="w-4 h-4" />
               <span>Or call: <span className="font-semibold text-foreground">380-324-0878</span> (24/7)</span>
@@ -272,14 +274,16 @@ const Header = () => {
 
                   {/* CTA */}
                   <div className="mt-6 pt-6 border-t border-border">
-                    <Link 
-                      to="/contact" 
-                      onClick={() => setIsOpen(false)}
+                    <button 
+                      onClick={() => {
+                        setIsOpen(false);
+                        openConsultation();
+                      }}
                       className="btn-cta w-full justify-center text-sm px-5 py-3"
                     >
                       <Calendar className="w-4 h-4 mr-2" />
                       Free Consultation
-                    </Link>
+                    </button>
                     <a href="tel:+13803240878" className="flex items-center justify-center gap-2 mt-4 text-sm text-muted-foreground">
                       <Phone className="w-4 h-4" />
                       <span>380-324-0878 (24/7)</span>
