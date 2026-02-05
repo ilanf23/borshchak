@@ -53,7 +53,7 @@ const Header = () => {
                       <li>
                         <NavigationMenuLink asChild>
                           <Link 
-                            to="/about" 
+                            to="/attorneys/dmitriy-borshchak" 
                             className="block px-4 py-2 text-sm text-foreground hover:bg-secondary rounded-md transition-colors"
                           >
                             Dmitriy Borshchak
@@ -227,7 +227,7 @@ const Header = () => {
                       <ChevronDown className="w-4 h-4" />
                     </CollapsibleTrigger>
                     <CollapsibleContent className="pl-4">
-                      <Link to="/about" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-muted-foreground hover:text-foreground transition-colors">
+                      <Link to="/attorneys/dmitriy-borshchak" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-muted-foreground hover:text-foreground transition-colors">
                         Dmitriy Borshchak
                       </Link>
                       <Link to="/about" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-muted-foreground hover:text-foreground transition-colors">
