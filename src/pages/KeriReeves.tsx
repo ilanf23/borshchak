@@ -2,7 +2,7 @@ import { Award, GraduationCap, Briefcase, Heart, BookOpen, Scale, Users, MapPin,
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import keriPhoto from "@/assets/keri-reeves.png";
+import keriPhoto from "@/assets/keri-reeves.jpg";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const KeriReeves = () => {
