@@ -13,7 +13,7 @@ const FinalCTA = () => {
           Family law is one of the most personal and stressful areas of law. We walk with you through every stage, protect your interests, and help you make clear decisions during a difficult time.
         </p>
         
-        <a href="tel:+13803240878" className="btn-cta text-lg px-10 py-4">
+        <a href="tel:+13803240878" className="btn-cta text-xl px-10 py-4">
           <Phone className="w-5 h-5 mr-2" />
           Call Us Now: 380-324-0878
         </a>

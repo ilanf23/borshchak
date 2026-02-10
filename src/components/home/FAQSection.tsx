@@ -39,7 +39,7 @@ const FAQSection = () => {
       <div className="container max-w-4xl">
         <div className="text-center mb-12">
           <h2 className="heading-section">Common Questions</h2>
-          <p className="text-muted-foreground mt-4 text-lg">Get answers to frequently asked questions about Ohio family law</p>
+          <p className="text-muted-foreground mt-4 text-xl">Get answers to frequently asked questions about Ohio family law</p>
         </div>
         
         <Accordion type="single" collapsible className="w-full space-y-4">
@@ -50,10 +50,10 @@ const FAQSection = () => {
               className="border border-border rounded-xl px-6 bg-card/50"
             >
               <AccordionTrigger className="text-left py-6 hover:no-underline">
-                <span className="font-semibold text-foreground text-lg md:text-xl pr-4">{faq.question}</span>
+                <span className="font-semibold text-foreground text-xl md:text-2xl pr-4">{faq.question}</span>
               </AccordionTrigger>
               <AccordionContent className="pb-6">
-                <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-6">{faq.answer}</p>
+                <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mb-6">{faq.answer}</p>
                 {faq.videoId && (
                   <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
                     <iframe

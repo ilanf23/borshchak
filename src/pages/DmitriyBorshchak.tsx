@@ -21,7 +21,7 @@ const DmitriyBorshchak = () => {
             <div className="flex-1 flex items-center section-padding">
               <div className="max-w-xl ml-auto mr-8">
                 <p
-                  className="text-sm font-medium uppercase tracking-wider mb-4 opacity-0 animate-fade-in"
+                  className="text-base font-medium uppercase tracking-wider mb-4 opacity-0 animate-fade-in"
                   style={{ color: "hsla(40, 30%, 98%, 0.7)", animationDelay: "100ms" }}
                 >
                   Borshchak Law Group | Columbus, OH
@@ -33,7 +33,7 @@ const DmitriyBorshchak = () => {
                   Dmitriy Borshchak
                 </h1>
                 <p
-                  className="text-body text-lg leading-relaxed opacity-0 animate-fade-in"
+                  className="text-body text-xl leading-relaxed opacity-0 animate-fade-in"
                   style={{ animationDelay: "400ms" }}
                 >
                   Dmitriy Borshchak is a dedicated family lawyer in Columbus and founding attorney of Borshchak Law Group. After first pursuing a brief career in medicine, Dmitriy found his true passion in the legal field, assisting clients and helping them navigate tough situations.
@@ -46,7 +46,6 @@ const DmitriyBorshchak = () => {
                 alt="Dmitriy Borshchak"
                 className="w-full h-full object-cover object-top"
               />
-              {/* Gradient blend from photo to navy bg */}
               <div
                 className="absolute inset-0 pointer-events-none hidden md:block"
                 style={{
@@ -72,8 +71,8 @@ const DmitriyBorshchak = () => {
               >
                 <Award className="w-10 h-10 text-primary" />
                 <div className="text-center">
-                  <div className="font-serif text-xl font-semibold text-primary">Super Lawyers Rising Star</div>
-                  <div className="text-sm text-muted-foreground">Selected in 2023</div>
+                  <div className="font-serif text-2xl font-semibold text-primary">Super Lawyers Rising Star</div>
+                  <div className="text-base text-muted-foreground">Selected in 2023</div>
                 </div>
               </a>
               <a
@@ -126,15 +125,15 @@ const DmitriyBorshchak = () => {
             <h2 className="heading-section text-center mb-10">Professional Background</h2>
             <Tabs defaultValue="education" className="w-full">
               <TabsList className="w-full h-auto flex-wrap gap-2 bg-transparent p-0 mb-8">
-                <TabsTrigger value="education" className="flex items-center gap-2 px-5 py-3 text-base font-medium border border-border rounded-lg data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:border-primary">
+                <TabsTrigger value="education" className="flex items-center gap-2 px-5 py-3 text-lg font-medium border border-border rounded-lg data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:border-primary">
                   <GraduationCap className="w-5 h-5" />
                   Education
                 </TabsTrigger>
-                <TabsTrigger value="speaking" className="flex items-center gap-2 px-5 py-3 text-base font-medium border border-border rounded-lg data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:border-primary">
+                <TabsTrigger value="speaking" className="flex items-center gap-2 px-5 py-3 text-lg font-medium border border-border rounded-lg data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:border-primary">
                   <Mic className="w-5 h-5" />
                   Speaking Engagements
                 </TabsTrigger>
-                <TabsTrigger value="career" className="flex items-center gap-2 px-5 py-3 text-base font-medium border border-border rounded-lg data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:border-primary">
+                <TabsTrigger value="career" className="flex items-center gap-2 px-5 py-3 text-lg font-medium border border-border rounded-lg data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:border-primary">
                   <Briefcase className="w-5 h-5" />
                   Legal Career
                 </TabsTrigger>
@@ -147,9 +146,9 @@ const DmitriyBorshchak = () => {
                       <BookOpen className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="heading-subsection text-lg mb-1">Ohio University</h4>
-                      <p className="text-sm font-medium text-muted-foreground mb-2">B.A. Political Science</p>
-                      <p className="text-body text-base">Joined the student senate and began investigating how he could personally help the local community and students.</p>
+                      <h4 className="heading-subsection text-xl mb-1">Ohio University</h4>
+                      <p className="text-base font-medium text-muted-foreground mb-2">B.A. Political Science</p>
+                      <p className="text-body text-lg">Joined the student senate and began investigating how he could personally help the local community and students.</p>
                     </div>
                   </div>
 
@@ -158,14 +157,14 @@ const DmitriyBorshchak = () => {
                       <Scale className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="heading-subsection text-lg mb-1">Capital University Law School</h4>
-                      <p className="text-sm font-medium text-muted-foreground mb-3">Columbus, Ohio</p>
+                      <h4 className="heading-subsection text-xl mb-1">Capital University Law School</h4>
+                      <p className="text-base font-medium text-muted-foreground mb-3">Columbus, Ohio</p>
                       <div className="flex flex-wrap gap-2 mb-3">
-                        <span className="trust-badge text-xs"><Star className="w-3.5 h-3.5" /> Dean's List</span>
-                        <span className="trust-badge text-xs"><Award className="w-3.5 h-3.5" /> CALI Award</span>
-                        <span className="trust-badge text-xs"><Gavel className="w-3.5 h-3.5" /> Mock Trial Team</span>
+                        <span className="trust-badge text-sm"><Star className="w-3.5 h-3.5" /> Dean's List</span>
+                        <span className="trust-badge text-sm"><Award className="w-3.5 h-3.5" /> CALI Award</span>
+                        <span className="trust-badge text-sm"><Gavel className="w-3.5 h-3.5" /> Mock Trial Team</span>
                       </div>
-                      <p className="text-body text-base">Member of the American Association for Justice Mock Trial Team. Received the CALI Award for Business and Financial Concepts for Lawyers.</p>
+                      <p className="text-body text-lg">Member of the American Association for Justice Mock Trial Team. Received the CALI Award for Business and Financial Concepts for Lawyers.</p>
                     </div>
                   </div>
 
@@ -174,9 +173,9 @@ const DmitriyBorshchak = () => {
                       <Users className="w-6 h-6" style={{ color: "hsl(var(--green-accent))" }} />
                     </div>
                     <div>
-                      <h4 className="heading-subsection text-lg mb-1">Pro Bono Work</h4>
-                      <p className="text-sm font-medium text-muted-foreground mb-2">Capital University Litigation Clinic</p>
-                      <p className="text-body text-base">Represented individuals who could not afford an attorney at no charge during law school.</p>
+                      <h4 className="heading-subsection text-xl mb-1">Pro Bono Work</h4>
+                      <p className="text-base font-medium text-muted-foreground mb-2">Capital University Litigation Clinic</p>
+                      <p className="text-body text-lg">Represented individuals who could not afford an attorney at no charge during law school.</p>
                     </div>
                   </div>
                 </div>
@@ -189,25 +188,25 @@ const DmitriyBorshchak = () => {
                       <Mic className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="heading-subsection text-lg mb-1">Uncovering Hidden Assets During Litigation</h4>
-                      <p className="text-sm font-medium text-muted-foreground mb-3">Featured Seminar</p>
-                      <p className="text-body text-base mb-4">Dmitriy led a comprehensive seminar covering asset division strategies, including evaluating and finding hidden assets, classifying marital vs. non-marital assets, and valuation techniques.</p>
+                      <h4 className="heading-subsection text-xl mb-1">Uncovering Hidden Assets During Litigation</h4>
+                      <p className="text-base font-medium text-muted-foreground mb-3">Featured Seminar</p>
+                      <p className="text-body text-lg mb-4">Dmitriy led a comprehensive seminar covering asset division strategies, including evaluating and finding hidden assets, classifying marital vs. non-marital assets, and valuation techniques.</p>
                       <div className="space-y-2">
-                        <h5 className="text-sm font-semibold text-primary">Topics Covered</h5>
+                        <h5 className="text-base font-semibold text-primary">Topics Covered</h5>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                          <div className="flex items-center gap-2 text-body text-sm">
+                          <div className="flex items-center gap-2 text-body text-base">
                             <CheckCircle2 className="w-4 h-4 shrink-0" style={{ color: "hsl(var(--green-accent))" }} />
                             Evaluating hidden assets
                           </div>
-                          <div className="flex items-center gap-2 text-body text-sm">
+                          <div className="flex items-center gap-2 text-body text-base">
                             <CheckCircle2 className="w-4 h-4 shrink-0" style={{ color: "hsl(var(--green-accent))" }} />
                             Marital vs. non-marital assets
                           </div>
-                          <div className="flex items-center gap-2 text-body text-sm">
+                          <div className="flex items-center gap-2 text-body text-base">
                             <CheckCircle2 className="w-4 h-4 shrink-0" style={{ color: "hsl(var(--green-accent))" }} />
                             Federal Form 1040 analysis
                           </div>
-                          <div className="flex items-center gap-2 text-body text-sm">
+                          <div className="flex items-center gap-2 text-body text-base">
                             <CheckCircle2 className="w-4 h-4 shrink-0" style={{ color: "hsl(var(--green-accent))" }} />
                             Asset valuation & division
                           </div>
@@ -225,11 +224,11 @@ const DmitriyBorshchak = () => {
                       <Gavel className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="heading-subsection text-lg mb-1">Franklin County Prosecutor's Office</h4>
-                      <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+                      <h4 className="heading-subsection text-xl mb-1">Franklin County Prosecutor's Office</h4>
+                      <div className="flex items-center gap-2 text-base text-muted-foreground mb-2">
                         <MapPin className="w-3.5 h-3.5" /> Columbus, OH
                       </div>
-                      <p className="text-body text-base">Focused on felonies while simultaneously working as a supervised assistant prosecutor at Hilliard's Mayor's Court.</p>
+                      <p className="text-body text-lg">Focused on felonies while simultaneously working as a supervised assistant prosecutor at Hilliard's Mayor's Court.</p>
                     </div>
                   </div>
 
@@ -238,11 +237,11 @@ const DmitriyBorshchak = () => {
                       <TrendingUp className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="heading-subsection text-lg mb-1">Milegroup Consulting</h4>
-                      <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+                      <h4 className="heading-subsection text-xl mb-1">Milegroup Consulting</h4>
+                      <div className="flex items-center gap-2 text-base text-muted-foreground mb-2">
                         <MapPin className="w-3.5 h-3.5" /> Mayfield Village, OH
                       </div>
-                      <p className="text-body text-base">Gained concrete experience dealing with financial risk—knowledge he uses today to help clients foresee and pinpoint issues they may face.</p>
+                      <p className="text-body text-lg">Gained concrete experience dealing with financial risk—knowledge he uses today to help clients foresee and pinpoint issues they may face.</p>
                     </div>
                   </div>
 
@@ -251,11 +250,11 @@ const DmitriyBorshchak = () => {
                       <FileText className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="heading-subsection text-lg mb-1">Kats Law</h4>
-                      <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+                      <h4 className="heading-subsection text-xl mb-1">Kats Law</h4>
+                      <div className="flex items-center gap-2 text-base text-muted-foreground mb-2">
                         <MapPin className="w-3.5 h-3.5" /> Shaker Heights, OH
                       </div>
-                      <p className="text-body text-base">Handled personal injury claims including correspondence with insurance companies, meeting with clients, and compiling demand packets.</p>
+                      <p className="text-body text-lg">Handled personal injury claims including correspondence with insurance companies, meeting with clients, and compiling demand packets.</p>
                     </div>
                   </div>
 
@@ -264,15 +263,15 @@ const DmitriyBorshchak = () => {
                       <Building2 className="w-6 h-6" style={{ color: "hsl(var(--green-accent))" }} />
                     </div>
                     <div>
-                      <h4 className="heading-subsection text-lg mb-1">Weis & O'Connor, LLC</h4>
-                      <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+                      <h4 className="heading-subsection text-xl mb-1">Weis & O'Connor, LLC</h4>
+                      <div className="flex items-center gap-2 text-base text-muted-foreground mb-2">
                         <MapPin className="w-3.5 h-3.5" /> Columbus, OH · 2016
                       </div>
-                      <p className="text-body text-base mb-3">Started as Law Clerk, promoted to Associate. Gained extensive experience in family law—preparing pleadings, responding to motions, and advising clients.</p>
+                      <p className="text-body text-lg mb-3">Started as Law Clerk, promoted to Associate. Gained extensive experience in family law—preparing pleadings, responding to motions, and advising clients.</p>
                       <div className="flex flex-wrap gap-2">
-                        <span className="trust-badge text-xs"><CheckCircle2 className="w-3.5 h-3.5" /> Pleadings & Motions</span>
-                        <span className="trust-badge text-xs"><CheckCircle2 className="w-3.5 h-3.5" /> Client Advisory</span>
-                        <span className="trust-badge text-xs"><CheckCircle2 className="w-3.5 h-3.5" /> Risk Management</span>
+                        <span className="trust-badge text-sm"><CheckCircle2 className="w-3.5 h-3.5" /> Pleadings & Motions</span>
+                        <span className="trust-badge text-sm"><CheckCircle2 className="w-3.5 h-3.5" /> Client Advisory</span>
+                        <span className="trust-badge text-sm"><CheckCircle2 className="w-3.5 h-3.5" /> Risk Management</span>
                       </div>
                     </div>
                   </div>

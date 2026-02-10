@@ -50,13 +50,13 @@ const ServicesOverview = () => {
                   to={service.href}
                   className="card-bordered group hover:bg-card hover:shadow-sm transition-all duration-200 py-6 px-6 text-left"
                 >
-                  <h3 className="font-medium text-foreground group-hover:text-primary transition-colors mb-2">
+                  <h3 className="font-medium text-lg text-foreground group-hover:text-primary transition-colors mb-2">
                     {service.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-3 line-clamp-2">
+                  <p className="text-base text-muted-foreground mb-3 line-clamp-2">
                     {service.description}
                   </p>
-                  <span className="inline-flex items-center text-sm text-muted-foreground group-hover:text-primary transition-colors">
+                  <span className="inline-flex items-center text-base text-muted-foreground group-hover:text-primary transition-colors">
                     Learn more <ArrowRight className="w-4 h-4 ml-1" />
                   </span>
                 </Link>

@@ -33,7 +33,7 @@ const FlyoutLink = ({
       onMouseLeave={() => setOpen(false)}
       className="relative h-fit w-fit"
     >
-      <button className="relative inline-flex h-12 items-center justify-center px-4 py-2 text-base font-medium text-foreground hover:text-primary transition-colors">
+      <button className="relative inline-flex h-12 items-center justify-center px-4 py-2 text-lg font-medium text-foreground hover:text-primary transition-colors">
         {children}
         {content && <ChevronDown className="ml-1 w-3.5 h-3.5" />}
         <span
@@ -80,13 +80,13 @@ const FlyoutLink = ({
 
 const AttorneysFlyout = () => (
   <div className="w-56 p-2">
-    <Link to="/attorneys/dmitriy-borshchak" className="block px-4 py-2.5 text-base text-foreground hover:bg-secondary rounded-md transition-colors">
+    <Link to="/attorneys/dmitriy-borshchak" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
       Dmitriy Borshchak
     </Link>
-    <Link to="/attorneys/hank-sonderman" className="block px-4 py-2.5 text-base text-foreground hover:bg-secondary rounded-md transition-colors">
+    <Link to="/attorneys/hank-sonderman" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
       Hank Sonderman
     </Link>
-    <Link to="/attorneys/keri-reeves" className="block px-4 py-2.5 text-base text-foreground hover:bg-secondary rounded-md transition-colors">
+    <Link to="/attorneys/keri-reeves" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
       Keri Reeves
     </Link>
   </div>
@@ -94,16 +94,16 @@ const AttorneysFlyout = () => (
 
 const LegalServicesFlyout = () => (
   <div className="w-56 p-2">
-    <Link to="/divorce" className="block px-4 py-2.5 text-base text-foreground hover:bg-secondary rounded-md transition-colors">
+    <Link to="/divorce" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
       Divorce & Legal Separation
     </Link>
-    <Link to="/custody" className="block px-4 py-2.5 text-base text-foreground hover:bg-secondary rounded-md transition-colors">
+    <Link to="/custody" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
       Child Custody
     </Link>
-    <Link to="/assets" className="block px-4 py-2.5 text-base text-foreground hover:bg-secondary rounded-md transition-colors">
+    <Link to="/assets" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
       Property Division
     </Link>
-    <Link to="/mediation" className="block px-4 py-2.5 text-base text-foreground hover:bg-secondary rounded-md transition-colors">
+    <Link to="/mediation" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
       Mediation
     </Link>
   </div>
@@ -111,10 +111,10 @@ const LegalServicesFlyout = () => (
 
 const ContactFlyout = () => (
   <div className="w-48 p-2">
-    <Link to="/contact" className="block px-4 py-2.5 text-base text-foreground hover:bg-secondary rounded-md transition-colors">
+    <Link to="/contact" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
       Contact Us
     </Link>
-    <Link to="/process" className="block px-4 py-2.5 text-base text-foreground hover:bg-secondary rounded-md transition-colors">
+    <Link to="/process" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
       Our Process
     </Link>
   </div>
@@ -141,13 +141,13 @@ const Header = () => {
             <FlyoutLink content={<LegalServicesFlyout />}>Legal Services</FlyoutLink>
             <Link 
               to="/resources" 
-              className="inline-flex h-12 items-center justify-center px-4 py-2 text-base font-medium text-foreground hover:text-primary transition-colors"
+              className="inline-flex h-12 items-center justify-center px-4 py-2 text-lg font-medium text-foreground hover:text-primary transition-colors"
             >
               Testimonials
             </Link>
             <Link 
               to="/resources" 
-              className="inline-flex h-12 items-center justify-center px-4 py-2 text-base font-medium text-foreground hover:text-primary transition-colors"
+              className="inline-flex h-12 items-center justify-center px-4 py-2 text-lg font-medium text-foreground hover:text-primary transition-colors"
             >
               Blog
             </Link>
@@ -155,7 +155,7 @@ const Header = () => {
           </div>
           
           <div className="flex items-center gap-4">
-            <a href="tel:+13803240878" className="hidden sm:flex btn-cta text-base px-6 py-3 whitespace-nowrap">
+            <a href="tel:+13803240878" className="hidden sm:flex btn-cta text-lg px-6 py-3 whitespace-nowrap">
               <Phone className="w-5 h-5 mr-2" />
               Call Us Now
             </a>
@@ -176,18 +176,18 @@ const Header = () => {
                 <nav className="flex flex-col gap-2 mt-8">
                   {/* Attorneys */}
                   <Collapsible>
-                    <CollapsibleTrigger className="flex items-center justify-between w-full py-3 px-2 text-left font-medium hover:bg-secondary rounded-md transition-colors">
+                    <CollapsibleTrigger className="flex items-center justify-between w-full py-3 px-2 text-left text-lg font-medium hover:bg-secondary rounded-md transition-colors">
                       Attorneys
                       <ChevronDown className="w-4 h-4" />
                     </CollapsibleTrigger>
                     <CollapsibleContent className="pl-4">
-                      <Link to="/attorneys/dmitriy-borshchak" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-muted-foreground hover:text-foreground transition-colors">
+                      <Link to="/attorneys/dmitriy-borshchak" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-base text-muted-foreground hover:text-foreground transition-colors">
                         Dmitriy Borshchak
                       </Link>
-                      <Link to="/attorneys/hank-sonderman" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-muted-foreground hover:text-foreground transition-colors">
+                      <Link to="/attorneys/hank-sonderman" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-base text-muted-foreground hover:text-foreground transition-colors">
                         Hank Sonderman
                       </Link>
-                      <Link to="/attorneys/keri-reeves" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-muted-foreground hover:text-foreground transition-colors">
+                      <Link to="/attorneys/keri-reeves" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-base text-muted-foreground hover:text-foreground transition-colors">
                         Keri Reeves
                       </Link>
                     </CollapsibleContent>
@@ -195,45 +195,45 @@ const Header = () => {
 
                   {/* Legal Services */}
                   <Collapsible>
-                    <CollapsibleTrigger className="flex items-center justify-between w-full py-3 px-2 text-left font-medium hover:bg-secondary rounded-md transition-colors">
+                    <CollapsibleTrigger className="flex items-center justify-between w-full py-3 px-2 text-left text-lg font-medium hover:bg-secondary rounded-md transition-colors">
                       Legal Services
                       <ChevronDown className="w-4 h-4" />
                     </CollapsibleTrigger>
                     <CollapsibleContent className="pl-4">
-                      <Link to="/divorce" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-muted-foreground hover:text-foreground transition-colors">
+                      <Link to="/divorce" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-base text-muted-foreground hover:text-foreground transition-colors">
                         Divorce & Legal Separation
                       </Link>
-                      <Link to="/custody" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-muted-foreground hover:text-foreground transition-colors">
+                      <Link to="/custody" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-base text-muted-foreground hover:text-foreground transition-colors">
                         Child Custody
                       </Link>
-                      <Link to="/assets" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-muted-foreground hover:text-foreground transition-colors">
+                      <Link to="/assets" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-base text-muted-foreground hover:text-foreground transition-colors">
                         Property Division
                       </Link>
-                      <Link to="/mediation" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-muted-foreground hover:text-foreground transition-colors">
+                      <Link to="/mediation" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-base text-muted-foreground hover:text-foreground transition-colors">
                         Mediation
                       </Link>
                     </CollapsibleContent>
                   </Collapsible>
 
                   {/* Simple Links */}
-                  <Link to="/resources" onClick={() => setIsOpen(false)} className="py-3 px-2 font-medium hover:bg-secondary rounded-md transition-colors">
+                  <Link to="/resources" onClick={() => setIsOpen(false)} className="py-3 px-2 text-lg font-medium hover:bg-secondary rounded-md transition-colors">
                     Testimonials
                   </Link>
-                  <Link to="/resources" onClick={() => setIsOpen(false)} className="py-3 px-2 font-medium hover:bg-secondary rounded-md transition-colors">
+                  <Link to="/resources" onClick={() => setIsOpen(false)} className="py-3 px-2 text-lg font-medium hover:bg-secondary rounded-md transition-colors">
                     Blog
                   </Link>
 
                   {/* Contact */}
                   <Collapsible>
-                    <CollapsibleTrigger className="flex items-center justify-between w-full py-3 px-2 text-left font-medium hover:bg-secondary rounded-md transition-colors">
+                    <CollapsibleTrigger className="flex items-center justify-between w-full py-3 px-2 text-left text-lg font-medium hover:bg-secondary rounded-md transition-colors">
                       Contact
                       <ChevronDown className="w-4 h-4" />
                     </CollapsibleTrigger>
                     <CollapsibleContent className="pl-4">
-                      <Link to="/contact" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-muted-foreground hover:text-foreground transition-colors">
+                      <Link to="/contact" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-base text-muted-foreground hover:text-foreground transition-colors">
                         Contact Us
                       </Link>
-                      <Link to="/process" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-muted-foreground hover:text-foreground transition-colors">
+                      <Link to="/process" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-base text-muted-foreground hover:text-foreground transition-colors">
                         Our Process
                       </Link>
                     </CollapsibleContent>
@@ -241,7 +241,7 @@ const Header = () => {
 
                   {/* CTA */}
                   <div className="mt-6 pt-6 border-t border-border">
-                    <a href="tel:+13803240878" className="btn-cta w-full justify-center text-sm px-5 py-3">
+                    <a href="tel:+13803240878" className="btn-cta w-full justify-center text-base px-5 py-3">
                       <Phone className="w-4 h-4 mr-2" />
                       Call Us Now: 380-324-0878
                     </a>

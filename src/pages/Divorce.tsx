@@ -109,7 +109,7 @@ const ExpandableCard = ({
           >
             <Icon className="w-5 h-5 text-primary" />
           </div>
-          <h4 className="heading-subsection text-base">{title}</h4>
+          <h4 className="heading-subsection text-lg">{title}</h4>
         </div>
         {open ? (
           <ChevronUp className="w-5 h-5 text-muted-foreground" />
@@ -126,7 +126,7 @@ const ExpandableCard = ({
             transition={{ duration: 0.25 }}
             className="overflow-hidden"
           >
-            <div className="mt-4 text-body text-sm">{children}</div>
+            <div className="mt-4 text-body text-base">{children}</div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -169,7 +169,7 @@ const DivorceQuiz = () => {
         >
           <Trophy className="w-10 h-10" style={{ color: "hsl(var(--green-accent))" }} />
         </div>
-        <h3 className="heading-section text-2xl">
+        <h3 className="heading-section text-3xl">
           You scored {score}/{quizQuestions.length}!
         </h3>
         <p className="text-body">
@@ -190,7 +190,7 @@ const DivorceQuiz = () => {
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between mb-2">
-        <span className="text-sm font-medium text-muted-foreground">
+        <span className="text-base font-medium text-muted-foreground">
           Question {currentQ + 1} of {quizQuestions.length}
         </span>
         <div className="flex gap-1">
@@ -208,7 +208,7 @@ const DivorceQuiz = () => {
           ))}
         </div>
       </div>
-      <h3 className="heading-subsection text-xl">{q.question}</h3>
+      <h3 className="heading-subsection text-2xl">{q.question}</h3>
       <div className="grid gap-3">
         {q.options.map((opt, idx) => {
           let borderColor = "hsl(var(--border))";
@@ -226,7 +226,7 @@ const DivorceQuiz = () => {
             <button
               key={idx}
               onClick={() => handleSelect(idx)}
-              className="text-left px-5 py-4 rounded-lg border-2 transition-all duration-200 text-body text-base"
+              className="text-left px-5 py-4 rounded-lg border-2 transition-all duration-200 text-body text-lg"
               style={{ borderColor, backgroundColor: bgColor }}
             >
               {opt}
@@ -241,7 +241,7 @@ const DivorceQuiz = () => {
           className="p-4 rounded-lg"
           style={{ backgroundColor: "hsl(var(--secondary))" }}
         >
-          <p className="text-body text-sm">
+          <p className="text-body text-base">
             <strong>{selected === q.correctIndex ? "Correct!" : "Not quite."}</strong>{" "}
             {q.explanation}
           </p>
@@ -273,7 +273,7 @@ const Divorce = () => {
         <section className="relative bg-navy min-h-[450px] md:min-h-[500px] flex items-center">
           <div className="container max-w-4xl section-padding relative z-10">
             <p
-              className="text-sm font-medium uppercase tracking-wider mb-4 opacity-0 animate-fade-in"
+              className="text-base font-medium uppercase tracking-wider mb-4 opacity-0 animate-fade-in"
               style={{ color: "hsla(40, 30%, 98%, 0.7)", animationDelay: "100ms" }}
             >
               Columbus, OH Divorce Lawyers
@@ -285,7 +285,7 @@ const Divorce = () => {
               Getting a Divorce in Columbus, OH? Here's How We Can Help
             </h1>
             <p
-              className="text-body text-lg leading-relaxed max-w-2xl opacity-0 animate-fade-in"
+              className="text-body text-xl leading-relaxed max-w-2xl opacity-0 animate-fade-in"
               style={{ animationDelay: "400ms" }}
             >
               Getting a divorce can be emotionally draining and legally complex. If you or your family are considering divorce, it's crucial to understand Ohio family law before embarking on this journey.
@@ -315,21 +315,21 @@ const Divorce = () => {
                   >
                     <Gavel className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="heading-subsection text-lg">Divorce (Fault-Based)</h3>
+                  <h3 className="heading-subsection text-xl">Divorce (Fault-Based)</h3>
                 </div>
-                <p className="text-body text-base mb-4">
+                <p className="text-body text-lg mb-4">
                   Either spouse files a lawsuit to end the marriage. This is the more formal method and can be resolved through negotiations or court proceedings.
                 </p>
                 <div className="space-y-2">
-                  <div className="flex items-start gap-2 text-body text-sm">
+                  <div className="flex items-start gap-2 text-body text-base">
                     <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color: "hsl(var(--green-accent))" }} />
                     One party files against the other
                   </div>
-                  <div className="flex items-start gap-2 text-body text-sm">
+                  <div className="flex items-start gap-2 text-body text-base">
                     <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color: "hsl(var(--green-accent))" }} />
                     Must prove legal grounds
                   </div>
-                  <div className="flex items-start gap-2 text-body text-sm">
+                  <div className="flex items-start gap-2 text-body text-base">
                     <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color: "hsl(var(--green-accent))" }} />
                     Court decides unresolved issues
                   </div>
@@ -344,21 +344,21 @@ const Divorce = () => {
                   >
                     <Scale className="w-6 h-6" style={{ color: "hsl(var(--green-accent))" }} />
                   </div>
-                  <h3 className="heading-subsection text-lg">Dissolution (No-Fault)</h3>
+                  <h3 className="heading-subsection text-xl">Dissolution (No-Fault)</h3>
                 </div>
-                <p className="text-body text-base mb-4">
+                <p className="text-body text-lg mb-4">
                   Both parties agree to end the marriage without court proceedings. Generally less expensive and faster, but requires agreement on all issues.
                 </p>
                 <div className="space-y-2">
-                  <div className="flex items-start gap-2 text-body text-sm">
+                  <div className="flex items-start gap-2 text-body text-base">
                     <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color: "hsl(var(--green-accent))" }} />
                     Both parties must agree
                   </div>
-                  <div className="flex items-start gap-2 text-body text-sm">
+                  <div className="flex items-start gap-2 text-body text-base">
                     <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color: "hsl(var(--green-accent))" }} />
                     No fault needs to be proven
                   </div>
-                  <div className="flex items-start gap-2 text-body text-sm">
+                  <div className="flex items-start gap-2 text-body text-base">
                     <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color: "hsl(var(--green-accent))" }} />
                     Typically faster & less costly
                   </div>
@@ -370,8 +370,8 @@ const Divorce = () => {
               <div className="flex items-start gap-3">
                 <BookOpen className="w-5 h-5 text-primary shrink-0 mt-1" />
                 <div>
-                  <h4 className="heading-subsection text-base mb-2">Ohio Residency Requirement</h4>
-                  <p className="text-body text-sm">
+                  <h4 className="heading-subsection text-lg mb-2">Ohio Residency Requirement</h4>
+                  <p className="text-body text-base">
                     To file for either divorce or dissolution in Ohio, either you or your spouse must have lived in the state for at least <strong>six months</strong>. For a no-fault dissolution, you don't need to prove wrongdoing — only that the marriage can't be saved.
                   </p>
                 </div>
@@ -397,7 +397,7 @@ const Divorce = () => {
                 </ExpandableCard>
               ))}
             </div>
-            <p className="text-body text-sm mt-6 italic">
+            <p className="text-body text-base mt-6 italic">
               Every case is unique. Having experienced legal guidance is essential, especially since fault can have a significant impact on the outcome.
             </p>
           </div>
@@ -419,11 +419,11 @@ const Divorce = () => {
               <div className="p-6 rounded-lg" style={{ backgroundColor: "hsla(40, 30%, 98%, 0.08)" }}>
                 <div className="flex items-center gap-3 mb-4">
                   <Home className="w-6 h-6" style={{ color: "hsl(var(--green-accent))" }} />
-                  <h3 className="text-lg font-serif font-medium" style={{ color: "hsl(var(--primary-foreground))" }}>
+                  <h3 className="text-xl font-serif font-medium" style={{ color: "hsl(var(--primary-foreground))" }}>
                     Division of Property
                   </h3>
                 </div>
-                <p className="text-sm leading-relaxed" style={{ color: "hsla(40, 30%, 98%, 0.85)" }}>
+                <p className="text-base leading-relaxed" style={{ color: "hsla(40, 30%, 98%, 0.85)" }}>
                   Ohio courts use equitable distribution — fair but not always equal. Marital property includes assets acquired during the marriage. The court may consider misconduct (such as wasting marital funds) when dividing property.
                 </p>
               </div>
@@ -431,11 +431,11 @@ const Divorce = () => {
               <div className="p-6 rounded-lg" style={{ backgroundColor: "hsla(40, 30%, 98%, 0.08)" }}>
                 <div className="flex items-center gap-3 mb-4">
                   <DollarSign className="w-6 h-6" style={{ color: "hsl(var(--green-accent))" }} />
-                  <h3 className="text-lg font-serif font-medium" style={{ color: "hsl(var(--primary-foreground))" }}>
+                  <h3 className="text-xl font-serif font-medium" style={{ color: "hsl(var(--primary-foreground))" }}>
                     Alimony & Spousal Support
                   </h3>
                 </div>
-                <p className="text-sm leading-relaxed" style={{ color: "hsla(40, 30%, 98%, 0.85)" }}>
+                <p className="text-base leading-relaxed" style={{ color: "hsla(40, 30%, 98%, 0.85)" }}>
                   Spousal support isn't automatic in Ohio. When parties can't agree, the court decides eligibility, amount, and duration — ensuring both parties can maintain a reasonable standard of living.
                 </p>
               </div>
@@ -443,11 +443,11 @@ const Divorce = () => {
               <div className="p-6 rounded-lg" style={{ backgroundColor: "hsla(40, 30%, 98%, 0.08)" }}>
                 <div className="flex items-center gap-3 mb-4">
                   <Users className="w-6 h-6" style={{ color: "hsl(var(--green-accent))" }} />
-                  <h3 className="text-lg font-serif font-medium" style={{ color: "hsl(var(--primary-foreground))" }}>
+                  <h3 className="text-xl font-serif font-medium" style={{ color: "hsl(var(--primary-foreground))" }}>
                     Parental Rights
                   </h3>
                 </div>
-                <p className="text-sm leading-relaxed" style={{ color: "hsla(40, 30%, 98%, 0.85)" }}>
+                <p className="text-base leading-relaxed" style={{ color: "hsla(40, 30%, 98%, 0.85)" }}>
                   Ohio courts divide parental rights based on the child's best interest. Shared parenting doesn't always mean equal time. The court may privately interview the child about their preferences.
                 </p>
               </div>
@@ -455,11 +455,11 @@ const Divorce = () => {
               <div className="p-6 rounded-lg" style={{ backgroundColor: "hsla(40, 30%, 98%, 0.08)" }}>
                 <div className="flex items-center gap-3 mb-4">
                   <Baby className="w-6 h-6" style={{ color: "hsl(var(--green-accent))" }} />
-                  <h3 className="text-lg font-serif font-medium" style={{ color: "hsl(var(--primary-foreground))" }}>
+                  <h3 className="text-xl font-serif font-medium" style={{ color: "hsl(var(--primary-foreground))" }}>
                     Child Support
                   </h3>
                 </div>
-                <p className="text-sm leading-relaxed" style={{ color: "hsla(40, 30%, 98%, 0.85)" }}>
+                <p className="text-base leading-relaxed" style={{ color: "hsla(40, 30%, 98%, 0.85)" }}>
                   Ohio uses child support guidelines based on the number of children, combined parental income, medical costs, and childcare expenses. The court can deviate from standard calculations when fairness requires it.
                 </p>
               </div>
@@ -486,8 +486,8 @@ const Divorce = () => {
                   >
                     <FileText className="w-5 h-5 text-primary" />
                   </div>
-                  <h4 className="font-serif font-medium text-base mb-1 text-foreground">1. Preparation</h4>
-                  <p className="text-body-sm text-sm">Your attorney reviews finances, assets, debts, and gathers evidence.</p>
+                  <h4 className="font-serif font-medium text-lg mb-1 text-foreground">1. Preparation</h4>
+                  <p className="text-body-sm text-base">Your attorney reviews finances, assets, debts, and gathers evidence.</p>
                 </div>
                 <div className="card-bordered text-center">
                   <div
@@ -496,8 +496,8 @@ const Divorce = () => {
                   >
                     <Gavel className="w-5 h-5 text-primary" />
                   </div>
-                  <h4 className="font-serif font-medium text-base mb-1 text-foreground">2. Trial</h4>
-                  <p className="text-body-sm text-sm">Both sides present evidence, examine witnesses, and submit documents.</p>
+                  <h4 className="font-serif font-medium text-lg mb-1 text-foreground">2. Trial</h4>
+                  <p className="text-body-sm text-base">Both sides present evidence, examine witnesses, and submit documents.</p>
                 </div>
                 <div className="card-bordered text-center">
                   <div
@@ -506,8 +506,8 @@ const Divorce = () => {
                   >
                     <Scale className="w-5 h-5 text-primary" />
                   </div>
-                  <h4 className="font-serif font-medium text-base mb-1 text-foreground">3. Ruling</h4>
-                  <p className="text-body-sm text-sm">The judge rules on property, support, custody, and child support based on evidence and law.</p>
+                  <h4 className="font-serif font-medium text-lg mb-1 text-foreground">3. Ruling</h4>
+                  <p className="text-body-sm text-base">The judge rules on property, support, custody, and child support based on evidence and law.</p>
                 </div>
               </div>
               <p>
@@ -545,7 +545,7 @@ const Divorce = () => {
             >
               Navigate Your Divorce with Confidence
             </h2>
-            <p className="text-lg leading-relaxed mb-8" style={{ color: "hsla(40, 30%, 98%, 0.85)" }}>
+            <p className="text-xl leading-relaxed mb-8" style={{ color: "hsla(40, 30%, 98%, 0.85)" }}>
               At Borshchak Law Group, our team has years of experience resolving family law matters in the Columbus, OH area. Contact us today for a free consultation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

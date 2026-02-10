@@ -46,13 +46,13 @@ const Resources = () => {
         {/* Hero */}
         <section className="section-padding bg-secondary/50">
           <div className="container max-w-4xl">
-            <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4">
+            <p className="text-base font-medium text-muted-foreground uppercase tracking-wider mb-4">
               Resources
             </p>
             <h1 className="heading-hero mb-6">
               Helpful Information for Your Situation
             </h1>
-            <p className="text-body text-lg">
+            <p className="text-body text-xl">
               Understanding the legal process helps you make better decisions. Browse our guides and articles on divorce, custody, and family law in Ohio.
             </p>
           </div>
@@ -73,7 +73,7 @@ const Resources = () => {
                           className="flex items-center gap-2 text-foreground hover:text-primary transition-colors group"
                         >
                           <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary shrink-0" />
-                          <span className="text-sm">{article.title}</span>
+                          <span className="text-base">{article.title}</span>
                         </a>
                       </li>
                     ))}
@@ -87,7 +87,7 @@ const Resources = () => {
         {/* Disclaimer */}
         <section className="py-8 bg-muted/50">
           <div className="container max-w-3xl text-center">
-            <p className="text-sm text-muted-foreground">
+            <p className="text-base text-muted-foreground">
               The information on this page is for educational purposes only and does not constitute legal advice. 
               Every case is different. For guidance specific to your situation, schedule a consultation.
             </p>

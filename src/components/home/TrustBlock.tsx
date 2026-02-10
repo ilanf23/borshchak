@@ -28,8 +28,8 @@ const TrustBlock = () => {
               ))}
             </div>
             <div>
-              <p className="font-semibold text-foreground">147+ Reviews • 4.8 Stars</p>
-              <p className="text-sm text-muted-foreground">on Google</p>
+              <p className="font-semibold text-lg text-foreground">147+ Reviews • 4.8 Stars</p>
+              <p className="text-base text-muted-foreground">on Google</p>
             </div>
           </div>
           
@@ -37,8 +37,8 @@ const TrustBlock = () => {
           <div className="flex flex-col md:flex-row gap-6 lg:gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="max-w-xs">
-                <p className="text-sm text-foreground italic mb-1">"{testimonial.quote}"</p>
-                <p className="text-xs text-muted-foreground">— {testimonial.author}</p>
+                <p className="text-base text-foreground italic mb-1">"{testimonial.quote}"</p>
+                <p className="text-sm text-muted-foreground">— {testimonial.author}</p>
               </div>
             ))}
           </div>
