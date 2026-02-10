@@ -63,7 +63,7 @@ const Header = () => {
                       <li>
                         <NavigationMenuLink asChild>
                           <Link 
-                            to="/about" 
+                            to="/attorneys/hank-sonderman" 
                             className="block px-4 py-2.5 text-base text-foreground hover:bg-secondary rounded-md transition-colors"
                           >
                             Hank Sonderman
@@ -223,7 +223,7 @@ const Header = () => {
                       <Link to="/attorneys/dmitriy-borshchak" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-muted-foreground hover:text-foreground transition-colors">
                         Dmitriy Borshchak
                       </Link>
-                      <Link to="/about" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-muted-foreground hover:text-foreground transition-colors">
+                      <Link to="/attorneys/hank-sonderman" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-muted-foreground hover:text-foreground transition-colors">
                         Hank Sonderman
                       </Link>
                       <Link to="/about" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-muted-foreground hover:text-foreground transition-colors">
