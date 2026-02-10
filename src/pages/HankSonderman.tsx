@@ -19,7 +19,7 @@ const HankSonderman = () => {
             <div className="flex-1 flex items-center section-padding">
               <div className="max-w-xl ml-auto mr-8">
                 <p
-                  className="text-sm font-medium uppercase tracking-wider mb-4 opacity-0 animate-fade-in"
+                  className="text-base font-medium uppercase tracking-wider mb-4 opacity-0 animate-fade-in"
                   style={{ color: "hsla(40, 30%, 98%, 0.7)", animationDelay: "100ms" }}
                 >
                   Borshchak Law Group | Columbus, OH
@@ -31,7 +31,7 @@ const HankSonderman = () => {
                   Hank Sonderman
                 </h1>
                 <p
-                  className="text-body text-lg leading-relaxed opacity-0 animate-fade-in"
+                  className="text-body text-xl leading-relaxed opacity-0 animate-fade-in"
                   style={{ animationDelay: "400ms" }}
                 >
                   In family law, attorneys are trusted with the client's most precious and personal interests. This means that an empathetic and sincere connection to each case is essential because it fuels the drive and commitment to work for the client's best outcome.
@@ -86,15 +86,15 @@ const HankSonderman = () => {
             <h2 className="heading-section text-center mb-10">Professional Background</h2>
             <Tabs defaultValue="about" className="w-full">
               <TabsList className="w-full h-auto flex-wrap gap-2 bg-transparent p-0 mb-8">
-                <TabsTrigger value="about" className="flex items-center gap-2 px-5 py-3 text-base font-medium border border-border rounded-lg data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:border-primary">
+                <TabsTrigger value="about" className="flex items-center gap-2 px-5 py-3 text-lg font-medium border border-border rounded-lg data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:border-primary">
                   <Briefcase className="w-5 h-5" />
                   About
                 </TabsTrigger>
-                <TabsTrigger value="education" className="flex items-center gap-2 px-5 py-3 text-base font-medium border border-border rounded-lg data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:border-primary">
+                <TabsTrigger value="education" className="flex items-center gap-2 px-5 py-3 text-lg font-medium border border-border rounded-lg data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:border-primary">
                   <GraduationCap className="w-5 h-5" />
                   Education
                 </TabsTrigger>
-                <TabsTrigger value="interests" className="flex items-center gap-2 px-5 py-3 text-base font-medium border border-border rounded-lg data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:border-primary">
+                <TabsTrigger value="interests" className="flex items-center gap-2 px-5 py-3 text-lg font-medium border border-border rounded-lg data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:border-primary">
                   <Heart className="w-5 h-5" />
                   Interests
                 </TabsTrigger>
@@ -107,8 +107,8 @@ const HankSonderman = () => {
                       <Handshake className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="heading-subsection text-lg mb-1">Dedicated Family Law Attorney</h4>
-                      <p className="text-body text-base">Family law is an inherently unpredictable field that requires patience, understanding, and dedication to the client's objectives. Hank is happy to work with individuals who exemplify those characteristics every day.</p>
+                      <h4 className="heading-subsection text-xl mb-1">Dedicated Family Law Attorney</h4>
+                      <p className="text-body text-lg">Family law is an inherently unpredictable field that requires patience, understanding, and dedication to the client's objectives. Hank is happy to work with individuals who exemplify those characteristics every day.</p>
                     </div>
                   </div>
 
@@ -117,8 +117,8 @@ const HankSonderman = () => {
                       <Users className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="heading-subsection text-lg mb-1">A Collaborative Partnership</h4>
-                      <p className="text-body text-base">Hank and Dmitriy's friendship goes back to law school, where they were often asked to leave the library at late hours by the Capital Law School custodial staff. Today, they work together as a small, tight-knit firm operating as one collaborative brain trust.</p>
+                      <h4 className="heading-subsection text-xl mb-1">A Collaborative Partnership</h4>
+                      <p className="text-body text-lg">Hank and Dmitriy's friendship goes back to law school, where they were often asked to leave the library at late hours by the Capital Law School custodial staff. Today, they work together as a small, tight-knit firm operating as one collaborative brain trust.</p>
                     </div>
                   </div>
 
@@ -127,8 +127,8 @@ const HankSonderman = () => {
                       <CheckCircle2 className="w-6 h-6" style={{ color: "hsl(var(--green-accent))" }} />
                     </div>
                     <div>
-                      <h4 className="heading-subsection text-lg mb-1">Client-Focused Outcomes</h4>
-                      <p className="text-body text-base">Hank spent years in the service industry, where customer satisfaction is both a high priority and the source of gratification. As a family law attorney, he is proud to represent clients with the goal of producing outcomes wherein their situations have improved.</p>
+                      <h4 className="heading-subsection text-xl mb-1">Client-Focused Outcomes</h4>
+                      <p className="text-body text-lg">Hank spent years in the service industry, where customer satisfaction is both a high priority and the source of gratification. As a family law attorney, he is proud to represent clients with the goal of producing outcomes wherein their situations have improved.</p>
                     </div>
                   </div>
                 </div>
@@ -141,11 +141,11 @@ const HankSonderman = () => {
                       <BookOpen className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="heading-subsection text-lg mb-1">The Ohio State University</h4>
-                      <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+                      <h4 className="heading-subsection text-xl mb-1">The Ohio State University</h4>
+                      <div className="flex items-center gap-2 text-base text-muted-foreground mb-2">
                         <MapPin className="w-3.5 h-3.5" /> Columbus, OH
                       </div>
-                      <p className="text-body text-base">Undergraduate degree from one of Ohio's premier institutions.</p>
+                      <p className="text-body text-lg">Undergraduate degree from one of Ohio's premier institutions.</p>
                     </div>
                   </div>
 
@@ -154,11 +154,11 @@ const HankSonderman = () => {
                       <Scale className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="heading-subsection text-lg mb-1">Capital University Law School</h4>
-                      <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+                      <h4 className="heading-subsection text-xl mb-1">Capital University Law School</h4>
+                      <div className="flex items-center gap-2 text-base text-muted-foreground mb-2">
                         <MapPin className="w-3.5 h-3.5" /> Columbus, OH
                       </div>
-                      <p className="text-body text-base">Earned his Juris Doctor degree, where he forged a lasting partnership with Dmitriy Borshchak that would become the foundation of Borshchak Law Group.</p>
+                      <p className="text-body text-lg">Earned his Juris Doctor degree, where he forged a lasting partnership with Dmitriy Borshchak that would become the foundation of Borshchak Law Group.</p>
                     </div>
                   </div>
                 </div>
@@ -171,12 +171,12 @@ const HankSonderman = () => {
                       <Trophy className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="heading-subsection text-lg mb-1">Sports & Trivia Enthusiast</h4>
-                      <p className="text-body text-base mb-3">His interests include watching all sports, Jeopardy, and spending time with friends and family in no particular order.</p>
+                      <h4 className="heading-subsection text-xl mb-1">Sports & Trivia Enthusiast</h4>
+                      <p className="text-body text-lg mb-3">His interests include watching all sports, Jeopardy, and spending time with friends and family in no particular order.</p>
                       <div className="flex flex-wrap gap-2">
-                        <span className="trust-badge text-xs"><CheckCircle2 className="w-3.5 h-3.5" /> Sand Volleyball</span>
-                        <span className="trust-badge text-xs"><CheckCircle2 className="w-3.5 h-3.5" /> Golf</span>
-                        <span className="trust-badge text-xs"><CheckCircle2 className="w-3.5 h-3.5" /> Bar Trivia Host</span>
+                        <span className="trust-badge text-sm"><CheckCircle2 className="w-3.5 h-3.5" /> Sand Volleyball</span>
+                        <span className="trust-badge text-sm"><CheckCircle2 className="w-3.5 h-3.5" /> Golf</span>
+                        <span className="trust-badge text-sm"><CheckCircle2 className="w-3.5 h-3.5" /> Bar Trivia Host</span>
                       </div>
                     </div>
                   </div>

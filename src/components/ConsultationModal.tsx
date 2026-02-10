@@ -31,13 +31,11 @@ const ConsultationModal = ({ open, onOpenChange }: ConsultationModalProps) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1000));
     
     setIsSubmitting(false);
     setIsSubmitted(true);
     
-    // Reset after showing success
     setTimeout(() => {
       setIsSubmitted(false);
       setFormData({ name: "", email: "", phone: "", message: "" });
@@ -65,21 +63,21 @@ const ConsultationModal = ({ open, onOpenChange }: ConsultationModalProps) => {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-navy/80 to-transparent" />
             <div className="absolute bottom-6 left-6 right-6 text-white">
-              <p className="text-lg font-medium drop-shadow-md">
+              <p className="text-xl font-medium drop-shadow-md">
                 "They helped us through the most difficult time in our lives."
               </p>
-              <p className="text-sm text-white/80 mt-2">— Former Client</p>
+              <p className="text-base text-white/80 mt-2">— Former Client</p>
             </div>
           </div>
           
           {/* Right: Form */}
           <div className="md:w-3/5 p-6">
             <DialogHeader>
-              <DialogTitle className="text-2xl font-serif flex items-center gap-2">
+              <DialogTitle className="text-3xl font-serif flex items-center gap-2">
                 <Calendar className="w-6 h-6 text-primary" />
                 Free Consultation
               </DialogTitle>
-              <DialogDescription className="text-base">
+              <DialogDescription className="text-lg">
                 Tell us about your situation and we'll get back to you within 24 hours.
               </DialogDescription>
             </DialogHeader>
@@ -89,8 +87,8 @@ const ConsultationModal = ({ open, onOpenChange }: ConsultationModalProps) => {
                 <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-4">
                   <Calendar className="w-8 h-8 text-accent" />
                 </div>
-                <h3 className="text-xl font-medium text-foreground mb-2">Thank You!</h3>
-                <p className="text-muted-foreground">
+                <h3 className="text-2xl font-medium text-foreground mb-2">Thank You!</h3>
+                <p className="text-lg text-muted-foreground">
                   We've received your request and will contact you within 24 hours.
                 </p>
               </div>
@@ -180,7 +178,7 @@ const ConsultationModal = ({ open, onOpenChange }: ConsultationModalProps) => {
                     )}
                   </button>
                   
-                  <p className="text-center text-sm text-muted-foreground">
+                  <p className="text-center text-base text-muted-foreground">
                     Or call us directly:{" "}
                     <a href="tel:+13803240878" className="font-medium text-primary hover:underline">
                       380-324-0878

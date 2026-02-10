@@ -11,13 +11,13 @@ const About = () => {
         {/* Hero */}
         <section className="section-padding bg-secondary/50">
           <div className="container max-w-4xl">
-            <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4">
+            <p className="text-base font-medium text-muted-foreground uppercase tracking-wider mb-4">
               About Borshchak Law Group
             </p>
             <h1 className="heading-hero mb-6">
               Columbus Family Law Attorneys Since 1998
             </h1>
-            <p className="text-body text-lg">
+            <p className="text-body text-xl">
               For over 25 years, we've helped Central Ohio families navigate their most challenging legal transitions. Our focus has never changed: provide strategic counsel with personal attention, achieving the best possible outcomes for every client.
             </p>
           </div>
@@ -29,18 +29,18 @@ const About = () => {
             <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto text-center">
               <div>
                 <Scale className="w-8 h-8 mx-auto mb-3 text-primary" />
-                <div className="font-serif text-3xl font-semibold text-primary">25+</div>
-                <div className="text-sm text-muted-foreground">Years in Practice</div>
+                <div className="font-serif text-4xl font-semibold text-primary">25+</div>
+                <div className="text-base text-muted-foreground">Years in Practice</div>
               </div>
               <div>
                 <Users className="w-8 h-8 mx-auto mb-3 text-primary" />
-                <div className="font-serif text-3xl font-semibold text-primary">500+</div>
-                <div className="text-sm text-muted-foreground">Families Helped</div>
+                <div className="font-serif text-4xl font-semibold text-primary">500+</div>
+                <div className="text-base text-muted-foreground">Families Helped</div>
               </div>
               <div>
                 <Award className="w-8 h-8 mx-auto mb-3 text-primary" />
-                <div className="font-serif text-3xl font-semibold text-primary">4.9</div>
-                <div className="text-sm text-muted-foreground">Client Rating</div>
+                <div className="font-serif text-4xl font-semibold text-primary">4.9</div>
+                <div className="text-base text-muted-foreground">Client Rating</div>
               </div>
             </div>
           </div>

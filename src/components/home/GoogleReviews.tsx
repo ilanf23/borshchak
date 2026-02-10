@@ -65,11 +65,11 @@ const GoogleReviews = () => {
               alt="Google" 
               className="h-8 w-auto"
             />
-            <span className="text-2xl font-medium text-muted-foreground">Reviews</span>
+            <span className="text-3xl font-medium text-muted-foreground">Reviews</span>
           </div>
           
           <div className="flex items-center justify-center gap-4 mb-6">
-            <span className="text-5xl font-bold text-foreground">{stats.average}</span>
+            <span className="text-6xl font-bold text-foreground">{stats.average}</span>
             <div className="text-left">
               <div className="flex gap-1">
                 {[1, 2, 3, 4, 5].map((star) => (
@@ -84,7 +84,7 @@ const GoogleReviews = () => {
                   />
                 ))}
               </div>
-              <p className="text-muted-foreground text-sm mt-1">
+              <p className="text-muted-foreground text-base mt-1">
                 Based on {stats.total} reviews
               </p>
             </div>
@@ -109,7 +109,7 @@ const GoogleReviews = () => {
                     filterRating !== null && !isActive && "opacity-40"
                   )}
                 >
-                  <span className="text-sm w-12 text-left text-muted-foreground group-hover:text-foreground">
+                  <span className="text-base w-12 text-left text-muted-foreground group-hover:text-foreground">
                     {rating} star{rating !== 1 && "s"}
                   </span>
                   <div className="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
@@ -118,7 +118,7 @@ const GoogleReviews = () => {
                       style={{ width: `${percentage}%` }}
                     />
                   </div>
-                  <span className="text-sm w-10 text-right text-muted-foreground">
+                  <span className="text-base w-10 text-right text-muted-foreground">
                     {count}
                   </span>
                 </button>
@@ -132,7 +132,7 @@ const GoogleReviews = () => {
                 setFilterRating(null);
                 setCurrentPage(0);
               }}
-              className="text-sm text-primary hover:underline mb-4"
+              className="text-base text-primary hover:underline mb-4"
             >
               Clear filter
             </button>
@@ -165,20 +165,20 @@ const GoogleReviews = () => {
                       {review.name.charAt(0)}
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h4 className="font-medium text-foreground truncate">{review.name}</h4>
+                      <h4 className="font-medium text-lg text-foreground truncate">{review.name}</h4>
                       <div className="flex items-center gap-2 mt-1">
                         {renderStars(review.rating)}
-                        <span className="text-xs text-muted-foreground">{review.date}</span>
+                        <span className="text-sm text-muted-foreground">{review.date}</span>
                       </div>
                       {review.isLocalGuide && (
-                        <span className="text-xs text-muted-foreground">
+                        <span className="text-sm text-muted-foreground">
                           Local Guide · {review.reviewCount}
                         </span>
                       )}
                     </div>
                   </div>
                   
-                  <p className="text-muted-foreground text-sm leading-relaxed line-clamp-4">
+                  <p className="text-muted-foreground text-base leading-relaxed line-clamp-4">
                     {review.text}
                   </p>
                 </div>
@@ -197,7 +197,7 @@ const GoogleReviews = () => {
         </div>
 
         {/* Page indicator */}
-        <p className="text-center text-sm text-muted-foreground mt-8">
+        <p className="text-center text-base text-muted-foreground mt-8">
           {currentPage + 1} of {totalPages} · {filteredReviews.length} reviews
         </p>
 
@@ -208,20 +208,20 @@ const GoogleReviews = () => {
               <>
                 <DialogHeader>
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-semibold text-lg">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-semibold text-xl">
                       {selectedReview.name.charAt(0)}
                     </div>
                     <div>
                       <DialogTitle className="text-left">{selectedReview.name}</DialogTitle>
                       <div className="flex items-center gap-2 mt-1">
                         {renderStars(selectedReview.rating)}
-                        <span className="text-xs text-muted-foreground">{selectedReview.date}</span>
+                        <span className="text-sm text-muted-foreground">{selectedReview.date}</span>
                       </div>
                     </div>
                   </div>
                 </DialogHeader>
                 <div className="mt-4">
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground text-lg leading-relaxed">
                     {selectedReview.text}
                   </p>
                 </div>

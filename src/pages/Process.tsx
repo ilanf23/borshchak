@@ -66,13 +66,13 @@ const Process = () => {
         {/* Hero */}
         <section className="section-padding bg-secondary/50">
           <div className="container max-w-4xl">
-            <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4">
+            <p className="text-base font-medium text-muted-foreground uppercase tracking-wider mb-4">
               Our Process
             </p>
             <h1 className="heading-hero mb-6">
               What Working With Us Looks Like
             </h1>
-            <p className="text-body text-lg">
+            <p className="text-body text-xl">
               No surprises, no confusion. From first call to final resolution, we guide you through a clear, predictable process. You'll always know what's happening, what comes next, and what decisions you need to make.
             </p>
           </div>
@@ -88,7 +88,7 @@ const Process = () => {
                     {/* Number */}
                     <div className="shrink-0">
                       <div className="w-16 h-16 rounded-full bg-navy flex items-center justify-center">
-                        <span className="font-serif text-2xl font-semibold text-primary-foreground">
+                        <span className="font-serif text-3xl font-semibold text-primary-foreground">
                           {step.number}
                         </span>
                       </div>
@@ -98,12 +98,12 @@ const Process = () => {
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-2">
                         <h2 className="heading-subsection">{step.title}</h2>
-                        <span className="text-sm text-muted-foreground">— {step.subtitle}</span>
+                        <span className="text-base text-muted-foreground">— {step.subtitle}</span>
                       </div>
                       <p className="text-body mb-4">{step.description}</p>
                       <ul className="grid sm:grid-cols-2 gap-2">
                         {step.details.map((detail, idx) => (
-                          <li key={idx} className="flex items-center gap-2 text-sm text-muted-foreground">
+                          <li key={idx} className="flex items-center gap-2 text-base text-muted-foreground">
                             <ArrowRight className="w-4 h-4 text-accent shrink-0" />
                             {detail}
                           </li>
@@ -126,7 +126,7 @@ const Process = () => {
         <section className="section-padding bg-navy">
           <div className="container max-w-2xl text-center">
             <h2 className="heading-section text-primary-foreground mb-4">Ready to Start?</h2>
-            <p className="text-primary-foreground/70 mb-8">
+            <p className="text-primary-foreground/70 text-lg mb-8">
               The first step is a free consultation. Let's discuss your situation and see how we can help.
             </p>
             <Link to="/contact" className="btn-cta">

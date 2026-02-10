@@ -20,10 +20,10 @@ const HeroSection = () => {
 
       <div className="container relative z-10">
         <div className="max-w-3xl mx-auto text-center py-20 md:py-28 lg:py-36">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl leading-tight font-medium tracking-tight text-white mb-6 drop-shadow-lg">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl leading-tight font-medium tracking-tight text-white mb-6 drop-shadow-lg">
             Award-Winning Family Law Attorneys in Columbus, Ohio
           </h1>
-          <p className="text-lg md:text-xl leading-relaxed text-white/95 mb-10 drop-shadow-md">
+          <p className="text-xl md:text-2xl leading-relaxed text-white/95 mb-10 drop-shadow-md">
             Compassionate, strategic legal guidance for divorce, custody, and complex family law matters.
           </p>
           

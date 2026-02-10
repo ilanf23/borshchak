@@ -17,7 +17,6 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Form submission would be handled here
     console.log("Form submitted:", formData);
     alert("Thank you for contacting us. We will reach out within one business day.");
   };
@@ -39,7 +38,7 @@ const Contact = () => {
             <h1 className="heading-hero mb-4">
               Schedule Your Free Consultation
             </h1>
-            <p className="text-body text-lg max-w-2xl mx-auto">
+            <p className="text-body text-xl max-w-2xl mx-auto">
               Take the first step. Fill out the form below or call us directly. All communications are confidential and protected by attorney-client privilege.
             </p>
           </div>
@@ -103,7 +102,7 @@ const Contact = () => {
                       required
                       value={formData.situation}
                       onChange={handleChange}
-                      className="mt-2 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                      className="mt-2 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
                     >
                       <option value="">Select one...</option>
                       <option value="divorce">Considering or filing for divorce</option>
@@ -132,7 +131,7 @@ const Contact = () => {
                     Request Free Consultation
                   </button>
 
-                  <p className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <p className="flex items-center gap-2 text-base text-muted-foreground">
                     <Lock className="w-4 h-4" />
                     Your information is confidential and protected.
                   </p>
@@ -148,7 +147,7 @@ const Contact = () => {
                     <div className="flex items-start gap-4">
                       <Phone className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                       <div>
-                        <p className="font-medium text-foreground">Call Us</p>
+                        <p className="font-medium text-lg text-foreground">Call Us</p>
                         <a href="tel:+16145551234" className="text-muted-foreground hover:text-primary transition-colors">
                           (614) 555-1234
                         </a>
@@ -158,7 +157,7 @@ const Contact = () => {
                     <div className="flex items-start gap-4">
                       <Mail className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                       <div>
-                        <p className="font-medium text-foreground">Email Us</p>
+                        <p className="font-medium text-lg text-foreground">Email Us</p>
                         <a href="mailto:info@morrisonfamilylaw.com" className="text-muted-foreground hover:text-primary transition-colors">
                           info@morrisonfamilylaw.com
                         </a>
@@ -168,7 +167,7 @@ const Contact = () => {
                     <div className="flex items-start gap-4">
                       <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                       <div>
-                        <p className="font-medium text-foreground">Visit Us</p>
+                        <p className="font-medium text-lg text-foreground">Visit Us</p>
                         <p className="text-muted-foreground">
                           250 Civic Center Dr, Suite 400<br />
                           Columbus, OH 43215
@@ -179,7 +178,7 @@ const Contact = () => {
                     <div className="flex items-start gap-4">
                       <Clock className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                       <div>
-                        <p className="font-medium text-foreground">Office Hours</p>
+                        <p className="font-medium text-lg text-foreground">Office Hours</p>
                         <p className="text-muted-foreground">
                           Monday - Friday: 8:30 AM - 5:30 PM<br />
                           Evenings & weekends by appointment
@@ -189,7 +188,7 @@ const Contact = () => {
                   </div>
 
                   <div className="mt-8 pt-6 border-t border-border">
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-base text-muted-foreground">
                       We respond to all inquiries within one business day. For urgent matters, please call directly.
                     </p>
                   </div>

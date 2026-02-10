@@ -11,13 +11,13 @@ const Assets = () => {
         {/* Hero */}
         <section className="section-padding bg-secondary/50">
           <div className="container max-w-4xl">
-            <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4">
+            <p className="text-base font-medium text-muted-foreground uppercase tracking-wider mb-4">
               Property & Asset Division
             </p>
             <h1 className="heading-hero mb-6">
               Protecting What You've Built
             </h1>
-            <p className="text-body text-lg mb-8">
+            <p className="text-body text-xl mb-8">
               From family businesses to investment portfolios, real estate to retirement accounts—we ensure marital property is accurately valued and divided fairly. Your financial future depends on getting this right.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -46,7 +46,7 @@ const Assets = () => {
               ].map((item, index) => (
                 <div key={index} className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                  <span className="text-foreground">{item}</span>
+                  <span className="text-lg text-foreground">{item}</span>
                 </div>
               ))}
             </div>

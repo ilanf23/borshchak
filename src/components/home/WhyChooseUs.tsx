@@ -43,14 +43,14 @@ const WhyChooseUs = () => {
       <div className="container relative z-10">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-medium mb-4">
+          <div className="inline-flex items-center gap-2 bg-accent/20 text-accent px-4 py-2 rounded-full text-base font-medium mb-4">
             <Star className="w-4 h-4 fill-accent" />
             What Sets Us Apart
           </div>
           <h2 className="heading-section text-primary-foreground mb-4">
             Why Clients Choose Borshchak Law Group
           </h2>
-          <p className="text-primary-foreground/70 max-w-2xl mx-auto">
+          <p className="text-primary-foreground/70 text-lg max-w-2xl mx-auto">
             These are what our clients consistently say in their reviews.
           </p>
         </div>
@@ -67,11 +67,11 @@ const WhyChooseUs = () => {
                   <item.icon className="w-7 h-7 text-accent" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-semibold text-primary-foreground text-lg mb-2">{item.title}</h3>
-                  <p className="text-primary-foreground/70 text-sm leading-relaxed mb-4">{item.description}</p>
+                  <h3 className="font-semibold text-primary-foreground text-xl mb-2">{item.title}</h3>
+                  <p className="text-primary-foreground/70 text-base leading-relaxed mb-4">{item.description}</p>
                   <div className="flex items-baseline gap-2">
-                    <span className="text-2xl font-bold text-accent">{item.stat}</span>
-                    <span className="text-xs text-primary-foreground/50 uppercase tracking-wider">{item.statLabel}</span>
+                    <span className="text-3xl font-bold text-accent">{item.stat}</span>
+                    <span className="text-sm text-primary-foreground/50 uppercase tracking-wider">{item.statLabel}</span>
                   </div>
                 </div>
               </div>

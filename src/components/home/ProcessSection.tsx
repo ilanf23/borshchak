@@ -67,7 +67,7 @@ const ProcessSection = () => {
           <h2 className="heading-section text-primary-foreground">
             What Working With Us Looks Like
           </h2>
-          <p className="text-primary-foreground/70 mt-4">
+          <p className="text-primary-foreground/70 mt-4 text-lg">
             A proven 4-step process designed to guide you from uncertainty to resolution
           </p>
         </div>
@@ -110,7 +110,7 @@ const ProcessSection = () => {
                     </div>
                     <span 
                       className={cn(
-                        "mt-3 text-sm font-medium transition-colors",
+                        "mt-3 text-base font-medium transition-colors",
                         isActive 
                           ? "text-accent" 
                           : "text-primary-foreground/60 group-hover:text-primary-foreground/80"
@@ -133,7 +133,7 @@ const ProcessSection = () => {
                   key={index}
                   onClick={() => setActiveStep(index)}
                   className={cn(
-                    "px-4 py-2 rounded-full text-sm font-medium transition-all duration-300",
+                    "px-4 py-2 rounded-full text-base font-medium transition-all duration-300",
                     isActive 
                       ? "bg-accent text-accent-foreground" 
                       : "bg-primary-foreground/20 text-primary-foreground/60"
@@ -152,27 +152,27 @@ const ProcessSection = () => {
               <div className="lg:w-2/3">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center">
-                    <span className="font-serif text-lg font-semibold text-accent">
+                    <span className="font-serif text-xl font-semibold text-accent">
                       {steps[activeStep].number}
                     </span>
                   </div>
-                  <h3 className="text-xl md:text-2xl font-serif font-semibold text-primary-foreground">
+                  <h3 className="text-2xl md:text-3xl font-serif font-semibold text-primary-foreground">
                     {steps[activeStep].title}
                   </h3>
                 </div>
-                <p className="text-primary-foreground/80 leading-relaxed text-base md:text-lg">
+                <p className="text-primary-foreground/80 leading-relaxed text-lg md:text-xl">
                   {steps[activeStep].fullDesc}
                 </p>
               </div>
 
               {/* Right: Details List */}
               <div className="lg:w-1/3 lg:border-l lg:border-primary-foreground/10 lg:pl-8">
-                <h4 className="text-sm font-medium text-accent mb-4 uppercase tracking-wider">
+                <h4 className="text-base font-medium text-accent mb-4 uppercase tracking-wider">
                   What's Included
                 </h4>
                 <ul className="space-y-3">
                   {steps[activeStep].details.map((detail, idx) => (
-                    <li key={idx} className="flex items-start gap-2 text-primary-foreground/70 text-sm">
+                    <li key={idx} className="flex items-start gap-2 text-primary-foreground/70 text-base">
                       <ChevronRight className="w-4 h-4 text-accent shrink-0 mt-0.5" />
                       {detail}
                     </li>
@@ -187,7 +187,7 @@ const ProcessSection = () => {
                 onClick={() => setActiveStep(prev => Math.max(0, prev - 1))}
                 disabled={activeStep === 0}
                 className={cn(
-                  "flex items-center gap-2 text-sm font-medium transition-colors",
+                  "flex items-center gap-2 text-base font-medium transition-colors",
                   activeStep === 0 
                     ? "text-primary-foreground/30 cursor-not-allowed" 
                     : "text-primary-foreground/70 hover:text-accent"
@@ -200,7 +200,7 @@ const ProcessSection = () => {
                 onClick={() => setActiveStep(prev => Math.min(steps.length - 1, prev + 1))}
                 disabled={activeStep === steps.length - 1}
                 className={cn(
-                  "flex items-center gap-2 text-sm font-medium transition-colors",
+                  "flex items-center gap-2 text-base font-medium transition-colors",
                   activeStep === steps.length - 1 
                     ? "text-primary-foreground/30 cursor-not-allowed" 
                     : "text-primary-foreground/70 hover:text-accent"
