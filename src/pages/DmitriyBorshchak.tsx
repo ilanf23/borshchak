@@ -1,4 +1,4 @@
-import { Phone, Award, GraduationCap, Briefcase, Mic } from "lucide-react";
+import { Phone, Award, GraduationCap, Briefcase, Mic, BookOpen, Scale, Users, TrendingUp, FileText, Building2, Gavel, MapPin, Star, CheckCircle2 } from "lucide-react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -141,27 +141,141 @@ const DmitriyBorshchak = () => {
               </TabsList>
 
               <TabsContent value="education" className="animate-fade-in">
-                <div className="space-y-6 text-body">
-                  <p>Dmitriy obtained his undergraduate degree in Political Science from Ohio University. There, he joined the student senate and began investigating how he could personally help the local community and students.</p>
-                  <p>He went on to attend law school at Capital University Law School in Columbus, Ohio. During his time there, Dmitriy was a member of the American Association for Justice Mock Trial Team, was on the Dean's List, and received the CALI Award for Business and Financial Concepts for Lawyers.</p>
-                  <p>During his time in law school, he also worked pro bono, representing individuals in the Capital University Law School Litigation Clinic who could not afford an attorney at no charge.</p>
+                <div className="space-y-6">
+                  <div className="card-bordered flex gap-5 items-start hover:shadow-md transition-shadow duration-200">
+                    <div className="shrink-0 w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: "hsl(var(--secondary))" }}>
+                      <BookOpen className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="heading-subsection text-lg mb-1">Ohio University</h4>
+                      <p className="text-sm font-medium text-muted-foreground mb-2">B.A. Political Science</p>
+                      <p className="text-body text-base">Joined the student senate and began investigating how he could personally help the local community and students.</p>
+                    </div>
+                  </div>
+
+                  <div className="card-bordered flex gap-5 items-start hover:shadow-md transition-shadow duration-200">
+                    <div className="shrink-0 w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: "hsl(var(--secondary))" }}>
+                      <Scale className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="heading-subsection text-lg mb-1">Capital University Law School</h4>
+                      <p className="text-sm font-medium text-muted-foreground mb-3">Columbus, Ohio</p>
+                      <div className="flex flex-wrap gap-2 mb-3">
+                        <span className="trust-badge text-xs"><Star className="w-3.5 h-3.5" /> Dean's List</span>
+                        <span className="trust-badge text-xs"><Award className="w-3.5 h-3.5" /> CALI Award</span>
+                        <span className="trust-badge text-xs"><Gavel className="w-3.5 h-3.5" /> Mock Trial Team</span>
+                      </div>
+                      <p className="text-body text-base">Member of the American Association for Justice Mock Trial Team. Received the CALI Award for Business and Financial Concepts for Lawyers.</p>
+                    </div>
+                  </div>
+
+                  <div className="card-bordered flex gap-5 items-start hover:shadow-md transition-shadow duration-200">
+                    <div className="shrink-0 w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: "hsla(152, 45%, 38%, 0.1)" }}>
+                      <Users className="w-6 h-6" style={{ color: "hsl(var(--green-accent))" }} />
+                    </div>
+                    <div>
+                      <h4 className="heading-subsection text-lg mb-1">Pro Bono Work</h4>
+                      <p className="text-sm font-medium text-muted-foreground mb-2">Capital University Litigation Clinic</p>
+                      <p className="text-body text-base">Represented individuals who could not afford an attorney at no charge during law school.</p>
+                    </div>
+                  </div>
                 </div>
               </TabsContent>
 
               <TabsContent value="speaking" className="animate-fade-in">
-                <div className="space-y-6 text-body">
-                  <p>Recently, Dmitriy was invited to lead a seminar on uncovering hidden or concealed assets during litigation. During the seminar, Dmitriy covered a range of topics related to asset division, including evaluating and finding hidden assets, classifying marital vs. non-marital assets, valuing assets, and how to divide assets.</p>
-                  <p>Much of his discussion centered on using tax forms, specifically Federal Form 1040, to uncover hidden assets. Dmitriy went through the form line by line, showcasing how each itemized line represents various forms of income and explaining the significance of each line in relation to other listed income and assets.</p>
+                <div className="space-y-6">
+                  <div className="card-bordered flex gap-5 items-start hover:shadow-md transition-shadow duration-200">
+                    <div className="shrink-0 w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: "hsl(var(--secondary))" }}>
+                      <Mic className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="heading-subsection text-lg mb-1">Uncovering Hidden Assets During Litigation</h4>
+                      <p className="text-sm font-medium text-muted-foreground mb-3">Featured Seminar</p>
+                      <p className="text-body text-base mb-4">Dmitriy led a comprehensive seminar covering asset division strategies, including evaluating and finding hidden assets, classifying marital vs. non-marital assets, and valuation techniques.</p>
+                      <div className="space-y-2">
+                        <h5 className="text-sm font-semibold text-primary">Topics Covered</h5>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                          <div className="flex items-center gap-2 text-body text-sm">
+                            <CheckCircle2 className="w-4 h-4 shrink-0" style={{ color: "hsl(var(--green-accent))" }} />
+                            Evaluating hidden assets
+                          </div>
+                          <div className="flex items-center gap-2 text-body text-sm">
+                            <CheckCircle2 className="w-4 h-4 shrink-0" style={{ color: "hsl(var(--green-accent))" }} />
+                            Marital vs. non-marital assets
+                          </div>
+                          <div className="flex items-center gap-2 text-body text-sm">
+                            <CheckCircle2 className="w-4 h-4 shrink-0" style={{ color: "hsl(var(--green-accent))" }} />
+                            Federal Form 1040 analysis
+                          </div>
+                          <div className="flex items-center gap-2 text-body text-sm">
+                            <CheckCircle2 className="w-4 h-4 shrink-0" style={{ color: "hsl(var(--green-accent))" }} />
+                            Asset valuation & division
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </TabsContent>
 
               <TabsContent value="career" className="animate-fade-in">
-                <div className="space-y-6 text-body">
-                  <p>Dmitriy began his law career at the Franklin County Prosecutor's Office while still in law school. There, he focused his practice on felonies while simultaneously working as a supervised assistant prosecutor at Hilliard's Mayor's Court.</p>
-                  <p>He also gained invaluable experience working at the consulting firm of Milegroup Consulting in Mayfield Village, Ohio. There, Dmitriy gained concrete experience dealing with financial risk—knowledge he uses today to help his clients foresee and pinpoint issues that his clients may face.</p>
-                  <p>Dmitriy's legal experience also encompasses time spent working as a Law Clerk at Kats Law in Shaker Heights, Ohio, where he primarily handled matters relating to personal injury claims, including correspondence with insurance companies, meeting with clients, and compiling demand packets.</p>
-                  <p>In 2016, Dmitriy joined Weis & O'Connor, LLC in Columbus, Ohio, first as a Law Clerk and later as an Associate of the firm. During his time there, Dmitriy gained extensive experience preparing and drafting pleadings on behalf of clients, responding to opposing counsels' motions, advising clients on various family law issues, and more.</p>
-                  <p>He learned how to help clients understand the inherent risks involved in their case, as well as how to manage those risks. Today, Dmitriy uses this insight to help clients avoid and/or diminish the risk to liability, as well as financial risks associated with their situation.</p>
+                <div className="space-y-6">
+                  <div className="card-bordered flex gap-5 items-start hover:shadow-md transition-shadow duration-200">
+                    <div className="shrink-0 w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: "hsl(var(--secondary))" }}>
+                      <Gavel className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="heading-subsection text-lg mb-1">Franklin County Prosecutor's Office</h4>
+                      <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+                        <MapPin className="w-3.5 h-3.5" /> Columbus, OH
+                      </div>
+                      <p className="text-body text-base">Focused on felonies while simultaneously working as a supervised assistant prosecutor at Hilliard's Mayor's Court.</p>
+                    </div>
+                  </div>
+
+                  <div className="card-bordered flex gap-5 items-start hover:shadow-md transition-shadow duration-200">
+                    <div className="shrink-0 w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: "hsl(var(--secondary))" }}>
+                      <TrendingUp className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="heading-subsection text-lg mb-1">Milegroup Consulting</h4>
+                      <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+                        <MapPin className="w-3.5 h-3.5" /> Mayfield Village, OH
+                      </div>
+                      <p className="text-body text-base">Gained concrete experience dealing with financial risk—knowledge he uses today to help clients foresee and pinpoint issues they may face.</p>
+                    </div>
+                  </div>
+
+                  <div className="card-bordered flex gap-5 items-start hover:shadow-md transition-shadow duration-200">
+                    <div className="shrink-0 w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: "hsl(var(--secondary))" }}>
+                      <FileText className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="heading-subsection text-lg mb-1">Kats Law</h4>
+                      <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+                        <MapPin className="w-3.5 h-3.5" /> Shaker Heights, OH
+                      </div>
+                      <p className="text-body text-base">Handled personal injury claims including correspondence with insurance companies, meeting with clients, and compiling demand packets.</p>
+                    </div>
+                  </div>
+
+                  <div className="card-bordered flex gap-5 items-start hover:shadow-md transition-shadow duration-200">
+                    <div className="shrink-0 w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: "hsla(152, 45%, 38%, 0.1)" }}>
+                      <Building2 className="w-6 h-6" style={{ color: "hsl(var(--green-accent))" }} />
+                    </div>
+                    <div>
+                      <h4 className="heading-subsection text-lg mb-1">Weis & O'Connor, LLC</h4>
+                      <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+                        <MapPin className="w-3.5 h-3.5" /> Columbus, OH · 2016
+                      </div>
+                      <p className="text-body text-base mb-3">Started as Law Clerk, promoted to Associate. Gained extensive experience in family law—preparing pleadings, responding to motions, and advising clients.</p>
+                      <div className="flex flex-wrap gap-2">
+                        <span className="trust-badge text-xs"><CheckCircle2 className="w-3.5 h-3.5" /> Pleadings & Motions</span>
+                        <span className="trust-badge text-xs"><CheckCircle2 className="w-3.5 h-3.5" /> Client Advisory</span>
+                        <span className="trust-badge text-xs"><CheckCircle2 className="w-3.5 h-3.5" /> Risk Management</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </TabsContent>
             </Tabs>
