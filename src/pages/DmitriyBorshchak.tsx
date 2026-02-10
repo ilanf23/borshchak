@@ -11,15 +11,11 @@ const DmitriyBorshchak = () => {
       <Header />
       <main className="flex-1">
         {/* Hero */}
-        <section className="section-padding bg-secondary/50">
-          <div className="container max-w-4xl">
-            <div className="flex flex-col md:flex-row items-center gap-8">
-              <img
-                src={dmitriyPhoto}
-                alt="Dmitriy Borshchak"
-                className="w-48 md:w-64 rounded-lg object-cover shadow-lg flex-shrink-0"
-              />
-              <div>
+        <section className="relative bg-secondary/50 min-h-[500px] md:min-h-[600px]">
+          <div className="flex flex-col md:flex-row min-h-[500px] md:min-h-[600px]">
+            {/* Text Content */}
+            <div className="flex-1 flex items-center section-padding">
+              <div className="max-w-xl ml-auto mr-8">
                 <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4">
                   Borshchak Law Group | Columbus, OH
                 </p>
@@ -28,6 +24,14 @@ const DmitriyBorshchak = () => {
                   Dmitriy Borshchak is a dedicated family lawyer in Columbus and founding attorney of Borshchak Law Group. After first pursuing a brief career in medicine, Dmitriy found his true passion in the legal field, assisting clients and helping them navigate tough situations.
                 </p>
               </div>
+            </div>
+            {/* Photo */}
+            <div className="md:w-[45%] relative">
+              <img
+                src={dmitriyPhoto}
+                alt="Dmitriy Borshchak"
+                className="w-full h-full object-cover object-top"
+              />
             </div>
           </div>
         </section>
