@@ -20,6 +20,23 @@ const HankSonderman = () => {
           </div>
         </section>
 
+        {/* Video */}
+        <section className="section-padding-sm bg-background">
+          <div className="container">
+            <div className="max-w-4xl mx-auto">
+              <div className="aspect-video rounded-lg overflow-hidden shadow-lg">
+                <iframe
+                  src="https://www.youtube.com/embed/M1DSZLFOHZM"
+                  title="Hank Sonderman - Borshchak Law Group"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* About */}
         <section className="section-padding">
           <div className="container max-w-4xl">
