@@ -44,12 +44,6 @@ const HankSonderman = () => {
                 alt="Hank Sonderman"
                 className="w-full h-full object-cover object-top"
               />
-              <div
-                className="absolute inset-0 pointer-events-none hidden md:block"
-                style={{
-                  background: "linear-gradient(to right, hsl(var(--trust-navy)) 0%, transparent 30%)",
-                }}
-              />
             </div>
           </div>
         </section>
