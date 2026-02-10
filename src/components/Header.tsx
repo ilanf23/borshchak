@@ -194,9 +194,6 @@ const Header = () => {
           </div>
           
           <div className="flex items-center gap-4">
-            <a href="tel:+13803240878" className="lg:hidden flex items-center justify-center w-10 h-10 rounded-full bg-secondary text-primary">
-              <Phone className="w-5 h-5" />
-            </a>
             <button onClick={openConsultation} className="hidden sm:flex btn-cta text-sm px-5 py-2.5 whitespace-nowrap">
               <Calendar className="w-4 h-4 mr-2" />
               Free Consultation
