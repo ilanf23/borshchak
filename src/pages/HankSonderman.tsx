@@ -2,7 +2,7 @@ import { Award, GraduationCap, Briefcase, Heart, BookOpen, Scale, Users, MapPin,
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import hankPhoto from "@/assets/hank-sonderman.png";
+import hankPhoto from "@/assets/hank-sonderman-hero.png";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const HankSonderman = () => {
