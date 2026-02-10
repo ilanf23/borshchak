@@ -17,7 +17,7 @@ const DmitriyBorshchak = () => {
               <img
                 src={dmitriyPhoto}
                 alt="Dmitriy Borshchak"
-                className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover shadow-lg flex-shrink-0"
+                className="w-48 md:w-64 rounded-lg object-cover shadow-lg flex-shrink-0"
               />
               <div>
                 <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4">
