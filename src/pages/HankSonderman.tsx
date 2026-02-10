@@ -1,6 +1,7 @@
 import { Phone, GraduationCap, Heart } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import hankPhoto from "@/assets/hank-sonderman.png";
 
 const HankSonderman = () => {
   return (
@@ -10,13 +11,22 @@ const HankSonderman = () => {
         {/* Hero */}
         <section className="section-padding bg-secondary/50">
           <div className="container max-w-4xl">
-            <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4">
-              Borshchak Law Group | Columbus, OH
-            </p>
-            <h1 className="heading-hero mb-6">Hank Sonderman</h1>
-            <p className="text-body text-lg leading-relaxed">
-              In family law, attorneys are trusted with the client's most precious and personal interests. This means that an empathetic and sincere connection to each case is essential because it fuels the drive and commitment to work for the client's best outcome.
-            </p>
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              <img
+                src={hankPhoto}
+                alt="Hank Sonderman"
+                className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover shadow-lg flex-shrink-0"
+              />
+              <div>
+                <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4">
+                  Borshchak Law Group | Columbus, OH
+                </p>
+                <h1 className="heading-hero mb-6">Hank Sonderman</h1>
+                <p className="text-body text-lg leading-relaxed">
+                  In family law, attorneys are trusted with the client's most precious and personal interests. This means that an empathetic and sincere connection to each case is essential because it fuels the drive and commitment to work for the client's best outcome.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
