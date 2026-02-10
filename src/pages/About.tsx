@@ -90,13 +90,9 @@ const About = () => {
               Schedule a consultation to discuss your situation and see if we're the right fit.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link to="/contact" className="btn-cta">
-                <Calendar className="w-5 h-5 mr-2" />
-                Book Free Consultation
-              </Link>
-              <a href="tel:+16145551234" className="btn-secondary">
+              <a href="tel:+13803240878" className="btn-cta">
                 <Phone className="w-5 h-5 mr-2" />
-                (614) 555-1234
+                Call Us Now: 380-324-0878
               </a>
             </div>
           </div>

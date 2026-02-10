@@ -1,4 +1,4 @@
-import { Calendar, Phone, CheckCircle } from "lucide-react";
+import { Phone, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -21,13 +21,9 @@ const Divorce = () => {
               Whether you're facing a contested divorce or seeking an amicable resolution, you need an attorney who understands the financial and emotional stakes. We protect your assets, your parental rights, and your future.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/contact" className="btn-cta">
-                <Calendar className="w-5 h-5 mr-2" />
-                Book Free Consultation
-              </Link>
-              <a href="tel:+16145551234" className="btn-secondary">
+              <a href="tel:+13803240878" className="btn-cta">
                 <Phone className="w-5 h-5 mr-2" />
-                (614) 555-1234
+                Call Us Now: 380-324-0878
               </a>
             </div>
           </div>
@@ -82,10 +78,10 @@ const Divorce = () => {
             <p className="text-body mb-8">
               Schedule a confidential consultation to understand your options and develop a clear path forward.
             </p>
-            <Link to="/contact" className="btn-cta">
-              <Calendar className="w-5 h-5 mr-2" />
-              Book Free Consultation
-            </Link>
+            <a href="tel:+13803240878" className="btn-cta">
+              <Phone className="w-5 h-5 mr-2" />
+              Call Us Now: 380-324-0878
+            </a>
           </div>
         </section>
       </main>

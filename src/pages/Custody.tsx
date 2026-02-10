@@ -1,4 +1,4 @@
-import { Calendar, Phone, CheckCircle } from "lucide-react";
+import { Phone, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -21,13 +21,9 @@ const Custody = () => {
               Custody decisions shape your family for years to come. We fight for arrangements that protect your parental rights while prioritizing your children's wellbeing—whether through negotiation or litigation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/contact" className="btn-cta">
-                <Calendar className="w-5 h-5 mr-2" />
-                Book Free Consultation
-              </Link>
-              <a href="tel:+16145551234" className="btn-secondary">
+              <a href="tel:+13803240878" className="btn-cta">
                 <Phone className="w-5 h-5 mr-2" />
-                (614) 555-1234
+                Call Us Now: 380-324-0878
               </a>
             </div>
           </div>
@@ -82,10 +78,10 @@ const Custody = () => {
             <p className="text-body mb-8">
               Get clear guidance on your rights and options in a confidential consultation.
             </p>
-            <Link to="/contact" className="btn-cta">
-              <Calendar className="w-5 h-5 mr-2" />
-              Book Free Consultation
-            </Link>
+            <a href="tel:+13803240878" className="btn-cta">
+              <Phone className="w-5 h-5 mr-2" />
+              Call Us Now: 380-324-0878
+            </a>
           </div>
         </section>
       </main>

@@ -194,10 +194,10 @@ const Header = () => {
           </div>
           
           <div className="flex items-center gap-4">
-            <button onClick={openConsultation} className="hidden sm:flex btn-cta text-sm px-5 py-2.5 whitespace-nowrap">
-              <Calendar className="w-4 h-4 mr-2" />
-              Free Consultation
-            </button>
+            <a href="tel:+13803240878" className="hidden sm:flex btn-cta text-sm px-5 py-2.5 whitespace-nowrap">
+              <Phone className="w-4 h-4 mr-2" />
+              Call Us Now
+            </a>
             
             {/* Mobile Menu */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -280,19 +280,9 @@ const Header = () => {
 
                   {/* CTA */}
                   <div className="mt-6 pt-6 border-t border-border">
-                    <button 
-                      onClick={() => {
-                        setIsOpen(false);
-                        openConsultation();
-                      }}
-                      className="btn-cta w-full justify-center text-sm px-5 py-3"
-                    >
-                      <Calendar className="w-4 h-4 mr-2" />
-                      Free Consultation
-                    </button>
-                    <a href="tel:+13803240878" className="flex items-center justify-center gap-2 mt-4 text-sm text-muted-foreground">
-                      <Phone className="w-4 h-4" />
-                      <span>380-324-0878</span>
+                    <a href="tel:+13803240878" className="btn-cta w-full justify-center text-sm px-5 py-3">
+                      <Phone className="w-4 h-4 mr-2" />
+                      Call Us Now: 380-324-0878
                     </a>
                   </div>
                 </nav>

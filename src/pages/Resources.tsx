@@ -1,4 +1,4 @@
-import { Calendar, ArrowRight } from "lucide-react";
+import { Phone, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -101,10 +101,10 @@ const Resources = () => {
             <p className="text-body mb-8">
               Schedule a free consultation to get answers tailored to your situation.
             </p>
-            <Link to="/contact" className="btn-cta">
-              <Calendar className="w-5 h-5 mr-2" />
-              Book Free Consultation
-            </Link>
+            <a href="tel:+13803240878" className="btn-cta">
+              <Phone className="w-5 h-5 mr-2" />
+              Call Us Now: 380-324-0878
+            </a>
           </div>
         </section>
       </main>

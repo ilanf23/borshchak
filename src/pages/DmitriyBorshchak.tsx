@@ -1,10 +1,9 @@
-import { Calendar, Phone, Award, GraduationCap, Briefcase, Mic } from "lucide-react";
+import { Phone, Award, GraduationCap, Briefcase, Mic } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { useConsultation } from "@/contexts/ConsultationContext";
 
 const DmitriyBorshchak = () => {
-  const { openConsultation } = useConsultation();
+  
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -125,16 +124,10 @@ const DmitriyBorshchak = () => {
             <p className="text-body mb-8">
               Call 380-324-0878 to get a free initial consultation with one of our team members.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button onClick={openConsultation} className="btn-cta">
-                <Calendar className="w-5 h-5 mr-2" />
-                Request a Consultation
-              </button>
-              <a href="tel:+13803240878" className="btn-secondary">
-                <Phone className="w-5 h-5 mr-2" />
-                (380) 324-0878
-              </a>
-            </div>
+            <a href="tel:+13803240878" className="btn-cta">
+              <Phone className="w-5 h-5 mr-2" />
+              Call Us Now: 380-324-0878
+            </a>
           </div>
         </section>
       </main>
