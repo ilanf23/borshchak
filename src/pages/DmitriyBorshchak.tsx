@@ -126,21 +126,7 @@ const DmitriyBorshchak = () => {
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="section-padding bg-secondary/50">
-          <div className="container max-w-2xl text-center">
-            <h2 className="heading-section mb-4">
-              Looking for a Columbus Family Lawyer?
-            </h2>
-            <p className="text-body mb-8">
-              Call 380-324-0878 to get a free initial consultation with one of our team members.
-            </p>
-            <a href="tel:+13803240878" className="btn-cta">
-              <Phone className="w-5 h-5 mr-2" />
-              Call Us Now: 380-324-0878
-            </a>
-          </div>
-        </section>
+
       </main>
       <Footer />
     </div>
