@@ -1,5 +1,5 @@
 import { Phone, Award, GraduationCap, Briefcase, Mic } from "lucide-react";
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import dmitriyPhoto from "@/assets/dmitriy-borshchak.png";
@@ -82,56 +82,47 @@ const DmitriyBorshchak = () => {
         {/* Education, Speaking, Legal Career Accordion */}
         <section className="section-padding bg-card">
           <div className="container max-w-4xl">
-            <Accordion type="multiple" className="space-y-4">
-              <AccordionItem value="education" className="border rounded-lg px-6">
-                <AccordionTrigger className="hover:no-underline">
-                  <div className="flex items-center gap-3">
-                    <GraduationCap className="w-7 h-7 text-primary" />
-                    <span className="heading-section mb-0 text-left">Education</span>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent>
-                  <div className="space-y-6 text-body pt-2">
-                    <p>Dmitriy obtained his undergraduate degree in Political Science from Ohio University. There, he joined the student senate and began investigating how he could personally help the local community and students.</p>
-                    <p>He went on to attend law school at Capital University Law School in Columbus, Ohio. During his time there, Dmitriy was a member of the American Association for Justice Mock Trial Team, was on the Dean's List, and received the CALI Award for Business and Financial Concepts for Lawyers.</p>
-                    <p>During his time in law school, he also worked pro bono, representing individuals in the Capital University Law School Litigation Clinic who could not afford an attorney at no charge.</p>
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
+            <Tabs defaultValue="education" className="w-full">
+              <TabsList className="w-full h-auto flex-wrap gap-2 bg-transparent p-0 mb-8">
+                <TabsTrigger value="education" className="flex items-center gap-2 px-5 py-3 text-base font-medium border border-border rounded-lg data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:border-primary">
+                  <GraduationCap className="w-5 h-5" />
+                  Education
+                </TabsTrigger>
+                <TabsTrigger value="speaking" className="flex items-center gap-2 px-5 py-3 text-base font-medium border border-border rounded-lg data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:border-primary">
+                  <Mic className="w-5 h-5" />
+                  Speaking Engagements
+                </TabsTrigger>
+                <TabsTrigger value="career" className="flex items-center gap-2 px-5 py-3 text-base font-medium border border-border rounded-lg data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:border-primary">
+                  <Briefcase className="w-5 h-5" />
+                  Legal Career
+                </TabsTrigger>
+              </TabsList>
 
-              <AccordionItem value="speaking" className="border rounded-lg px-6">
-                <AccordionTrigger className="hover:no-underline">
-                  <div className="flex items-center gap-3">
-                    <Mic className="w-7 h-7 text-primary" />
-                    <span className="heading-section mb-0 text-left">Speaking Engagements</span>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent>
-                  <div className="space-y-6 text-body pt-2">
-                    <p>Recently, Dmitriy was invited to lead a seminar on uncovering hidden or concealed assets during litigation. During the seminar, Dmitriy covered a range of topics related to asset division, including evaluating and finding hidden assets, classifying marital vs. non-marital assets, valuing assets, and how to divide assets.</p>
-                    <p>Much of his discussion centered on using tax forms, specifically Federal Form 1040, to uncover hidden assets. Dmitriy went through the form line by line, showcasing how each itemized line represents various forms of income and explaining the significance of each line in relation to other listed income and assets.</p>
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
+              <TabsContent value="education">
+                <div className="space-y-6 text-body">
+                  <p>Dmitriy obtained his undergraduate degree in Political Science from Ohio University. There, he joined the student senate and began investigating how he could personally help the local community and students.</p>
+                  <p>He went on to attend law school at Capital University Law School in Columbus, Ohio. During his time there, Dmitriy was a member of the American Association for Justice Mock Trial Team, was on the Dean's List, and received the CALI Award for Business and Financial Concepts for Lawyers.</p>
+                  <p>During his time in law school, he also worked pro bono, representing individuals in the Capital University Law School Litigation Clinic who could not afford an attorney at no charge.</p>
+                </div>
+              </TabsContent>
 
-              <AccordionItem value="career" className="border rounded-lg px-6">
-                <AccordionTrigger className="hover:no-underline">
-                  <div className="flex items-center gap-3">
-                    <Briefcase className="w-7 h-7 text-primary" />
-                    <span className="heading-section mb-0 text-left">Legal Career</span>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent>
-                  <div className="space-y-6 text-body pt-2">
-                    <p>Dmitriy began his law career at the Franklin County Prosecutor's Office while still in law school. There, he focused his practice on felonies while simultaneously working as a supervised assistant prosecutor at Hilliard's Mayor's Court.</p>
-                    <p>He also gained invaluable experience working at the consulting firm of Milegroup Consulting in Mayfield Village, Ohio. There, Dmitriy gained concrete experience dealing with financial risk—knowledge he uses today to help his clients foresee and pinpoint issues that his clients may face.</p>
-                    <p>Dmitriy's legal experience also encompasses time spent working as a Law Clerk at Kats Law in Shaker Heights, Ohio, where he primarily handled matters relating to personal injury claims, including correspondence with insurance companies, meeting with clients, and compiling demand packets.</p>
-                    <p>In 2016, Dmitriy joined Weis & O'Connor, LLC in Columbus, Ohio, first as a Law Clerk and later as an Associate of the firm. During his time there, Dmitriy gained extensive experience preparing and drafting pleadings on behalf of clients, responding to opposing counsels' motions, advising clients on various family law issues, and more.</p>
-                    <p>He learned how to help clients understand the inherent risks involved in their case, as well as how to manage those risks. Today, Dmitriy uses this insight to help clients avoid and/or diminish the risk to liability, as well as financial risks associated with their situation.</p>
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
+              <TabsContent value="speaking">
+                <div className="space-y-6 text-body">
+                  <p>Recently, Dmitriy was invited to lead a seminar on uncovering hidden or concealed assets during litigation. During the seminar, Dmitriy covered a range of topics related to asset division, including evaluating and finding hidden assets, classifying marital vs. non-marital assets, valuing assets, and how to divide assets.</p>
+                  <p>Much of his discussion centered on using tax forms, specifically Federal Form 1040, to uncover hidden assets. Dmitriy went through the form line by line, showcasing how each itemized line represents various forms of income and explaining the significance of each line in relation to other listed income and assets.</p>
+                </div>
+              </TabsContent>
+
+              <TabsContent value="career">
+                <div className="space-y-6 text-body">
+                  <p>Dmitriy began his law career at the Franklin County Prosecutor's Office while still in law school. There, he focused his practice on felonies while simultaneously working as a supervised assistant prosecutor at Hilliard's Mayor's Court.</p>
+                  <p>He also gained invaluable experience working at the consulting firm of Milegroup Consulting in Mayfield Village, Ohio. There, Dmitriy gained concrete experience dealing with financial risk—knowledge he uses today to help his clients foresee and pinpoint issues that his clients may face.</p>
+                  <p>Dmitriy's legal experience also encompasses time spent working as a Law Clerk at Kats Law in Shaker Heights, Ohio, where he primarily handled matters relating to personal injury claims, including correspondence with insurance companies, meeting with clients, and compiling demand packets.</p>
+                  <p>In 2016, Dmitriy joined Weis & O'Connor, LLC in Columbus, Ohio, first as a Law Clerk and later as an Associate of the firm. During his time there, Dmitriy gained extensive experience preparing and drafting pleadings on behalf of clients, responding to opposing counsels' motions, advising clients on various family law issues, and more.</p>
+                  <p>He learned how to help clients understand the inherent risks involved in their case, as well as how to manage those risks. Today, Dmitriy uses this insight to help clients avoid and/or diminish the risk to liability, as well as financial risks associated with their situation.</p>
+                </div>
+              </TabsContent>
+            </Tabs>
           </div>
         </section>
 
