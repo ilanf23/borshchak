@@ -19,6 +19,7 @@ import KeriReeves from "./pages/KeriReeves";
 import Process from "./pages/Process";
 import Resources from "./pages/Resources";
 import Contact from "./pages/Contact";
+import Annulment from "./pages/Annulment";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -46,6 +47,7 @@ const App = () => (
             <Route path="/process" element={<Process />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/annulment" element={<Annulment />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
