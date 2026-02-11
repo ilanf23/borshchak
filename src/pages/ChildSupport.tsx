@@ -396,15 +396,19 @@ const ChildSupport = () => {
           </div>
         </section>
 
-        {/* Stock Photo: Parent and Child */}
-        <section className="py-8">
-          <div className="container max-w-4xl">
-            <img
-              src="https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=1200&q=80"
-              alt="Parent and child sharing a warm moment together"
-              className="w-full h-64 md:h-80 object-cover rounded-lg"
-              loading="lazy"
-            />
+        {/* Style 1: Full-Bleed Background with Stat Overlay */}
+        <section
+          className="relative min-h-[300px] md:min-h-[400px] flex items-center justify-center bg-cover bg-center"
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=1600&q=80')" }}
+        >
+          <div className="absolute inset-0" style={{ backgroundColor: "hsla(215, 45%, 22%, 0.75)" }} />
+          <div className="relative z-10 text-center px-6 max-w-3xl">
+            <p className="text-4xl md:text-5xl font-serif font-bold mb-4" style={{ color: "hsl(var(--primary-foreground))" }}>
+              750,000+
+            </p>
+            <p className="text-xl md:text-2xl font-serif leading-relaxed" style={{ color: "hsla(40, 30%, 98%, 0.9)" }}>
+              Ohio children are covered by active child support orders
+            </p>
           </div>
         </section>
 
@@ -441,15 +445,21 @@ const ChildSupport = () => {
           </div>
         </section>
 
-        {/* Stock Photo: Financial Planning */}
-        <section className="py-8">
+        {/* Style 5: Offset Image with Green Accent Block */}
+        <section className="section-padding-sm">
           <div className="container max-w-4xl">
-            <img
-              src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80"
-              alt="Financial documents and planning materials on a desk"
-              className="w-full h-64 md:h-80 object-cover rounded-lg"
-              loading="lazy"
-            />
+            <div className="relative">
+              <div
+                className="absolute top-4 right-4 w-full h-full rounded-lg hidden md:block"
+                style={{ backgroundColor: "hsl(var(--green-accent))" }}
+              />
+              <img
+                src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80"
+                alt="Financial documents and planning materials on a desk"
+                className="relative z-10 w-full h-64 md:h-80 object-cover rounded-lg"
+                loading="lazy"
+              />
+            </div>
           </div>
         </section>
 
@@ -572,15 +582,23 @@ const ChildSupport = () => {
           </div>
         </section>
 
-        {/* Stock Photo: Family Outdoors */}
-        <section className="py-8">
-          <div className="container max-w-4xl">
-            <img
-              src="https://images.unsplash.com/photo-1475503572774-15a45e5d60b9?w=1200&q=80"
-              alt="Family enjoying time together outdoors"
-              className="w-full h-64 md:h-80 object-cover rounded-lg"
-              loading="lazy"
-            />
+        {/* Style 2: Side-by-Side (Image Left, Text Right) */}
+        <section className="section-padding-sm">
+          <div className="container max-w-5xl">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <img
+                src="https://images.unsplash.com/photo-1475503572774-15a45e5d60b9?w=1200&q=80"
+                alt="Family enjoying time together outdoors"
+                className="w-full h-72 md:h-96 object-cover rounded-lg"
+                loading="lazy"
+              />
+              <div className="space-y-4">
+                <h3 className="heading-subsection">Your Child's Future Comes First</h3>
+                <p className="text-body">
+                  Child support ensures your child continues to receive the care and opportunities they deserve. Whether you're seeking, modifying, or enforcing an order, we're here to guide you through every step.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 

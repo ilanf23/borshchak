@@ -369,15 +369,23 @@ const Custody = () => {
           </div>
         </section>
 
-        {/* Stock Photo: Parent with Child */}
-        <section className="py-8">
-          <div className="container max-w-4xl">
-            <img
-              src="https://images.unsplash.com/photo-1476703993599-0035a21b17a9?w=1200&q=80"
-              alt="Parent spending quality time with their child"
-              className="w-full h-64 md:h-80 object-cover rounded-lg"
-              loading="lazy"
-            />
+        {/* Style 3: Side-by-Side (Text Left, Image Right) */}
+        <section className="section-padding-sm">
+          <div className="container max-w-5xl">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div className="space-y-4 order-2 md:order-1">
+                <h3 className="heading-subsection">Protecting Your Family's Future</h3>
+                <p className="text-body">
+                  Every custody decision is guided by one standard: the best interests of your child. Our attorneys work to protect your parental rights while keeping your child's wellbeing at the center of every strategy.
+                </p>
+              </div>
+              <img
+                src="https://images.unsplash.com/photo-1476703993599-0035a21b17a9?w=1200&q=80"
+                alt="Parent spending quality time with their child"
+                className="w-full h-72 md:h-96 object-cover rounded-lg order-1 md:order-2"
+                loading="lazy"
+              />
+            </div>
           </div>
         </section>
 
@@ -431,16 +439,14 @@ const Custody = () => {
           </div>
         </section>
 
-        {/* Stock Photo: Family Walking */}
-        <section className="py-8">
-          <div className="container max-w-4xl">
-            <img
-              src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=1200&q=80"
-              alt="Family walking together outdoors"
-              className="w-full h-64 md:h-80 object-cover rounded-lg"
-              loading="lazy"
-            />
-          </div>
+        {/* Style 4: Full-Bleed Edge-to-Edge */}
+        <section>
+          <img
+            src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=1600&q=80"
+            alt="Family walking together outdoors"
+            className="w-full h-64 md:h-96 object-cover"
+            loading="lazy"
+          />
         </section>
 
         {/* Custody Modification */}
@@ -493,8 +499,8 @@ const Custody = () => {
           </div>
         </section>
 
-        {/* Stock Photo: Child Playing */}
-        <section className="py-8">
+        {/* Style 6: Image with Caption Bar */}
+        <section className="section-padding-sm">
           <div className="container max-w-4xl">
             <img
               src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=1200&q=80"
@@ -502,6 +508,9 @@ const Custody = () => {
               className="w-full h-64 md:h-80 object-cover rounded-lg"
               loading="lazy"
             />
+            <p className="mt-3 text-center text-body-sm italic">
+              Every custody decision centers on one priority — your child's happiness and stability.
+            </p>
           </div>
         </section>
 

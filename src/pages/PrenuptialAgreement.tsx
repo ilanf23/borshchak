@@ -374,16 +374,14 @@ const PrenuptialAgreement = () => {
           </div>
         </section>
 
-        {/* Stock Photo: Couple Holding Hands */}
-        <section className="py-8">
-          <div className="container max-w-4xl">
-            <img
-              src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&q=80"
-              alt="Couple holding hands during wedding preparation"
-              className="w-full h-64 md:h-80 object-cover rounded-lg"
-              loading="lazy"
-            />
-          </div>
+        {/* Style 4: Full-Bleed Edge-to-Edge */}
+        <section>
+          <img
+            src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1600&q=80"
+            alt="Couple holding hands during wedding preparation"
+            className="w-full h-64 md:h-96 object-cover"
+            loading="lazy"
+          />
         </section>
 
         {/* What a Prenup Can Do */}
@@ -439,15 +437,23 @@ const PrenuptialAgreement = () => {
           </div>
         </section>
 
-        {/* Stock Photo: Signing Documents */}
-        <section className="py-8">
-          <div className="container max-w-4xl">
-            <img
-              src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80"
-              alt="Person signing legal documents at a desk"
-              className="w-full h-64 md:h-80 object-cover rounded-lg"
-              loading="lazy"
-            />
+        {/* Style 3: Side-by-Side (Text Left, Image Right) */}
+        <section className="section-padding-sm">
+          <div className="container max-w-5xl">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div className="space-y-4 order-2 md:order-1">
+                <h3 className="heading-subsection">Built on Transparency</h3>
+                <p className="text-body">
+                  A valid prenuptial agreement requires full disclosure, fairness, and independent legal representation for both parties. Our attorneys ensure your agreement meets every standard Ohio courts require.
+                </p>
+              </div>
+              <img
+                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80"
+                alt="Person signing legal documents at a desk"
+                className="w-full h-72 md:h-96 object-cover rounded-lg order-1 md:order-2"
+                loading="lazy"
+              />
+            </div>
           </div>
         </section>
 
@@ -489,15 +495,17 @@ const PrenuptialAgreement = () => {
           </div>
         </section>
 
-        {/* Stock Photo: Happy Couple */}
-        <section className="py-8">
-          <div className="container max-w-4xl">
-            <img
-              src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=1200&q=80"
-              alt="Happy couple smiling together"
-              className="w-full h-64 md:h-80 object-cover rounded-lg"
-              loading="lazy"
-            />
+        {/* Style 1: Full-Bleed Background with Quote Overlay */}
+        <section
+          className="relative min-h-[300px] md:min-h-[400px] flex items-center justify-center bg-cover bg-center"
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=1600&q=80')" }}
+        >
+          <div className="absolute inset-0" style={{ backgroundColor: "hsla(215, 45%, 22%, 0.75)" }} />
+          <div className="relative z-10 text-center px-6 max-w-3xl">
+            <p className="text-2xl md:text-3xl font-serif font-medium leading-relaxed italic" style={{ color: "hsl(var(--primary-foreground))" }}>
+              "The best time to plan for the unexpected is before it happens."
+            </p>
+            <p className="mt-4 text-base" style={{ color: "hsla(40, 30%, 98%, 0.7)" }}>— Planning for your future together</p>
           </div>
         </section>
 
