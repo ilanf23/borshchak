@@ -26,6 +26,7 @@ import SpousalSupport from "./pages/SpousalSupport";
 import ContemptProceedings from "./pages/ContemptProceedings";
 import LegalSeparation from "./pages/LegalSeparation";
 import BusinessInterests from "./pages/BusinessInterests";
+import EnforcementOfCourtOrders from "./pages/EnforcementOfCourtOrders";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -60,6 +61,7 @@ const App = () => (
             <Route path="/contempt-proceedings" element={<ContemptProceedings />} />
             <Route path="/legal-separation" element={<LegalSeparation />} />
             <Route path="/business-interests" element={<BusinessInterests />} />
+            <Route path="/enforcement-of-court-orders" element={<EnforcementOfCourtOrders />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
