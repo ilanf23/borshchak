@@ -1,4 +1,5 @@
-import { Phone, ArrowRight, Calendar, ExternalLink } from "lucide-react";
+import { Phone, ArrowRight, Calendar } from "lucide-react";
+import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -18,7 +19,7 @@ const blogPosts = [
     title: "Enforcing Ohio Child Custody Orders Across State Lines: UCCJEA Explained",
     excerpt: "Navigating the complexities of child custody can be daunting for any parent—especially when life's circumstances take you across state lines.",
     date: "February 10, 2026",
-    href: "https://dlbcounsel.com/enforcing-ohio-child-custody-orders-across-state-lines-uccjea-explained/",
+    slug: "custody-state-lines",
     category: "Child Custody",
     image: blogCustodyStateLines,
   },
@@ -26,7 +27,7 @@ const blogPosts = [
     title: "Essential Questions to Ask Before Filing for Divorce in Ohio",
     excerpt: "Divorce is never an easy decision, and for small business owners, developers, and general readers in Ohio, the process can feel especially overwhelming.",
     date: "February 10, 2026",
-    href: "https://dlbcounsel.com/essential-questions-to-ask-before-filing-for-divorce-in-ohio/",
+    slug: "questions-before-divorce",
     category: "Divorce",
     image: blogQuestionsBeforeDivorce,
   },
@@ -34,7 +35,7 @@ const blogPosts = [
     title: "Unveiling Ohio Judges' Approach: Key Factors in Fair Divorce Settlements",
     excerpt: "Navigating a divorce can be one of the most challenging journeys in life, especially when it comes to achieving a fair settlement.",
     date: "February 10, 2026",
-    href: "https://dlbcounsel.com/unveiling-ohio-judges-approach-key-factors-in-fair-divorce-settlements/",
+    slug: "judges-fair-settlements",
     category: "Divorce",
     image: blogJudgesFairSettlements,
   },
@@ -42,7 +43,7 @@ const blogPosts = [
     title: "What Are the Legal Risks of Moving Out During an Ohio Divorce?",
     excerpt: "Divorce is never easy, and the choices you make early in the process can have lasting legal consequences.",
     date: "February 10, 2026",
-    href: "https://dlbcounsel.com/what-are-the-legal-risks-of-moving-out-during-an-ohio-divorce/",
+    slug: "moving-out-risks",
     category: "Divorce",
     image: blogMovingOutRisks,
   },
@@ -50,7 +51,7 @@ const blogPosts = [
     title: "Can You File for Divorce in Ohio While Living Out of State? Residency Rules Explained",
     excerpt: "Facing divorce is never easy, and the process can become even more complex if you no longer live in the state where you were married.",
     date: "February 10, 2026",
-    href: "https://dlbcounsel.com/can-you-file-for-divorce-in-ohio-while-living-out-of-state-residency-rules-explained/",
+    slug: "filing-out-of-state",
     category: "Divorce",
     image: blogFilingOutOfState,
   },
@@ -58,7 +59,7 @@ const blogPosts = [
     title: "How Divorce Impacts College Expenses for Children in Ohio: Legal Obligations and Agreements",
     excerpt: "Navigating the financial landscape of divorce is never easy, especially when children's futures are at stake.",
     date: "February 10, 2026",
-    href: "https://dlbcounsel.com/how-divorce-impacts-college-expenses-for-children-in-ohio-legal-obligations-and-agreements/",
+    slug: "college-expenses",
     category: "Financial Matters",
     image: blogCollegeExpenses,
   },
@@ -66,7 +67,7 @@ const blogPosts = [
     title: "What Happens to Inheritance Money in an Ohio Divorce? Separate Property or Marital Asset?",
     excerpt: "If you're going through a divorce in Ohio, understanding how inheritance is treated can protect your financial interests.",
     date: "February 10, 2026",
-    href: "https://dlbcounsel.com/what-happens-to-inheritance-money-in-an-ohio-divorce-separate-property-or-marital-asset/",
+    slug: "inheritance-divorce",
     category: "Financial Matters",
     image: blogInheritanceDivorce,
   },
@@ -74,7 +75,7 @@ const blogPosts = [
     title: "Ohio Courts and Alimony Disputes: Modification, Enforcement, and Key Legal Standards",
     excerpt: "Alimony, also known as spousal support, is often one of the most contentious aspects of a divorce.",
     date: "February 10, 2026",
-    href: "https://dlbcounsel.com/ohio-courts-and-alimony-disputes-modification-enforcement-and-key-legal-standards/",
+    slug: "alimony-disputes",
     category: "Spousal Support",
     image: blogAlimonyDisputes,
   },
@@ -82,7 +83,7 @@ const blogPosts = [
     title: "Fast-Tracking Divorce in Ohio: Dissolution's 30-90 Day Path Under Key Conditions",
     excerpt: "Navigating the end of a marriage can be daunting, especially when you want to resolve things quickly and amicably.",
     date: "February 9, 2026",
-    href: "https://dlbcounsel.com/fast-tracking-divorce-in-ohio-dissolutions-30-90-day-path-under-key-conditions/",
+    slug: "fast-track-dissolution",
     category: "Dissolution",
     image: blogFastTrackDissolution,
   },
@@ -90,7 +91,7 @@ const blogPosts = [
     title: "Key Evidence Essentials for Winning Your Ohio Divorce Case",
     excerpt: "Divorce is never easy, especially when the stakes are high. Understanding the key evidence you need can make all the difference.",
     date: "February 9, 2026",
-    href: "https://dlbcounsel.com/key-evidence-essentials-for-winning-your-ohio-divorce-case/",
+    slug: "evidence-essentials",
     category: "Divorce",
     image: blogEvidenceEssentials,
   },
@@ -121,11 +122,9 @@ const Resources = () => {
           <div className="container max-w-5xl">
             <div className="grid md:grid-cols-2 gap-8">
               {blogPosts.map((post, index) => (
-                <a
+                <Link
                   key={index}
-                  href={post.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  to={`/blog/${post.slug}`}
                   className="card-elevated group hover:shadow-lg transition-all duration-300 flex flex-col overflow-hidden rounded-lg"
                 >
                   <div className="aspect-video overflow-hidden">
@@ -157,7 +156,7 @@ const Resources = () => {
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </div>
                   </div>
-                </a>
+                </Link>
               ))}
             </div>
           </div>

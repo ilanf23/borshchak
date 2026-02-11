@@ -18,6 +18,7 @@ import HankSonderman from "./pages/HankSonderman";
 import KeriReeves from "./pages/KeriReeves";
 import Process from "./pages/Process";
 import Resources from "./pages/Resources";
+import BlogPostPage from "./pages/BlogPostPage";
 import Contact from "./pages/Contact";
 import Annulment from "./pages/Annulment";
 import Dissolution from "./pages/Dissolution";
@@ -54,6 +55,7 @@ const App = () => (
             <Route path="/attorneys/keri-reeves" element={<KeriReeves />} />
             <Route path="/process" element={<Process />} />
             <Route path="/resources" element={<Resources />} />
+            <Route path="/blog/:slug" element={<BlogPostPage />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/annulment" element={<Annulment />} />
             <Route path="/dissolution" element={<Dissolution />} />
