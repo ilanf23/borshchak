@@ -566,30 +566,6 @@ const ChildSupport = () => {
             </div>
           </div>
         </section>
-
-        {/* Final CTA */}
-        <section className="section-padding bg-navy">
-          <div className="container max-w-2xl text-center">
-            <h2
-              className="heading-section mb-4"
-              style={{ color: "hsl(var(--primary-foreground))" }}
-            >
-              Ensure Your Child Gets the Support They Deserve
-            </h2>
-            <p className="text-xl leading-relaxed mb-8" style={{ color: "hsla(40, 30%, 98%, 0.85)" }}>
-              At Borshchak Law Group, our experienced child support lawyers help you navigate the process, protect your rights, and secure a fair outcome for your family. Contact us today for a free consultation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+13803240878" className="btn-cta">
-                <Phone className="w-5 h-5 mr-2" />
-                Call Us: 380-324-0878
-              </a>
-              <button onClick={openConsultation} className="btn-secondary" style={{ borderColor: "hsl(var(--primary-foreground))", color: "hsl(var(--primary-foreground))" }}>
-                Request a Consultation
-              </button>
-            </div>
-          </div>
-        </section>
       </main>
       <Footer />
     </div>
