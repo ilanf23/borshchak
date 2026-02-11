@@ -380,15 +380,23 @@ const Divorce = () => {
           </div>
         </section>
 
-        {/* Stock Photo: Family Discussion */}
-        <section className="py-8">
-          <div className="container max-w-4xl">
-            <img
-              src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&q=80"
-              alt="Family having a thoughtful discussion together"
-              className="w-full h-64 md:h-80 object-cover rounded-lg"
-              loading="lazy"
-            />
+        {/* Style 2: Side-by-Side (Image Left, Text Right) */}
+        <section className="section-padding-sm">
+          <div className="container max-w-5xl">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <img
+                src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&q=80"
+                alt="Family having a thoughtful discussion together"
+                className="w-full h-72 md:h-96 object-cover rounded-lg"
+                loading="lazy"
+              />
+              <div className="space-y-4">
+                <h3 className="heading-subsection">Choosing the Right Path Forward</h3>
+                <p className="text-body">
+                  Whether you pursue a fault-based divorce or a no-fault dissolution, the decision shapes every aspect of the process — from timelines and costs to how assets are divided. Our attorneys help you evaluate your options so you can move forward with confidence.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -415,15 +423,17 @@ const Divorce = () => {
           </div>
         </section>
 
-        {/* Stock Photo: Courthouse */}
-        <section className="py-8">
-          <div className="container max-w-4xl">
-            <img
-              src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200&q=80"
-              alt="Legal documents and courthouse setting"
-              className="w-full h-64 md:h-80 object-cover rounded-lg"
-              loading="lazy"
-            />
+        {/* Style 1: Full-Bleed Background with Quote Overlay */}
+        <section
+          className="relative min-h-[300px] md:min-h-[400px] flex items-center justify-center bg-cover bg-center"
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1600&q=80')" }}
+        >
+          <div className="absolute inset-0" style={{ backgroundColor: "hsla(215, 45%, 22%, 0.75)" }} />
+          <div className="relative z-10 text-center px-6 max-w-3xl">
+            <p className="text-2xl md:text-3xl font-serif font-medium leading-relaxed italic" style={{ color: "hsl(var(--primary-foreground))" }}>
+              "Justice cannot be for one side alone, but must be for both."
+            </p>
+            <p className="mt-4 text-base" style={{ color: "hsla(40, 30%, 98%, 0.7)" }}>— Eleanor Roosevelt</p>
           </div>
         </section>
 
@@ -541,15 +551,21 @@ const Divorce = () => {
           </div>
         </section>
 
-        {/* Stock Photo: New Beginning */}
-        <section className="py-8">
+        {/* Style 5: Offset Image with Accent Block */}
+        <section className="section-padding-sm">
           <div className="container max-w-4xl">
-            <img
-              src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&q=80"
-              alt="Person looking toward a hopeful new beginning"
-              className="w-full h-64 md:h-80 object-cover rounded-lg"
-              loading="lazy"
-            />
+            <div className="relative">
+              <div
+                className="absolute top-4 left-4 w-full h-full rounded-lg hidden md:block"
+                style={{ backgroundColor: "hsl(var(--trust-navy))" }}
+              />
+              <img
+                src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&q=80"
+                alt="Person looking toward a hopeful new beginning"
+                className="relative z-10 w-full h-64 md:h-80 object-cover rounded-lg"
+                loading="lazy"
+              />
+            </div>
           </div>
         </section>
 
