@@ -93,18 +93,45 @@ const AttorneysFlyout = () => (
 );
 
 const LegalServicesFlyout = () => (
-  <div className="w-56 p-2">
+  <div className="w-64 p-2">
     <Link to="/divorce" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
-      Divorce & Legal Separation
+      Divorce
     </Link>
     <Link to="/custody" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
       Child Custody
     </Link>
-    <Link to="/assets" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
-      Property Division
+    <Link to="/child-support" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
+      Child Support
     </Link>
-    <Link to="/mediation" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
-      Mediation
+    <Link to="/prenuptial-agreement" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
+      Prenuptial Agreement
+    </Link>
+    <Link to="/annulment" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
+      Annulment
+    </Link>
+    <Link to="/dissolution" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
+      Dissolution
+    </Link>
+    <Link to="/post-decree-matters" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
+      Post-Decree Matters
+    </Link>
+    <Link to="/spousal-support" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
+      Spousal Support
+    </Link>
+    <Link to="/contempt-proceedings" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
+      Contempt Proceedings
+    </Link>
+    <Link to="/legal-separation" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
+      Legal Separation
+    </Link>
+    <Link to="/business-interests" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
+      Business Interests
+    </Link>
+    <Link to="/enforcement" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
+      Enforcement of Court Orders
+    </Link>
+    <Link to="/civil-protection-orders" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
+      Civil Protection Orders
     </Link>
   </div>
 );
@@ -201,16 +228,43 @@ const Header = () => {
                     </CollapsibleTrigger>
                     <CollapsibleContent className="pl-4">
                       <Link to="/divorce" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-base text-muted-foreground hover:text-foreground transition-colors">
-                        Divorce & Legal Separation
+                        Divorce
                       </Link>
                       <Link to="/custody" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-base text-muted-foreground hover:text-foreground transition-colors">
                         Child Custody
                       </Link>
-                      <Link to="/assets" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-base text-muted-foreground hover:text-foreground transition-colors">
-                        Property Division
+                      <Link to="/child-support" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-base text-muted-foreground hover:text-foreground transition-colors">
+                        Child Support
                       </Link>
-                      <Link to="/mediation" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-base text-muted-foreground hover:text-foreground transition-colors">
-                        Mediation
+                      <Link to="/prenuptial-agreement" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-base text-muted-foreground hover:text-foreground transition-colors">
+                        Prenuptial Agreement
+                      </Link>
+                      <Link to="/annulment" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-base text-muted-foreground hover:text-foreground transition-colors">
+                        Annulment
+                      </Link>
+                      <Link to="/dissolution" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-base text-muted-foreground hover:text-foreground transition-colors">
+                        Dissolution
+                      </Link>
+                      <Link to="/post-decree-matters" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-base text-muted-foreground hover:text-foreground transition-colors">
+                        Post-Decree Matters
+                      </Link>
+                      <Link to="/spousal-support" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-base text-muted-foreground hover:text-foreground transition-colors">
+                        Spousal Support
+                      </Link>
+                      <Link to="/contempt-proceedings" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-base text-muted-foreground hover:text-foreground transition-colors">
+                        Contempt Proceedings
+                      </Link>
+                      <Link to="/legal-separation" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-base text-muted-foreground hover:text-foreground transition-colors">
+                        Legal Separation
+                      </Link>
+                      <Link to="/business-interests" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-base text-muted-foreground hover:text-foreground transition-colors">
+                        Business Interests
+                      </Link>
+                      <Link to="/enforcement" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-base text-muted-foreground hover:text-foreground transition-colors">
+                        Enforcement of Court Orders
+                      </Link>
+                      <Link to="/civil-protection-orders" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-base text-muted-foreground hover:text-foreground transition-colors">
+                        Civil Protection Orders
                       </Link>
                     </CollapsibleContent>
                   </Collapsible>
