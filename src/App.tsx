@@ -10,6 +10,7 @@ import Divorce from "./pages/Divorce";
 import Custody from "./pages/Custody";
 import ChildSupport from "./pages/ChildSupport";
 import Assets from "./pages/Assets";
+import PrenuptialAgreement from "./pages/PrenuptialAgreement";
 import Mediation from "./pages/Mediation";
 import About from "./pages/About";
 import DmitriyBorshchak from "./pages/DmitriyBorshchak";
@@ -36,6 +37,7 @@ const App = () => (
             <Route path="/custody" element={<Custody />} />
             <Route path="/child-support" element={<ChildSupport />} />
             <Route path="/assets" element={<Assets />} />
+            <Route path="/prenuptial-agreement" element={<PrenuptialAgreement />} />
             <Route path="/mediation" element={<Mediation />} />
             <Route path="/about" element={<About />} />
             <Route path="/attorneys/dmitriy-borshchak" element={<DmitriyBorshchak />} />
