@@ -7,6 +7,7 @@ import { ConsultationProvider } from "@/contexts/ConsultationContext";
 import Index from "./pages/Index";
 import Divorce from "./pages/Divorce";
 import Custody from "./pages/Custody";
+import ChildSupport from "./pages/ChildSupport";
 import Assets from "./pages/Assets";
 import Mediation from "./pages/Mediation";
 import About from "./pages/About";
@@ -31,6 +32,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/divorce" element={<Divorce />} />
             <Route path="/custody" element={<Custody />} />
+            <Route path="/child-support" element={<ChildSupport />} />
             <Route path="/assets" element={<Assets />} />
             <Route path="/mediation" element={<Mediation />} />
             <Route path="/about" element={<About />} />
