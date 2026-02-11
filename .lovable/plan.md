@@ -1,36 +1,46 @@
 
-
-# Testimonials Page
+# Redesign Google Reviews Section
 
 ## Overview
-Create a dedicated Testimonials page featuring the provided video testimonial prominently, combined with the existing Google Reviews carousel, award logos, and a hero section -- all modeled after the original site's testimonials page.
+Replace the current compact 3-card carousel with a more immersive, detailed layout that gives each review more breathing room and visual impact.
 
-## Page Structure
+## New Design
 
-1. **Hero Section** -- Full-width background image (reusing `happy-family.jpg`) with overlay text: "Testimonials for Borshchak Law Group" heading, a subtitle about alleviating stress, and a "Leave us a Google review" CTA button linking to the Google Maps listing.
+### 1. Featured Review Spotlight
+The top 5-star reviews will rotate in a large "spotlight" area -- a single review displayed prominently with:
+- Large avatar initial (colored background)
+- Full review text (no truncation)
+- Bigger star display and reviewer name
+- A large opening quotation mark as a decorative element
+- Subtle green accent left border
 
-2. **Award Logos Bar** -- Reuse the existing `AwardLogos` component directly beneath the hero.
+### 2. Review Grid Below
+Replace the 3-card paginated carousel with a scrollable grid showing **all reviews** at once (no pagination needed):
+- **2-column layout** on desktop, single column on mobile
+- Each card shows the **full review text** (no `line-clamp`)
+- Larger cards with more padding, bigger text, and a Google "G" icon watermark
+- Verified Google Review badge on each card
+- Staggered fade-in animations on scroll
 
-3. **Featured Video Testimonial** -- A large, prominent section with the embedded YouTube video (`https://www.youtube.com/embed/AHfY54OdW2E`) centered, with a heading like "Hear From Our Clients" and a brief intro line. Styled similarly to the existing `VideoSection` but with more visual weight (larger max-width, accent border or background treatment).
+### 3. Stats Header (Simplified)
+- Keep the Google logo + rating number + stars + total count
+- Move the rating distribution bar chart into a collapsible/expandable section to reduce visual clutter
+- Keep the filter-by-rating functionality
 
-4. **Google Reviews Section** -- Reuse the existing `GoogleReviews` component (filterable carousel with rating distribution, review cards, and detail modal).
-
-5. **Final CTA** -- Reuse the existing `FinalCTA` component for a consultation call-to-action at the bottom.
+### 4. "Read More on Google" CTA
+Add a button at the bottom linking to the Google Maps listing to see all 160 reviews.
 
 ## Technical Details
 
-### New Files
-- `src/pages/Testimonials.tsx` -- New page component composing Header, hero, AwardLogos, video section, GoogleReviews, FinalCTA, and Footer.
+### Files Modified
+- **`src/components/home/GoogleReviews.tsx`** -- Complete redesign of the component layout:
+  - Add a featured spotlight review section with rotating highlights
+  - Replace paginated carousel with a full scrollable grid
+  - Remove `line-clamp-4` so full text is always shown
+  - Add decorative quote marks and Google badge elements
+  - Add collapsible rating distribution
+  - Add "Read More on Google" CTA button
+  - Use framer-motion for staggered card entrance animations
 
-### Modified Files
-- `src/App.tsx` -- Add route: `/testimonials` pointing to the new `Testimonials` page.
-- `src/components/Header.tsx` -- Update the navigation to include a "Testimonials" link (if not already present).
-
-### Patterns Followed
-- Same Header/Footer wrapper as all other pages
-- Playfair Display for headings, Lora for body text
-- Deep slate navy, warm cream, forest green accent palette
-- Scroll-triggered animations via `useScrollAnimation`
-- Framer Motion for entrance animations
-- Mobile-first responsive layout
-
+### No Other Files Changed
+The Testimonials page already imports `GoogleReviews` so no routing or page changes needed.
