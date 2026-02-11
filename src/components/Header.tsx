@@ -167,7 +167,7 @@ const Header = () => {
             <FlyoutLink content={<AttorneysFlyout />}>Attorneys</FlyoutLink>
             <FlyoutLink content={<LegalServicesFlyout />}>Legal Services</FlyoutLink>
             <Link 
-              to="/resources" 
+              to="/testimonials" 
               className="inline-flex h-12 items-center justify-center px-4 py-2 text-lg font-medium text-foreground hover:text-primary transition-colors"
             >
               Testimonials
@@ -270,7 +270,7 @@ const Header = () => {
                   </Collapsible>
 
                   {/* Simple Links */}
-                  <Link to="/resources" onClick={() => setIsOpen(false)} className="py-3 px-2 text-lg font-medium hover:bg-secondary rounded-md transition-colors">
+                  <Link to="/testimonials" onClick={() => setIsOpen(false)} className="py-3 px-2 text-lg font-medium hover:bg-secondary rounded-md transition-colors">
                     Testimonials
                   </Link>
                   <Link to="/resources" onClick={() => setIsOpen(false)} className="py-3 px-2 text-lg font-medium hover:bg-secondary rounded-md transition-colors">
