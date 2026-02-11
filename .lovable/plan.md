@@ -1,57 +1,63 @@
 
 
-# Add Stock Photos to Legal Services Pages
+# Diversify Stock Photo Layouts Across Legal Services Pages
 
-Add 2-3 real stock photographs from Unsplash to each of the four legal services pages. Images will be placed between content sections to break up text and add visual warmth.
+Replace the repetitive centered image blocks with 6 different layout styles, ensuring no two consecutive images on any page use the same treatment.
 
-## Image Selection (Unsplash -- real, royalty-free photography)
+## Layout Styles
 
-### Divorce Page
-1. **Couple/family in discussion** -- placed after the Divorce vs. Dissolution comparison
-2. **Courthouse or legal documents** -- placed after the fault grounds section
-3. **Person reflecting/new beginning** -- placed before the quiz
+### Style 1: Full-Bleed Background with Quote Overlay
+Image spans full width with a dark overlay and a short relevant quote or stat centered on top in white text.
 
-### Child Custody Page
-1. **Parent with child** -- placed after the custody allocation comparison
-2. **Family walking together** -- placed after the court factors section
-3. **Child playing** -- placed before the quiz
+### Style 2: Side-by-Side (Image Left, Text Right)
+Two-column layout -- image on the left (roughly 50%), short contextual paragraph on the right.
 
-### Child Support Page
-1. **Parent and child together** -- placed after the lawyer roles section
-2. **Financial planning/documents** -- placed after the calculation factors
-3. **Family outdoors** -- placed before the quiz
+### Style 3: Side-by-Side (Text Left, Image Right)
+Reverse of Style 2 -- text block on the left, image on the right.
 
-### Prenuptial Agreement Page
-1. **Couple holding hands/wedding prep** -- placed after the "What Is a Prenup" section
-2. **Signing documents** -- placed after the invalidation section
-3. **Happy couple** -- placed before the quiz
+### Style 4: Full-Bleed Edge-to-Edge (No Container)
+Image spans the full viewport width with no container or rounded corners -- a bold visual break.
 
-## Implementation Details
+### Style 5: Offset Image with Accent Block
+Image slightly narrower with a colored accent block (navy or green) peeking behind it on one side for visual depth.
 
-Each image will be inserted as a full-width section between existing content blocks:
+### Style 6: Image with Caption Bar
+Centered image (current style) but with a subtle caption bar below it -- a short contextual note in muted text.
 
-```text
-<section className="py-0">
-  <div className="container max-w-4xl">
-    <img
-      src="https://images.unsplash.com/photo-XXXXX?w=1200&q=80"
-      alt="Descriptive alt text"
-      className="w-full h-64 md:h-80 object-cover rounded-lg"
-    />
-  </div>
-</section>
-```
+## Assignment Per Page
 
-- Images use `object-cover` for consistent aspect ratios
-- Responsive height: 256px on mobile, 320px on desktop
-- Rounded corners to match the card-based design language
-- Meaningful alt text for accessibility
+### Divorce Page (3 images)
+1. After Divorce vs. Dissolution -- **Style 2** (image left, short text about choosing the right path)
+2. After fault grounds -- **Style 1** (full-bleed background with a quote about justice)
+3. Before quiz -- **Style 5** (offset with navy accent block)
+
+### Child Custody Page (3 images)
+1. After custody allocation -- **Style 3** (text left about protecting your family, image right)
+2. After court factors -- **Style 4** (full-bleed edge-to-edge)
+3. Before quiz -- **Style 6** (image with caption bar)
+
+### Child Support Page (3 images)
+1. After lawyer roles -- **Style 1** (full-bleed background with a stat about Ohio child support)
+2. After calculation factors -- **Style 5** (offset with green accent block)
+3. Before quiz -- **Style 2** (image left, encouraging text right)
+
+### Prenuptial Agreement Page (3 images)
+1. After "What Is a Prenup" -- **Style 4** (full-bleed edge-to-edge)
+2. After invalidation section -- **Style 3** (text left, image right)
+3. Before quiz -- **Style 1** (full-bleed background with a quote about planning ahead)
+
+## Technical Details
 
 ### Files Modified
-- `src/pages/Divorce.tsx` -- 3 image sections inserted
-- `src/pages/Custody.tsx` -- 3 image sections inserted
-- `src/pages/ChildSupport.tsx` -- 3 image sections inserted
-- `src/pages/PrenuptialAgreement.tsx` -- 3 image sections inserted
+- `src/pages/Divorce.tsx` -- replace 3 image sections
+- `src/pages/Custody.tsx` -- replace 3 image sections
+- `src/pages/ChildSupport.tsx` -- replace 3 image sections
+- `src/pages/PrenuptialAgreement.tsx` -- replace 3 image sections
 
-### No New Dependencies
-Standard `<img>` tags with Unsplash URLs -- no packages needed.
+### Styling Approach
+- All layouts use responsive design (stack vertically on mobile for side-by-side layouts)
+- Full-bleed backgrounds use `bg-cover bg-center` with a semi-transparent navy overlay
+- Offset accent blocks use `relative`/`absolute` positioning
+- Same Unsplash image URLs are retained -- only the presentation changes
+- No new dependencies required
+
