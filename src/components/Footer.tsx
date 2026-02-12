@@ -18,9 +18,9 @@ const Footer = () => {
               Award-winning family law advocates serving Columbus and Central Ohio.
             </p>
             <div className="space-y-3">
-              <a href="tel:+13803240878" className="flex items-center gap-3 text-base text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+              <a href="tel:+16146624043" className="flex items-center gap-3 text-base text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                 <Phone className="w-4 h-4" />
-                380-324-0878
+                614-662-4043
               </a>
               <a href="mailto:info@borshchaklawgroup.com" className="flex items-center gap-3 text-base text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                 <Mail className="w-4 h-4" />
@@ -93,8 +93,8 @@ const Footer = () => {
             <p className="text-base text-primary-foreground/70 mb-4">
               Schedule your free, confidential consultation today.
             </p>
-            <a href="tel:+13803240878" className="btn-cta text-base px-6 py-3 w-full md:w-auto inline-flex items-center gap-2">
-              Call Us Now: 380-324-0878
+            <a href="tel:+16146624043" className="btn-cta text-base px-6 py-3 w-full md:w-auto inline-flex items-center gap-2">
+              Call Us Now: 614-662-4043
             </a>
           </div>
         </div>

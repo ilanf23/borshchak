@@ -138,7 +138,7 @@ const LegalSeparationQuiz = () => {
         <p className="text-body">
           {score === 3 ? "Excellent understanding of legal separation." : score >= 2 ? "Good knowledge! A consultation can clarify the details." : "Legal separation has many nuances. Let our team guide you."}
         </p>
-        <a href="tel:+13803240878" className="btn-cta inline-flex">
+        <a href="tel:+16146624043" className="btn-cta inline-flex">
           <Phone className="w-5 h-5 mr-2" />
           Get Your Free Consultation
         </a>
@@ -211,9 +211,9 @@ const LegalSeparation = () => {
               A legal separation allows married couples to live apart while remaining legally married. Our attorneys help you understand your options and protect your rights throughout the process.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-8 opacity-0 animate-fade-in" style={{ animationDelay: "550ms" }}>
-              <a href="tel:+13803240878" className="btn-cta">
+              <a href="tel:+16146624043" className="btn-cta">
                 <Phone className="w-5 h-5 mr-2" />
-                Call Us Now: 380-324-0878
+                Call Us Now: 614-662-4043
               </a>
             </div>
           </div>
@@ -403,9 +403,9 @@ const LegalSeparation = () => {
             <p className="text-body text-lg mb-8 max-w-2xl mx-auto" style={{ color: "hsla(40, 30%, 98%, 0.8)" }}>
               Whether you are considering legal separation or need guidance on your next steps, our experienced attorneys are ready to help. Contact us today for a free consultation.
             </p>
-            <a href="tel:+13803240878" className="btn-cta inline-flex text-lg">
+            <a href="tel:+16146624043" className="btn-cta inline-flex text-lg">
               <Phone className="w-5 h-5 mr-2" />
-              Call Us Now: 380-324-0878
+              Call Us Now: 614-662-4043
             </a>
           </div>
         </section>
