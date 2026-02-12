@@ -3,7 +3,6 @@ import { ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
 import { reviews } from "@/data/reviews";
 import ReviewStatsHeader from "./reviews/ReviewStatsHeader";
-import FeaturedReview from "./reviews/FeaturedReview";
 import ReviewCard from "./reviews/ReviewCard";
 
 const GoogleReviews = () => {
@@ -66,9 +65,6 @@ const GoogleReviews = () => {
           filterRating={filterRating}
           onFilterChange={setFilterRating}
         />
-
-        {/* Featured Spotlight (only when unfiltered) */}
-        {filterRating === null && <FeaturedReview />}
 
         {/* Carousel */}
         <div className="relative">
