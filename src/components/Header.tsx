@@ -136,14 +136,6 @@ const LegalServicesFlyout = () => (
   </div>
 );
 
-const ContactFlyout = () => (
-  <div className="w-48 p-2">
-    <Link to="/contact" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
-      Contact Us
-    </Link>
-  </div>
-);
-
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { openConsultation } = useConsultation();
@@ -175,7 +167,12 @@ const Header = () => {
             >
               Blog
             </Link>
-            <FlyoutLink content={<ContactFlyout />}>Contact</FlyoutLink>
+            <Link 
+              to="/contact" 
+              className="inline-flex h-12 items-center justify-center px-4 py-2 text-lg font-medium text-foreground hover:text-primary transition-colors"
+            >
+              Contact
+            </Link>
           </div>
           
           <div className="flex items-center gap-4">
