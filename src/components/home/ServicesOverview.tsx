@@ -53,7 +53,8 @@ const ServicesOverview = () => {
                 <Link
                   key={index}
                   to={service.href}
-                  className="group bg-card rounded-lg border-t-4 border-t-green p-6 hover:-translate-y-1 transition-all duration-200 hover:shadow-lg"
+                  className="group bg-card rounded-lg border-t-4 border-t-green p-6 hover:-translate-y-1 transition-all duration-200 hover:shadow-lg shadow-sm"
+                  style={{ background: "linear-gradient(135deg, hsl(40 30% 96%), hsl(40 33% 98%))" }}
                 >
                   <Icon className="w-8 h-8 text-green mb-4" />
                   <h3 className="font-medium text-lg text-card-foreground group-hover:text-primary transition-colors mb-2">
