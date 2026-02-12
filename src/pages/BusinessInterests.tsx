@@ -162,7 +162,7 @@ const BusinessQuiz = () => {
         <p className="text-body">
           {score === 3 ? "Excellent understanding of business interests in divorce." : score >= 2 ? "Good knowledge! A consultation can clarify the specifics." : "Business valuation in divorce is complex. Let our team guide you."}
         </p>
-        <a href="tel:+13803240878" className="btn-cta inline-flex">
+        <a href="tel:+16146624043" className="btn-cta inline-flex">
           <Phone className="w-5 h-5 mr-2" />
           Get Your Free Consultation
         </a>
@@ -234,9 +234,9 @@ const BusinessInterests = () => {
               Divorces are difficult enough without worrying about how to handle a family-owned business. We help you get the most out of your business during a divorce by maximizing its value.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-8 opacity-0 animate-fade-in" style={{ animationDelay: "550ms" }}>
-              <a href="tel:+13803240878" className="btn-cta">
+              <a href="tel:+16146624043" className="btn-cta">
                 <Phone className="w-5 h-5 mr-2" />
-                Call Us Now: 380-324-0878
+                Call Us Now: 614-662-4043
               </a>
             </div>
           </div>
@@ -410,9 +410,9 @@ const BusinessInterests = () => {
             <p className="text-body text-lg mb-8 max-w-2xl mx-auto" style={{ color: "hsla(40, 30%, 98%, 0.8)" }}>
               Your business is one of your most valuable assets. Contact our experienced attorneys today for a business valuation consultation and ensure your interests are protected.
             </p>
-            <a href="tel:+13803240878" className="btn-cta inline-flex text-lg">
+            <a href="tel:+16146624043" className="btn-cta inline-flex text-lg">
               <Phone className="w-5 h-5 mr-2" />
-              Call Us Now: 380-324-0878
+              Call Us Now: 614-662-4043
             </a>
           </div>
         </section>

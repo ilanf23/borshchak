@@ -29,9 +29,9 @@ const HeroSection = () => {
           
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+13803240878" className="btn-cta">
+            <a href="tel:+16146624043" className="btn-cta">
               <Phone className="w-5 h-5 mr-2" />
-              Call Us Now: 380-324-0878
+              Call Us Now: 614-662-4043
             </a>
           </div>
         </div>

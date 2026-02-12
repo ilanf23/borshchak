@@ -21,9 +21,9 @@ const Assets = () => {
               From family businesses to investment portfolios, real estate to retirement accounts, we ensure marital property is accurately valued and divided fairly. Your financial future depends on getting this right.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="tel:+13803240878" className="btn-cta">
+              <a href="tel:+16146624043" className="btn-cta">
                 <Phone className="w-5 h-5 mr-2" />
-                Call Us Now: 380-324-0878
+                Call Us Now: 614-662-4043
               </a>
             </div>
           </div>
@@ -78,9 +78,9 @@ const Assets = () => {
             <p className="text-body mb-8">
               Schedule a consultation to discuss protecting your financial interests.
             </p>
-            <a href="tel:+13803240878" className="btn-cta">
+            <a href="tel:+16146624043" className="btn-cta">
               <Phone className="w-5 h-5 mr-2" />
-              Call Us Now: 380-324-0878
+              Call Us Now: 614-662-4043
             </a>
           </div>
         </section>

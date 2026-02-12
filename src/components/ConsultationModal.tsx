@@ -180,8 +180,8 @@ const ConsultationModal = ({ open, onOpenChange }: ConsultationModalProps) => {
                   
                   <p className="text-center text-base text-muted-foreground">
                     Or call us directly:{" "}
-                    <a href="tel:+13803240878" className="font-medium text-primary hover:underline">
-                      380-324-0878
+                    <a href="tel:+16146624043" className="font-medium text-primary hover:underline">
+                      614-662-4043
                     </a>
                   </p>
                 </div>

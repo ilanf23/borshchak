@@ -21,9 +21,9 @@ const Mediation = () => {
               Not every divorce needs to be a fight. When both parties are willing, mediation and collaborative processes can achieve fair outcomes faster, with less expense and emotional toll. We guide productive negotiations while protecting your interests.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="tel:+13803240878" className="btn-cta">
+              <a href="tel:+16146624043" className="btn-cta">
                 <Phone className="w-5 h-5 mr-2" />
-                Call Us Now: 380-324-0878
+                Call Us Now: 614-662-4043
               </a>
             </div>
           </div>
@@ -78,9 +78,9 @@ const Mediation = () => {
             <p className="text-body mb-8">
               Let's discuss whether mediation or litigation is the right path for your situation.
             </p>
-            <a href="tel:+13803240878" className="btn-cta">
+            <a href="tel:+16146624043" className="btn-cta">
               <Phone className="w-5 h-5 mr-2" />
-              Call Us Now: 380-324-0878
+              Call Us Now: 614-662-4043
             </a>
           </div>
         </section>

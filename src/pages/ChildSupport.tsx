@@ -174,7 +174,7 @@ const ChildSupportQuiz = () => {
             ? "Good knowledge! A consultation can fill in the rest."
             : "Child support law can be complex. Let our team guide you."}
         </p>
-        <a href="tel:+13803240878" className="btn-cta inline-flex">
+        <a href="tel:+16146624043" className="btn-cta inline-flex">
           <Phone className="w-5 h-5 mr-2" />
           Get Your Free Consultation
         </a>
@@ -287,9 +287,9 @@ const ChildSupport = () => {
               Every parent wants the best for their child, even amidst separation or divorce. Understanding Ohio's child support laws is essential to ensuring your child's needs are met and your rights are protected.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-8 opacity-0 animate-fade-in" style={{ animationDelay: "550ms" }}>
-              <a href="tel:+13803240878" className="btn-cta">
+              <a href="tel:+16146624043" className="btn-cta">
                 <Phone className="w-5 h-5 mr-2" />
-                Free Consultation: 380-324-0878
+                Free Consultation: 614-662-4043
               </a>
             </div>
           </div>

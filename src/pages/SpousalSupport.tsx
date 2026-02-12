@@ -183,7 +183,7 @@ const SpousalSupportQuiz = () => {
             ? "Good knowledge! A consultation can clarify the specifics."
             : "Spousal support law is nuanced. Let our team guide you."}
         </p>
-        <a href="tel:+13803240878" className="btn-cta inline-flex">
+        <a href="tel:+16146624043" className="btn-cta inline-flex">
           <Phone className="w-5 h-5 mr-2" />
           Get Your Free Consultation
         </a>
@@ -255,9 +255,9 @@ const SpousalSupport = () => {
               Spousal support (alimony) helps the lower-earning spouse maintain financial stability after divorce. Whether you're seeking or contesting support, our attorneys protect your interests.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-8 opacity-0 animate-fade-in" style={{ animationDelay: "550ms" }}>
-              <a href="tel:+13803240878" className="btn-cta">
+              <a href="tel:+16146624043" className="btn-cta">
                 <Phone className="w-5 h-5 mr-2" />
-                Free Consultation: 380-324-0878
+                Free Consultation: 614-662-4043
               </a>
             </div>
           </div>
@@ -434,9 +434,9 @@ const SpousalSupport = () => {
               </p>
             </div>
             <div className="mt-8">
-              <a href="tel:+13803240878" className="btn-cta">
+              <a href="tel:+16146624043" className="btn-cta">
                 <Phone className="w-5 h-5 mr-2" />
-                Call Us Now: 380-324-0878
+                Call Us Now: 614-662-4043
               </a>
             </div>
           </div>
