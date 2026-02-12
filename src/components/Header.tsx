@@ -141,9 +141,6 @@ const ContactFlyout = () => (
     <Link to="/contact" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
       Contact Us
     </Link>
-    <Link to="/process" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
-      Our Process
-    </Link>
   </div>
 );
 
@@ -277,21 +274,9 @@ const Header = () => {
                     Blog
                   </Link>
 
-                  {/* Contact */}
-                  <Collapsible>
-                    <CollapsibleTrigger className="flex items-center justify-between w-full py-3 px-2 text-left text-lg font-medium hover:bg-secondary rounded-md transition-colors">
-                      Contact
-                      <ChevronDown className="w-4 h-4" />
-                    </CollapsibleTrigger>
-                    <CollapsibleContent className="pl-4">
-                      <Link to="/contact" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-base text-muted-foreground hover:text-foreground transition-colors">
-                        Contact Us
-                      </Link>
-                      <Link to="/process" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-base text-muted-foreground hover:text-foreground transition-colors">
-                        Our Process
-                      </Link>
-                    </CollapsibleContent>
-                  </Collapsible>
+                  <Link to="/contact" onClick={() => setIsOpen(false)} className="py-3 px-2 text-lg font-medium hover:bg-secondary rounded-md transition-colors">
+                    Contact
+                  </Link>
 
                   {/* CTA */}
                   <div className="mt-6 pt-6 border-t border-border">
