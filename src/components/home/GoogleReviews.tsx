@@ -112,18 +112,6 @@ const GoogleReviews = () => {
           ))}
         </div>
 
-        {/* Read More CTA */}
-        <div className="text-center mt-10">
-          <a
-            href="https://www.google.com/maps/place/Borshchak+Law+Group/@39.9612,-82.9988,17z"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-base font-medium"
-          >
-            Read All 160 Reviews on Google
-            <ExternalLink className="w-4 h-4" />
-          </a>
-        </div>
       </div>
     </section>
   );
