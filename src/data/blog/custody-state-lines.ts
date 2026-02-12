@@ -1,4 +1,9 @@
 import blogCustodyStateLines from "@/assets/blog-custody-state-lines.jpg";
+import blogCustody1 from "@/assets/blog-custody-1.jpg";
+import blogCustody2 from "@/assets/blog-custody-2.jpg";
+import blogCustody3 from "@/assets/blog-custody-3.jpg";
+import blogCustody4 from "@/assets/blog-custody-4.jpg";
+import blogCustody5 from "@/assets/blog-custody-5.jpg";
 
 export type BlogSection =
   | { type: "paragraph"; content: string }
@@ -6,7 +11,8 @@ export type BlogSection =
   | { type: "subheading"; content: string }
   | { type: "list"; items: string[] }
   | { type: "table"; headers: string[]; rows: string[][] }
-  | { type: "faq"; items: { question: string; answer: string }[] };
+  | { type: "faq"; items: { question: string; answer: string }[] }
+  | { type: "image"; src: string; alt: string; variant: "full" | "float-right" | "float-left" | "side-by-side" | "captioned"; caption?: string; src2?: string; alt2?: string };
 
 export interface BlogPostData {
   slug: string;
@@ -28,9 +34,11 @@ const post: BlogPostData = {
   sections: [
     { type: "paragraph", content: "Navigating the complexities of child custody can be daunting for any parent—especially when life's circumstances require crossing state lines. Whether you're a small business owner, a developer frequently on the move, or a Columbus resident facing a major life change, understanding how Ohio child custody orders are enforced in other states is essential. The Uniform Child Custody Jurisdiction and Enforcement Act (UCCJEA) plays a pivotal role in ensuring that custody arrangements remain consistent, even when families relocate or travel for work or personal reasons." },
     { type: "paragraph", content: "Imagine this scenario: you've secured a custody order in Ohio, but your ex-spouse moves to another state and challenges the arrangement. Or perhaps your job requires you to relocate, and you need assurance that your parental rights will remain protected. Without a clear understanding of the legal framework governing interstate custody, you could find yourself facing unexpected legal hurdles, emotional stress, and uncertainty about your child's well-being." },
+    { type: "image", src: blogCustody1, alt: "Parent and child walking through an airport terminal", variant: "full" },
     { type: "paragraph", content: "In this comprehensive guide, we'll break down the UCCJEA, explain how Ohio's custody orders are enforced across state lines, and provide practical advice for parents, business owners, and anyone with a stake in child custody matters. We'll also explore the essential role of a knowledgeable divorce lawyer, offer real-world examples, and answer common questions about multi-state custody disputes. By the end, you'll be equipped with the knowledge and confidence to navigate this challenging process and protect your family's best interests." },
     { type: "heading", content: "Enforcing Child Custody Orders in Columbus: What You Need to Know" },
     { type: "paragraph", content: "Columbus families often face unique challenges when it comes to enforcing child custody orders, especially if one parent relocates or if the child's life involves frequent travel. The foundation of any custody enforcement in Columbus starts with a valid Ohio court order. But what happens when that order needs to be recognized or enforced outside the state?" },
+    { type: "image", src: blogCustody2, alt: "Judge's gavel resting on a map of Ohio", variant: "float-right" },
     { type: "paragraph", content: "The Uniform Child Custody Jurisdiction and Enforcement Act (UCCJEA) is designed to address precisely these situations. Ohio, like most states, has adopted the UCCJEA to create a standardized legal process for determining which state's court has jurisdiction over a child custody case. This prevents conflicting orders and ensures that children are not caught in the middle of interstate disputes." },
     { type: "paragraph", content: "For Columbus parents, understanding the UCCJEA is crucial. The act gives primary jurisdiction to the child's \"home state\"—typically where the child has lived for the past six months. If a parent tries to modify or challenge a custody order in another state, the UCCJEA provides a legal mechanism for Ohio courts to retain authority or for the new state to recognize and enforce the existing order. This is especially important in divorce situations, where emotions and stakes are high." },
     { type: "paragraph", content: "Columbus families should also be aware that the UCCJEA allows for emergency jurisdiction in cases where the child is at risk. However, such jurisdiction is temporary and designed to protect the child until the proper court can make a final decision. By understanding these rules, parents can better protect their rights and their children's best interests, no matter where life takes them." },
@@ -40,6 +48,7 @@ const post: BlogPostData = {
     { type: "paragraph", content: "The UCCJEA also streamlines the process for registering an Ohio custody order in another state. This is crucial for enforcement—if the other parent violates the order, you can seek help from local authorities in the new state, who are legally bound to enforce the Ohio decision. Working with an experienced divorce lawyer can make this process much smoother and ensure your rights are fully protected." },
     { type: "paragraph", content: "It's important to note that while the UCCJEA provides a strong framework, each state may have slight procedural differences. Columbus parents should always consult with legal professionals familiar with both Ohio and the destination state's laws to avoid pitfalls. This proactive approach can save time, reduce stress, and safeguard your child's stability during transitions." },
     { type: "heading", content: "Understanding Child Custody Enforcement in Columbus, Ohio" },
+    { type: "image", src: blogCustody3, alt: "Modern courtroom interior with American flag", variant: "captioned", caption: "Ohio family courts provide a structured environment for resolving interstate custody disputes." },
     { type: "paragraph", content: "When dealing with child custody enforcement in Columbus, Ohio, it's essential to grasp how local courts interpret and apply the UCCJEA. The act's main objective is to prevent parents from \"forum shopping\" for a more favorable custody ruling in another state. This ensures consistency and fairness, especially in contentious situations such as post-divorce disputes or when a parent relocates for work." },
     { type: "paragraph", content: "In practical terms, Columbus courts will only relinquish jurisdiction if neither the child nor the parents have a significant connection to Ohio. If a parent attempts to modify an Ohio order in another state without proper grounds, the UCCJEA allows Ohio courts to challenge and block the new proceedings. This legal shield is invaluable for parents who want to maintain a stable environment for their children." },
     { type: "paragraph", content: "For families with complex needs—such as business owners who travel frequently or developers working on out-of-state projects—the UCCJEA provides peace of mind. You can rest assured that your Ohio custody order will be respected and enforced, regardless of where life takes you." },
@@ -50,6 +59,7 @@ const post: BlogPostData = {
     { type: "paragraph", content: "Another key feature of the UCCJEA is its provision for emergency jurisdiction. If a child is in danger, a court in any state can step in temporarily to protect the child. However, once the emergency is resolved, the case returns to the home state for a final decision. This system prevents parents from exploiting legal loopholes or moving children across state lines to gain a custody advantage." },
     { type: "paragraph", content: "For parents, business owners, and professionals in Columbus, understanding the UCCJEA is crucial. It ensures that your custody order will be recognized and enforced nationwide, providing stability for your child and predictability for your family's future. By working within this framework, you can avoid costly legal battles and maintain focus on what matters most—your child's well-being." },
     { type: "heading", content: "Registering and Enforcing Ohio Custody Orders in Other States" },
+    { type: "image", src: blogCustody4, alt: "Parent signing legal custody documents", variant: "side-by-side", src2: blogCustody2, alt2: "Legal gavel on a map" },
     { type: "paragraph", content: "One of the most practical concerns for parents is how to ensure an Ohio custody order is recognized and enforced in another state. The UCCJEA provides a straightforward process for registering your Ohio order in the new state, which is essential if you anticipate needing local law enforcement or court intervention." },
     { type: "paragraph", content: "To register your Ohio custody order, you'll need to submit a certified copy of the order, along with a sworn statement that the order is still in effect, to the appropriate court in the new state. Once registered, the order is treated as if it were issued by the new state's court, meaning local authorities can enforce it if necessary." },
     { type: "paragraph", content: "This process is especially important in situations where the other parent refuses to comply with the order or attempts to interfere with your parental rights. By registering your order promptly, you eliminate delays and ensure that your child's best interests are protected, no matter where you live or work." },
@@ -80,6 +90,7 @@ const post: BlogPostData = {
       { question: "What happens if the other parent refuses to comply with the order?", answer: "You can seek enforcement through the local court or law enforcement in the new state once your order is registered." },
     ]},
     { type: "heading", content: "Conclusion: Protecting Your Child's Best Interests Across State Lines" },
+    { type: "image", src: blogCustody5, alt: "Happy family walking together outdoors", variant: "full" },
     { type: "paragraph", content: "Navigating child custody enforcement across state lines can be complex, but the UCCJEA provides a clear and reliable framework for parents in Columbus and throughout Ohio. By understanding the law, registering your custody order when necessary, and working with experienced legal counsel, you can ensure your parental rights are protected and your child's best interests remain the top priority—even when life's journey takes you beyond Ohio's borders." },
     { type: "paragraph", content: "Whether you're a small business owner, a developer, or a parent facing a major life transition, preparation is key. Stay informed, keep thorough records, and seek legal advice early to avoid unnecessary stress and complications. With the right knowledge and support, you can confidently navigate the challenges of interstate custody and focus on what matters most: your child's happiness and security." },
   ],

@@ -13,9 +13,9 @@ const renderSection = (section: BlogSection, index: number) => {
     case "paragraph":
       return <p key={index} className="text-body mb-6">{section.content}</p>;
     case "heading":
-      return <h2 key={index} className="heading-subsection mt-12 mb-4">{section.content}</h2>;
+      return <h2 key={index} className="heading-subsection mt-12 mb-4 clear-both">{section.content}</h2>;
     case "subheading":
-      return <h3 key={index} className="text-xl md:text-2xl font-medium mt-8 mb-3" style={{ color: "hsl(var(--text-primary))" }}>{section.content}</h3>;
+      return <h3 key={index} className="text-xl md:text-2xl font-medium mt-8 mb-3 clear-both" style={{ color: "hsl(var(--text-primary))" }}>{section.content}</h3>;
     case "list":
       return (
         <ul key={index} className="list-disc pl-6 mb-6 space-y-2">
@@ -24,6 +24,49 @@ const renderSection = (section: BlogSection, index: number) => {
           ))}
         </ul>
       );
+    case "image":
+      if (section.variant === "full") {
+        return (
+          <div key={index} className="rounded-xl overflow-hidden my-8">
+            <img src={section.src} alt={section.alt} className="w-full h-auto object-cover" loading="lazy" />
+          </div>
+        );
+      }
+      if (section.variant === "float-right") {
+        return (
+          <div key={index} className="float-right ml-6 mb-4 w-2/5 md:w-1/3">
+            <img src={section.src} alt={section.alt} className="w-full h-auto rounded-lg object-cover" loading="lazy" />
+          </div>
+        );
+      }
+      if (section.variant === "float-left") {
+        return (
+          <div key={index} className="float-left mr-6 mb-4 w-2/5 md:w-1/3">
+            <img src={section.src} alt={section.alt} className="w-full h-auto rounded-lg object-cover" loading="lazy" />
+          </div>
+        );
+      }
+      if (section.variant === "side-by-side") {
+        return (
+          <div key={index} className="grid grid-cols-2 gap-4 my-8">
+            <img src={section.src} alt={section.alt} className="w-full h-auto rounded-lg object-cover" loading="lazy" />
+            {section.src2 && <img src={section.src2} alt={section.alt2 || ""} className="w-full h-auto rounded-lg object-cover" loading="lazy" />}
+          </div>
+        );
+      }
+      if (section.variant === "captioned") {
+        return (
+          <figure key={index} className="my-8">
+            <div className="rounded-xl overflow-hidden">
+              <img src={section.src} alt={section.alt} className="w-full h-auto object-cover" loading="lazy" />
+            </div>
+            {section.caption && (
+              <figcaption className="text-sm italic text-muted-foreground mt-3 text-center">{section.caption}</figcaption>
+            )}
+          </figure>
+        );
+      }
+      return null;
     case "table":
       return (
         <div key={index} className="overflow-x-auto mb-8 mt-4">
