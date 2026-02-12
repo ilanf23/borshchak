@@ -1,5 +1,5 @@
 import { Phone } from "lucide-react";
-import happyFamilyCta from "@/assets/happy-family-cta.jpg";
+import happyFamilyCta from "@/assets/happy-family-cta.png";
 
 const FinalCTA = () => {
   return (
