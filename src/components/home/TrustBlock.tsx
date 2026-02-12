@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const testimonials = [
   {
@@ -16,10 +17,15 @@ const testimonials = [
 ];
 
 const TrustBlock = () => {
+  const anim = useScrollAnimation(0.2);
+
   return (
     <section className="section-padding-sm bg-card border-y border-border">
       <div className="container">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+        <div
+          ref={anim.ref}
+          className={`flex flex-col lg:flex-row items-center justify-between gap-8 ${anim.className}`}
+        >
           {/* Google Rating */}
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-1">

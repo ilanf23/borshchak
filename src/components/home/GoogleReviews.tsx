@@ -4,8 +4,10 @@ import useEmblaCarousel from "embla-carousel-react";
 import { reviews } from "@/data/reviews";
 import ReviewStatsHeader from "./reviews/ReviewStatsHeader";
 import ReviewCard from "./reviews/ReviewCard";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const GoogleReviews = () => {
+  const sectionAnim = useScrollAnimation(0.1);
   const [filterRating, setFilterRating] = useState<number | null>(null);
 
   const filteredReviews = useMemo(() => {
@@ -60,7 +62,10 @@ const GoogleReviews = () => {
 
   return (
     <section className="py-16 md:py-24 bg-secondary/30">
-      <div className="container max-w-5xl">
+      <div
+        ref={sectionAnim.ref}
+        className={`container max-w-5xl ${sectionAnim.className}`}
+      >
         <ReviewStatsHeader
           filterRating={filterRating}
           onFilterChange={setFilterRating}

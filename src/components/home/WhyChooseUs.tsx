@@ -1,4 +1,5 @@
 import { UserCheck, MessageCircle, Target, Heart, Star } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const differentiators = [
   {
@@ -32,6 +33,9 @@ const differentiators = [
 ];
 
 const WhyChooseUs = () => {
+  const headerAnim = useScrollAnimation();
+  const gridAnim = useScrollAnimation(0.1);
+
   return (
     <section className="section-padding bg-navy relative overflow-hidden">
       {/* Subtle background pattern */}
@@ -42,7 +46,10 @@ const WhyChooseUs = () => {
       
       <div className="container relative z-10">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div
+          ref={headerAnim.ref}
+          className={`text-center mb-12 ${headerAnim.className}`}
+        >
           <div className="inline-flex items-center gap-2 bg-accent/20 text-accent px-4 py-2 rounded-full text-base font-medium mb-4">
             <Star className="w-4 h-4 fill-accent" />
             What Sets Us Apart
@@ -56,11 +63,14 @@ const WhyChooseUs = () => {
         </div>
         
         {/* Differentiators Grid */}
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div
+          ref={gridAnim.ref}
+          className={`grid md:grid-cols-2 gap-6 max-w-4xl mx-auto stagger-children ${gridAnim.isVisible ? "stagger-visible" : ""}`}
+        >
           {differentiators.map((item, index) => (
             <div 
               key={index} 
-              className="group bg-primary-foreground/5 border border-primary-foreground/10 rounded-2xl p-6 hover:bg-primary-foreground/10 transition-all duration-300"
+              className="group bg-primary-foreground/5 border border-primary-foreground/10 rounded-2xl p-6 hover:bg-primary-foreground/10 transition-all duration-300 hover:-translate-y-1"
             >
               <div className="flex items-start gap-4">
                 <div className="shrink-0 w-14 h-14 rounded-xl bg-accent/20 flex items-center justify-center group-hover:bg-accent/30 transition-colors">

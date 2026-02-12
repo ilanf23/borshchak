@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Phone, FileText, Scale, Shield, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const steps = [
   {
@@ -59,11 +60,16 @@ const steps = [
 
 const ProcessSection = () => {
   const [activeStep, setActiveStep] = useState(0);
+  const headerAnim = useScrollAnimation();
+  const graphAnim = useScrollAnimation(0.1);
 
   return (
     <section className="section-padding bg-navy">
       <div className="container">
-        <div className="text-center max-w-2xl mx-auto mb-12">
+        <div
+          ref={headerAnim.ref}
+          className={`text-center max-w-2xl mx-auto mb-12 ${headerAnim.className}`}
+        >
           <h2 className="heading-section text-primary-foreground">
             What Working With Us Looks Like
           </h2>
@@ -73,7 +79,10 @@ const ProcessSection = () => {
         </div>
         
         {/* Interactive Process Graph */}
-        <div className="max-w-5xl mx-auto">
+        <div
+          ref={graphAnim.ref}
+          className={`max-w-5xl mx-auto ${graphAnim.className}`}
+        >
           {/* Progress Line - Desktop */}
           <div className="hidden md:block relative mb-8">
             <div className="absolute top-6 left-0 right-0 h-1 bg-primary-foreground/20 rounded-full" />

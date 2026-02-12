@@ -1,7 +1,10 @@
 import { Phone } from "lucide-react";
 import happyFamilyCta from "@/assets/happy-family-cta.png";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const FinalCTA = () => {
+  const contentAnim = useScrollAnimation(0.2);
+
   return (
     <section className="relative section-padding overflow-hidden">
       {/* Background Image */}
@@ -14,7 +17,10 @@ const FinalCTA = () => {
         <div className="absolute inset-0 bg-foreground/70" />
       </div>
 
-      <div className="container max-w-2xl text-center relative z-10">
+      <div
+        ref={contentAnim.ref}
+        className={`container max-w-2xl text-center relative z-10 ${contentAnim.className}`}
+      >
         <h2 className="heading-section mb-4 text-white drop-shadow-lg">
           You Don't Have to Go Through This Alone
         </h2>

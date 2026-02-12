@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 
-export function useScrollAnimation(threshold = 0.15) {
+type AnimationDirection = "up" | "left" | "right" | "scale";
+
+export function useScrollAnimation(threshold = 0.15, direction: AnimationDirection = "up") {
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -22,5 +24,19 @@ export function useScrollAnimation(threshold = 0.15) {
     return () => observer.disconnect();
   }, [threshold]);
 
-  return { ref, isVisible };
+  const hiddenClass = direction === "left" ? "scroll-hidden-left" 
+    : direction === "right" ? "scroll-hidden-right"
+    : direction === "scale" ? "scroll-hidden-scale"
+    : "scroll-hidden";
+
+  const visibleClass = direction === "left" ? "scroll-visible-left"
+    : direction === "right" ? "scroll-visible-right"
+    : direction === "scale" ? "scroll-visible-scale"
+    : "scroll-visible";
+
+  return { 
+    ref, 
+    isVisible,
+    className: isVisible ? visibleClass : hiddenClass,
+  };
 }

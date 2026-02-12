@@ -241,9 +241,51 @@
   /* Scroll animation states */
   .scroll-hidden {
     opacity: 0;
-    transform: translateY(16px);
+    transform: translateY(24px);
   }
   .scroll-visible {
-    animation: fade-in 0.6s ease-out forwards;
+    animation: fade-in-up 0.7s ease-out forwards;
+  }
+
+  /* Staggered children animation */
+  .stagger-children > * {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  .stagger-visible > * {
+    animation: fade-in-up 0.6s ease-out forwards;
+  }
+  .stagger-visible > *:nth-child(1) { animation-delay: 0ms; }
+  .stagger-visible > *:nth-child(2) { animation-delay: 120ms; }
+  .stagger-visible > *:nth-child(3) { animation-delay: 240ms; }
+  .stagger-visible > *:nth-child(4) { animation-delay: 360ms; }
+  .stagger-visible > *:nth-child(5) { animation-delay: 480ms; }
+  .stagger-visible > *:nth-child(6) { animation-delay: 600ms; }
+
+  /* Slide from left */
+  .scroll-hidden-left {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  .scroll-visible-left {
+    animation: fade-in-left 0.7s ease-out forwards;
+  }
+
+  /* Slide from right */
+  .scroll-hidden-right {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  .scroll-visible-right {
+    animation: fade-in-right 0.7s ease-out forwards;
+  }
+
+  /* Scale fade */
+  .scroll-hidden-scale {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  .scroll-visible-scale {
+    animation: scale-fade-in 0.6s ease-out forwards;
   }
 }

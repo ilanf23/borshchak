@@ -1,8 +1,15 @@
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+
 const VideoSection = () => {
+  const videoAnim = useScrollAnimation(0.1, "scale");
+
   return (
     <section className="section-padding-sm bg-background">
       <div className="container">
-        <div className="max-w-4xl mx-auto">
+        <div
+          ref={videoAnim.ref}
+          className={`max-w-4xl mx-auto ${videoAnim.className}`}
+        >
           <div className="aspect-video rounded-lg overflow-hidden shadow-lg">
             <iframe
               src="https://www.youtube.com/embed/lN_avUAmYnk"
