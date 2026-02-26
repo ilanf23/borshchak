@@ -3,7 +3,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import dmitriyPhoto from "@/assets/dmitriy-borshchak.png";
-import localLawyerBadge from "@/assets/dmitriy-local-lawyer-badge.png";
+
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const DmitriyBorshchak = () => {
@@ -74,14 +74,6 @@ const DmitriyBorshchak = () => {
                   <div className="font-serif text-2xl font-semibold text-primary">Super Lawyers Rising Star</div>
                   <div className="text-base text-muted-foreground">Selected in 2023</div>
                 </div>
-              </a>
-              <a
-                href="https://mylocallawyer.org/lawyers/dmitriy-borshchak/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:opacity-80 transition-all duration-200 hover:scale-105"
-              >
-                <img src={localLawyerBadge} alt="My Local Lawyer - Top 10 2023" className="h-16 w-auto" />
               </a>
             </div>
           </div>

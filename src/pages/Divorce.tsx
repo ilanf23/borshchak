@@ -315,10 +315,10 @@ const Divorce = () => {
                   >
                     <Gavel className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="heading-subsection text-xl">Divorce (Fault-Based)</h3>
+                  <h3 className="heading-subsection text-xl">Ohio Divorce (Contested or Uncontested)</h3>
                 </div>
                 <p className="text-body text-lg mb-4">
-                  Either spouse files a lawsuit to end the marriage. This is the more formal method and can be resolved through negotiations or court proceedings.
+                  Either spouse files a complaint to end the marriage. Ohio divorce may be filed on fault-based or no-fault grounds, including incompatibility. This is the more formal method and can be resolved through negotiations or court proceedings.
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-start gap-2 text-body text-base">
@@ -327,7 +327,7 @@ const Divorce = () => {
                   </div>
                   <div className="flex items-start gap-2 text-body text-base">
                     <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color: "hsl(var(--green-accent))" }} />
-                    Must prove legal grounds
+                    Fault-based or no-fault (incompatibility) grounds available
                   </div>
                   <div className="flex items-start gap-2 text-body text-base">
                     <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color: "hsl(var(--green-accent))" }} />
@@ -347,7 +347,7 @@ const Divorce = () => {
                   <h3 className="heading-subsection text-xl">Dissolution (No-Fault)</h3>
                 </div>
                 <p className="text-body text-lg mb-4">
-                  Both parties agree to end the marriage without court proceedings. Generally less expensive and faster, but requires agreement on all issues.
+                  Both parties agree to end the marriage without adversarial court proceedings. A final hearing before a judge is still required, but it is brief, non-contested, and typically completed in one appearance. Generally less expensive and faster than divorce, but requires full agreement on all issues.
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-start gap-2 text-body text-base">

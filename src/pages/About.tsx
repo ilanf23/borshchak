@@ -15,10 +15,10 @@ const About = () => {
               About Borshchak Law Group
             </p>
             <h1 className="heading-hero mb-6">
-              Columbus Family Law Attorneys Since 1998
+              Columbus Family Law Attorneys
             </h1>
             <p className="text-body text-xl">
-              For over 25 years, we've helped Central Ohio families navigate their most challenging legal transitions. Our focus has never changed: provide strategic counsel with personal attention, achieving the best possible outcomes for every client.
+              Borshchak Law Group is a Columbus family law firm focused exclusively on divorce, custody, and family law matters. We help Central Ohio families navigate their most challenging legal transitions with strategic counsel, personal attention, and a genuine commitment to each client's wellbeing.
             </p>
           </div>
         </section>
@@ -29,8 +29,8 @@ const About = () => {
             <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto text-center">
               <div>
                 <Scale className="w-8 h-8 mx-auto mb-3 text-primary" />
-                <div className="font-serif text-4xl font-semibold text-primary">25+</div>
-                <div className="text-base text-muted-foreground">Years in Practice</div>
+                <div className="font-serif text-4xl font-semibold text-primary">100%</div>
+                <div className="text-base text-muted-foreground">Family Law Focus</div>
               </div>
               <div>
                 <Users className="w-8 h-8 mx-auto mb-3 text-primary" />
@@ -39,8 +39,8 @@ const About = () => {
               </div>
               <div>
                 <Award className="w-8 h-8 mx-auto mb-3 text-primary" />
-                <div className="font-serif text-4xl font-semibold text-primary">4.9</div>
-                <div className="text-base text-muted-foreground">Client Rating</div>
+                <div className="font-serif text-4xl font-semibold text-primary">4.8</div>
+                <div className="text-base text-muted-foreground">Google Rating</div>
               </div>
             </div>
           </div>
@@ -58,7 +58,7 @@ const About = () => {
                 At the same time, family law requires clear-headed strategy. Emotional decisions often lead to regrettable outcomes. Our job is to help you think through decisions rationally while honoring what you're going through emotionally.
               </p>
               <p>
-                We've built our practice on direct attorney involvement. You'll never be handed off to a paralegal for important conversations. When you call with a question, you get an answer, not a callback in three days. This approach means we take fewer cases, but we handle each one better.
+                We've built our practice on direct attorney involvement. Every client has a dedicated attorney handling their case — you'll know exactly who to call and you'll get answers, not callbacks in three days. Our attorneys take ownership of your matter from start to finish.
               </p>
             </div>
           </div>
@@ -78,6 +78,30 @@ const About = () => {
               <p>
                 Our office in downtown Columbus is convenient for clients across the metro area, and we offer video consultations for those who prefer them.
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Our Attorneys */}
+        <section className="section-padding">
+          <div className="container max-w-4xl">
+            <h2 className="heading-section mb-6">Our Attorneys</h2>
+            <p className="text-body mb-8">
+              Borshchak Law Group is led by Dmitriy Borshchak and supported by a team of experienced family law attorneys. Every case is handled by a licensed attorney — never delegated to paralegals for substantive legal work.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              <Link to="/attorneys/dmitriy-borshchak" className="p-6 border border-border rounded-lg hover:border-primary transition-colors">
+                <p className="font-serif text-lg font-semibold text-foreground">Dmitriy Borshchak</p>
+                <p className="text-sm text-muted-foreground mt-1">Managing Attorney</p>
+              </Link>
+              <Link to="/attorneys/keri-reeves" className="p-6 border border-border rounded-lg hover:border-primary transition-colors">
+                <p className="font-serif text-lg font-semibold text-foreground">Keri Reeves</p>
+                <p className="text-sm text-muted-foreground mt-1">Family Law Attorney</p>
+              </Link>
+              <Link to="/attorneys/hank-sonderman" className="p-6 border border-border rounded-lg hover:border-primary transition-colors">
+                <p className="font-serif text-lg font-semibold text-foreground">Hank Sonderman</p>
+                <p className="text-sm text-muted-foreground mt-1">Family Law Attorney</p>
+              </Link>
             </div>
           </div>
         </section>

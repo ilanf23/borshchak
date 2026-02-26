@@ -159,10 +159,10 @@ export const reviews: Review[] = [
   }
 ];
 
-// Calculate stats - using hardcoded totals for display (160 reviews, 4.8 avg)
+// Calculate stats - using hardcoded totals for display (147 reviews, 4.8 avg)
 export const getReviewStats = () => {
   return {
-    total: 160,
+    total: 147,
     average: 4.8,
     actualCount: reviews.length,
     distribution: {

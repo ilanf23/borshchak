@@ -15,7 +15,7 @@ const Footer = () => {
               className="h-10 w-auto mb-4 brightness-0 invert"
             />
             <p className="text-primary-foreground/70 text-base leading-relaxed mb-6">
-              Award-winning family law advocates serving Columbus and Central Ohio.
+              Dedicated family law attorneys serving Columbus and Central Ohio.
             </p>
             <div className="space-y-3">
               <a href="tel:+16146624043" className="flex items-center gap-3 text-base text-primary-foreground/80 hover:text-primary-foreground transition-colors">
@@ -99,14 +99,18 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom bar */}
+        {/* Legal Disclaimer */}
         <div className="mt-12 pt-8 border-t border-primary-foreground/10">
+          <p className="text-xs text-primary-foreground/40 leading-relaxed mb-6">
+            The information on this website is for general information purposes only. Nothing on this site should be taken as legal advice for any individual case or situation. This information is not intended to create, and receipt or viewing does not constitute, an attorney-client relationship.
+          </p>
+          {/* Bottom bar */}
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-primary-foreground/50">
             <p>© {new Date().getFullYear()} Borshchak Law Group. All rights reserved.</p>
             <div className="flex items-center gap-6">
               <Link to="/privacy" className="hover:text-primary-foreground transition-colors">Privacy Policy</Link>
               <Link to="/terms" className="hover:text-primary-foreground transition-colors">Terms of Service</Link>
-              <span>Ohio State Bar Licensed</span>
+              <span>Licensed to Practice Law in Ohio</span>
             </div>
           </div>
         </div>

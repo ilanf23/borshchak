@@ -4,15 +4,15 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 const differentiators = [
   {
     icon: UserCheck,
-    title: "Direct Access to Your Attorney",
-    description: "You work directly with Dmitriy, not passed to juniors or paralegals.",
-    stat: "100%",
-    statLabel: "of clients work directly with Dmitriy"
+    title: "Direct Attorney Access",
+    description: "You always know who is handling your case and have a direct line to your attorney — never handed off to paralegals for substantive legal work.",
+    stat: "3",
+    statLabel: "dedicated family law attorneys"
   },
   {
     icon: MessageCircle,
-    title: "Extremely Responsive Communication",
-    description: "Calls and emails returned the same day. You're never left wondering.",
+    title: "Responsive Communication",
+    description: "Calls and emails returned promptly. You're never left wondering about the status of your case.",
     stat: "<24hr",
     statLabel: "average response time"
   },
@@ -28,7 +28,7 @@ const differentiators = [
     title: "Calm, Human Guidance",
     description: "We understand the emotional weight and help you make clear decisions.",
     stat: "4.8★",
-    statLabel: "from 160+ reviews"
+    statLabel: "from 147+ Google reviews"
   }
 ];
 

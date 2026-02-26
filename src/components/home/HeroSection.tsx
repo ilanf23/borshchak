@@ -20,7 +20,7 @@ const HeroSection = () => {
       <div className="container relative z-10">
         <div className="max-w-3xl mx-auto text-center py-20 md:py-28 lg:py-36">
           <h1 className="text-5xl md:text-6xl lg:text-7xl leading-tight font-medium tracking-tight text-white mb-6 drop-shadow-lg opacity-0 animate-slide-up">
-            Award-Winning Family Law Attorneys in Columbus, Ohio
+            Trusted Family Law Attorneys in Columbus, Ohio
           </h1>
           <p className="text-xl md:text-2xl leading-relaxed text-white/95 mb-10 drop-shadow-md opacity-0 animate-fade-in-up" style={{ animationDelay: "300ms" }}>
             Compassionate, strategic legal guidance for divorce, custody, and complex family law matters.
