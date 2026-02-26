@@ -1,35 +1,39 @@
-import { Users, Briefcase, ShieldAlert, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import { useConsultation } from "@/contexts/ConsultationContext";
 
-const personas = [
-  {
-    number: "01",
-    icon: Users,
-    title: "Parents navigating divorce or custody",
-    description:
-      "Your relationship with your children and your financial security are on the line. We build a clear strategy from day one — so you're never reacting, only moving forward.",
-  },
-  {
-    number: "02",
-    icon: Briefcase,
-    title: "Professionals with complex assets",
-    description:
-      "Business interests, stock options, real estate, and retirement accounts require more than a standard approach. We protect what you've built while keeping your case discreet.",
-  },
-  {
-    number: "03",
-    icon: ShieldAlert,
-    title: "Individuals in high-conflict disputes",
-    description:
-      "When the other side is combative, you need an attorney who won't back down. We've litigated hundreds of contentious cases and know how to protect you under pressure.",
-  },
+import imgDivorce from "@/assets/services/divorce.jpg";
+import imgChildCustody from "@/assets/services/child-custody.jpg";
+import imgChildSupport from "@/assets/services/child-support.jpg";
+import imgPrenuptial from "@/assets/services/prenuptial.jpg";
+import imgAnnulment from "@/assets/services/annulment.jpg";
+import imgDissolution from "@/assets/services/dissolution.jpg";
+import imgPostDecree from "@/assets/services/post-decree.jpg";
+import imgSpousalSupport from "@/assets/services/spousal-support.jpg";
+import imgContempt from "@/assets/services/contempt.jpg";
+import imgLegalSeparation from "@/assets/services/legal-separation.jpg";
+import imgBusinessInterests from "@/assets/services/business-interests.jpg";
+import imgEnforcement from "@/assets/services/enforcement.jpg";
+import imgCivilProtection from "@/assets/services/civil-protection.jpg";
+
+const services = [
+  { label: "Divorce", href: "/divorce", image: imgDivorce },
+  { label: "Child Custody", href: "/custody", image: imgChildCustody },
+  { label: "Child Support", href: "/child-support", image: imgChildSupport },
+  { label: "Prenuptial Agreement", href: "/prenuptial-agreement", image: imgPrenuptial },
+  { label: "Annulment", href: "/annulment", image: imgAnnulment },
+  { label: "Dissolution", href: "/dissolution", image: imgDissolution },
+  { label: "Post-Decree Matters", href: "/post-decree-matters", image: imgPostDecree },
+  { label: "Spousal Support", href: "/spousal-support", image: imgSpousalSupport },
+  { label: "Contempt Proceedings", href: "/contempt-proceedings", image: imgContempt },
+  { label: "Legal Separation", href: "/legal-separation", image: imgLegalSeparation },
+  { label: "Business Interests", href: "/business-interests", image: imgBusinessInterests },
+  { label: "Enforcement of Court Orders", href: "/enforcement-of-court-orders", image: imgEnforcement },
+  { label: "Civil Protection Orders", href: "/contact", image: imgCivilProtection },
 ];
 
 const WhoWeHelp = () => {
   const headerAnim = useScrollAnimation();
-  const cardsAnim = useScrollAnimation(0.1);
-  const { openConsultation } = useConsultation();
+  const gridAnim = useScrollAnimation(0.05);
 
   return (
     <section className="section-padding bg-secondary overflow-hidden">
@@ -38,46 +42,34 @@ const WhoWeHelp = () => {
           ref={headerAnim.ref}
           className={`text-center max-w-2xl mx-auto mb-12 ${headerAnim.className}`}
         >
-          <h2 className="heading-section mb-4">Who We Help</h2>
+          <h2 className="heading-section mb-4">Legal Services</h2>
           <p className="text-body">
-            Every family situation is different. We've handled them all.
+            Comprehensive family law representation across every area that matters to your family.
           </p>
         </div>
 
         <div
-          ref={cardsAnim.ref}
-          className={`grid md:grid-cols-3 gap-6 stagger-children ${cardsAnim.isVisible ? "stagger-visible" : ""}`}
+          ref={gridAnim.ref}
+          className={`grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 stagger-children ${gridAnim.isVisible ? "stagger-visible" : ""}`}
         >
-          {personas.map((persona) => (
-            <div
-              key={persona.number}
-              className="bg-navy rounded-lg p-8 flex flex-col group hover:-translate-y-1 transition-transform duration-200"
+          {services.map((service) => (
+            <Link
+              key={service.href + service.label}
+              to={service.href}
+              className="group relative h-44 md:h-52 rounded-lg overflow-hidden block"
             >
-              <div className="flex items-start justify-between mb-6">
-                <div className="w-12 h-12 rounded-full bg-primary-foreground/10 flex items-center justify-center">
-                  <persona.icon className="w-6 h-6 text-primary-foreground" />
-                </div>
-                <span className="font-serif text-4xl font-semibold text-green leading-none">
-                  {persona.number}
+              <img
+                src={service.image}
+                alt={service.label}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-black/55 group-hover:bg-black/45 transition-colors duration-300" />
+              <div className="absolute inset-0 flex items-center justify-center p-4">
+                <span className="font-serif text-center text-white text-lg md:text-xl font-medium leading-tight drop-shadow-md">
+                  {service.label}
                 </span>
               </div>
-
-              <h3 className="text-xl md:text-2xl font-serif font-medium text-primary-foreground mb-4 leading-snug">
-                {persona.title}
-              </h3>
-
-              <p className="text-primary-foreground/70 text-base leading-relaxed flex-1 mb-8">
-                {persona.description}
-              </p>
-
-              <button
-                onClick={openConsultation}
-                className="inline-flex items-center gap-2 text-base font-medium text-green group-hover:gap-3 transition-all duration-200"
-              >
-                Schedule a free consultation
-                <ArrowRight className="w-4 h-4" />
-              </button>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
