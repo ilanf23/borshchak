@@ -92,7 +92,7 @@ const AttorneysFlyout = () => (
   </div>
 );
 
-const LegalServicesFlyout = () => (
+const PracticeAreasFlyout = () => (
   <div className="w-64 p-2">
     <Link to="/divorce" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
       Divorce
@@ -154,7 +154,7 @@ const Header = () => {
           
           <div className="hidden lg:flex items-center gap-0">
             <FlyoutLink content={<AttorneysFlyout />}>Attorneys</FlyoutLink>
-            <FlyoutLink content={<LegalServicesFlyout />}>Legal Services</FlyoutLink>
+            <FlyoutLink content={<PracticeAreasFlyout />}>Practice Areas</FlyoutLink>
             <Link 
               to="/testimonials" 
               className="inline-flex h-12 items-center justify-center px-4 py-2 text-lg font-medium text-foreground hover:text-primary transition-colors"
@@ -176,7 +176,7 @@ const Header = () => {
           </div>
           
           <div className="flex items-center gap-4">
-            <a href="tel:+16146624043" className="hidden sm:flex btn-cta text-lg px-6 py-3 whitespace-nowrap">
+            <a href="tel:+16146624043" className="hidden sm:flex btn-cta text-lg px-8 py-3 whitespace-nowrap">
               <Phone className="w-5 h-5 mr-2" />
               Call Us Now
             </a>
@@ -214,10 +214,10 @@ const Header = () => {
                     </CollapsibleContent>
                   </Collapsible>
 
-                  {/* Legal Services */}
+                  {/* Practice Areas */}
                   <Collapsible>
                     <CollapsibleTrigger className="flex items-center justify-between w-full py-3 px-2 text-left text-lg font-medium hover:bg-secondary rounded-md transition-colors">
-                      Legal Services
+                      Practice Areas
                       <ChevronDown className="w-4 h-4" />
                     </CollapsibleTrigger>
                     <CollapsibleContent className="pl-4">
@@ -277,7 +277,7 @@ const Header = () => {
 
                   {/* CTA */}
                   <div className="mt-6 pt-6 border-t border-border">
-                    <a href="tel:+16146624043" className="btn-cta w-full justify-center text-base px-5 py-3">
+                    <a href="tel:+16146624043" className="btn-cta w-full justify-center text-base px-6 py-3">
                       <Phone className="w-4 h-4 mr-2" />
                       Call Us Now: 614-662-4043
                     </a>

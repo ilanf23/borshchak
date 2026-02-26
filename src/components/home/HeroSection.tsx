@@ -1,5 +1,6 @@
 import { Phone } from "lucide-react";
 import { useConsultation } from "@/contexts/ConsultationContext";
+import AnimatedCTA from "@/components/AnimatedCTA";
 
 const HeroSection = () => {
   const { openConsultation } = useConsultation();
@@ -27,11 +28,13 @@ const HeroSection = () => {
           </p>
           
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center opacity-0 animate-fade-in-up" style={{ animationDelay: "600ms" }}>
-            <a href="tel:+16146624043" className="btn-cta">
-              <Phone className="w-5 h-5 mr-2" />
-              Call Us Now: 614-662-4043
-            </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <AnimatedCTA delay={0.6}>
+              <a href="tel:+16146624043" className="btn-cta">
+                <Phone className="w-5 h-5 mr-2" />
+                Call Us Now: 614-662-4043
+              </a>
+            </AnimatedCTA>
           </div>
         </div>
       </div>

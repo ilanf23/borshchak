@@ -34,7 +34,7 @@
     --muted-foreground: 220 15% 45%;
 
     /* Forest green accent - confident, encourages action */
-    --accent: 152 45% 38%;
+    --accent: 153 30% 25%;
     --accent-foreground: 220 25% 12%;
 
     --destructive: 0 72% 51%;
@@ -55,9 +55,10 @@
     --text-secondary: 220 15% 40%;
     --text-muted: 220 12% 55%;
     
-    /* Green accent tokens */
-    --green-accent: 152 45% 38%;
-    --green-accent-hover: 152 50% 32%;
+    /* Green accent tokens - matched to logo's dark hunter green */
+    --green-accent: 153 30% 25%;
+    --green-accent-hover: 153 32% 20%;
+    --green-accent-light: 153 28% 30%;
 
     /* Sidebar defaults */
     --sidebar-background: 40 30% 96%;
@@ -128,17 +129,46 @@
 }
 
 @layer components {
-  /* Primary CTA button - green, confident */
+  /* Primary CTA button - premium, dimensional, pill-shaped */
   .btn-cta {
-    @apply inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-md transition-all duration-200;
-    background-color: hsl(var(--green-accent));
+    @apply inline-flex items-center justify-center px-10 py-4 text-lg font-medium rounded-full transition-all duration-300 relative overflow-hidden;
+    background: linear-gradient(
+      to bottom,
+      hsl(var(--green-accent-light)),
+      hsl(var(--green-accent))
+    );
     color: white;
+    box-shadow:
+      0 1px 0 0 hsla(153, 28%, 35%, 0.3) inset,
+      0 -1px 0 0 hsla(153, 30%, 12%, 0.2) inset,
+      0 2px 8px hsla(153, 30%, 15%, 0.25),
+      0 1px 2px hsla(153, 30%, 15%, 0.15);
+    border: 1px solid hsla(153, 28%, 30%, 0.3);
+    letter-spacing: 0.025em;
+    text-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.15);
   }
 
   .btn-cta:hover {
-    background-color: hsl(var(--green-accent-hover));
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px hsla(var(--green-accent), 0.3);
+    background: linear-gradient(
+      to bottom,
+      hsl(var(--green-accent)),
+      hsl(var(--green-accent-hover))
+    );
+    transform: translateY(-2px);
+    box-shadow:
+      0 1px 0 0 hsla(153, 28%, 35%, 0.3) inset,
+      0 -1px 0 0 hsla(153, 30%, 12%, 0.2) inset,
+      0 6px 20px hsla(153, 30%, 15%, 0.3),
+      0 2px 6px hsla(153, 30%, 15%, 0.2);
+    border-color: hsla(153, 28%, 28%, 0.4);
+  }
+
+  .btn-cta:active {
+    transform: translateY(0px);
+    box-shadow:
+      0 1px 0 0 hsla(153, 28%, 35%, 0.15) inset,
+      0 -1px 0 0 hsla(153, 30%, 12%, 0.3) inset,
+      0 1px 4px hsla(153, 30%, 15%, 0.2);
   }
 
   /* Secondary button - outlined */

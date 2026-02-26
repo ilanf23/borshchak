@@ -42,7 +42,7 @@ const WhoWeHelp = () => {
           ref={headerAnim.ref}
           className={`text-center max-w-2xl mx-auto mb-12 ${headerAnim.className}`}
         >
-          <h2 className="heading-section mb-4">Legal Services</h2>
+          <h2 className="heading-section mb-4">Practice Areas</h2>
           <p className="text-body">
             Comprehensive family law representation across every area that matters to your family.
           </p>
