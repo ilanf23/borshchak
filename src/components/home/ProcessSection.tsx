@@ -6,54 +6,54 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 const steps = [
   {
     number: "1",
-    title: "Free Consultation",
-    shortDesc: "Understand your situation",
-    fullDesc: "Schedule a confidential call with our team. We'll listen to your story, answer your questions, and help you understand your legal options. No pressure, no obligation.",
+    title: "Consultation",
+    shortDesc: "Your situation, your questions",
+    fullDesc: "Schedule a confidential call with our team. We'll listen to what you're going through, explain how Ohio family law applies to your situation, and outline the realistic options available to you. There is no cost and no obligation.",
     icon: Phone,
     details: [
-      "30-minute confidential call",
-      "Discuss your unique situation",
-      "Get answers to your questions",
+      "Confidential and private",
+      "In-person or by video",
+      "Candid assessment of your options",
       "No cost, no obligation"
     ]
   },
   {
     number: "2",
-    title: "Custom Strategy",
-    shortDesc: "Clear legal plan",
-    fullDesc: "Based on your goals and circumstances, we develop a personalized legal strategy. You'll know exactly what to expect, the timeline, and the costs involved.",
+    title: "Case Strategy",
+    shortDesc: "A plan built around your goals",
+    fullDesc: "If you decide to move forward, we immediately get to work understanding your full situation. We develop a legal strategy tailored to your specific goals, circumstances, and timeline — and we present it to you clearly before anything is filed.",
     icon: FileText,
     details: [
-      "Tailored to your goals",
-      "Transparent pricing",
-      "Clear timeline expectations",
-      "Written action plan"
+      "Tailored to your circumstances",
+      "Transparent fee structure",
+      "Realistic timeline expectations",
+      "Your approval before we act"
     ]
   },
   {
     number: "3",
-    title: "Skilled Advocacy",
-    shortDesc: "Negotiations or court",
-    fullDesc: "Whether through negotiation, mediation, or litigation, we fight for your interests. You'll have a dedicated advocate handling every detail while keeping you informed.",
+    title: "Active Representation",
+    shortDesc: "Negotiations and court",
+    fullDesc: "We handle all filings, court appearances, negotiations, and communications with opposing counsel. You'll receive regular updates and will be consulted before any significant decision is made. You are never left uninformed.",
     icon: Scale,
     details: [
-      "Expert negotiations",
-      "Court representation",
-      "Regular case updates",
-      "24/7 client portal access"
+      "Direct attorney communication",
+      "Negotiation and mediation",
+      "Court representation when needed",
+      "Regular case updates"
     ]
   },
   {
     number: "4",
-    title: "Resolution",
-    shortDesc: "Protect your future",
-    fullDesc: "We work to secure the best possible outcome for you and your family. Once resolved, we ensure all paperwork is finalized so you can move forward with confidence.",
+    title: "Case Conclusion",
+    shortDesc: "Documentation and next steps",
+    fullDesc: "We ensure all final agreements and court orders are properly drafted, filed, and enforceable. We walk you through what the order means, what your obligations are, and what to do if circumstances change down the road.",
     icon: Shield,
     details: [
-      "Favorable settlements",
-      "Complete documentation",
-      "Post-case support",
-      "Peace of mind"
+      "Final order review and filing",
+      "Clear explanation of your obligations",
+      "Modification and enforcement guidance",
+      "Continued support as needed"
     ]
   }
 ];
@@ -74,7 +74,7 @@ const ProcessSection = () => {
             What Working With Us Looks Like
           </h2>
           <p className="text-primary-foreground/70 mt-4 text-lg">
-            A proven 4-step process designed to guide you from uncertainty to resolution
+            A structured process designed to give you clarity at every stage.
           </p>
         </div>
         

@@ -8,25 +8,25 @@ const steps = [
     number: "01",
     icon: Phone,
     title: "Free Consultation",
-    subtitle: "30-60 minutes, no obligation",
-    description: "We start with a confidential conversation about your situation. You'll share what's happening, what you're hoping to achieve, and what concerns you most. We'll provide initial guidance on your options and likely outcomes.",
+    subtitle: "30–60 minutes, confidential",
+    description: "We start with a confidential conversation about your situation. You'll explain what's happening, what you're hoping to achieve, and what concerns you most. We'll give you an honest picture of how Ohio law applies to your circumstances and what your realistic options are.",
     details: [
       "Available in-person or by video",
-      "No pressure to hire us",
-      "Honest assessment of your case",
-      "Clear explanation of fees and process"
+      "No pressure to retain us",
+      "Candid assessment of your situation",
+      "Clear explanation of fees and next steps"
     ]
   },
   {
     number: "02",
     icon: FileText,
     title: "Case Strategy",
-    subtitle: "Weeks 1-2",
-    description: "If you choose to work with us, we immediately gather the information needed to build your case. We'll develop a legal strategy tailored to your goals, timeline, and budget, then present it for your approval.",
+    subtitle: "Weeks 1–2",
+    description: "If you choose to retain us, we immediately gather the information needed to understand your full picture. We develop a legal strategy tailored to your goals and present it to you for review before any action is taken.",
     details: [
       "Document collection and review",
       "Financial analysis and discovery planning",
-      "Strategy presentation and discussion",
+      "Strategy review with your attorney",
       "Timeline and cost estimates"
     ]
   },
@@ -35,25 +35,25 @@ const steps = [
     icon: Scale,
     title: "Skilled Execution",
     subtitle: "Duration varies by case",
-    description: "We handle all legal filings, court appearances, negotiations, and communication with opposing counsel. You'll receive regular updates and be consulted on all significant decisions. Nothing happens without your knowledge.",
+    description: "We manage all legal filings, court appearances, negotiations, and communication with the other side. You'll receive regular updates and be consulted before any significant decision is made. Nothing happens without your knowledge.",
     details: [
       "Direct attorney communication",
       "Regular case status updates",
-      "Aggressive advocacy when needed",
-      "Settlement negotiations or trial preparation"
+      "Negotiation, mediation, or litigation as your case requires",
+      "Settlement discussions or trial preparation"
     ]
   },
   {
     number: "04",
     icon: CheckCircle,
-    title: "Resolution & Beyond",
+    title: "Resolution and Beyond",
     subtitle: "Final steps and ongoing support",
-    description: "We ensure your final agreements or court orders are properly documented, filed, and enforceable. If issues arise later (modifications, enforcement, or new circumstances), we're here to help.",
+    description: "We ensure your final agreements or court orders are properly documented, filed, and enforceable. We walk you through exactly what the order means and what to do if your circumstances change in the future.",
     details: [
       "Final order review and filing",
-      "Asset transfer coordination",
-      "Future modification guidance",
-      "Ongoing client relationship"
+      "Clear explanation of your rights and obligations",
+      "Guidance on future modifications or enforcement",
+      "Continued attorney relationship"
     ]
   }
 ];
