@@ -6,7 +6,7 @@ const HeroSection = () => {
   const { openConsultation } = useConsultation();
 
   return (
-    <section className="relative min-h-[80vh] flex items-center overflow-hidden">
+    <section className="relative min-h-[80vh] flex items-center overflow-hidden -mt-[96px] md:-mt-[104px]">
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <iframe

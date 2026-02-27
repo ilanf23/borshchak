@@ -58,7 +58,7 @@ const About = () => {
                 At the same time, family law requires clear-headed strategy. Emotional decisions often lead to regrettable outcomes. Our job is to help you think through decisions rationally while honoring what you're going through emotionally.
               </p>
               <p>
-                We've built our practice on direct attorney involvement. Every client has a dedicated attorney handling their case — you'll know exactly who to call and you'll get answers, not callbacks in three days. Our attorneys take ownership of your matter from start to finish.
+                We've built our practice on direct attorney involvement. Every client has a dedicated attorney handling their case. You'll know exactly who to call, and you'll get answers, not callbacks in three days. Our attorneys take ownership of your matter from start to finish.
               </p>
             </div>
           </div>
@@ -87,7 +87,7 @@ const About = () => {
           <div className="container max-w-4xl">
             <h2 className="heading-section mb-6">Our Attorneys</h2>
             <p className="text-body mb-8">
-              Borshchak Law Group is led by Dmitriy Borshchak and supported by a team of experienced family law attorneys. Every case is handled by a licensed attorney — never delegated to paralegals for substantive legal work.
+              Borshchak Law Group is led by Dmitriy Borshchak and supported by a team of experienced family law attorneys. Every case is handled by a licensed attorney and never delegated to paralegals for substantive legal work.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               <Link to="/attorneys/dmitriy-borshchak" className="p-6 border border-border rounded-lg hover:border-primary transition-colors">

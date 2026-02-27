@@ -61,7 +61,7 @@ const GoogleReviews = () => {
   const scrollSnaps = emblaApi?.scrollSnapList() || [];
 
   return (
-    <section className="py-16 md:py-24 bg-secondary/30">
+    <section className="py-16 md:py-24 bg-secondary/50">
       <div
         ref={sectionAnim.ref}
         className={`container max-w-5xl ${sectionAnim.className}`}

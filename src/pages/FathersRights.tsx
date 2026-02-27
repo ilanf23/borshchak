@@ -467,7 +467,7 @@ const FathersRights = () => {
           </div>
         </section>
 
-        {/* Key Issues — full-bleed with background image */}
+        {/* Key Issues: full-bleed with background image */}
         <section
           className="relative py-20 md:py-28 bg-cover bg-center"
           style={{ backgroundImage: "url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1800&q=80')" }}
@@ -670,7 +670,7 @@ const FathersRights = () => {
               />
               <img
                 src="https://images.unsplash.com/photo-1473116763249-2faaef81ccda?w=1200&q=80"
-                alt="Sunset over the ocean — a new beginning"
+                alt="Sunset over the ocean, a new beginning"
                 className="relative z-10 w-full h-64 md:h-80 object-cover rounded-lg"
                 loading="lazy"
               />

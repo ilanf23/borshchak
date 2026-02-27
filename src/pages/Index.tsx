@@ -4,7 +4,6 @@ import HeroSection from "@/components/home/HeroSection";
 import AwardLogos from "@/components/home/AwardLogos";
 import WhoWeHelp from "@/components/home/WhoWeHelp";
 import VideoSection from "@/components/home/VideoSection";
-import WhyChooseUs from "@/components/home/WhyChooseUs";
 import GoogleReviews from "@/components/home/GoogleReviews";
 import ServicesOverview from "@/components/home/ServicesOverview";
 import ProcessSection from "@/components/home/ProcessSection";
@@ -21,7 +20,6 @@ const Index = () => {
         <AwardLogos />
         <WhoWeHelp />
         <VideoSection />
-        <WhyChooseUs />
         <GoogleReviews />
         <ServicesOverview />
         <ProcessSection />

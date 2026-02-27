@@ -25,7 +25,7 @@ const courtFactors = [
   {
     title: "Duration of Marriage",
     icon: Calendar,
-    description: "The duration of the marriage is a key factor. Longer marriages may result in more substantial and longer-lasting support awards. Shorter marriages may result in limited or no support, depending on the parties' circumstances. There is no fixed formula — each case is evaluated individually.",
+    description: "The duration of the marriage is a key factor. Longer marriages may result in more substantial and longer-lasting support awards. Shorter marriages may result in limited or no support, depending on the parties' circumstances. There is no fixed formula, and each case is evaluated individually.",
   },
   {
     title: "Standard of Living",
@@ -349,7 +349,7 @@ const SpousalSupport = () => {
           <div className="absolute inset-0" style={{ backgroundColor: "hsla(215, 45%, 22%, 0.75)" }} />
           <div className="relative z-10 text-center px-6 max-w-3xl">
             <p className="text-2xl md:text-3xl font-serif font-medium leading-relaxed" style={{ color: "hsl(var(--primary-foreground))" }}>
-              Under Ohio R.C. 3105.18, courts weigh fourteen statutory factors when determining spousal support — including length of marriage, income disparity, and each party's earning capacity.
+              Under Ohio R.C. 3105.18, courts weigh fourteen statutory factors when determining spousal support, including length of marriage, income disparity, and each party's earning capacity.
             </p>
             <p className="mt-4 text-base" style={{ color: "hsla(40, 30%, 98%, 0.7)" }}>Ohio Revised Code § 3105.18</p>
           </div>

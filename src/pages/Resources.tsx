@@ -17,7 +17,7 @@ import blogEvidenceEssentials from "@/assets/blog-evidence-essentials.jpg";
 const blogPosts = [
   {
     title: "Enforcing Ohio Child Custody Orders Across State Lines: UCCJEA Explained",
-    excerpt: "Navigating the complexities of child custody can be daunting for any parent—especially when life's circumstances take you across state lines.",
+    excerpt: "Navigating the complexities of child custody can be daunting for any parent, especially when life's circumstances take you across state lines.",
     date: "February 10, 2026",
     slug: "custody-state-lines",
     category: "Child Custody",

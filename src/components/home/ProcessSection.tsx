@@ -21,7 +21,7 @@ const steps = [
     number: "2",
     title: "Case Strategy",
     shortDesc: "A plan built around your goals",
-    fullDesc: "If you decide to move forward, we immediately get to work understanding your full situation. We develop a legal strategy tailored to your specific goals, circumstances, and timeline — and we present it to you clearly before anything is filed.",
+    fullDesc: "If you decide to move forward, we immediately get to work understanding your full situation. We develop a legal strategy tailored to your specific goals, circumstances, and timeline, and we present it to you clearly before anything is filed.",
     icon: FileText,
     details: [
       "Tailored to your circumstances",

@@ -1,6 +1,6 @@
 import { Phone, ChevronDown, Menu } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import logo from "@/assets/logo.png";
 import { useConsultation } from "@/contexts/ConsultationContext";
@@ -21,9 +21,11 @@ import {
 const FlyoutLink = ({
   children,
   content,
+  isTransparent,
 }: {
   children: React.ReactNode;
   content?: React.ReactNode;
+  isTransparent?: boolean;
 }) => {
   const [open, setOpen] = useState(false);
 
@@ -33,7 +35,7 @@ const FlyoutLink = ({
       onMouseLeave={() => setOpen(false)}
       className="relative h-fit w-fit"
     >
-      <button className="relative inline-flex h-12 items-center justify-center px-4 py-2 text-lg font-medium text-foreground hover:text-primary transition-colors">
+      <button className={`relative inline-flex h-12 items-center justify-center px-4 py-2 text-lg font-medium transition-colors ${isTransparent ? "text-white hover:text-white/80" : "text-foreground hover:text-primary"}`}>
         {children}
         {content && <ChevronDown className="ml-1 w-3.5 h-3.5" />}
         <span
@@ -141,53 +143,73 @@ const PracticeAreasFlyout = () => (
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const { openConsultation } = useConsultation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 200);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const isTransparent = !scrolled;
+
   return (
-    <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+    <>
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isTransparent
+          ? "bg-transparent border-b border-transparent"
+          : "bg-background/95 backdrop-blur-sm border-b border-border"
+      }`}
+    >
       <div className="container">
         {/* Main navigation */}
         <nav className="flex items-center justify-between py-5">
           <Link to="/" className="flex items-center shrink-0">
-            <img 
-              src={logo} 
-              alt="Borshchak Law Group" 
+            <img
+              src={logo}
+              alt="Borshchak Law Group"
               className="h-14 md:h-16 w-auto object-contain"
             />
           </Link>
-          
+
           <div className="hidden lg:flex items-center gap-0">
-            <FlyoutLink content={<AttorneysFlyout />}>Attorneys</FlyoutLink>
-            <FlyoutLink content={<PracticeAreasFlyout />}>Practice Areas</FlyoutLink>
-            <Link 
-              to="/testimonials" 
-              className="inline-flex h-12 items-center justify-center px-4 py-2 text-lg font-medium text-foreground hover:text-primary transition-colors"
+            <FlyoutLink content={<AttorneysFlyout />} isTransparent={isTransparent}>Attorneys</FlyoutLink>
+            <FlyoutLink content={<PracticeAreasFlyout />} isTransparent={isTransparent}>Practice Areas</FlyoutLink>
+            <Link
+              to="/testimonials"
+              className={`inline-flex h-12 items-center justify-center px-4 py-2 text-lg font-medium transition-colors ${isTransparent ? "text-white hover:text-white/80" : "text-foreground hover:text-primary"}`}
             >
               Testimonials
             </Link>
-            <Link 
-              to="/resources" 
-              className="inline-flex h-12 items-center justify-center px-4 py-2 text-lg font-medium text-foreground hover:text-primary transition-colors"
+            <Link
+              to="/resources"
+              className={`inline-flex h-12 items-center justify-center px-4 py-2 text-lg font-medium transition-colors ${isTransparent ? "text-white hover:text-white/80" : "text-foreground hover:text-primary"}`}
             >
               Blog
             </Link>
-            <Link 
-              to="/contact" 
-              className="inline-flex h-12 items-center justify-center px-4 py-2 text-lg font-medium text-foreground hover:text-primary transition-colors"
+            <Link
+              to="/contact"
+              className={`inline-flex h-12 items-center justify-center px-4 py-2 text-lg font-medium transition-colors ${isTransparent ? "text-white hover:text-white/80" : "text-foreground hover:text-primary"}`}
             >
               Contact
             </Link>
           </div>
-          
+
           <div className="flex items-center gap-4">
             <a href="tel:+16146624043" className="hidden sm:flex btn-cta text-lg px-8 py-3 whitespace-nowrap">
               <Phone className="w-5 h-5 mr-2" />
               Call Us Now
             </a>
-            
+
             {/* Mobile Menu */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild className="lg:hidden">
-                <button className="flex items-center justify-center w-10 h-10 rounded-md hover:bg-secondary transition-colors">
+                <button className={`flex items-center justify-center w-10 h-10 rounded-md transition-colors ${isTransparent ? "text-white hover:bg-white/10" : "hover:bg-secondary"}`}>
                   <Menu className="w-7 h-7" />
                 </button>
               </SheetTrigger>
@@ -295,6 +317,9 @@ const Header = () => {
         </nav>
       </div>
     </header>
+    {/* Spacer to offset fixed header */}
+    <div className="h-[96px] md:h-[104px]" />
+    </>
   );
 };
 

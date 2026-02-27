@@ -1,76 +1,145 @@
-import { Link } from "react-router-dom";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import bgImage from "@/assets/hero-office.jpg";
 
-import imgDivorce from "@/assets/services/divorce.jpg";
-import imgChildCustody from "@/assets/services/child-custody.jpg";
-import imgChildSupport from "@/assets/services/child-support.jpg";
-import imgPrenuptial from "@/assets/services/prenuptial.jpg";
-import imgAnnulment from "@/assets/services/annulment.jpg";
-import imgDissolution from "@/assets/services/dissolution.jpg";
-import imgPostDecree from "@/assets/services/post-decree.jpg";
-import imgSpousalSupport from "@/assets/services/spousal-support.jpg";
-import imgContempt from "@/assets/services/contempt.jpg";
-import imgLegalSeparation from "@/assets/services/legal-separation.jpg";
-import imgBusinessInterests from "@/assets/services/business-interests.jpg";
-import imgEnforcement from "@/assets/services/enforcement.jpg";
-import imgCivilProtection from "@/assets/services/civil-protection.jpg";
-
-const services = [
-  { label: "Divorce", href: "/divorce", image: imgDivorce },
-  { label: "Child Custody", href: "/custody", image: imgChildCustody },
-  { label: "Child Support", href: "/child-support", image: imgChildSupport },
-  { label: "Prenuptial Agreement", href: "/prenuptial-agreement", image: imgPrenuptial },
-  { label: "Annulment", href: "/annulment", image: imgAnnulment },
-  { label: "Dissolution", href: "/dissolution", image: imgDissolution },
-  { label: "Post-Decree Matters", href: "/post-decree-matters", image: imgPostDecree },
-  { label: "Spousal Support", href: "/spousal-support", image: imgSpousalSupport },
-  { label: "Contempt Proceedings", href: "/contempt-proceedings", image: imgContempt },
-  { label: "Legal Separation", href: "/legal-separation", image: imgLegalSeparation },
-  { label: "Business Interests", href: "/business-interests", image: imgBusinessInterests },
-  { label: "Enforcement of Court Orders", href: "/enforcement-of-court-orders", image: imgEnforcement },
-  { label: "Civil Protection Orders", href: "/contact", image: imgCivilProtection },
+const audiences = [
+  {
+    title: "Going Through Divorce",
+    description:
+      "Whether contested or uncontested, we guide you through every step with clarity while protecting your rights without prolonging the pain.",
+  },
+  {
+    title: "Fighting for Your Children",
+    description:
+      "Custody and parenting time shape your child's future. We advocate decisively for arrangements that put your family first.",
+  },
+  {
+    title: "Protecting What You've Built",
+    description:
+      "From the family home to retirement accounts and business interests, we fight for equitable division of everything you've worked for.",
+  },
+  {
+    title: "Moving Forward Post-Decree",
+    description:
+      "Life changes after divorce. When orders need modification or enforcement, we move quickly to protect your new stability.",
+  },
 ];
 
+const DecorativeDots = ({ size = "lg" }: { size?: "sm" | "lg" }) => {
+  const w = size === "lg" ? "w-7 h-2" : "w-5 h-1.5";
+  return (
+    <div className="flex justify-center gap-1.5" aria-hidden="true">
+      <span
+        className={`block ${w} rounded-sm`}
+        style={{ backgroundColor: "hsl(var(--green-accent-light))" }}
+      />
+      <span
+        className={`block ${w} rounded-sm`}
+        style={{ backgroundColor: "hsl(var(--green-accent))" }}
+      />
+      <span
+        className={`block ${w} rounded-sm`}
+        style={{ backgroundColor: "hsl(var(--green-accent-hover))" }}
+      />
+    </div>
+  );
+};
+
 const WhoWeHelp = () => {
-  const headerAnim = useScrollAnimation();
+  const headerAnim = useScrollAnimation(0.1);
   const gridAnim = useScrollAnimation(0.05);
 
   return (
-    <section className="section-padding bg-secondary overflow-hidden">
-      <div className="container">
-        <div
-          ref={headerAnim.ref}
-          className={`text-center max-w-2xl mx-auto mb-12 ${headerAnim.className}`}
-        >
-          <h2 className="heading-section mb-4">Practice Areas</h2>
-          <p className="text-body">
-            Comprehensive family law representation across every area that matters to your family.
-          </p>
-        </div>
+    <section className="relative overflow-hidden">
+      {/* Background image */}
+      <img
+        src={bgImage}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover object-center"
+      />
 
-        <div
-          ref={gridAnim.ref}
-          className={`grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 stagger-children ${gridAnim.isVisible ? "stagger-visible" : ""}`}
-        >
-          {services.map((service) => (
-            <Link
-              key={service.href + service.label}
-              to={service.href}
-              className="group relative h-44 md:h-52 rounded-lg overflow-hidden block"
+      {/* Deep navy overlay, warm tinted, not pure black */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(150deg, hsla(215,50%,10%,0.94) 0%, hsla(215,42%,16%,0.90) 100%)",
+        }}
+      />
+
+      <div className="relative z-10 py-16 md:py-24">
+        <div className="container">
+          {/* ── Header ── */}
+          <div
+            ref={headerAnim.ref}
+            className={`text-center max-w-3xl mx-auto mb-14 ${headerAnim.className}`}
+          >
+            <DecorativeDots size="lg" />
+
+            <h2
+              className="mt-6 mb-4 text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-wide uppercase"
+              style={{
+                fontFamily: "'Playfair Display', Georgia, serif",
+                color: "hsl(40 30% 98%)",
+                letterSpacing: "0.06em",
+              }}
             >
-              <img
-                src={service.image}
-                alt={service.label}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-black/55 group-hover:bg-black/45 transition-colors duration-300" />
-              <div className="absolute inset-0 flex items-center justify-center p-4">
-                <span className="font-serif text-center text-white text-lg md:text-xl font-medium leading-tight drop-shadow-md">
-                  {service.label}
-                </span>
+              Trusted by Colorado Families
+            </h2>
+
+            {/* Thin accent rule */}
+            <div
+              className="mx-auto mb-5 h-px w-16"
+              style={{ backgroundColor: "hsl(var(--green-accent-light))" }}
+            />
+
+            <p
+              className="text-lg md:text-xl leading-relaxed"
+              style={{ color: "hsla(40, 30%, 98%, 0.72)" }}
+            >
+              Whatever brings you here, you don't have to face it alone. We've
+              helped hundreds of Colorado families through situations just like
+              yours.
+            </p>
+          </div>
+
+          {/* ── 4-column pillars ── */}
+          <div
+            ref={gridAnim.ref}
+            className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10 ${
+              gridAnim.isVisible ? "stagger-visible" : "stagger-children"
+            }`}
+          >
+            {audiences.map((item) => (
+              <div key={item.title} className="text-center px-2">
+                <DecorativeDots size="sm" />
+
+                <h3
+                  className="mt-4 mb-3 text-sm md:text-base font-bold uppercase tracking-widest"
+                  style={{
+                    fontFamily: "'Playfair Display', Georgia, serif",
+                    color: "hsl(40 30% 98%)",
+                    letterSpacing: "0.12em",
+                  }}
+                >
+                  {item.title}
+                </h3>
+
+                {/* Short accent rule under title */}
+                <div
+                  className="mx-auto mb-3 h-px w-8"
+                  style={{ backgroundColor: "hsl(var(--green-accent-light) / 0.5)" }}
+                />
+
+                <p
+                  className="text-base leading-relaxed"
+                  style={{ color: "hsla(40, 30%, 98%, 0.68)" }}
+                >
+                  {item.description}
+                </p>
               </div>
-            </Link>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
