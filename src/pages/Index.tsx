@@ -8,6 +8,7 @@ import WhyChooseUs from "@/components/home/WhyChooseUs";
 import GoogleReviews from "@/components/home/GoogleReviews";
 import ServicesOverview from "@/components/home/ServicesOverview";
 import ProcessSection from "@/components/home/ProcessSection";
+import RecentBlogs from "@/components/home/RecentBlogs";
 import FAQSection from "@/components/home/FAQSection";
 import FinalCTA from "@/components/home/FinalCTA";
 
@@ -24,6 +25,7 @@ const Index = () => {
         <GoogleReviews />
         <ServicesOverview />
         <ProcessSection />
+        <RecentBlogs />
         <FAQSection />
         <FinalCTA />
       </main>

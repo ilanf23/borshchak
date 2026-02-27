@@ -133,6 +133,9 @@ const PracticeAreasFlyout = () => (
     <Link to="/civil-protection-orders" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
       Civil Protection Orders
     </Link>
+    <Link to="/fathers-rights" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
+      Father's Rights
+    </Link>
   </div>
 );
 
@@ -259,6 +262,9 @@ const Header = () => {
                       </Link>
                       <Link to="/civil-protection-orders" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-base text-muted-foreground hover:text-foreground transition-colors">
                         Civil Protection Orders
+                      </Link>
+                      <Link to="/fathers-rights" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-base text-muted-foreground hover:text-foreground transition-colors">
+                        Father's Rights
                       </Link>
                     </CollapsibleContent>
                   </Collapsible>
