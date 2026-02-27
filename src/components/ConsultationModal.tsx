@@ -78,7 +78,7 @@ const ConsultationModal = ({ open, onOpenChange }: ConsultationModalProps) => {
                 Free Consultation
               </DialogTitle>
               <DialogDescription className="text-lg">
-                Tell us about your situation and we'll get back to you within 24 hours.
+                Tell us about your situation and we'll get back to you promptly.
               </DialogDescription>
             </DialogHeader>
 
@@ -89,7 +89,7 @@ const ConsultationModal = ({ open, onOpenChange }: ConsultationModalProps) => {
                 </div>
                 <h3 className="text-2xl font-medium text-foreground mb-2">Thank You!</h3>
                 <p className="text-lg text-muted-foreground">
-                  We've received your request and will contact you within 24 hours.
+                  We've received your request and will contact you shortly.
                 </p>
               </div>
             ) : (

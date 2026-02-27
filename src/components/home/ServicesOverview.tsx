@@ -16,7 +16,7 @@ const services = [
   { title: "Contempt Proceedings", description: "Enforce court orders when they're violated.", href: "/contempt-proceedings", icon: ShieldAlert },
   { title: "Legal Separation", description: "Legal boundaries for finances, custody, and property.", href: "/legal-separation", icon: Scale },
   { title: "Business Interests", description: "Valuation, division, and preservation of commercial assets.", href: "/business-interests", icon: Briefcase },
-  { title: "Court Order Enforcement", description: "Hold the other party accountable to court orders.", href: "/enforcement", icon: ShieldCheck },
+  { title: "Court Order Enforcement", description: "Hold the other party accountable to court orders.", href: "/enforcement-of-court-orders", icon: ShieldCheck },
   { title: "Civil Protection Orders", description: "Obtain or defend against protection orders.", href: "/civil-protection-orders", icon: ShieldAlert },
   { title: "Father's Rights", description: "Equal consideration in custody and support matters.", href: "/fathers-rights", icon: UserCheck },
 ];
@@ -41,19 +41,21 @@ const ServicesOverview = () => {
           <div className={`grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 stagger-children ${sectionAnim.isVisible ? "stagger-visible" : ""}`}>
             {services.map((service, index) => {
               const Icon = service.icon;
-              const [bgColor, textColor] = service.color.split(" ");
               return (
                 <Link
                   key={index}
                   to={service.href}
                   className="group bg-white rounded-xl p-5 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col items-start border border-transparent hover:border-primary/10"
                 >
-                  <div className={`w-11 h-11 rounded-lg flex items-center justify-center mb-3 ${bgColor}`}>
-                    <Icon className={`w-5.5 h-5.5 ${textColor}`} />
+                  <div className="w-11 h-11 rounded-lg flex items-center justify-center mb-3" style={{ backgroundColor: "hsl(var(--green-accent) / 0.12)" }}>
+                    <Icon className="w-5.5 h-5.5" style={{ color: "hsl(var(--green-accent))" }} />
                   </div>
-                  <h3 className="font-semibold text-sm md:text-base text-foreground group-hover:text-primary transition-colors leading-snug mb-2">
+                  <h3 className="font-semibold text-sm md:text-base text-foreground group-hover:text-primary transition-colors leading-snug mb-1">
                     {service.title}
                   </h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed mb-2 flex-1">
+                    {service.description}
+                  </p>
                   <span className="inline-flex items-center text-xs font-medium text-muted-foreground group-hover:text-primary transition-colors mt-auto">
                     Explore <ArrowRight className="w-3 h-3 ml-1 transition-transform group-hover:translate-x-1" />
                   </span>

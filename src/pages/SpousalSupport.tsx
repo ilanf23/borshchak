@@ -63,7 +63,7 @@ const quizQuestions = [
   {
     question: "Is spousal support automatic in an Ohio divorce?",
     options: [
-      "Yes, it is always awarded",
+      "Yes, it is automatically awarded in every case",
       "No, it depends on income differences and other factors",
       "Only if the marriage lasted over 10 years",
       "Only for women",
@@ -308,7 +308,7 @@ const SpousalSupport = () => {
               <div className="space-y-4">
                 <h3 className="heading-subsection">Securing Your Financial Future</h3>
                 <p className="text-body">
-                  The financial implications of divorce can be overwhelming. Whether you're the higher or lower earner, having experienced legal counsel ensures the spousal support arrangement is fair, sustainable, and reflective of your circumstances.
+                  The financial implications of divorce can be overwhelming. Whether you're the higher or lower earner, having experienced legal counsel helps pursue a spousal support arrangement that is fair, sustainable, and reflective of your circumstances.
                 </p>
               </div>
               <img

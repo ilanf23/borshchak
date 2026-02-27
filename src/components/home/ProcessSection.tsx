@@ -77,7 +77,7 @@ const ProcessSection = () => {
             A structured process designed to give you clarity at every stage.
           </p>
         </div>
-        
+
         {/* Interactive Process Graph */}
         <div
           ref={graphAnim.ref}
@@ -86,18 +86,18 @@ const ProcessSection = () => {
           {/* Progress Line - Desktop */}
           <div className="hidden md:block relative mb-8">
             <div className="absolute top-6 left-0 right-0 h-1 bg-primary-foreground/20 rounded-full" />
-            <div 
+            <div
               className="absolute top-6 left-0 h-1 bg-accent rounded-full transition-all duration-500 ease-out"
               style={{ width: `${(activeStep / (steps.length - 1)) * 100}%` }}
             />
-            
+
             {/* Step Indicators */}
             <div className="relative flex justify-between">
               {steps.map((step, index) => {
                 const Icon = step.icon;
                 const isActive = index === activeStep;
                 const isCompleted = index < activeStep;
-                
+
                 return (
                   <button
                     key={index}
@@ -105,23 +105,23 @@ const ProcessSection = () => {
                     onMouseEnter={() => setActiveStep(index)}
                     className="flex flex-col items-center group focus:outline-none"
                   >
-                    <div 
+                    <div
                       className={cn(
                         "w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 relative z-10",
-                        isActive 
-                          ? "bg-accent text-accent-foreground scale-110 shadow-lg shadow-accent/30" 
-                          : isCompleted 
-                            ? "bg-accent/80 text-accent-foreground" 
+                        isActive
+                          ? "bg-accent text-accent-foreground scale-110 shadow-lg shadow-accent/30"
+                          : isCompleted
+                            ? "bg-accent/80 text-accent-foreground"
                             : "bg-primary-foreground/20 text-primary-foreground/60 group-hover:bg-primary-foreground/30"
                       )}
                     >
                       <Icon className="w-5 h-5" />
                     </div>
-                    <span 
+                    <span
                       className={cn(
                         "mt-3 text-base font-medium transition-colors",
-                        isActive 
-                          ? "text-accent" 
+                        isActive
+                          ? "text-accent"
                           : "text-primary-foreground/60 group-hover:text-primary-foreground/80"
                       )}
                     >
@@ -143,8 +143,8 @@ const ProcessSection = () => {
                   onClick={() => setActiveStep(index)}
                   className={cn(
                     "px-4 py-2 rounded-full text-base font-medium transition-all duration-300",
-                    isActive 
-                      ? "bg-accent text-accent-foreground" 
+                    isActive
+                      ? "bg-accent text-accent-foreground"
                       : "bg-primary-foreground/20 text-primary-foreground/60"
                   )}
                 >

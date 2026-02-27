@@ -68,7 +68,7 @@ const quizQuestions = [
       "There is no difference",
       "A dissolution requires proving fault",
       "A dissolution requires both parties to agree on all issues",
-      "A divorce is always faster",
+      "A divorce is automatically faster in every case",
     ],
     correctIndex: 2,
     explanation: "A dissolution (no-fault divorce) requires both parties to agree on all issues. A divorce involves one spouse filing a lawsuit and can be resolved through negotiations or court.",

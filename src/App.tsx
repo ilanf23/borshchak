@@ -28,6 +28,7 @@ import ContemptProceedings from "./pages/ContemptProceedings";
 import LegalSeparation from "./pages/LegalSeparation";
 import BusinessInterests from "./pages/BusinessInterests";
 import EnforcementOfCourtOrders from "./pages/EnforcementOfCourtOrders";
+import CivilProtectionOrders from "./pages/CivilProtectionOrders";
 import FathersRights from "./pages/FathersRights";
 import Testimonials from "./pages/Testimonials";
 import NotFound from "./pages/NotFound";
@@ -66,6 +67,7 @@ const App = () => (
             <Route path="/legal-separation" element={<LegalSeparation />} />
             <Route path="/business-interests" element={<BusinessInterests />} />
             <Route path="/enforcement-of-court-orders" element={<EnforcementOfCourtOrders />} />
+            <Route path="/civil-protection-orders" element={<CivilProtectionOrders />} />
             <Route path="/fathers-rights" element={<FathersRights />} />
             <Route path="/testimonials" element={<Testimonials />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

@@ -93,7 +93,7 @@ const Footer = () => {
             <p className="text-base text-primary-foreground/70 mb-4">
               Schedule your free, confidential consultation today.
             </p>
-            <a href="tel:+16146624043" className="btn-cta text-base px-6 py-3 w-full md:w-auto inline-flex items-center gap-2">
+            <a href="tel:+16146624043" className="btn-cta text-base px-6 py-2 w-full md:w-auto inline-flex items-center gap-2 whitespace-nowrap">
               Call Us Now: 614-662-4043
             </a>
           </div>

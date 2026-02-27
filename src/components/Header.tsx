@@ -129,7 +129,7 @@ const PracticeAreasFlyout = () => (
     <Link to="/business-interests" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
       Business Interests
     </Link>
-    <Link to="/enforcement" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
+    <Link to="/enforcement-of-court-orders" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
       Enforcement of Court Orders
     </Link>
     <Link to="/civil-protection-orders" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
@@ -203,7 +203,7 @@ const Header = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <a href="tel:+16146624043" className="hidden sm:flex btn-cta text-lg px-8 py-3 whitespace-nowrap">
+            <a href="tel:+16146624043" className="hidden sm:flex btn-cta text-base px-6 py-2 whitespace-nowrap">
               <Phone className="w-5 h-5 mr-2" />
               Call Us Now
             </a>
@@ -281,7 +281,7 @@ const Header = () => {
                       <Link to="/business-interests" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-base text-muted-foreground hover:text-foreground transition-colors">
                         Business Interests
                       </Link>
-                      <Link to="/enforcement" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-base text-muted-foreground hover:text-foreground transition-colors">
+                      <Link to="/enforcement-of-court-orders" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-base text-muted-foreground hover:text-foreground transition-colors">
                         Enforcement of Court Orders
                       </Link>
                       <Link to="/civil-protection-orders" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-base text-muted-foreground hover:text-foreground transition-colors">

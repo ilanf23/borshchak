@@ -18,7 +18,7 @@ const Assets = () => {
               Protecting What You've Built
             </h1>
             <p className="text-body text-xl mb-8">
-              From family businesses to investment portfolios, real estate to retirement accounts, we ensure marital property is accurately valued and divided fairly. Your financial future depends on getting this right.
+              From family businesses to investment portfolios, real estate to retirement accounts, we work to ensure marital property is accurately valued and divided fairly. Your financial future depends on getting this right.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="tel:+16146624043" className="btn-cta">
