@@ -526,6 +526,7 @@ const Custody = () => {
                 <h2 className="heading-section mb-0">Test Your Knowledge</h2>
               </div>
               <p className="text-body">How much do you know about child custody in Ohio? Take this quick 3-question quiz.</p>
+              <p className="text-body text-sm italic mt-1">For informational purposes only. This is not legal advice.</p>
             </div>
             <div className="card-elevated">
               <CustodyQuiz />

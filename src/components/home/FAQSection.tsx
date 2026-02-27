@@ -47,6 +47,7 @@ const FAQSection = () => {
         >
           <h2 className="heading-section">Common Questions</h2>
           <p className="text-muted-foreground mt-4 text-xl">Get answers to frequently asked questions about Ohio family law</p>
+          <p className="text-muted-foreground mt-2 text-sm italic">The following is for general informational purposes only and does not constitute legal advice. Consult an attorney for guidance specific to your situation.</p>
         </div>
         
         <div

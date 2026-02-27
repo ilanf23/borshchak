@@ -155,33 +155,33 @@ const ProcessSection = () => {
           </div>
 
           {/* Active Step Content */}
-          <div className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-2xl p-6 md:p-8 animate-fade-in" key={activeStep}>
+          <div className="bg-cream rounded-2xl p-6 md:p-8 shadow-xl shadow-black/20 animate-fade-in" key={activeStep}>
             <div className="flex flex-col lg:flex-row gap-8">
               {/* Left: Main Content */}
               <div className="lg:w-2/3">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center">
-                    <span className="font-serif text-xl font-semibold text-accent">
+                  <div className="w-10 h-10 rounded-full bg-navy flex items-center justify-center">
+                    <span className="font-serif text-xl font-semibold text-cream">
                       {steps[activeStep].number}
                     </span>
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-serif font-semibold text-primary-foreground">
+                  <h3 className="text-2xl md:text-3xl font-serif font-semibold text-navy">
                     {steps[activeStep].title}
                   </h3>
                 </div>
-                <p className="text-primary-foreground/80 leading-relaxed text-lg md:text-xl">
+                <p className="text-navy/80 leading-relaxed text-lg md:text-xl">
                   {steps[activeStep].fullDesc}
                 </p>
               </div>
 
               {/* Right: Details List */}
-              <div className="lg:w-1/3 lg:border-l lg:border-primary-foreground/10 lg:pl-8">
+              <div className="lg:w-1/3 lg:border-l lg:border-navy/15 lg:pl-8">
                 <h4 className="text-base font-medium text-accent mb-4 uppercase tracking-wider">
                   What's Included
                 </h4>
                 <ul className="space-y-3">
                   {steps[activeStep].details.map((detail, idx) => (
-                    <li key={idx} className="flex items-start gap-2 text-primary-foreground/70 text-base">
+                    <li key={idx} className="flex items-start gap-2 text-navy/70 text-base">
                       <ChevronRight className="w-4 h-4 text-accent shrink-0 mt-0.5" />
                       {detail}
                     </li>
@@ -191,15 +191,15 @@ const ProcessSection = () => {
             </div>
 
             {/* Navigation Arrows */}
-            <div className="flex justify-between mt-8 pt-6 border-t border-primary-foreground/10">
+            <div className="flex justify-between mt-8 pt-6 border-t border-navy/15">
               <button
                 onClick={() => setActiveStep(prev => Math.max(0, prev - 1))}
                 disabled={activeStep === 0}
                 className={cn(
                   "flex items-center gap-2 text-base font-medium transition-colors",
-                  activeStep === 0 
-                    ? "text-primary-foreground/30 cursor-not-allowed" 
-                    : "text-primary-foreground/70 hover:text-accent"
+                  activeStep === 0
+                    ? "text-navy/25 cursor-not-allowed"
+                    : "text-navy/60 hover:text-accent"
                 )}
               >
                 <ChevronRight className="w-4 h-4 rotate-180" />
@@ -210,9 +210,9 @@ const ProcessSection = () => {
                 disabled={activeStep === steps.length - 1}
                 className={cn(
                   "flex items-center gap-2 text-base font-medium transition-colors",
-                  activeStep === steps.length - 1 
-                    ? "text-primary-foreground/30 cursor-not-allowed" 
-                    : "text-primary-foreground/70 hover:text-accent"
+                  activeStep === steps.length - 1
+                    ? "text-navy/25 cursor-not-allowed"
+                    : "text-navy/60 hover:text-accent"
                 )}
               >
                 Next Step

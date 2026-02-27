@@ -372,6 +372,7 @@ const ContemptProceedings = () => {
                 <span className="text-base font-medium text-primary">Test Your Knowledge</span>
               </div>
               <h2 className="heading-section">Contempt Proceedings Quiz</h2>
+              <p className="text-body text-sm italic mt-1">For informational purposes only. This is not legal advice.</p>
             </div>
             <div className="card-elevated">
               <ContemptQuiz />

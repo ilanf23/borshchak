@@ -619,7 +619,7 @@ const FathersRights = () => {
             <h2 className="heading-section mb-6">How Borshchak Law Group Helps Fathers</h2>
             <div className="space-y-6 text-body">
               <p>
-                Our attorneys understand the challenges fathers face in Ohio family court. Whether you need to establish paternity, fight for custody, or enforce a parenting time order, we provide strategic, aggressive representation focused on your goals.
+                Our attorneys understand the challenges fathers face in Ohio family court. Whether you need to establish paternity, fight for custody, or enforce a parenting time order, we provide strategic, dedicated representation focused on your goals.
               </p>
               <div className="grid sm:grid-cols-3 gap-4">
                 <div className="card-bordered text-center">
@@ -650,11 +650,11 @@ const FathersRights = () => {
                     <Gavel className="w-5 h-5 text-primary" />
                   </div>
                   <h4 className="font-serif font-medium text-lg mb-1 text-foreground">3. Court Advocacy</h4>
-                  <p className="text-body-sm text-base">When court proceedings are needed, we provide aggressive representation to protect your rights.</p>
+                  <p className="text-body-sm text-base">When court proceedings are needed, we provide strong representation to protect your rights.</p>
                 </div>
               </div>
               <p>
-                At Borshchak Law Group, we believe every father deserves a fair chance in family court. Our Columbus, Ohio attorneys have the experience and dedication to fight for the outcome you and your children deserve.
+                At Borshchak Law Group, we believe every father deserves a fair chance in family court. Our Columbus, Ohio attorneys have the experience and dedication to advocate for your rights and your relationship with your children.
               </p>
             </div>
           </div>
@@ -690,6 +690,7 @@ const FathersRights = () => {
                 <h2 className="heading-section mb-0">Test Your Knowledge</h2>
               </div>
               <p className="text-body">How much do you know about father's rights in Ohio? Take this quick 3-question quiz.</p>
+              <p className="text-body text-sm italic mt-1">For informational purposes only. This is not legal advice.</p>
             </div>
             <div className="card-elevated">
               <FathersRightsQuiz />

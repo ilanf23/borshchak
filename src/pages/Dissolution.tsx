@@ -25,7 +25,7 @@ const requirements = [
   {
     title: "No Extramarital Offspring",
     icon: Baby,
-    description: "All children born to the wife during the marriage should be the husband's descendants, and the wife should not be pregnant. Ohio presumes that offspring born during marriage belong to the husband. Dissolution proceedings don't allow the addition of third parties.",
+    description: "Ohio presumes that children born during marriage are the husband's. If there are questions about paternity or the wife is pregnant, dissolution may still be possible but may require additional procedures. An attorney can advise on how these circumstances affect your case.",
   },
   {
     title: "Residency Requirement",
@@ -568,6 +568,7 @@ const Dissolution = () => {
                 <h2 className="heading-section mb-0">Test Your Knowledge</h2>
               </div>
               <p className="text-body">How much do you know about dissolution in Ohio? Take this quick 3-question quiz.</p>
+              <p className="text-body text-sm italic mt-1">For informational purposes only. This is not legal advice.</p>
             </div>
             <div className="card-elevated">
               <DissolutionQuiz />

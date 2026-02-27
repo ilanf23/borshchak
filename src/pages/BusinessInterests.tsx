@@ -231,7 +231,7 @@ const BusinessInterests = () => {
               Business Interests Lawyer in Columbus
             </h1>
             <p className="text-body text-xl leading-relaxed max-w-2xl opacity-0 animate-fade-in" style={{ animationDelay: "400ms" }}>
-              Divorces are difficult enough without worrying about how to handle a family-owned business. We help you get the most out of your business during a divorce by maximizing its value.
+              Divorces are difficult enough without worrying about how to handle a family-owned business. We help you navigate business-related decisions during a divorce by working to protect your interests.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-8 opacity-0 animate-fade-in" style={{ animationDelay: "550ms" }}>
               <a href="tel:+16146624043" className="btn-cta">
@@ -248,7 +248,7 @@ const BusinessInterests = () => {
             <h2 className="heading-section mb-6">Protecting Your Business in Divorce</h2>
             <div className="space-y-4 text-body">
               <p>
-                Contact Borshchak Law Group to help you make important decisions about your divorce business assets in Columbus, Ohio. We take care to maximize the business' value so you can make a wise decision moving forward.
+                Contact Borshchak Law Group to help you make important decisions about your divorce business assets in Columbus, Ohio. We work to accurately assess the business' value so you can make informed decisions moving forward.
               </p>
               <p>
                 Whether you have a corporation, LLC, partnership, limited partnership, or sole proprietorship, our experienced attorneys can guide you through the business valuation process and help protect your interests.
@@ -290,7 +290,7 @@ const BusinessInterests = () => {
           <div className="absolute inset-0" style={{ backgroundColor: "hsla(215, 45%, 22%, 0.75)" }} />
           <div className="relative z-10 text-center px-6 max-w-3xl">
             <p className="text-2xl md:text-3xl font-serif font-medium leading-relaxed italic" style={{ color: "hsl(var(--primary-foreground))" }}>
-              "Your business may be your most valuable asset. You can trust us to make sure you get your fair share after the divorce."
+              "Your business may be your most valuable asset. We work diligently to help protect your interests throughout the divorce process."
             </p>
             <p className="mt-4 text-base" style={{ color: "hsla(40, 30%, 98%, 0.7)" }}>Borshchak Law Group</p>
           </div>
@@ -327,12 +327,12 @@ const BusinessInterests = () => {
                 loading="lazy"
               />
               <div className="space-y-4">
-                <h3 className="heading-subsection">Expert Guidance for Business Owners</h3>
+                <h3 className="heading-subsection">Experienced Guidance for Business Owners</h3>
                 <p className="text-body">
                   Dividing business assets in a divorce requires specialized knowledge and careful analysis. Our attorneys work with experienced valuation professionals to determine the true worth of your business, ensuring you make informed decisions.
                 </p>
                 <p className="text-body">
-                  We help many couples make important decisions about their divorce business assets by taking care to maximize the business' value and protect each party's interests.
+                  We help many couples make important decisions about their divorce business assets by working to accurately assess the business' value and protect each party's interests.
                 </p>
               </div>
             </div>
@@ -391,6 +391,7 @@ const BusinessInterests = () => {
                 <span className="text-base font-medium text-primary">Test Your Knowledge</span>
               </div>
               <h2 className="heading-section">Business Interests Quiz</h2>
+              <p className="text-body text-sm italic mt-1">For informational purposes only. This is not legal advice.</p>
             </div>
             <div className="card-elevated">
               <BusinessQuiz />

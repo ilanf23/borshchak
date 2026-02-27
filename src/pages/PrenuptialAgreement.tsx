@@ -34,8 +34,8 @@ const invalidReasons = [
   { icon: Scale, title: "Changes in the Law", description: "Changes in the laws governing prenuptial agreements may render the document obsolete or unenforceable." },
   { icon: Ban, title: "Failure to Disclose", description: "Not disclosing all property, assets, or debts invalidates the agreement." },
   { icon: HandHeart, title: "Unfairness", description: "If the agreement is found to be unconscionable or grossly unfair to one party, it may not be enforced." },
-  { icon: Users, title: "No Legal Representation", description: "If either party did not have independent legal representation during drafting, the agreement can be invalidated." },
-  { icon: PenLine, title: "Failure to Execute", description: "The document must be signed by both parties and properly notarized to be legally binding." },
+  { icon: Users, title: "Lack of Independent Counsel", description: "While Ohio does not strictly require independent counsel, if either party did not have the opportunity to consult with their own attorney, courts may weigh this as a factor when evaluating the agreement's validity." },
+  { icon: PenLine, title: "Failure to Execute", description: "The agreement must be in writing and signed by both parties. Notarization is strongly recommended as best practice, though not strictly required under Ohio law." },
 ];
 
 const draftingPrinciples = [
@@ -366,7 +366,7 @@ const PrenuptialAgreement = () => {
                 <div>
                   <h4 className="heading-subsection text-lg mb-2">Ohio Divorce Rate</h4>
                   <p className="text-body text-base">
-                    According to Statista, Ohio's divorce rate is <strong>2.5 per 1,000 people</strong>. While no one plans for divorce, a prenuptial agreement provides clarity and protection for both parties and can significantly reduce conflict if a separation does occur.
+                    According to Statista, Ohio's divorce rate is approximately <strong>2.5 per 1,000 people</strong> (based on recent available data). While no one plans for divorce, a prenuptial agreement provides clarity and protection for both parties and can significantly reduce conflict if a separation does occur.
                   </p>
                 </div>
               </div>
@@ -521,6 +521,7 @@ const PrenuptialAgreement = () => {
                 <h2 className="heading-section mb-0">Test Your Knowledge</h2>
               </div>
               <p className="text-body">How much do you know about prenuptial agreements in Ohio? Take this quick 3-question quiz.</p>
+              <p className="text-body text-sm italic mt-1">For informational purposes only. This is not legal advice.</p>
             </div>
             <div className="card-elevated">
               <PrenupQuiz />

@@ -101,8 +101,11 @@ const Footer = () => {
 
         {/* Legal Disclaimer */}
         <div className="mt-12 pt-8 border-t border-primary-foreground/10">
+          <p className="text-xs text-primary-foreground/40 leading-relaxed mb-4">
+            The information on this website is for general information purposes only. Nothing on this site should be taken as legal advice for any individual case or situation. This information is not intended to create, and receipt or viewing does not constitute, an attorney-client relationship. Past results do not guarantee a similar outcome. Each case is different and must be evaluated on its own merits. Client testimonials reflect the experiences of those individual clients and do not constitute a guarantee, warranty, or prediction of the outcome of any future legal matter.
+          </p>
           <p className="text-xs text-primary-foreground/40 leading-relaxed mb-6">
-            The information on this website is for general information purposes only. Nothing on this site should be taken as legal advice for any individual case or situation. This information is not intended to create, and receipt or viewing does not constitute, an attorney-client relationship.
+            Responsible Attorney: Dmitriy Borshchak, Borshchak Law Group, 1650 Lake Shore Drive, Suite 380, Columbus, OH 43204. Court filing fees, deadlines, and procedural requirements referenced on this website are subject to change. Please consult with an attorney or verify with the appropriate court for the most current information.
           </p>
           {/* Bottom bar */}
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-primary-foreground/50">

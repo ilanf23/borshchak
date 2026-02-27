@@ -1,5 +1,5 @@
 import { Phone, ChevronDown, Menu } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import logo from "@/assets/logo.png";
@@ -145,6 +145,8 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { openConsultation } = useConsultation();
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -155,7 +157,7 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const isTransparent = !scrolled;
+  const isTransparent = isHomePage && !scrolled;
 
   return (
     <>

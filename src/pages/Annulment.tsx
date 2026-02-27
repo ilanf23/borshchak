@@ -48,17 +48,17 @@ const differences = [
   {
     aspect: "Spousal Support",
     divorce: "The court may award alimony and divide assets equitably between spouses.",
-    annulment: "No spousal support, because the marriage is declared void from the start.",
+    annulment: "Generally no spousal support, because the marriage is declared void from the start. However, courts may still address certain financial matters in limited circumstances.",
   },
   {
     aspect: "Filing Timeline",
     divorce: "Can be filed at any point during the marriage.",
-    annulment: "Must be filed within two years of the marriage date under Ohio Bar guidelines.",
+    annulment: "For voidable marriages, must generally be filed within two years of the marriage date. Void marriages (such as bigamy) have no time limit.",
   },
   {
     aspect: "Property Division",
     divorce: "Marital property is divided equitably by the court.",
-    annulment: "No marital property to divide. Assets return to their original owners.",
+    annulment: "Generally no marital property to divide and assets return to their original owners. However, courts may apply equitable principles to jointly acquired property.",
   },
 ];
 
@@ -78,7 +78,7 @@ const quizQuestions = [
     question: "How long do you have to file for an annulment in Ohio?",
     options: ["6 months", "1 year", "2 years", "No time limit"],
     correctIndex: 2,
-    explanation: "Under Ohio Bar guidelines, you must file a petition for annulment within two years from the date the marriage took place.",
+    explanation: "For most voidable marriages in Ohio, you must file a petition for annulment within two years from the date the marriage took place. Note that void marriages (such as bigamy) have no time limit.",
   },
   {
     question: "Which of the following is NOT a ground for annulment in Ohio?",
@@ -324,7 +324,7 @@ const Annulment = () => {
                 <div>
                   <h4 className="heading-subsection text-lg mb-2">Filing Cost in Ohio</h4>
                   <p className="text-body text-base">
-                    Court filing fees vary by county. In Columbus and Franklin County, filing fees for an annulment case are approximately <strong>$175</strong>. In Cleveland, filing fees are around <strong>$150</strong>. Attorney fees are additional and depend on case complexity.
+                    Court filing fees vary by county and are subject to change. In Columbus and Franklin County, filing fees for an annulment case are approximately <strong>$175</strong>. In Cleveland, filing fees are around <strong>$150</strong>. Verify current fees with the appropriate court. Attorney fees are additional and depend on case complexity.
                   </p>
                 </div>
               </div>
@@ -444,10 +444,10 @@ const Annulment = () => {
             <h2 className="heading-section mb-6">Get an Annulment Attorney Today</h2>
             <div className="space-y-4 text-body">
               <p>
-                Court hearings can be daunting, especially when emotions are involved. At Borshchak Law Group, we provide you with a strong attorney-client relationship to ensure your grounds for marriage annulment are solid and give you the best possible outcome.
+                Court hearings can be daunting, especially when emotions are involved. At Borshchak Law Group, we provide you with a strong attorney-client relationship to evaluate whether your grounds for annulment qualify under Ohio law and guide you through the process.
               </p>
               <p>
-                Our expert annulment attorneys will walk you through the court proceedings and present a compelling case for annulment. You must file within <strong>two years</strong> of the marriage date. Don't wait to explore your options.
+                Our experienced annulment attorneys will walk you through the court proceedings and present a compelling case for annulment. For most voidable marriages, Ohio law requires filing within <strong>two years</strong> of the marriage date, though certain void marriages (such as bigamy) have no time limit. Don't wait to explore your options.
               </p>
             </div>
             <div className="mt-8">
@@ -489,6 +489,7 @@ const Annulment = () => {
                 <h2 className="heading-section mb-0">Test Your Knowledge</h2>
               </div>
               <p className="text-body">How much do you know about annulment in Ohio? Take this quick 3-question quiz.</p>
+              <p className="text-body text-sm italic mt-1">For informational purposes only. This is not legal advice.</p>
             </div>
             <div className="card-elevated">
               <AnnulmentQuiz />

@@ -348,7 +348,7 @@ const ChildSupport = () => {
                 <div className="space-y-2">
                   <div className="flex items-start gap-2 text-body text-base">
                     <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color: "hsl(var(--green-accent))" }} />
-                    Technically, the money belongs to the child
+                    Support is paid for the benefit of the child
                   </div>
                   <div className="flex items-start gap-2 text-body text-base">
                     <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color: "hsl(var(--green-accent))" }} />
@@ -407,7 +407,7 @@ const ChildSupport = () => {
               750,000+
             </p>
             <p className="text-xl md:text-2xl font-serif leading-relaxed" style={{ color: "hsla(40, 30%, 98%, 0.9)" }}>
-              Ohio children are covered by active child support orders
+              Ohio children are covered by active child support orders (Source: Ohio CSEA, approximate figure)
             </p>
           </div>
         </section>
@@ -614,6 +614,7 @@ const ChildSupport = () => {
                 <h2 className="heading-section mb-0">Test Your Knowledge</h2>
               </div>
               <p className="text-body">How much do you know about child support in Ohio? Take this quick 3-question quiz.</p>
+              <p className="text-body text-sm italic mt-1">For informational purposes only. This is not legal advice.</p>
             </div>
             <div className="card-elevated">
               <ChildSupportQuiz />

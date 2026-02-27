@@ -238,7 +238,7 @@ const EnforcementOfCourtOrders = () => {
                 What do you do if a party is failing to comply with a court order in Ohio? When a party fails to follow a court order, you may file for contempt of court and request that the court take steps to enforce the order.
               </p>
               <p>
-                Before filing a contempt, it is essential that there is proof to back up your claim. Our Columbus-based family law attorneys at Borshchak Law Group can help you gather the necessary evidence and take all the proper steps to get a favorable result.
+                Before filing a contempt, it is essential that there is proof to back up your claim. Our Columbus-based family law attorneys at Borshchak Law Group can help you gather the necessary evidence and take the proper steps to present the strongest possible case.
               </p>
             </div>
           </div>
@@ -326,10 +326,10 @@ const EnforcementOfCourtOrders = () => {
               <div className="space-y-4">
                 <h3 className="heading-subsection">Taking the Proper Steps</h3>
                 <p className="text-body">
-                  Call us today to ensure that you are taking all of the proper necessary steps to get a favorable result in the enforcement of your court order. Our Columbus-based family law attorneys at Borshchak Law Group are ready and able to assist you.
+                  Call us today to discuss the proper steps for pursuing enforcement of your court order. Our Columbus-based family law attorneys at Borshchak Law Group are ready to assist you.
                 </p>
                 <p className="text-body">
-                  Having experienced legal counsel ensures your case is presented with the right evidence and legal arguments to maximize your chances of a successful enforcement.
+                  Having experienced legal counsel helps ensure your case is presented with the right evidence and legal arguments to support your enforcement action.
                 </p>
               </div>
               <img
@@ -394,6 +394,7 @@ const EnforcementOfCourtOrders = () => {
                 <span className="text-base font-medium text-primary">Test Your Knowledge</span>
               </div>
               <h2 className="heading-section">Enforcement Quiz</h2>
+              <p className="text-body text-sm italic mt-1">For informational purposes only. This is not legal advice.</p>
             </div>
             <div className="card-elevated">
               <EnforcementQuiz />

@@ -19,7 +19,7 @@ const ReviewCard = ({ review, index }: ReviewCardProps) => {
     >
       {/* Google G watermark */}
       <svg
-        className="absolute bottom-3 right-4 w-14 h-14 opacity-[0.07] select-none pointer-events-none"
+        className="absolute bottom-3 right-4 w-14 h-14 select-none pointer-events-none"
         viewBox="0 0 48 48"
         aria-hidden="true"
       >
