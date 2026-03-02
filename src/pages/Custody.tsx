@@ -1,79 +1,195 @@
 import { useState } from "react";
-import { Phone, CheckCircle2, Users, Shield, Home, Heart, Gavel, Scale, ChevronDown, ChevronUp, ArrowRight, BookOpen, HelpCircle, Trophy, AlertTriangle, Baby, Brain, MessageCircle, Eye, HandHeart, FileText } from "lucide-react";
+import {
+  Phone,
+  CheckCircle2,
+  Users,
+  Shield,
+  Home,
+  Heart,
+  Gavel,
+  Scale,
+  ChevronDown,
+  BookOpen,
+  HelpCircle,
+  AlertTriangle,
+  Baby,
+  Brain,
+  MessageCircle,
+  Eye,
+  HandHeart,
+  FileText,
+} from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import AnimatedQuiz from "@/components/AnimatedQuiz";
+import PracticeAreaFAQ from "@/components/PracticeAreaFAQ";
+import AnimatedCTA from "@/components/AnimatedCTA";
 import { useConsultation } from "@/contexts/ConsultationContext";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { cn } from "@/lib/utils";
 
 const custodyTypes = [
   {
     title: "Physical Custody",
     icon: Home,
-    description: "Physical custody determines where the child lives on a day-to-day basis. The parent with physical custody provides the child's primary residence and handles daily care, including meals, transportation, and routine activities.",
+    description:
+      "Physical custody determines where the child lives on a day-to-day basis. The parent with physical custody provides the child's primary residence and handles daily care, including meals, transportation, and routine activities. Courts consider factors such as proximity to school, the child's established routine, and each parent's work schedule. If you are seeking physical custody, documenting your involvement in your child's daily life strengthens your case.",
   },
   {
     title: "Legal Custody",
     icon: Scale,
-    description: "Legal custody refers to the right to make major decisions about the child's life, including education, healthcare, religious upbringing, and extracurricular activities. A parent with legal custody has authority over these important choices.",
+    description:
+      "Legal custody refers to the right to make major decisions about the child's life, including education, healthcare, religious upbringing, and extracurricular activities. A parent with legal custody has authority over these important choices. Ohio courts generally prefer to award joint legal custody unless one parent demonstrates an inability to cooperate. Your attorney can help present evidence supporting your capacity to make sound decisions for your child.",
   },
   {
     title: "Sole Physical Custody",
     icon: Shield,
-    description: "When one parent is granted sole physical custody, the child lives primarily with that parent. The non-custodial parent typically receives visitation or parenting time, but the child's main home is with the custodial parent.",
+    description:
+      "When one parent is granted sole physical custody, the child lives primarily with that parent. The non-custodial parent typically receives visitation or parenting time, but the child's main home is with the custodial parent. Courts award sole physical custody when it best serves the child's stability and safety, particularly in cases involving relocation, substance abuse, or domestic violence. An experienced custody attorney helps you demonstrate why sole custody is in your child's best interest.",
   },
   {
     title: "Joint Physical Custody",
     icon: Users,
-    description: "Joint physical custody means the child splits time living with both parents. The schedule doesn't have to be exactly 50/50. It's designed around the child's best interests and each parent's availability and living situation.",
+    description:
+      "Joint physical custody means the child splits time living with both parents. The schedule doesn't have to be exactly 50/50 \u2014 it's designed around the child's best interests and each parent's availability and living situation. Ohio courts favor arrangements that maintain the child's connections with both parents while minimizing disruption to their education and social life. A well-drafted parenting plan is essential to making joint physical custody work smoothly.",
   },
   {
     title: "Sole Legal Custody",
     icon: Gavel,
-    description: "With sole legal custody, one parent has exclusive authority to make all major decisions for the child. This is typically granted when one parent is unfit, absent, or when parents are unable to cooperate on decision-making.",
+    description:
+      "With sole legal custody, one parent has exclusive authority to make all major decisions for the child. This is typically granted when one parent is unfit, absent, or when parents are unable to cooperate on decision-making. Courts may also award sole legal custody if there is a history of domestic violence, substance abuse, or one parent's refusal to participate in the child's life. Your attorney will help you present compelling evidence to support this arrangement.",
   },
   {
     title: "Joint Legal Custody",
     icon: HandHeart,
-    description: "Joint legal custody means both parents share the right and responsibility to make important decisions about the child's welfare. Both parents must communicate and agree on matters like schooling, medical treatment, and religious instruction.",
+    description:
+      "Joint legal custody means both parents share the right and responsibility to make important decisions about the child's welfare. Both parents must communicate and agree on matters like schooling, medical treatment, and religious instruction. While Ohio courts generally favor joint legal custody, it requires a demonstrated ability by both parents to cooperate and communicate effectively. Mediation is often recommended to help parents work through disagreements.",
   },
   {
     title: "Grandparent Visitation Rights",
     icon: Heart,
-    description: "In Ohio, grandparents can petition the court for visitation rights under certain circumstances, such as when the child's parents are divorced, separated, or when one parent is deceased. The court must find that visitation serves the child's best interest.",
+    description:
+      "In Ohio, grandparents can petition the court for visitation rights under certain circumstances, such as when the child's parents are divorced, separated, or when one parent is deceased. The court must find that visitation serves the child's best interest. Grandparents must also show an existing relationship with the child that would be harmed by denial of visitation. An attorney experienced in grandparent rights can help navigate this often-emotional process.",
   },
 ];
 
 const courtFactors = [
-  { icon: AlertTriangle, title: "Domestic Violence or Abuse", description: "Any history of domestic violence, child abuse, or neglect by either parent is a critical factor in custody decisions." },
-  { icon: Brain, title: "Substance Abuse History", description: "Alcohol or drug abuse by either parent that could endanger the child's physical or emotional safety." },
-  { icon: Eye, title: "Psychiatric Concerns", description: "Mental health issues affecting a parent's ability to provide safe, stable care for the child." },
-  { icon: Baby, title: "Age-Appropriate Decisions", description: "Each parent's ability to make decisions that are appropriate for the child's developmental stage and needs." },
-  { icon: MessageCircle, title: "Communication with the Child", description: "The quality of each parent's relationship and communication with the child, including emotional bonds." },
-  { icon: Home, title: "Safe Living Conditions", description: "Whether each parent can provide a safe, adequate, and stable living environment for the child." },
-  { icon: Users, title: "Child's Own Preferences", description: "For older children, the court may consider the child's own wishes regarding which parent they prefer to live with." },
+  {
+    icon: AlertTriangle,
+    title: "Domestic Violence or Abuse",
+    description:
+      "Any history of domestic violence, child abuse, or neglect by either parent is a critical factor in custody decisions.",
+  },
+  {
+    icon: Brain,
+    title: "Substance Abuse History",
+    description:
+      "Alcohol or drug abuse by either parent that could endanger the child's physical or emotional safety.",
+  },
+  {
+    icon: Eye,
+    title: "Psychiatric Concerns",
+    description:
+      "Mental health issues affecting a parent's ability to provide safe, stable care for the child.",
+  },
+  {
+    icon: Baby,
+    title: "Age-Appropriate Decisions",
+    description:
+      "Each parent's ability to make decisions that are appropriate for the child's developmental stage and needs.",
+  },
+  {
+    icon: MessageCircle,
+    title: "Communication with the Child",
+    description:
+      "The quality of each parent's relationship and communication with the child, including emotional bonds.",
+  },
+  {
+    icon: Home,
+    title: "Safe Living Conditions",
+    description:
+      "Whether each parent can provide a safe, adequate, and stable living environment for the child.",
+  },
+  {
+    icon: Users,
+    title: "Child's Own Preferences",
+    description:
+      "For older children, the court may consider the child's own wishes regarding which parent they prefer to live with.",
+  },
 ];
 
 const quizQuestions = [
   {
-    question: "In Ohio, if parents are unmarried, who typically gets initial custody?",
-    options: ["The father", "The mother", "Both parents equally", "The state decides"],
+    question:
+      "In Ohio, if parents are unmarried, who typically gets initial custody?",
+    options: [
+      "The father",
+      "The mother",
+      "Both parents equally",
+      "The state decides",
+    ],
     correctIndex: 1,
-    explanation: "Under Ohio law, if parents are unmarried and no court order exists, the mother is presumed to have sole custody of the child.",
+    explanation:
+      "Under Ohio law, if parents are unmarried and no court order exists, the mother is presumed to have sole custody of the child.",
   },
   {
     question: "What standard do Ohio courts use to decide custody?",
-    options: ["Which parent earns more", "Best interests of the child", "Who filed for custody first", "Equal time for both parents"],
+    options: [
+      "Which parent earns more",
+      "Best interests of the child",
+      "Who filed for custody first",
+      "Equal time for both parents",
+    ],
     correctIndex: 1,
-    explanation: "Ohio courts use the 'best interests of the child' standard, weighing factors like safety, parental fitness, and the child's relationships.",
+    explanation:
+      "Ohio courts use the 'best interests of the child' standard, weighing factors like safety, parental fitness, and the child's relationships.",
   },
   {
     question: "Can grandparents petition for visitation rights in Ohio?",
-    options: ["No, never", "Only if both parents agree", "Yes, if it serves the child's best interest", "Only if a parent is deceased"],
+    options: [
+      "No, never",
+      "Only if both parents agree",
+      "Yes, if it serves the child's best interest",
+      "Only if a parent is deceased",
+    ],
     correctIndex: 2,
-    explanation: "Yes, Ohio law allows grandparents to petition for visitation rights, but they must demonstrate that visitation serves the child's best interest.",
+    explanation:
+      "Yes, Ohio law allows grandparents to petition for visitation rights, but they must demonstrate that visitation serves the child's best interest.",
   },
 ];
+
+const faqItems = [
+  {
+    question: "How is custody decided in Ohio?",
+    answer:
+      "Ohio courts determine custody based on the 'best interests of the child' standard. The court considers factors including each parent's health, the child's adjustment to home and school, the wishes of both parents and the child (if old enough), and whether either parent has a history of domestic violence or substance abuse.",
+  },
+  {
+    question: "Can fathers get custody in Ohio?",
+    answer:
+      "Yes. Ohio law does not favor mothers over fathers. Both parents have equal rights to seek custody. If parents are married, both have equal custodial rights until a court order says otherwise. For unmarried parents, the father must establish paternity before filing for custody.",
+  },
+  {
+    question: "How long does a custody case take?",
+    answer:
+      "The timeline varies significantly depending on whether custody is contested. An agreed-upon custody arrangement can be finalized in a few weeks. Contested cases may take 6\u201312 months or longer, especially if evaluations, mediation, or trial are involved.",
+  },
+  {
+    question: "Can a custody order be changed later?",
+    answer:
+      "Yes. Either parent can file a motion to modify custody if there has been a substantial change in circumstances since the original order. The court will again use the best-interests standard. Common reasons include relocation, changes in a parent's living situation, or concerns about the child's safety.",
+  },
+  {
+    question: "What is a Guardian ad Litem?",
+    answer:
+      "A Guardian ad Litem (GAL) is an attorney appointed by the court to represent the child's best interests in a custody case. The GAL investigates by interviewing both parents, the child, teachers, and other relevant individuals, then makes a recommendation to the court.",
+  },
+];
+
+// ---------------------------------------------------------------------------
+// Sub-components
+// ---------------------------------------------------------------------------
 
 const ExpandableCard = ({
   title,
@@ -87,24 +203,30 @@ const ExpandableCard = ({
   const [open, setOpen] = useState(false);
   return (
     <div
-      className="card-bordered hover:shadow-md transition-shadow duration-200 cursor-pointer"
+      className="card-bordered transition-all duration-300 cursor-pointer hover:shadow-md hover:border-accent"
       onClick={() => setOpen(!open)}
     >
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div
-            className="shrink-0 w-10 h-10 rounded-full flex items-center justify-center"
-            style={{ backgroundColor: "hsl(var(--secondary))" }}
+            className={cn(
+              "shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300",
+              open ? "bg-accent text-white" : ""
+            )}
+            style={
+              !open ? { backgroundColor: "hsl(var(--secondary))" } : undefined
+            }
           >
-            <Icon className="w-5 h-5 text-primary" />
+            <Icon
+              className={cn("w-5 h-5", open ? "text-white" : "text-primary")}
+            />
           </div>
           <h4 className="heading-subsection text-lg">{title}</h4>
         </div>
-        {open ? (
-          <ChevronUp className="w-5 h-5 text-muted-foreground" />
-        ) : (
-          <ChevronDown className="w-5 h-5 text-muted-foreground" />
-        )}
+        <ChevronDown
+          className="w-5 h-5 text-muted-foreground transition-transform duration-300"
+          style={{ transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
+        />
       </div>
       <AnimatePresence>
         {open && (
@@ -112,7 +234,7 @@ const ExpandableCard = ({
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.25 }}
+            transition={{ duration: 0.35, ease: "easeOut" }}
             className="overflow-hidden"
           >
             <div className="mt-4 text-body text-base">{children}</div>
@@ -123,128 +245,9 @@ const ExpandableCard = ({
   );
 };
 
-const CustodyQuiz = () => {
-  const [currentQ, setCurrentQ] = useState(0);
-  const [selected, setSelected] = useState<number | null>(null);
-  const [score, setScore] = useState(0);
-  const [showResult, setShowResult] = useState(false);
-  const [answered, setAnswered] = useState(false);
-
-  const q = quizQuestions[currentQ];
-
-  const handleSelect = (idx: number) => {
-    if (answered) return;
-    setSelected(idx);
-    setAnswered(true);
-    if (idx === q.correctIndex) setScore((s) => s + 1);
-  };
-
-  const handleNext = () => {
-    if (currentQ < quizQuestions.length - 1) {
-      setCurrentQ((c) => c + 1);
-      setSelected(null);
-      setAnswered(false);
-    } else {
-      setShowResult(true);
-    }
-  };
-
-  if (showResult) {
-    return (
-      <div className="text-center space-y-6">
-        <div
-          className="w-20 h-20 rounded-full mx-auto flex items-center justify-center"
-          style={{ backgroundColor: "hsla(152, 45%, 38%, 0.1)" }}
-        >
-          <Trophy className="w-10 h-10" style={{ color: "hsl(var(--green-accent))" }} />
-        </div>
-        <h3 className="heading-section text-3xl">
-          You scored {score}/{quizQuestions.length}!
-        </h3>
-        <p className="text-body">
-          {score === 3
-            ? "You're well-informed about Ohio custody law."
-            : score >= 2
-            ? "Good knowledge! A consultation can fill in the rest."
-            : "Custody law can be complex. Let our team guide you."}
-        </p>
-        <a href="tel:+16146624043" className="btn-cta inline-flex">
-          <Phone className="w-5 h-5 mr-2" />
-          Get Your Free Consultation
-        </a>
-      </div>
-    );
-  }
-
-  return (
-    <div className="space-y-6">
-      <div className="flex items-center justify-between mb-2">
-        <span className="text-base font-medium text-muted-foreground">
-          Question {currentQ + 1} of {quizQuestions.length}
-        </span>
-        <div className="flex gap-1">
-          {quizQuestions.map((_, i) => (
-            <div
-              key={i}
-              className="w-8 h-1.5 rounded-full"
-              style={{
-                backgroundColor:
-                  i <= currentQ
-                    ? "hsl(var(--green-accent))"
-                    : "hsl(var(--border))",
-              }}
-            />
-          ))}
-        </div>
-      </div>
-      <h3 className="heading-subsection text-2xl">{q.question}</h3>
-      <div className="grid gap-3">
-        {q.options.map((opt, idx) => {
-          let borderColor = "hsl(var(--border))";
-          let bgColor = "transparent";
-          if (answered && idx === q.correctIndex) {
-            borderColor = "hsl(var(--green-accent))";
-            bgColor = "hsla(152, 45%, 38%, 0.08)";
-          } else if (answered && idx === selected && idx !== q.correctIndex) {
-            borderColor = "hsl(var(--destructive))";
-            bgColor = "hsla(0, 72%, 51%, 0.05)";
-          } else if (idx === selected) {
-            borderColor = "hsl(var(--primary))";
-          }
-          return (
-            <button
-              key={idx}
-              onClick={() => handleSelect(idx)}
-              className="text-left px-5 py-4 rounded-lg border-2 transition-all duration-200 text-body text-lg"
-              style={{ borderColor, backgroundColor: bgColor }}
-            >
-              {opt}
-            </button>
-          );
-        })}
-      </div>
-      {answered && (
-        <motion.div
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="p-4 rounded-lg"
-          style={{ backgroundColor: "hsl(var(--secondary))" }}
-        >
-          <p className="text-body text-base">
-            <strong>{selected === q.correctIndex ? "Correct!" : "Not quite."}</strong>{" "}
-            {q.explanation}
-          </p>
-        </motion.div>
-      )}
-      {answered && (
-        <button onClick={handleNext} className="btn-cta">
-          {currentQ < quizQuestions.length - 1 ? "Next Question" : "See Results"}
-          <ArrowRight className="w-4 h-4 ml-2" />
-        </button>
-      )}
-    </div>
-  );
-};
+// ---------------------------------------------------------------------------
+// Main Page
+// ---------------------------------------------------------------------------
 
 const Custody = () => {
   const { openConsultation } = useConsultation();
@@ -253,6 +256,7 @@ const Custody = () => {
   const factorsAnim = useScrollAnimation();
   const modAnim = useScrollAnimation();
   const quizAnim = useScrollAnimation();
+  const faqAnim = useScrollAnimation();
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -263,13 +267,19 @@ const Custody = () => {
           <div className="container max-w-4xl section-padding relative z-10">
             <p
               className="text-base font-medium uppercase tracking-wider mb-4 opacity-0 animate-fade-in"
-              style={{ color: "hsla(40, 30%, 98%, 0.7)", animationDelay: "100ms" }}
+              style={{
+                color: "hsla(40, 30%, 98%, 0.7)",
+                animationDelay: "100ms",
+              }}
             >
               Columbus, OH Child Custody Lawyers
             </p>
             <h1
               className="heading-hero mb-6 opacity-0 animate-fade-in"
-              style={{ color: "hsl(var(--primary-foreground))", animationDelay: "250ms" }}
+              style={{
+                color: "hsl(var(--primary-foreground))",
+                animationDelay: "250ms",
+              }}
             >
               Child Custody in Columbus, OH? Here's How We Protect Your Family
             </h1>
@@ -277,9 +287,15 @@ const Custody = () => {
               className="text-body text-xl leading-relaxed max-w-2xl opacity-0 animate-fade-in"
               style={{ animationDelay: "400ms" }}
             >
-              Custody decisions shape your family for years to come. Whether you're navigating an initial determination or modifying an existing order, understanding Ohio custody law is essential to protecting your relationship with your children.
+              Custody decisions shape your family for years to come. Whether
+              you're navigating an initial determination or modifying an existing
+              order, understanding Ohio custody law is essential to protecting
+              your relationship with your children.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 mt-8 opacity-0 animate-fade-in" style={{ animationDelay: "550ms" }}>
+            <div
+              className="flex flex-col sm:flex-row gap-4 mt-8 opacity-0 animate-fade-in"
+              style={{ animationDelay: "550ms" }}
+            >
               <a href="tel:+16146624043" className="btn-cta">
                 <Phone className="w-5 h-5 mr-2" />
                 Free Consultation: 614-662-4043
@@ -289,12 +305,17 @@ const Custody = () => {
         </section>
 
         {/* Custody Allocation Methods */}
-        <section className="section-padding bg-card" style={{ borderTop: "3px solid hsl(var(--green-accent))" }}>
+        <section
+          className="section-padding bg-card"
+          style={{ borderTop: "3px solid hsl(var(--green-accent))" }}
+        >
           <div
             ref={methodsAnim.ref}
             className={`container max-w-4xl ${methodsAnim.isVisible ? "scroll-visible" : "scroll-hidden"}`}
           >
-            <h2 className="heading-section mb-10">How Custody Is Allocated in Ohio</h2>
+            <h2 className="heading-section mb-10">
+              How Custody Is Allocated in Ohio
+            </h2>
             <div className="grid md:grid-cols-2 gap-6 mb-10">
               <div className="card-bordered hover:shadow-md transition-shadow duration-200">
                 <div className="flex items-center gap-3 mb-4">
@@ -307,19 +328,30 @@ const Custody = () => {
                   <h3 className="heading-subsection text-xl">Sole Custody</h3>
                 </div>
                 <p className="text-body text-lg mb-4">
-                  One parent holds primary rights and responsibilities for the child. The non-custodial parent may still receive parenting time or visitation.
+                  One parent holds primary rights and responsibilities for the
+                  child. The non-custodial parent may still receive parenting
+                  time or visitation.
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-start gap-2 text-body text-base">
-                    <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color: "hsl(var(--green-accent))" }} />
+                    <CheckCircle2
+                      className="w-4 h-4 shrink-0 mt-0.5"
+                      style={{ color: "hsl(var(--green-accent))" }}
+                    />
                     One parent makes major decisions
                   </div>
                   <div className="flex items-start gap-2 text-body text-base">
-                    <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color: "hsl(var(--green-accent))" }} />
+                    <CheckCircle2
+                      className="w-4 h-4 shrink-0 mt-0.5"
+                      style={{ color: "hsl(var(--green-accent))" }}
+                    />
                     Child primarily resides with custodial parent
                   </div>
                   <div className="flex items-start gap-2 text-body text-base">
-                    <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color: "hsl(var(--green-accent))" }} />
+                    <CheckCircle2
+                      className="w-4 h-4 shrink-0 mt-0.5"
+                      style={{ color: "hsl(var(--green-accent))" }}
+                    />
                     Common when co-parenting isn't feasible
                   </div>
                 </div>
@@ -331,24 +363,40 @@ const Custody = () => {
                     className="shrink-0 w-12 h-12 rounded-full flex items-center justify-center"
                     style={{ backgroundColor: "hsla(152, 45%, 38%, 0.1)" }}
                   >
-                    <Users className="w-6 h-6" style={{ color: "hsl(var(--green-accent))" }} />
+                    <Users
+                      className="w-6 h-6"
+                      style={{ color: "hsl(var(--green-accent))" }}
+                    />
                   </div>
-                  <h3 className="heading-subsection text-xl">Shared Parenting</h3>
+                  <h3 className="heading-subsection text-xl">
+                    Shared Parenting
+                  </h3>
                 </div>
                 <p className="text-body text-lg mb-4">
-                  Both parents divide rights and responsibilities through a shared parenting plan approved by the court. This doesn't always mean equal time. It's about shared decision-making.
+                  Both parents divide rights and responsibilities through a
+                  shared parenting plan approved by the court. This doesn't
+                  always mean equal time. It's about shared decision-making.
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-start gap-2 text-body text-base">
-                    <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color: "hsl(var(--green-accent))" }} />
+                    <CheckCircle2
+                      className="w-4 h-4 shrink-0 mt-0.5"
+                      style={{ color: "hsl(var(--green-accent))" }}
+                    />
                     Both parents share decision-making
                   </div>
                   <div className="flex items-start gap-2 text-body text-base">
-                    <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color: "hsl(var(--green-accent))" }} />
+                    <CheckCircle2
+                      className="w-4 h-4 shrink-0 mt-0.5"
+                      style={{ color: "hsl(var(--green-accent))" }}
+                    />
                     Requires a detailed parenting plan
                   </div>
                   <div className="flex items-start gap-2 text-body text-base">
-                    <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color: "hsl(var(--green-accent))" }} />
+                    <CheckCircle2
+                      className="w-4 h-4 shrink-0 mt-0.5"
+                      style={{ color: "hsl(var(--green-accent))" }}
+                    />
                     Encourages cooperation between parents
                   </div>
                 </div>
@@ -359,9 +407,15 @@ const Custody = () => {
               <div className="flex items-start gap-3">
                 <BookOpen className="w-5 h-5 text-primary shrink-0 mt-1" />
                 <div>
-                  <h4 className="heading-subsection text-lg mb-2">Ohio Law: Unmarried Parents</h4>
+                  <h4 className="heading-subsection text-lg mb-2">
+                    Ohio Law: Unmarried Parents
+                  </h4>
                   <p className="text-body text-base">
-                    Under Ohio law, if parents are <strong>unmarried</strong> and no court order has been issued, the mother is presumed to have sole custody of the child. The father must establish paternity and file for custody or visitation rights through the court.
+                    Under Ohio law, if parents are{" "}
+                    <strong>unmarried</strong> and no court order has been
+                    issued, the mother is presumed to have sole custody of the
+                    child. The father must establish paternity and file for
+                    custody or visitation rights through the court.
                   </p>
                 </div>
               </div>
@@ -369,19 +423,24 @@ const Custody = () => {
           </div>
         </section>
 
-        {/* Style 3: Side-by-Side (Text Left, Image Right) */}
+        {/* Side-by-Side (Text Left, Image Right) */}
         <section className="section-padding-sm">
           <div className="container max-w-5xl">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="space-y-4 order-2 md:order-1">
-                <h3 className="heading-subsection">Protecting Your Family's Future</h3>
+                <h3 className="heading-subsection">
+                  Protecting Your Family's Future
+                </h3>
                 <p className="text-body">
-                  Every custody decision is guided by one standard: the best interests of your child. Our attorneys work to protect your parental rights while keeping your child's wellbeing at the center of every strategy.
+                  Every custody decision is guided by one standard: the best
+                  interests of your child. Our attorneys work to protect your
+                  parental rights while keeping your child's wellbeing at the
+                  center of every strategy.
                 </p>
               </div>
               <img
-                src="https://images.unsplash.com/photo-1476703993599-0035a21b17a9?w=1200&q=80"
-                alt="Parent spending quality time with their child"
+                src="https://images.unsplash.com/photo-1536640712-4d4c36ff0e4e?w=1200&q=80"
+                alt="Parent holding child's hand"
                 className="w-full h-72 md:h-96 object-cover rounded-lg order-1 md:order-2"
                 loading="lazy"
               />
@@ -390,18 +449,25 @@ const Custody = () => {
         </section>
 
         {/* Types of Custody */}
-        <section className="section-padding">
+        <section className="section-padding bg-secondary">
           <div
             ref={typesAnim.ref}
             className={`container max-w-4xl ${typesAnim.isVisible ? "scroll-visible" : "scroll-hidden"}`}
           >
-            <h2 className="heading-section mb-4">Types of Custody in Ohio</h2>
+            <h2 className="heading-section mb-4">
+              Types of Custody in Ohio
+            </h2>
             <p className="text-body mb-8">
-              Ohio recognizes several types of custody arrangements. Tap each type below to learn how it works and when it applies.
+              Ohio recognizes several types of custody arrangements. Tap each
+              type below to learn how it works and when it applies.
             </p>
             <div className="grid gap-4">
               {custodyTypes.map((type) => (
-                <ExpandableCard key={type.title} title={type.title} icon={type.icon}>
+                <ExpandableCard
+                  key={type.title}
+                  title={type.title}
+                  icon={type.icon}
+                >
                   {type.description}
                 </ExpandableCard>
               ))}
@@ -423,14 +489,31 @@ const Custody = () => {
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
               {courtFactors.map((factor) => (
-                <div key={factor.title} className="p-6 rounded-lg" style={{ backgroundColor: "hsla(40, 30%, 98%, 0.08)" }}>
+                <div
+                  key={factor.title}
+                  className="p-6 rounded-lg"
+                  style={{
+                    backgroundColor: "hsla(40, 30%, 98%, 0.08)",
+                  }}
+                >
                   <div className="flex items-center gap-3 mb-4">
-                    <factor.icon className="w-6 h-6" style={{ color: "hsl(var(--green-accent))" }} />
-                    <h3 className="text-xl font-serif font-medium" style={{ color: "hsl(var(--primary-foreground))" }}>
+                    <factor.icon
+                      className="w-6 h-6"
+                      style={{ color: "hsl(var(--green-accent))" }}
+                    />
+                    <h3
+                      className="text-xl font-serif font-medium"
+                      style={{
+                        color: "hsl(var(--primary-foreground))",
+                      }}
+                    >
                       {factor.title}
                     </h3>
                   </div>
-                  <p className="text-base leading-relaxed" style={{ color: "hsla(40, 30%, 98%, 0.85)" }}>
+                  <p
+                    className="text-base leading-relaxed"
+                    style={{ color: "hsla(40, 30%, 98%, 0.85)" }}
+                  >
                     {factor.description}
                   </p>
                 </div>
@@ -439,11 +522,11 @@ const Custody = () => {
           </div>
         </section>
 
-        {/* Style 4: Full-Bleed Edge-to-Edge */}
+        {/* Full-Bleed Edge-to-Edge */}
         <section>
           <img
-            src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=1600&q=80"
-            alt="Family walking together outdoors"
+            src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1600&q=80"
+            alt="Peaceful nature scene"
             className="w-full h-64 md:h-96 object-cover"
             loading="lazy"
           />
@@ -455,10 +538,14 @@ const Custody = () => {
             ref={modAnim.ref}
             className={`container max-w-4xl ${modAnim.isVisible ? "scroll-visible" : "scroll-hidden"}`}
           >
-            <h2 className="heading-section mb-6">Modifying a Custody Order</h2>
+            <h2 className="heading-section mb-6">
+              Modifying a Custody Order
+            </h2>
             <div className="space-y-6 text-body">
               <p>
-                Life changes, and sometimes custody orders need to change too. Ohio courts allow modifications when circumstances have significantly changed since the original order was issued.
+                Life changes, and sometimes custody orders need to change too.
+                Ohio courts allow modifications when circumstances have
+                significantly changed since the original order was issued.
               </p>
               <div className="grid sm:grid-cols-3 gap-4">
                 <div className="card-bordered text-center">
@@ -468,8 +555,13 @@ const Custody = () => {
                   >
                     <AlertTriangle className="w-5 h-5 text-primary" />
                   </div>
-                  <h4 className="font-serif font-medium text-lg mb-1 text-foreground">1. Change in Circumstances</h4>
-                  <p className="text-body-sm text-base">Relocation, financial change, remarriage, or safety concerns that affect the child.</p>
+                  <h4 className="font-serif font-medium text-lg mb-1 text-foreground">
+                    1. Change in Circumstances
+                  </h4>
+                  <p className="text-body-sm text-base">
+                    Relocation, financial change, remarriage, or safety concerns
+                    that affect the child.
+                  </p>
                 </div>
                 <div className="card-bordered text-center">
                   <div
@@ -478,8 +570,13 @@ const Custody = () => {
                   >
                     <FileText className="w-5 h-5 text-primary" />
                   </div>
-                  <h4 className="font-serif font-medium text-lg mb-1 text-foreground">2. File a Motion</h4>
-                  <p className="text-body-sm text-base">Submit a formal modification request to the court with supporting documentation.</p>
+                  <h4 className="font-serif font-medium text-lg mb-1 text-foreground">
+                    2. File a Motion
+                  </h4>
+                  <p className="text-body-sm text-base">
+                    Submit a formal modification request to the court with
+                    supporting documentation.
+                  </p>
                 </div>
                 <div className="card-bordered text-center">
                   <div
@@ -488,34 +585,44 @@ const Custody = () => {
                   >
                     <Gavel className="w-5 h-5 text-primary" />
                   </div>
-                  <h4 className="font-serif font-medium text-lg mb-1 text-foreground">3. Court Review</h4>
-                  <p className="text-body-sm text-base">The judge evaluates whether the proposed change serves the child's best interest.</p>
+                  <h4 className="font-serif font-medium text-lg mb-1 text-foreground">
+                    3. Court Review
+                  </h4>
+                  <p className="text-body-sm text-base">
+                    The judge evaluates whether the proposed change serves the
+                    child's best interest.
+                  </p>
                 </div>
               </div>
               <p>
-                An experienced custody attorney can help you build a strong case for modification and present compelling evidence to the court.
+                An experienced custody attorney can help you build a strong case
+                for modification and present compelling evidence to the court.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Style 6: Image with Caption Bar */}
+        {/* Image with Caption Bar */}
         <section className="section-padding-sm">
           <div className="container max-w-4xl">
             <img
-              src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=1200&q=80"
+              src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80"
               alt="Child playing happily outdoors"
               className="w-full h-64 md:h-80 object-cover rounded-lg"
               loading="lazy"
             />
             <p className="mt-3 text-center text-body-sm italic">
-              Every custody decision centers on one priority: your child's happiness and stability.
+              Every custody decision centers on one priority: your child's
+              happiness and stability.
             </p>
           </div>
         </section>
 
         {/* Quiz */}
-        <section className="section-padding" style={{ borderTop: "3px solid hsl(var(--green-accent))" }}>
+        <section
+          className="section-padding bg-card"
+          style={{ borderTop: "3px solid hsl(var(--green-accent))" }}
+        >
           <div
             ref={quizAnim.ref}
             className={`container max-w-2xl ${quizAnim.isVisible ? "scroll-visible" : "scroll-hidden"}`}
@@ -525,12 +632,68 @@ const Custody = () => {
                 <HelpCircle className="w-6 h-6 text-primary" />
                 <h2 className="heading-section mb-0">Test Your Knowledge</h2>
               </div>
-              <p className="text-body">How much do you know about child custody in Ohio? Take this quick 3-question quiz.</p>
-              <p className="text-body text-sm italic mt-1">For informational purposes only. This is not legal advice.</p>
+              <p className="text-body">
+                How much do you know about child custody in Ohio? Take this
+                quick 3-question quiz.
+              </p>
+              <p className="text-body text-sm italic mt-1">
+                For informational purposes only. This is not legal advice.
+              </p>
             </div>
             <div className="card-elevated">
-              <CustodyQuiz />
+              <AnimatedQuiz questions={quizQuestions} />
             </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="section-padding">
+          <div
+            ref={faqAnim.ref}
+            className={`container max-w-2xl ${faqAnim.isVisible ? "scroll-visible" : "scroll-hidden"}`}
+          >
+            <div className="text-center mb-10">
+              <div className="flex items-center justify-center gap-2 mb-4">
+                <HelpCircle className="w-6 h-6 text-primary" />
+                <h2 className="heading-section mb-0">
+                  Common Questions About Child Custody
+                </h2>
+              </div>
+              <p className="text-body">
+                Answers to the questions we hear most often.
+              </p>
+            </div>
+            <PracticeAreaFAQ items={faqItems} />
+          </div>
+        </section>
+
+        {/* Final CTA */}
+        <section className="relative section-padding overflow-hidden">
+          <div className="absolute inset-0">
+            <img
+              src="https://images.unsplash.com/photo-1476703993599-0035a21b17a9?w=1600&q=80"
+              alt=""
+              aria-hidden="true"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-foreground/70" />
+          </div>
+          <div className="container max-w-2xl text-center relative z-10">
+            <h2 className="heading-section mb-4 text-white drop-shadow-lg">
+              Your Child Deserves the Best Outcome
+            </h2>
+            <p className="text-lg text-white/90 mb-8 drop-shadow">
+              Don't navigate custody alone. Call us for a free consultation
+              &mdash; we'll listen to your situation, explain your options, and
+              fight for your family.
+            </p>
+            <a
+              href="tel:+16146624043"
+              className="btn-cta text-xl px-12 py-5"
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              Call Us Now: 614-662-4043
+            </a>
           </div>
         </section>
       </main>

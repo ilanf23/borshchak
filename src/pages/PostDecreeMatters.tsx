@@ -1,41 +1,66 @@
 import { useState } from "react";
-import { Phone, CheckCircle2, Scale, FileText, ChevronDown, ChevronUp, ArrowRight, HelpCircle, Trophy, Users, Clock, ShieldCheck, Gavel, RefreshCw, DollarSign, Heart, Home, AlertTriangle } from "lucide-react";
+import {
+  Phone,
+  CheckCircle2,
+  ChevronDown,
+  HelpCircle,
+  Users,
+  DollarSign,
+  Heart,
+  Home,
+  Gavel,
+  RefreshCw,
+  AlertTriangle,
+} from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import AnimatedQuiz from "@/components/AnimatedQuiz";
+import PracticeAreaFAQ from "@/components/PracticeAreaFAQ";
 import { useConsultation } from "@/contexts/ConsultationContext";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { cn } from "@/lib/utils";
+
+// ---------------------------------------------------------------------------
+// Data
+// ---------------------------------------------------------------------------
 
 const postDecreeTypes = [
   {
     title: "Child Custody Modifications",
     icon: Users,
-    description: "Circumstances change after divorce. If you or your former spouse has relocated, remarried, or experienced a shift in work schedule, the original custody arrangement may no longer serve your child's best interests. Ohio courts allow modifications when there is a substantial change in circumstances.",
+    description:
+      "Circumstances change after divorce. If you or your former spouse has relocated, remarried, or experienced a shift in work schedule, the original custody arrangement may no longer serve your child's best interests. Ohio courts allow modifications when there is a substantial change in circumstances. Our attorneys will help you document the changes and present a compelling case to the court.",
   },
   {
     title: "Child Support Modifications",
     icon: DollarSign,
-    description: "If either parent's income has changed significantly (job loss, promotion, disability), child support obligations can be adjusted. Ohio law permits modification when the recalculated amount differs by at least 10% from the current order.",
+    description:
+      "If either parent's income has changed significantly — whether through job loss, promotion, disability, or retirement — child support obligations can be adjusted. Ohio law permits modification when the recalculated amount differs by at least 10% from the current order. We will review your financial situation, calculate the potential new amount, and guide you through the modification process from start to finish.",
   },
   {
     title: "Spousal Support (Alimony) Modifications",
     icon: Heart,
-    description: "A sudden loss of assets, change in employment, or remarriage of the receiving spouse can warrant a modification to spousal support. The original decree must allow for future modification for the court to consider changes.",
+    description:
+      "A sudden loss of assets, change in employment, or remarriage of the receiving spouse can warrant a modification to spousal support. The original decree must allow for future modification for the court to consider changes. Our attorneys will review your decree's language, assess whether your circumstances qualify, and advocate for a fair adjustment that reflects your current reality.",
   },
   {
     title: "Property Division Disputes",
     icon: Home,
-    description: "If your former spouse failed to transfer property as ordered, hid assets during the original proceedings, or is not complying with the division terms, you can seek enforcement or correction through the court.",
+    description:
+      "If your former spouse failed to transfer property as ordered, hid assets during the original proceedings, or is not complying with the division terms, you can seek enforcement or correction through the court. These disputes can involve real estate, retirement accounts, business interests, and personal property. We will work to ensure you receive everything you were awarded in the original decree.",
   },
   {
     title: "Contempt of Court",
     icon: Gavel,
-    description: "When a former spouse willfully violates a court order, such as refusing visitation, withholding support payments, or ignoring property transfer deadlines, the court can hold them in contempt. Penalties may include fines, jail time, or attorney fee awards.",
+    description:
+      "When a former spouse willfully violates a court order — such as refusing visitation, withholding support payments, or ignoring property transfer deadlines — the court can hold them in contempt. Penalties may include fines, jail time, or attorney fee awards. Our firm has extensive experience filing contempt motions and holding non-compliant parties accountable.",
   },
   {
     title: "Relocation Issues",
     icon: RefreshCw,
-    description: "If a custodial parent wishes to move out of state or a significant distance, they must obtain court approval. The court evaluates how the move affects the child's relationship with the non-custodial parent and whether the move is in the child's best interest.",
+    description:
+      "If a custodial parent wishes to move out of state or a significant distance, they must obtain court approval. The court evaluates how the move affects the child's relationship with the non-custodial parent and whether the move is in the child's best interest. Whether you are the parent seeking to relocate or the parent opposing the move, we can help you navigate this sensitive process.",
   },
 ];
 
@@ -98,6 +123,33 @@ const quizQuestions = [
   },
 ];
 
+const faqItems = [
+  {
+    question: "What are post-decree matters?",
+    answer: "Post-decree matters involve any legal issues that arise after a divorce, dissolution, or custody order has been finalized. Common examples include modifications to custody, child support, or spousal support, as well as enforcement of existing court orders.",
+  },
+  {
+    question: "When can I modify a court order?",
+    answer: "You can request a modification when there has been a substantial change in circumstances since the original order was issued. Examples include job loss, relocation, significant income changes, remarriage, or changes in the children's needs.",
+  },
+  {
+    question: "How do I enforce a court order my ex isn't following?",
+    answer: "You can file a motion for contempt of court, asking the judge to compel compliance. The court has various enforcement tools including wage garnishment, license suspension, fines, and even jail time for willful non-compliance.",
+  },
+  {
+    question: "Can I relocate with my children after divorce?",
+    answer: "If the move would significantly change the custody arrangement, you may need to file a motion to modify the custody order. Ohio courts evaluate relocation requests based on the child's best interests, the reason for the move, and the impact on the other parent's relationship with the child.",
+  },
+  {
+    question: "Do I need the same attorney who handled my divorce?",
+    answer: "No. While continuity can be helpful, you are free to hire any family law attorney for post-decree matters. What matters most is finding an attorney experienced in modifications and enforcement who understands your current situation.",
+  },
+];
+
+// ---------------------------------------------------------------------------
+// Sub-components
+// ---------------------------------------------------------------------------
+
 const ExpandableCard = ({
   title,
   icon: Icon,
@@ -110,24 +162,30 @@ const ExpandableCard = ({
   const [open, setOpen] = useState(false);
   return (
     <div
-      className="card-bordered hover:shadow-md transition-shadow duration-200 cursor-pointer"
+      className="card-bordered transition-all duration-300 cursor-pointer hover:shadow-md hover:border-accent"
       onClick={() => setOpen(!open)}
     >
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div
-            className="shrink-0 w-10 h-10 rounded-full flex items-center justify-center"
-            style={{ backgroundColor: "hsl(var(--secondary))" }}
+            className={cn(
+              "shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300",
+              open ? "bg-accent text-white" : ""
+            )}
+            style={
+              !open ? { backgroundColor: "hsl(var(--secondary))" } : undefined
+            }
           >
-            <Icon className="w-5 h-5 text-primary" />
+            <Icon
+              className={cn("w-5 h-5", open ? "text-white" : "text-primary")}
+            />
           </div>
           <h4 className="heading-subsection text-lg">{title}</h4>
         </div>
-        {open ? (
-          <ChevronUp className="w-5 h-5 text-muted-foreground" />
-        ) : (
-          <ChevronDown className="w-5 h-5 text-muted-foreground" />
-        )}
+        <ChevronDown
+          className="w-5 h-5 text-muted-foreground transition-transform duration-300"
+          style={{ transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
+        />
       </div>
       <AnimatePresence>
         {open && (
@@ -135,7 +193,7 @@ const ExpandableCard = ({
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.25 }}
+            transition={{ duration: 0.35, ease: "easeOut" }}
             className="overflow-hidden"
           >
             <div className="mt-4 text-body text-base">{children}</div>
@@ -146,128 +204,9 @@ const ExpandableCard = ({
   );
 };
 
-const PostDecreeQuiz = () => {
-  const [currentQ, setCurrentQ] = useState(0);
-  const [selected, setSelected] = useState<number | null>(null);
-  const [score, setScore] = useState(0);
-  const [showResult, setShowResult] = useState(false);
-  const [answered, setAnswered] = useState(false);
-
-  const q = quizQuestions[currentQ];
-
-  const handleSelect = (idx: number) => {
-    if (answered) return;
-    setSelected(idx);
-    setAnswered(true);
-    if (idx === q.correctIndex) setScore((s) => s + 1);
-  };
-
-  const handleNext = () => {
-    if (currentQ < quizQuestions.length - 1) {
-      setCurrentQ((c) => c + 1);
-      setSelected(null);
-      setAnswered(false);
-    } else {
-      setShowResult(true);
-    }
-  };
-
-  if (showResult) {
-    return (
-      <div className="text-center space-y-6">
-        <div
-          className="w-20 h-20 rounded-full mx-auto flex items-center justify-center"
-          style={{ backgroundColor: "hsla(152, 45%, 38%, 0.1)" }}
-        >
-          <Trophy className="w-10 h-10" style={{ color: "hsl(var(--green-accent))" }} />
-        </div>
-        <h3 className="heading-section text-3xl">
-          You scored {score}/{quizQuestions.length}!
-        </h3>
-        <p className="text-body">
-          {score === 3
-            ? "You have a strong understanding of post-decree matters."
-            : score >= 2
-            ? "Good foundation! A consultation can clarify the specifics of your case."
-            : "Post-decree law is complex. Let our attorneys guide you through your options."}
-        </p>
-        <a href="tel:+16146624043" className="btn-cta inline-flex">
-          <Phone className="w-5 h-5 mr-2" />
-          Get Your Free Consultation
-        </a>
-      </div>
-    );
-  }
-
-  return (
-    <div className="space-y-6">
-      <div className="flex items-center justify-between mb-2">
-        <span className="text-base font-medium text-muted-foreground">
-          Question {currentQ + 1} of {quizQuestions.length}
-        </span>
-        <div className="flex gap-1">
-          {quizQuestions.map((_, i) => (
-            <div
-              key={i}
-              className="w-8 h-1.5 rounded-full"
-              style={{
-                backgroundColor:
-                  i <= currentQ
-                    ? "hsl(var(--green-accent))"
-                    : "hsl(var(--border))",
-              }}
-            />
-          ))}
-        </div>
-      </div>
-      <h3 className="heading-subsection text-2xl">{q.question}</h3>
-      <div className="grid gap-3">
-        {q.options.map((opt, idx) => {
-          let borderColor = "hsl(var(--border))";
-          let bgColor = "transparent";
-          if (answered && idx === q.correctIndex) {
-            borderColor = "hsl(var(--green-accent))";
-            bgColor = "hsla(152, 45%, 38%, 0.08)";
-          } else if (answered && idx === selected && idx !== q.correctIndex) {
-            borderColor = "hsl(var(--destructive))";
-            bgColor = "hsla(0, 72%, 51%, 0.05)";
-          } else if (idx === selected) {
-            borderColor = "hsl(var(--primary))";
-          }
-          return (
-            <button
-              key={idx}
-              onClick={() => handleSelect(idx)}
-              className="text-left px-5 py-4 rounded-lg border-2 transition-all duration-200 text-body text-lg"
-              style={{ borderColor, backgroundColor: bgColor }}
-            >
-              {opt}
-            </button>
-          );
-        })}
-      </div>
-      {answered && (
-        <motion.div
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="p-4 rounded-lg"
-          style={{ backgroundColor: "hsl(var(--secondary))" }}
-        >
-          <p className="text-body text-base">
-            <strong>{selected === q.correctIndex ? "Correct!" : "Not quite."}</strong>{" "}
-            {q.explanation}
-          </p>
-        </motion.div>
-      )}
-      {answered && (
-        <button onClick={handleNext} className="btn-cta">
-          {currentQ < quizQuestions.length - 1 ? "Next Question" : "See Results"}
-          <ArrowRight className="w-4 h-4 ml-2" />
-        </button>
-      )}
-    </div>
-  );
-};
+// ---------------------------------------------------------------------------
+// Main Page
+// ---------------------------------------------------------------------------
 
 const PostDecreeMatters = () => {
   const { openConsultation } = useConsultation();
@@ -275,6 +214,7 @@ const PostDecreeMatters = () => {
   const compAnim = useScrollAnimation();
   const ctaAnim = useScrollAnimation();
   const quizAnim = useScrollAnimation();
+  const faqAnim = useScrollAnimation();
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -337,13 +277,13 @@ const PostDecreeMatters = () => {
           </div>
         </section>
 
-        {/* Style 2: Side-by-Side (Image Left, Text Right) */}
+        {/* Side-by-Side (Image Left, Text Right) */}
         <section className="section-padding-sm">
           <div className="container max-w-5xl">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <img
-                src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200&q=80"
-                alt="Legal scales and books representing post-decree justice"
+                src="https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=1200&q=80"
+                alt="Person looking ahead toward new possibilities"
                 className="w-full h-72 md:h-96 object-cover rounded-lg"
                 loading="lazy"
               />
@@ -358,7 +298,7 @@ const PostDecreeMatters = () => {
         </section>
 
         {/* Types of Post-Decree Matters */}
-        <section className="section-padding">
+        <section className="section-padding bg-secondary">
           <div
             ref={typesAnim.ref}
             className={`container max-w-4xl ${typesAnim.isVisible ? "scroll-visible" : "scroll-hidden"}`}
@@ -377,10 +317,10 @@ const PostDecreeMatters = () => {
           </div>
         </section>
 
-        {/* Style 1: Full-Bleed Background with Quote */}
+        {/* Full-Bleed Background with Quote */}
         <section
           className="relative min-h-[300px] md:min-h-[400px] flex items-center justify-center bg-cover bg-center"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1600&q=80')" }}
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1505778276668-26b3ff7af103?w=1600&q=80')" }}
         >
           <div className="absolute inset-0" style={{ backgroundColor: "hsla(215, 45%, 22%, 0.75)" }} />
           <div className="relative z-10 text-center px-6 max-w-3xl">
@@ -453,25 +393,8 @@ const PostDecreeMatters = () => {
           </div>
         </section>
 
-        {/* Style 5: Offset Image with Navy Accent Block */}
-        <section className="section-padding-sm">
-          <div className="container max-w-4xl">
-            <div className="relative">
-              <div
-                className="absolute top-4 left-4 w-full h-full rounded-lg hidden md:block bg-navy"
-              />
-              <img
-                src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&q=80"
-                alt="Attorney reviewing post-decree documents with client"
-                className="relative z-10 w-full h-64 md:h-80 object-cover rounded-lg"
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </section>
-
         {/* Quiz */}
-        <section className="section-padding" style={{ borderTop: "3px solid hsl(var(--green-accent))" }}>
+        <section className="section-padding bg-card" style={{ borderTop: "3px solid hsl(var(--green-accent))" }}>
           <div
             ref={quizAnim.ref}
             className={`container max-w-2xl ${quizAnim.isVisible ? "scroll-visible" : "scroll-hidden"}`}
@@ -485,8 +408,42 @@ const PostDecreeMatters = () => {
               <p className="text-body text-sm italic mt-1">For informational purposes only. This is not legal advice.</p>
             </div>
             <div className="card-elevated">
-              <PostDecreeQuiz />
+              <AnimatedQuiz questions={quizQuestions} />
             </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="section-padding">
+          <div
+            ref={faqAnim.ref}
+            className={`container max-w-2xl ${faqAnim.isVisible ? "scroll-visible" : "scroll-hidden"}`}
+          >
+            <div className="text-center mb-10">
+              <div className="flex items-center justify-center gap-2 mb-4">
+                <HelpCircle className="w-6 h-6 text-primary" />
+                <h2 className="heading-section mb-0">
+                  Common Questions About Post-Decree Matters
+                </h2>
+              </div>
+              <p className="text-body">
+                Answers to the questions we hear most often.
+              </p>
+            </div>
+            <PracticeAreaFAQ items={faqItems} />
+          </div>
+        </section>
+
+        {/* Final CTA */}
+        <section className="relative section-padding overflow-hidden">
+          <div className="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1600&q=80" alt="" aria-hidden="true" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-foreground/70" />
+          </div>
+          <div className="container max-w-2xl text-center relative z-10">
+            <h2 className="heading-section mb-4 text-white drop-shadow-lg">Life Changed? Your Court Order Can Too.</h2>
+            <p className="text-lg text-white/90 mb-8 drop-shadow">Post-decree modifications protect your rights as circumstances evolve. Call us for a free consultation.</p>
+            <a href="tel:+16146624043" className="btn-cta text-xl px-12 py-5"><Phone className="w-5 h-5 mr-2" />Call Us Now: 614-662-4043</a>
           </div>
         </section>
       </main>

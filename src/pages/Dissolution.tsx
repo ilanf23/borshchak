@@ -1,10 +1,13 @@
 import { useState } from "react";
-import { Phone, CheckCircle2, Scale, FileText, ChevronDown, ChevronUp, ArrowRight, HelpCircle, Trophy, Users, Clock, DollarSign, Heart, Home, Baby, CreditCard, FileCheck } from "lucide-react";
+import { Phone, CheckCircle2, Scale, FileText, ChevronDown, HelpCircle, Users, Clock, DollarSign, Heart, Home, Baby, CreditCard, FileCheck } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import AnimatedQuiz from "@/components/AnimatedQuiz";
+import PracticeAreaFAQ from "@/components/PracticeAreaFAQ";
 import { useConsultation } from "@/contexts/ConsultationContext";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { cn } from "@/lib/utils";
 
 const requirements = [
   {
@@ -107,6 +110,33 @@ const quizQuestions = [
   },
 ];
 
+const faqItems = [
+  {
+    question: "What is the difference between dissolution and divorce in Ohio?",
+    answer: "A dissolution requires both spouses to agree on all terms — property division, custody, support, and debt allocation — before filing. A divorce can be filed unilaterally and allows the court to resolve disputed issues. Dissolution is generally faster and less expensive.",
+  },
+  {
+    question: "How long does a dissolution take in Ohio?",
+    answer: "Once both parties have signed the separation agreement and filed the petition, a dissolution hearing is typically scheduled within 30 to 90 days. The entire process can be completed in as little as 4 to 6 weeks if all paperwork is in order.",
+  },
+  {
+    question: "Can a dissolution be converted to a divorce?",
+    answer: "Yes. If the parties cannot agree on all terms during the dissolution process, either spouse can withdraw and file for divorce instead. This allows the court to step in and make decisions on contested issues.",
+  },
+  {
+    question: "Do both spouses need a lawyer for dissolution?",
+    answer: "While not legally required, it is strongly recommended that each spouse have independent legal counsel. One attorney cannot represent both parties due to conflicts of interest. Having your own lawyer ensures the agreement is fair and that you understand your rights.",
+  },
+  {
+    question: "What happens at the dissolution hearing?",
+    answer: "At the final hearing, both spouses appear before the judge and confirm they agree to the terms of the separation agreement. The judge reviews the agreement, asks questions to ensure both parties understand it, and then grants the dissolution. The hearing typically lasts 15 to 30 minutes.",
+  },
+];
+
+// ---------------------------------------------------------------------------
+// Sub-components
+// ---------------------------------------------------------------------------
+
 const ExpandableCard = ({
   title,
   icon: Icon,
@@ -119,24 +149,30 @@ const ExpandableCard = ({
   const [open, setOpen] = useState(false);
   return (
     <div
-      className="card-bordered hover:shadow-md transition-shadow duration-200 cursor-pointer"
+      className="card-bordered transition-all duration-300 cursor-pointer hover:shadow-md hover:border-accent"
       onClick={() => setOpen(!open)}
     >
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div
-            className="shrink-0 w-10 h-10 rounded-full flex items-center justify-center"
-            style={{ backgroundColor: "hsl(var(--secondary))" }}
+            className={cn(
+              "shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300",
+              open ? "bg-accent text-white" : ""
+            )}
+            style={
+              !open ? { backgroundColor: "hsl(var(--secondary))" } : undefined
+            }
           >
-            <Icon className="w-5 h-5 text-primary" />
+            <Icon
+              className={cn("w-5 h-5", open ? "text-white" : "text-primary")}
+            />
           </div>
           <h4 className="heading-subsection text-lg">{title}</h4>
         </div>
-        {open ? (
-          <ChevronUp className="w-5 h-5 text-muted-foreground" />
-        ) : (
-          <ChevronDown className="w-5 h-5 text-muted-foreground" />
-        )}
+        <ChevronDown
+          className="w-5 h-5 text-muted-foreground transition-transform duration-300"
+          style={{ transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
+        />
       </div>
       <AnimatePresence>
         {open && (
@@ -144,7 +180,7 @@ const ExpandableCard = ({
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.25 }}
+            transition={{ duration: 0.35, ease: "easeOut" }}
             className="overflow-hidden"
           >
             <div className="mt-4 text-body text-base">{children}</div>
@@ -155,128 +191,9 @@ const ExpandableCard = ({
   );
 };
 
-const DissolutionQuiz = () => {
-  const [currentQ, setCurrentQ] = useState(0);
-  const [selected, setSelected] = useState<number | null>(null);
-  const [score, setScore] = useState(0);
-  const [showResult, setShowResult] = useState(false);
-  const [answered, setAnswered] = useState(false);
-
-  const q = quizQuestions[currentQ];
-
-  const handleSelect = (idx: number) => {
-    if (answered) return;
-    setSelected(idx);
-    setAnswered(true);
-    if (idx === q.correctIndex) setScore((s) => s + 1);
-  };
-
-  const handleNext = () => {
-    if (currentQ < quizQuestions.length - 1) {
-      setCurrentQ((c) => c + 1);
-      setSelected(null);
-      setAnswered(false);
-    } else {
-      setShowResult(true);
-    }
-  };
-
-  if (showResult) {
-    return (
-      <div className="text-center space-y-6">
-        <div
-          className="w-20 h-20 rounded-full mx-auto flex items-center justify-center"
-          style={{ backgroundColor: "hsla(152, 45%, 38%, 0.1)" }}
-        >
-          <Trophy className="w-10 h-10" style={{ color: "hsl(var(--green-accent))" }} />
-        </div>
-        <h3 className="heading-section text-3xl">
-          You scored {score}/{quizQuestions.length}!
-        </h3>
-        <p className="text-body">
-          {score === 3
-            ? "Excellent! You understand Ohio dissolution law well."
-            : score >= 2
-            ? "Good knowledge! A consultation can clarify the details."
-            : "Dissolution law has nuances. Let our team walk you through it."}
-        </p>
-        <a href="tel:+16146624043" className="btn-cta inline-flex">
-          <Phone className="w-5 h-5 mr-2" />
-          Get Your Free Consultation
-        </a>
-      </div>
-    );
-  }
-
-  return (
-    <div className="space-y-6">
-      <div className="flex items-center justify-between mb-2">
-        <span className="text-base font-medium text-muted-foreground">
-          Question {currentQ + 1} of {quizQuestions.length}
-        </span>
-        <div className="flex gap-1">
-          {quizQuestions.map((_, i) => (
-            <div
-              key={i}
-              className="w-8 h-1.5 rounded-full"
-              style={{
-                backgroundColor:
-                  i <= currentQ
-                    ? "hsl(var(--green-accent))"
-                    : "hsl(var(--border))",
-              }}
-            />
-          ))}
-        </div>
-      </div>
-      <h3 className="heading-subsection text-2xl">{q.question}</h3>
-      <div className="grid gap-3">
-        {q.options.map((opt, idx) => {
-          let borderColor = "hsl(var(--border))";
-          let bgColor = "transparent";
-          if (answered && idx === q.correctIndex) {
-            borderColor = "hsl(var(--green-accent))";
-            bgColor = "hsla(152, 45%, 38%, 0.08)";
-          } else if (answered && idx === selected && idx !== q.correctIndex) {
-            borderColor = "hsl(var(--destructive))";
-            bgColor = "hsla(0, 72%, 51%, 0.05)";
-          } else if (idx === selected) {
-            borderColor = "hsl(var(--primary))";
-          }
-          return (
-            <button
-              key={idx}
-              onClick={() => handleSelect(idx)}
-              className="text-left px-5 py-4 rounded-lg border-2 transition-all duration-200 text-body text-lg"
-              style={{ borderColor, backgroundColor: bgColor }}
-            >
-              {opt}
-            </button>
-          );
-        })}
-      </div>
-      {answered && (
-        <motion.div
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="p-4 rounded-lg"
-          style={{ backgroundColor: "hsl(var(--secondary))" }}
-        >
-          <p className="text-body text-base">
-            <strong>{selected === q.correctIndex ? "Correct!" : "Not quite."}</strong>{" "}
-            {q.explanation}
-          </p>
-        </motion.div>
-      )}
-      {answered && (
-        <button onClick={handleNext} className="btn-cta">
-          {currentQ < quizQuestions.length - 1 ? "Next Question" : "See Results"}
-          <ArrowRight className="w-4 h-4 ml-2" />
-        </button>
-      )}
-    </div>
-  );
-};
+// ---------------------------------------------------------------------------
+// Main Page
+// ---------------------------------------------------------------------------
 
 const Dissolution = () => {
   const { openConsultation } = useConsultation();
@@ -284,6 +201,7 @@ const Dissolution = () => {
   const diffAnim = useScrollAnimation();
   const ctaAnim = useScrollAnimation();
   const quizAnim = useScrollAnimation();
+  const faqAnim = useScrollAnimation();
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -351,7 +269,7 @@ const Dissolution = () => {
           </div>
         </section>
 
-        {/* Style 3: Side-by-Side (Text Left, Image Right) */}
+        {/* Side-by-Side (Text Left, Image Right) */}
         <section className="section-padding-sm">
           <div className="container max-w-5xl">
             <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -362,8 +280,8 @@ const Dissolution = () => {
                 </p>
               </div>
               <img
-                src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&q=80"
-                alt="Attorney and client shaking hands"
+                src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&q=80"
+                alt="Two people talking calmly"
                 className="w-full h-72 md:h-96 object-cover rounded-lg"
                 loading="lazy"
               />
@@ -434,10 +352,10 @@ const Dissolution = () => {
           </div>
         </section>
 
-        {/* Style 1: Full-Bleed Background with Quote */}
+        {/* Full-Bleed Background with Quote */}
         <section
           className="relative min-h-[300px] md:min-h-[400px] flex items-center justify-center bg-cover bg-center"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1600&q=80')" }}
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=1600&q=80')" }}
         >
           <div className="absolute inset-0" style={{ backgroundColor: "hsla(215, 45%, 22%, 0.75)" }} />
           <div className="relative z-10 text-center px-6 max-w-3xl">
@@ -449,7 +367,7 @@ const Dissolution = () => {
         </section>
 
         {/* Requirements */}
-        <section className="section-padding">
+        <section className="section-padding bg-secondary">
           <div
             ref={reqAnim.ref}
             className={`container max-w-4xl ${reqAnim.isVisible ? "scroll-visible" : "scroll-hidden"}`}
@@ -468,7 +386,7 @@ const Dissolution = () => {
           </div>
         </section>
 
-        {/* Style 4: Full-Bleed Edge-to-Edge */}
+        {/* Full-Bleed Edge-to-Edge */}
         <img
           src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1600&q=80"
           alt="Legal books and scales of justice"
@@ -541,7 +459,7 @@ const Dissolution = () => {
           </div>
         </section>
 
-        {/* Style 6: Image with Caption Bar */}
+        {/* Image with Caption Bar */}
         <section className="section-padding-sm">
           <div className="container max-w-4xl">
             <img
@@ -557,7 +475,7 @@ const Dissolution = () => {
         </section>
 
         {/* Quiz */}
-        <section className="section-padding" style={{ borderTop: "3px solid hsl(var(--green-accent))" }}>
+        <section className="section-padding bg-card" style={{ borderTop: "3px solid hsl(var(--green-accent))" }}>
           <div
             ref={quizAnim.ref}
             className={`container max-w-2xl ${quizAnim.isVisible ? "scroll-visible" : "scroll-hidden"}`}
@@ -571,8 +489,50 @@ const Dissolution = () => {
               <p className="text-body text-sm italic mt-1">For informational purposes only. This is not legal advice.</p>
             </div>
             <div className="card-elevated">
-              <DissolutionQuiz />
+              <AnimatedQuiz questions={quizQuestions} />
             </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="section-padding">
+          <div
+            ref={faqAnim.ref}
+            className={`container max-w-2xl ${faqAnim.isVisible ? "scroll-visible" : "scroll-hidden"}`}
+          >
+            <div className="text-center mb-10">
+              <div className="flex items-center justify-center gap-2 mb-4">
+                <HelpCircle className="w-6 h-6 text-primary" />
+                <h2 className="heading-section mb-0">Common Questions About Dissolution</h2>
+              </div>
+              <p className="text-body">Answers to the questions we hear most often.</p>
+            </div>
+            <PracticeAreaFAQ items={faqItems} />
+          </div>
+        </section>
+
+        {/* Final CTA */}
+        <section className="relative section-padding overflow-hidden">
+          <div className="absolute inset-0">
+            <img
+              src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80"
+              alt=""
+              aria-hidden="true"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-foreground/70" />
+          </div>
+          <div className="container max-w-2xl text-center relative z-10">
+            <h2 className="heading-section mb-4 text-white drop-shadow-lg">
+              Ready to Move Forward Together?
+            </h2>
+            <p className="text-lg text-white/90 mb-8 drop-shadow">
+              If you and your spouse agree it's time, dissolution can give you both a fresh start. Call us for a free consultation to see if dissolution is right for you.
+            </p>
+            <a href="tel:+16146624043" className="btn-cta text-xl px-12 py-5">
+              <Phone className="w-5 h-5 mr-2" />
+              Call Us Now: 614-662-4043
+            </a>
           </div>
         </section>
       </main>

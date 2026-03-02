@@ -1,12 +1,30 @@
 import { useState } from "react";
-import { Phone, CheckCircle2, Scale, FileText, Users, Home, DollarSign, Gavel, ChevronDown, ChevronUp, ArrowRight, BookOpen, HelpCircle, Shield, Clock, AlertTriangle, Heart, Trophy } from "lucide-react";
-import { Link } from "react-router-dom";
+import {
+  Phone,
+  CheckCircle2,
+  Scale,
+  FileText,
+  Home,
+  Gavel,
+  ChevronDown,
+  BookOpen,
+  HelpCircle,
+  Shield,
+  AlertTriangle,
+} from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import AnimatedQuiz from "@/components/AnimatedQuiz";
+import PracticeAreaFAQ from "@/components/PracticeAreaFAQ";
 import { useConsultation } from "@/contexts/ConsultationContext";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { cn } from "@/lib/utils";
 import fathersRightsHero from "@/assets/fathers-rights-hero.jpg";
+
+// ---------------------------------------------------------------------------
+// Data
+// ---------------------------------------------------------------------------
 
 const legalHurdles = [
   {
@@ -114,128 +132,9 @@ const quizQuestions = [
   },
 ];
 
-const FathersRightsQuiz = () => {
-  const [currentQ, setCurrentQ] = useState(0);
-  const [selected, setSelected] = useState<number | null>(null);
-  const [score, setScore] = useState(0);
-  const [showResult, setShowResult] = useState(false);
-  const [answered, setAnswered] = useState(false);
-
-  const q = quizQuestions[currentQ];
-
-  const handleSelect = (idx: number) => {
-    if (answered) return;
-    setSelected(idx);
-    setAnswered(true);
-    if (idx === q.correctIndex) setScore((s) => s + 1);
-  };
-
-  const handleNext = () => {
-    if (currentQ < quizQuestions.length - 1) {
-      setCurrentQ((c) => c + 1);
-      setSelected(null);
-      setAnswered(false);
-    } else {
-      setShowResult(true);
-    }
-  };
-
-  if (showResult) {
-    return (
-      <div className="text-center space-y-6">
-        <div
-          className="w-20 h-20 rounded-full mx-auto flex items-center justify-center"
-          style={{ backgroundColor: "hsla(152, 45%, 38%, 0.1)" }}
-        >
-          <Trophy className="w-10 h-10" style={{ color: "hsl(var(--green-accent))" }} />
-        </div>
-        <h3 className="heading-section text-3xl">
-          You scored {score}/{quizQuestions.length}!
-        </h3>
-        <p className="text-body">
-          {score === 3
-            ? "You're well-informed about father's rights in Ohio."
-            : score >= 2
-            ? "Good knowledge! A consultation can fill in the rest."
-            : "Father's rights law can be complex. Let our team guide you."}
-        </p>
-        <a href="tel:+16146624043" className="btn-cta inline-flex">
-          <Phone className="w-5 h-5 mr-2" />
-          Get Your Free Consultation
-        </a>
-      </div>
-    );
-  }
-
-  return (
-    <div className="space-y-6">
-      <div className="flex items-center justify-between mb-2">
-        <span className="text-base font-medium text-muted-foreground">
-          Question {currentQ + 1} of {quizQuestions.length}
-        </span>
-        <div className="flex gap-1">
-          {quizQuestions.map((_, i) => (
-            <div
-              key={i}
-              className="w-8 h-1.5 rounded-full"
-              style={{
-                backgroundColor:
-                  i <= currentQ
-                    ? "hsl(var(--green-accent))"
-                    : "hsl(var(--border))",
-              }}
-            />
-          ))}
-        </div>
-      </div>
-      <h3 className="heading-subsection text-2xl">{q.question}</h3>
-      <div className="grid gap-3">
-        {q.options.map((opt, idx) => {
-          let borderColor = "hsl(var(--border))";
-          let bgColor = "transparent";
-          if (answered && idx === q.correctIndex) {
-            borderColor = "hsl(var(--green-accent))";
-            bgColor = "hsla(152, 45%, 38%, 0.08)";
-          } else if (answered && idx === selected && idx !== q.correctIndex) {
-            borderColor = "hsl(var(--destructive))";
-            bgColor = "hsla(0, 72%, 51%, 0.05)";
-          } else if (idx === selected) {
-            borderColor = "hsl(var(--primary))";
-          }
-          return (
-            <button
-              key={idx}
-              onClick={() => handleSelect(idx)}
-              className="text-left px-5 py-4 rounded-lg border-2 transition-all duration-200 text-body text-lg"
-              style={{ borderColor, backgroundColor: bgColor }}
-            >
-              {opt}
-            </button>
-          );
-        })}
-      </div>
-      {answered && (
-        <motion.div
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="p-4 rounded-lg"
-          style={{ backgroundColor: "hsl(var(--secondary))" }}
-        >
-          <p className="text-body text-base">
-            <strong>{selected === q.correctIndex ? "Correct!" : "Not quite."}</strong>{" "}
-            {q.explanation}
-          </p>
-        </motion.div>
-      )}
-      {answered && (
-        <button onClick={handleNext} className="btn-cta">
-          {currentQ < quizQuestions.length - 1 ? "Next Question" : "See Results"}
-          <ArrowRight className="w-4 h-4 ml-2" />
-        </button>
-      )}
-    </div>
-  );
-};
+// ---------------------------------------------------------------------------
+// Sub-components
+// ---------------------------------------------------------------------------
 
 const ExpandableCard = ({
   title,
@@ -249,24 +148,30 @@ const ExpandableCard = ({
   const [open, setOpen] = useState(false);
   return (
     <div
-      className="card-bordered hover:shadow-md transition-shadow duration-200 cursor-pointer"
+      className="card-bordered transition-all duration-300 cursor-pointer hover:shadow-md hover:border-accent"
       onClick={() => setOpen(!open)}
     >
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div
-            className="shrink-0 w-10 h-10 rounded-full flex items-center justify-center"
-            style={{ backgroundColor: "hsl(var(--secondary))" }}
+            className={cn(
+              "shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300",
+              open ? "bg-accent text-white" : ""
+            )}
+            style={
+              !open ? { backgroundColor: "hsl(var(--secondary))" } : undefined
+            }
           >
-            <Icon className="w-5 h-5 text-primary" />
+            <Icon
+              className={cn("w-5 h-5", open ? "text-white" : "text-primary")}
+            />
           </div>
           <h4 className="heading-subsection text-lg">{title}</h4>
         </div>
-        {open ? (
-          <ChevronUp className="w-5 h-5 text-muted-foreground" />
-        ) : (
-          <ChevronDown className="w-5 h-5 text-muted-foreground" />
-        )}
+        <ChevronDown
+          className="w-5 h-5 text-muted-foreground transition-transform duration-300"
+          style={{ transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
+        />
       </div>
       <AnimatePresence>
         {open && (
@@ -274,7 +179,7 @@ const ExpandableCard = ({
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.25 }}
+            transition={{ duration: 0.35, ease: "easeOut" }}
             className="overflow-hidden"
           >
             <div className="mt-4 text-body text-base">{children}</div>
@@ -285,43 +190,9 @@ const ExpandableCard = ({
   );
 };
 
-const FAQAccordion = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  return (
-    <div className="grid gap-4">
-      {faqItems.map((item, idx) => (
-        <div
-          key={idx}
-          className="card-bordered hover:shadow-md transition-shadow duration-200 cursor-pointer"
-          onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
-        >
-          <div className="flex items-center justify-between">
-            <h4 className="heading-subsection text-lg pr-4">{item.question}</h4>
-            {openIndex === idx ? (
-              <ChevronUp className="w-5 h-5 text-muted-foreground shrink-0" />
-            ) : (
-              <ChevronDown className="w-5 h-5 text-muted-foreground shrink-0" />
-            )}
-          </div>
-          <AnimatePresence>
-            {openIndex === idx && (
-              <motion.div
-                initial={{ height: 0, opacity: 0 }}
-                animate={{ height: "auto", opacity: 1 }}
-                exit={{ height: 0, opacity: 0 }}
-                transition={{ duration: 0.25 }}
-                className="overflow-hidden"
-              >
-                <div className="mt-4 text-body text-base">{item.answer}</div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
-      ))}
-    </div>
-  );
-};
+// ---------------------------------------------------------------------------
+// Main Page
+// ---------------------------------------------------------------------------
 
 const FathersRights = () => {
   const { openConsultation } = useConsultation();
@@ -574,7 +445,7 @@ const FathersRights = () => {
         </section>
 
         {/* Common Legal Hurdles Fathers Face */}
-        <section className="section-padding">
+        <section className="section-padding bg-secondary">
           <div
             ref={hurdlesAnim.ref}
             className={`container max-w-4xl ${hurdlesAnim.isVisible ? "scroll-visible" : "scroll-hidden"}`}
@@ -679,7 +550,7 @@ const FathersRights = () => {
         </section>
 
         {/* Quiz */}
-        <section className="section-padding" style={{ borderTop: "3px solid hsl(var(--green-accent))" }}>
+        <section className="section-padding bg-card" style={{ borderTop: "3px solid hsl(var(--green-accent))" }}>
           <div
             ref={quizAnim.ref}
             className={`container max-w-2xl ${quizAnim.isVisible ? "scroll-visible" : "scroll-hidden"}`}
@@ -693,7 +564,7 @@ const FathersRights = () => {
               <p className="text-body text-sm italic mt-1">For informational purposes only. This is not legal advice.</p>
             </div>
             <div className="card-elevated">
-              <FathersRightsQuiz />
+              <AnimatedQuiz questions={quizQuestions} />
             </div>
           </div>
         </section>
@@ -711,7 +582,20 @@ const FathersRights = () => {
               </div>
               <p className="text-body">Common questions about father's rights in Ohio.</p>
             </div>
-            <FAQAccordion />
+            <PracticeAreaFAQ items={faqItems} />
+          </div>
+        </section>
+
+        {/* Final CTA */}
+        <section className="relative section-padding overflow-hidden">
+          <div className="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1473116763249-2faaef81ccda?w=1600&q=80" alt="" aria-hidden="true" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-foreground/70" />
+          </div>
+          <div className="container max-w-2xl text-center relative z-10">
+            <h2 className="heading-section mb-4 text-white drop-shadow-lg">Your Rights as a Father Matter</h2>
+            <p className="text-lg text-white/90 mb-8 drop-shadow">Don't let outdated assumptions define your role. Call us for a free consultation to protect your parental rights.</p>
+            <a href="tel:+16146624043" className="btn-cta text-xl px-12 py-5"><Phone className="w-5 h-5 mr-2" />Call Us Now: 614-662-4043</a>
           </div>
         </section>
       </main>

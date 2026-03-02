@@ -1,41 +1,104 @@
 import { useState } from "react";
-import { Phone, CheckCircle2, FileText, Shield, Users, Heart, Scale, ChevronDown, ChevronUp, ArrowRight, BookOpen, HelpCircle, Trophy, AlertTriangle, Briefcase, Ban, Eye, PenLine, HandHeart } from "lucide-react";
+import {
+  Phone,
+  CheckCircle2,
+  FileText,
+  Shield,
+  Users,
+  Heart,
+  Scale,
+  ChevronDown,
+  BookOpen,
+  HelpCircle,
+  AlertTriangle,
+  Briefcase,
+  Ban,
+  Eye,
+  PenLine,
+  HandHeart,
+} from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import AnimatedQuiz from "@/components/AnimatedQuiz";
+import PracticeAreaFAQ from "@/components/PracticeAreaFAQ";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { cn } from "@/lib/utils";
+
+// ---------------------------------------------------------------------------
+// Data
+// ---------------------------------------------------------------------------
 
 const whatAPrenupCanDo = [
   {
     title: "Protect from Each Other's Debts",
     icon: Shield,
-    description: "If your spouse has significant debts (from loans, failed investments, or emergencies), a prenup can protect your personal assets from being seized to repay those obligations.",
+    description:
+      "If your spouse has significant debts — from student loans, failed investments, medical bills, or other emergencies — a prenuptial agreement can shield your personal assets from being seized to satisfy those obligations. Without a prenup, creditors may pursue marital assets regardless of who incurred the debt. Establishing clear boundaries in advance gives both parties financial peace of mind.",
   },
   {
     title: "Set Rules on Marital Assets",
     icon: Scale,
-    description: "A prenup determines how income and assets acquired during the marriage are divided, even if only one party is directly involved in wealth creation. Both contributions (financial and domestic) are considered.",
+    description:
+      "A prenup determines how income, investments, and assets acquired during the marriage are divided, even if only one party is directly involved in wealth creation. Ohio courts recognize both financial and domestic contributions, but a prenuptial agreement lets you define those terms on your own rather than leaving the decision to a judge. This clarity can prevent costly disputes down the road.",
   },
   {
     title: "Protect Family Property",
     icon: Heart,
-    description: "If you're a beneficiary of an inheritance, heirlooms, a family business, or property passed down to you, a prenup ensures these generational assets stay in the family in the event of a divorce.",
+    description:
+      "If you are the beneficiary of an inheritance, heirlooms, a family business, or property passed down through generations, a prenup ensures those assets remain in your family in the event of a divorce. Without a clear agreement, commingling of assets during the marriage can blur the lines between separate and marital property. A well-drafted prenup removes that ambiguity and preserves what your family has built.",
   },
   {
     title: "Protect Children from Previous Relationships",
     icon: Users,
-    description: "If either spouse has children from a previous relationship, a prenuptial agreement can protect those children's future financial interests and ensure their support continues regardless of the marriage outcome.",
+    description:
+      "If either spouse has children from a prior relationship, a prenuptial agreement can protect those children's financial interests — including inheritance rights, trust assets, and ongoing support obligations. Remarriage can create complex family dynamics, and without a prenup, your children's future financial security could be affected by the terms of a divorce settlement. A prenup ensures their needs are addressed up front.",
   },
 ];
 
 const invalidReasons = [
-  { icon: AlertTriangle, title: "Coercion", description: "If either party was forced or fraudulently induced into signing the agreement, it will be considered invalid." },
-  { icon: Eye, title: "Inaccuracy", description: "Misrepresentation of facts or incorrect information on the document makes the prenup void." },
-  { icon: Scale, title: "Changes in the Law", description: "Changes in the laws governing prenuptial agreements may render the document obsolete or unenforceable." },
-  { icon: Ban, title: "Failure to Disclose", description: "Not disclosing all property, assets, or debts invalidates the agreement." },
-  { icon: HandHeart, title: "Unfairness", description: "If the agreement is found to be unconscionable or grossly unfair to one party, it may not be enforced." },
-  { icon: Users, title: "Lack of Independent Counsel", description: "While Ohio does not strictly require independent counsel, if either party did not have the opportunity to consult with their own attorney, courts may weigh this as a factor when evaluating the agreement's validity." },
-  { icon: PenLine, title: "Failure to Execute", description: "The agreement must be in writing and signed by both parties. Notarization is strongly recommended as best practice, though not strictly required under Ohio law." },
+  {
+    icon: AlertTriangle,
+    title: "Coercion",
+    description:
+      "If either party was forced, threatened, or fraudulently induced into signing the agreement, Ohio courts will deem it invalid. Courts examine the circumstances surrounding the signing, including timing relative to the wedding and whether one party exerted undue pressure on the other.",
+  },
+  {
+    icon: Eye,
+    title: "Inaccuracy",
+    description:
+      "Misrepresentation of facts or incorrect information on the document — such as understating income or inflating debts — makes the prenup vulnerable to being voided. Both parties have a duty to present truthful information so the agreement reflects reality.",
+  },
+  {
+    icon: Scale,
+    title: "Changes in the Law",
+    description:
+      "Changes in Ohio statutes or relevant case law may render portions of the agreement obsolete or unenforceable. Periodic review with an attorney is recommended to ensure your prenup remains current with the legal landscape.",
+  },
+  {
+    icon: Ban,
+    title: "Failure to Disclose",
+    description:
+      "Full financial disclosure is a cornerstone of an enforceable prenuptial agreement. Failing to disclose all property, assets, income, or debts — whether intentionally or through oversight — can invalidate the entire agreement under Ohio law.",
+  },
+  {
+    icon: HandHeart,
+    title: "Unfairness",
+    description:
+      "If the agreement is found to be unconscionable — meaning grossly unfair to one party at the time of enforcement — the court may refuse to uphold it. Ohio courts look at whether the disadvantaged party understood the terms and had a meaningful opportunity to negotiate.",
+  },
+  {
+    icon: Users,
+    title: "Lack of Independent Counsel",
+    description:
+      "While Ohio does not strictly require independent counsel, if either party did not have the opportunity to consult with their own attorney, courts may weigh this heavily when evaluating the agreement's validity. Having separate lawyers demonstrates that both parties entered the agreement voluntarily and with full understanding.",
+  },
+  {
+    icon: PenLine,
+    title: "Failure to Execute",
+    description:
+      "The agreement must be in writing and signed by both parties before the marriage takes place. Notarization is strongly recommended as best practice, though not strictly required under Ohio law. An improperly executed agreement may be unenforceable.",
+  },
 ];
 
 const draftingPrinciples = [
@@ -55,10 +118,12 @@ const quizQuestions = [
       "To set a wedding budget",
     ],
     correctIndex: 1,
-    explanation: "A prenuptial agreement is a legally binding contract that outlines how assets and debts would be divided in the event of a divorce, and can set rules for marital property and children from previous relationships.",
+    explanation:
+      "A prenuptial agreement is a legally binding contract that outlines how assets and debts would be divided in the event of a divorce, and can set rules for marital property and children from previous relationships.",
   },
   {
-    question: "Can a prenup be invalidated if one party was coerced into signing?",
+    question:
+      "Can a prenup be invalidated if one party was coerced into signing?",
     options: [
       "No, once signed it's permanent",
       "Only if a judge orders it",
@@ -66,10 +131,12 @@ const quizQuestions = [
       "Only after 10 years of marriage",
     ],
     correctIndex: 2,
-    explanation: "If either party was forced or fraudulently induced into signing the prenuptial agreement, it will be considered invalid and unenforceable by Ohio courts.",
+    explanation:
+      "If either party was forced or fraudulently induced into signing the prenuptial agreement, it will be considered invalid and unenforceable by Ohio courts.",
   },
   {
-    question: "Do you need a lawyer to draft a prenuptial agreement in Ohio?",
+    question:
+      "Do you need a lawyer to draft a prenuptial agreement in Ohio?",
     options: [
       "No, you can use an online template",
       "Only if you have significant assets",
@@ -77,9 +144,42 @@ const quizQuestions = [
       "Only the wealthier spouse needs one",
     ],
     correctIndex: 2,
-    explanation: "Both parties should have independent legal representation to ensure the agreement is fair, legally binding, and that both parties fully understand their rights and obligations.",
+    explanation:
+      "Both parties should have independent legal representation to ensure the agreement is fair, legally binding, and that both parties fully understand their rights and obligations.",
   },
 ];
+
+const faqItems = [
+  {
+    question: "Are prenuptial agreements enforceable in Ohio?",
+    answer:
+      "Yes. Ohio recognizes prenuptial agreements under the Uniform Premarital Agreement Act (ORC 1335.05). To be enforceable, the agreement must be in writing, signed voluntarily by both parties, and each party must have made full financial disclosure. Unconscionable terms may be struck down by the court.",
+  },
+  {
+    question: "When should we start discussing a prenup?",
+    answer:
+      "Ideally, prenuptial agreement discussions should begin several months before the wedding. Courts scrutinize agreements signed close to the wedding date, as there may be concerns about pressure or coercion. Starting early allows both parties to negotiate fairly and consult independent attorneys.",
+  },
+  {
+    question: "Can a prenup address spousal support?",
+    answer:
+      "Yes. Prenuptial agreements in Ohio can include provisions regarding spousal support, including waiving it entirely. However, if the waiver would leave one spouse destitute or on public assistance, the court may override that provision.",
+  },
+  {
+    question: "Do both parties need their own lawyer?",
+    answer:
+      "While not legally required, it is strongly recommended that each party has independent legal counsel when negotiating a prenuptial agreement. If one party does not have a lawyer, the agreement may be more vulnerable to challenges on the basis of lack of understanding or undue influence.",
+  },
+  {
+    question: "Can a prenup be changed after marriage?",
+    answer:
+      "Yes. Prenuptial agreements can be amended or revoked after marriage through a written postnuptial agreement signed by both parties. Any modifications must follow the same requirements as the original agreement to be enforceable.",
+  },
+];
+
+// ---------------------------------------------------------------------------
+// Sub-components
+// ---------------------------------------------------------------------------
 
 const ExpandableCard = ({
   title,
@@ -93,24 +193,30 @@ const ExpandableCard = ({
   const [open, setOpen] = useState(false);
   return (
     <div
-      className="card-bordered hover:shadow-md transition-shadow duration-200 cursor-pointer"
+      className="card-bordered transition-all duration-300 cursor-pointer hover:shadow-md hover:border-accent"
       onClick={() => setOpen(!open)}
     >
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div
-            className="shrink-0 w-10 h-10 rounded-full flex items-center justify-center"
-            style={{ backgroundColor: "hsl(var(--secondary))" }}
+            className={cn(
+              "shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300",
+              open ? "bg-accent text-white" : ""
+            )}
+            style={
+              !open ? { backgroundColor: "hsl(var(--secondary))" } : undefined
+            }
           >
-            <Icon className="w-5 h-5 text-primary" />
+            <Icon
+              className={cn("w-5 h-5", open ? "text-white" : "text-primary")}
+            />
           </div>
           <h4 className="heading-subsection text-lg">{title}</h4>
         </div>
-        {open ? (
-          <ChevronUp className="w-5 h-5 text-muted-foreground" />
-        ) : (
-          <ChevronDown className="w-5 h-5 text-muted-foreground" />
-        )}
+        <ChevronDown
+          className="w-5 h-5 text-muted-foreground transition-transform duration-300"
+          style={{ transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
+        />
       </div>
       <AnimatePresence>
         {open && (
@@ -118,7 +224,7 @@ const ExpandableCard = ({
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.25 }}
+            transition={{ duration: 0.35, ease: "easeOut" }}
             className="overflow-hidden"
           >
             <div className="mt-4 text-body text-base">{children}</div>
@@ -129,128 +235,9 @@ const ExpandableCard = ({
   );
 };
 
-const PrenupQuiz = () => {
-  const [currentQ, setCurrentQ] = useState(0);
-  const [selected, setSelected] = useState<number | null>(null);
-  const [score, setScore] = useState(0);
-  const [showResult, setShowResult] = useState(false);
-  const [answered, setAnswered] = useState(false);
-
-  const q = quizQuestions[currentQ];
-
-  const handleSelect = (idx: number) => {
-    if (answered) return;
-    setSelected(idx);
-    setAnswered(true);
-    if (idx === q.correctIndex) setScore((s) => s + 1);
-  };
-
-  const handleNext = () => {
-    if (currentQ < quizQuestions.length - 1) {
-      setCurrentQ((c) => c + 1);
-      setSelected(null);
-      setAnswered(false);
-    } else {
-      setShowResult(true);
-    }
-  };
-
-  if (showResult) {
-    return (
-      <div className="text-center space-y-6">
-        <div
-          className="w-20 h-20 rounded-full mx-auto flex items-center justify-center"
-          style={{ backgroundColor: "hsla(152, 45%, 38%, 0.1)" }}
-        >
-          <Trophy className="w-10 h-10" style={{ color: "hsl(var(--green-accent))" }} />
-        </div>
-        <h3 className="heading-section text-3xl">
-          You scored {score}/{quizQuestions.length}!
-        </h3>
-        <p className="text-body">
-          {score === 3
-            ? "You're well-informed about prenuptial agreements in Ohio."
-            : score >= 2
-            ? "Good knowledge! A consultation can fill in the rest."
-            : "Prenuptial law can be complex. Let our team guide you."}
-        </p>
-        <a href="tel:+16146624043" className="btn-cta inline-flex">
-          <Phone className="w-5 h-5 mr-2" />
-          Get Your Free Consultation
-        </a>
-      </div>
-    );
-  }
-
-  return (
-    <div className="space-y-6">
-      <div className="flex items-center justify-between mb-2">
-        <span className="text-base font-medium text-muted-foreground">
-          Question {currentQ + 1} of {quizQuestions.length}
-        </span>
-        <div className="flex gap-1">
-          {quizQuestions.map((_, i) => (
-            <div
-              key={i}
-              className="w-8 h-1.5 rounded-full"
-              style={{
-                backgroundColor:
-                  i <= currentQ
-                    ? "hsl(var(--green-accent))"
-                    : "hsl(var(--border))",
-              }}
-            />
-          ))}
-        </div>
-      </div>
-      <h3 className="heading-subsection text-2xl">{q.question}</h3>
-      <div className="grid gap-3">
-        {q.options.map((opt, idx) => {
-          let borderColor = "hsl(var(--border))";
-          let bgColor = "transparent";
-          if (answered && idx === q.correctIndex) {
-            borderColor = "hsl(var(--green-accent))";
-            bgColor = "hsla(152, 45%, 38%, 0.08)";
-          } else if (answered && idx === selected && idx !== q.correctIndex) {
-            borderColor = "hsl(var(--destructive))";
-            bgColor = "hsla(0, 72%, 51%, 0.05)";
-          } else if (idx === selected) {
-            borderColor = "hsl(var(--primary))";
-          }
-          return (
-            <button
-              key={idx}
-              onClick={() => handleSelect(idx)}
-              className="text-left px-5 py-4 rounded-lg border-2 transition-all duration-200 text-body text-lg"
-              style={{ borderColor, backgroundColor: bgColor }}
-            >
-              {opt}
-            </button>
-          );
-        })}
-      </div>
-      {answered && (
-        <motion.div
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="p-4 rounded-lg"
-          style={{ backgroundColor: "hsl(var(--secondary))" }}
-        >
-          <p className="text-body text-base">
-            <strong>{selected === q.correctIndex ? "Correct!" : "Not quite."}</strong>{" "}
-            {q.explanation}
-          </p>
-        </motion.div>
-      )}
-      {answered && (
-        <button onClick={handleNext} className="btn-cta">
-          {currentQ < quizQuestions.length - 1 ? "Next Question" : "See Results"}
-          <ArrowRight className="w-4 h-4 ml-2" />
-        </button>
-      )}
-    </div>
-  );
-};
+// ---------------------------------------------------------------------------
+// Main Page
+// ---------------------------------------------------------------------------
 
 const PrenuptialAgreement = () => {
   const purposeAnim = useScrollAnimation();
@@ -258,12 +245,15 @@ const PrenuptialAgreement = () => {
   const invalidAnim = useScrollAnimation();
   const draftingAnim = useScrollAnimation();
   const quizAnim = useScrollAnimation();
+  const faqAnim = useScrollAnimation();
 
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1">
-        {/* Hero */}
+        {/* ---------------------------------------------------------------- */}
+        {/* 1. Hero */}
+        {/* ---------------------------------------------------------------- */}
         <section className="relative bg-navy min-h-[450px] md:min-h-[500px] flex items-center">
           <div className="container max-w-4xl section-padding relative z-10">
             <p
@@ -293,7 +283,9 @@ const PrenuptialAgreement = () => {
           </div>
         </section>
 
-        {/* What Is a Prenup */}
+        {/* ---------------------------------------------------------------- */}
+        {/* 2. What Is a Prenup */}
+        {/* ---------------------------------------------------------------- */}
         <section className="section-padding bg-card" style={{ borderTop: "3px solid hsl(var(--green-accent))" }}>
           <div
             ref={purposeAnim.ref}
@@ -312,7 +304,7 @@ const PrenuptialAgreement = () => {
                   <h3 className="heading-subsection text-xl">The Contract</h3>
                 </div>
                 <p className="text-body text-lg mb-4">
-                  A prenuptial agreement is a legally binding contract between couples about to marry. It outlines how assets and debts would be divided in the event of a divorce.
+                  A prenuptial agreement is a legally binding contract between couples about to marry. It outlines how assets and debts would be divided in the event of a divorce, giving both parties clarity and control over their financial futures.
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-start gap-2 text-body text-base">
@@ -341,7 +333,7 @@ const PrenuptialAgreement = () => {
                   <h3 className="heading-subsection text-xl">The Lawyer's Role</h3>
                 </div>
                 <p className="text-body text-lg mb-4">
-                  A prenuptial agreement lawyer drafts, reviews, and revises your prenup until both parties agree on its terms, ensuring it's legally sound and fair.
+                  A prenuptial agreement lawyer drafts, reviews, and revises your prenup until both parties agree on its terms. Your attorney ensures the document is legally sound, enforceable under Ohio law, and that both parties' interests are fairly represented.
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-start gap-2 text-body text-base">
@@ -374,7 +366,9 @@ const PrenuptialAgreement = () => {
           </div>
         </section>
 
-        {/* Style 4: Full-Bleed Edge-to-Edge */}
+        {/* ---------------------------------------------------------------- */}
+        {/* 3. Full-Bleed Edge-to-Edge Image */}
+        {/* ---------------------------------------------------------------- */}
         <section>
           <img
             src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1600&q=80"
@@ -384,8 +378,10 @@ const PrenuptialAgreement = () => {
           />
         </section>
 
-        {/* What a Prenup Can Do */}
-        <section className="section-padding">
+        {/* ---------------------------------------------------------------- */}
+        {/* 4. What a Prenup Can Do */}
+        {/* ---------------------------------------------------------------- */}
+        <section className="section-padding bg-secondary">
           <div
             ref={canDoAnim.ref}
             className={`container max-w-4xl ${canDoAnim.isVisible ? "scroll-visible" : "scroll-hidden"}`}
@@ -404,7 +400,9 @@ const PrenuptialAgreement = () => {
           </div>
         </section>
 
-        {/* How a Prenup Becomes Invalid */}
+        {/* ---------------------------------------------------------------- */}
+        {/* 5. How a Prenup Becomes Invalid */}
+        {/* ---------------------------------------------------------------- */}
         <section className="section-padding bg-navy">
           <div
             ref={invalidAnim.ref}
@@ -417,7 +415,7 @@ const PrenuptialAgreement = () => {
               How a Prenuptial Agreement Can Become Invalid
             </h2>
             <p className="text-lg leading-relaxed mb-8" style={{ color: "hsla(40, 30%, 98%, 0.85)" }}>
-              While prenuptial agreements are legally binding contracts, there are circumstances under which they may be invalidated by the court.
+              While prenuptial agreements are legally binding contracts, there are circumstances under which they may be invalidated by the court. Understanding these pitfalls is essential to drafting an agreement that will hold up when it matters most.
             </p>
             <div className="grid md:grid-cols-2 gap-6">
               {invalidReasons.map((reason) => (
@@ -437,19 +435,21 @@ const PrenuptialAgreement = () => {
           </div>
         </section>
 
-        {/* Style 3: Side-by-Side (Text Left, Image Right) */}
+        {/* ---------------------------------------------------------------- */}
+        {/* 6. Side-by-Side (Text Left, Image Right) */}
+        {/* ---------------------------------------------------------------- */}
         <section className="section-padding-sm">
           <div className="container max-w-5xl">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="space-y-4 order-2 md:order-1">
                 <h3 className="heading-subsection">Built on Transparency</h3>
                 <p className="text-body">
-                  A valid prenuptial agreement requires full disclosure, fairness, and independent legal representation for both parties. Our attorneys ensure your agreement meets every standard Ohio courts require.
+                  A valid prenuptial agreement requires full disclosure, fairness, and independent legal representation for both parties. Ohio courts closely examine whether each spouse had a genuine opportunity to review and negotiate the terms. Our attorneys ensure your agreement meets every standard Ohio courts require, so it stands up when it matters most.
                 </p>
               </div>
               <img
-                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80"
-                alt="Person signing legal documents at a desk"
+                src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&q=80"
+                alt="Couple reviewing financial documents together"
                 className="w-full h-72 md:h-96 object-cover rounded-lg order-1 md:order-2"
                 loading="lazy"
               />
@@ -457,7 +457,9 @@ const PrenuptialAgreement = () => {
           </div>
         </section>
 
-        {/* Drafting a Prenup */}
+        {/* ---------------------------------------------------------------- */}
+        {/* 7. Drafting a Prenup */}
+        {/* ---------------------------------------------------------------- */}
         <section className="section-padding bg-card">
           <div
             ref={draftingAnim.ref}
@@ -466,7 +468,7 @@ const PrenuptialAgreement = () => {
             <h2 className="heading-section mb-6">Drafting a Fair Prenuptial Agreement</h2>
             <div className="space-y-6 text-body">
               <p>
-                A prenup should protect both parties. While you want to safeguard your interests, remember you're signing a contract with someone you love. Here are the key principles:
+                A prenup should protect both parties. While you want to safeguard your interests, remember you're signing a contract with someone you love. The goal is to create a framework that feels fair to both sides and prevents future disputes. Here are the key principles:
               </p>
               <div className="grid sm:grid-cols-2 gap-4">
                 {draftingPrinciples.map((principle, idx) => (
@@ -495,7 +497,9 @@ const PrenuptialAgreement = () => {
           </div>
         </section>
 
-        {/* Style 1: Full-Bleed Background with Quote Overlay */}
+        {/* ---------------------------------------------------------------- */}
+        {/* 8. Full-Bleed Quote */}
+        {/* ---------------------------------------------------------------- */}
         <section
           className="relative min-h-[300px] md:min-h-[400px] flex items-center justify-center bg-cover bg-center"
           style={{ backgroundImage: "url('https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=1600&q=80')" }}
@@ -509,8 +513,10 @@ const PrenuptialAgreement = () => {
           </div>
         </section>
 
-        {/* Quiz */}
-        <section className="section-padding" style={{ borderTop: "3px solid hsl(var(--green-accent))" }}>
+        {/* ---------------------------------------------------------------- */}
+        {/* 9. Quiz */}
+        {/* ---------------------------------------------------------------- */}
+        <section className="section-padding bg-card" style={{ borderTop: "3px solid hsl(var(--green-accent))" }}>
           <div
             ref={quizAnim.ref}
             className={`container max-w-2xl ${quizAnim.isVisible ? "scroll-visible" : "scroll-hidden"}`}
@@ -524,8 +530,61 @@ const PrenuptialAgreement = () => {
               <p className="text-body text-sm italic mt-1">For informational purposes only. This is not legal advice.</p>
             </div>
             <div className="card-elevated">
-              <PrenupQuiz />
+              <AnimatedQuiz questions={quizQuestions} />
             </div>
+          </div>
+        </section>
+
+        {/* ---------------------------------------------------------------- */}
+        {/* 10. FAQ */}
+        {/* ---------------------------------------------------------------- */}
+        <section className="section-padding">
+          <div
+            ref={faqAnim.ref}
+            className={`container max-w-2xl ${faqAnim.isVisible ? "scroll-visible" : "scroll-hidden"}`}
+          >
+            <div className="text-center mb-10">
+              <div className="flex items-center justify-center gap-2 mb-4">
+                <HelpCircle className="w-6 h-6 text-primary" />
+                <h2 className="heading-section mb-0">
+                  Common Questions About Prenuptial Agreements
+                </h2>
+              </div>
+              <p className="text-body">
+                Answers to the questions we hear most often from couples considering a prenup.
+              </p>
+            </div>
+            <PracticeAreaFAQ items={faqItems} />
+          </div>
+        </section>
+
+        {/* ---------------------------------------------------------------- */}
+        {/* 11. Final CTA */}
+        {/* ---------------------------------------------------------------- */}
+        <section className="relative section-padding overflow-hidden">
+          <div className="absolute inset-0">
+            <img
+              src="https://images.unsplash.com/photo-1517263904808-5dc91e3e7044?w=1600&q=80"
+              alt=""
+              aria-hidden="true"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-foreground/70" />
+          </div>
+          <div className="container max-w-2xl text-center relative z-10">
+            <h2 className="heading-section mb-4 text-white drop-shadow-lg">
+              Start Your Marriage with Clarity
+            </h2>
+            <p className="text-lg text-white/90 mb-8 drop-shadow">
+              A prenuptial agreement isn't about distrust — it's about planning. Call us for a free consultation.
+            </p>
+            <a
+              href="tel:+16146624043"
+              className="btn-cta text-xl px-12 py-5"
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              Call Us Now: 614-662-4043
+            </a>
           </div>
         </section>
       </main>

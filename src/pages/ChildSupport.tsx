@@ -1,31 +1,61 @@
 import { useState } from "react";
-import { Phone, CheckCircle2, DollarSign, FileText, Calculator, Clock, Gavel, Scale, ChevronDown, ChevronUp, ArrowRight, BookOpen, HelpCircle, Trophy, Users, Baby, Briefcase, HeartHandshake, Shield, AlertTriangle } from "lucide-react";
+import {
+  Phone,
+  CheckCircle2,
+  DollarSign,
+  FileText,
+  Calculator,
+  Clock,
+  Gavel,
+  Scale,
+  ChevronDown,
+  BookOpen,
+  HelpCircle,
+  Users,
+  Baby,
+  Briefcase,
+  HeartHandshake,
+  Shield,
+  AlertTriangle,
+} from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import AnimatedQuiz from "@/components/AnimatedQuiz";
+import PracticeAreaFAQ from "@/components/PracticeAreaFAQ";
+import AnimatedCTA from "@/components/AnimatedCTA";
 import { useConsultation } from "@/contexts/ConsultationContext";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { cn } from "@/lib/utils";
+
+// ---------------------------------------------------------------------------
+// Data
+// ---------------------------------------------------------------------------
 
 const whatALawyerDoes = [
   {
     title: "Helps You Understand the Process",
     icon: BookOpen,
-    description: "If it's your first time navigating child support, a lawyer ensures you know every step, from paperwork to hearings. They explain your rights, the actions you can take, and what to expect at each stage so the process is smooth and efficient.",
+    description:
+      "If it's your first time navigating child support, a lawyer ensures you know every step, from paperwork to hearings. They explain your rights, the actions you can take, and what to expect at each stage so the process is smooth and efficient. Having clear guidance from the start prevents costly mistakes and ensures your case moves forward without unnecessary delays. Your attorney also prepares you for what opposing counsel may argue.",
   },
   {
     title: "Assists With Implementation",
     icon: Gavel,
-    description: "Every state has specific terms for setting up and implementing child support orders. A lawyer ensures the order is implemented correctly and that failure by either party to uphold their obligations results in appropriate legal consequences.",
+    description:
+      "Every state has specific terms for setting up and implementing child support orders. A lawyer ensures the order is implemented correctly and that failure by either party to uphold their obligations results in appropriate legal consequences. They handle the technical details of wage withholding, income verification, and agency coordination so you don't have to. If complications arise during implementation, your attorney acts quickly to resolve them.",
   },
   {
     title: "Negotiates Payments",
     icon: HeartHandshake,
-    description: "When you can't reach an agreement with the other parent, a lawyer negotiates on your behalf, diplomatically and amicably. They can serve child support orders, argue appeals, and handle the emotional complexity so you don't have to.",
+    description:
+      "When you can't reach an agreement with the other parent, a lawyer negotiates on your behalf, diplomatically and amicably. They can serve child support orders, argue appeals, and handle the emotional complexity so you don't have to. Effective negotiation often results in faster resolution and lower legal costs than going to trial. Your attorney brings objectivity to a highly emotional situation, keeping the focus on your child's needs.",
   },
   {
     title: "Safeguards Your Rights",
     icon: Shield,
-    description: "Family law is complex. A child support lawyer works to protect your interests for a fair outcome. If your rights are being denied or suppressed, they present your grievances and ensure they are considered in the final decision.",
+    description:
+      "Family law is complex. A child support lawyer works to protect your interests for a fair outcome. If your rights are being denied or suppressed, they present your grievances and ensure they are considered in the final decision. Whether you're the paying or receiving parent, your attorney ensures the calculation is accurate and accounts for all relevant factors. They also protect you against attempts to hide income or underreport earnings.",
   },
 ];
 
@@ -81,6 +111,33 @@ const quizQuestions = [
   },
 ];
 
+const faqItems = [
+  {
+    question: "How is child support calculated in Ohio?",
+    answer: "Ohio uses the Child Support Guidelines worksheet, which considers both parents' combined gross income, the number of children, childcare costs, health insurance premiums, and the custody arrangement. The worksheet produces a presumptive amount that the court typically follows unless deviation is justified.",
+  },
+  {
+    question: "Can child support be modified?",
+    answer: "Yes. Either parent can request a modification if there has been a substantial change in circumstances, such as job loss, significant income change, or changes in the custody arrangement. The modification must be approved by the court or CSEA.",
+  },
+  {
+    question: "What happens if child support isn't paid?",
+    answer: "Ohio has strong enforcement mechanisms including wage withholding, tax refund interception, license suspension, contempt of court proceedings, and even jail time for willful non-payment. The CSEA actively pursues collection on behalf of the custodial parent.",
+  },
+  {
+    question: "Does child support cover college expenses?",
+    answer: "Standard Ohio child support does not extend to college expenses. However, parents can agree to include college costs in a separation agreement. The court cannot order a parent to pay for college, but voluntary agreements made during divorce proceedings are enforceable.",
+  },
+  {
+    question: "Can child support be waived?",
+    answer: "No. Child support is a right that belongs to the child, not the parents. Parents cannot waive or bargain away a child's right to support. The court will always consider the child's financial needs regardless of what the parents agree to between themselves.",
+  },
+];
+
+// ---------------------------------------------------------------------------
+// Sub-components
+// ---------------------------------------------------------------------------
+
 const ExpandableCard = ({
   title,
   icon: Icon,
@@ -93,24 +150,26 @@ const ExpandableCard = ({
   const [open, setOpen] = useState(false);
   return (
     <div
-      className="card-bordered hover:shadow-md transition-shadow duration-200 cursor-pointer"
+      className="card-bordered transition-all duration-300 cursor-pointer hover:shadow-md hover:border-accent"
       onClick={() => setOpen(!open)}
     >
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div
-            className="shrink-0 w-10 h-10 rounded-full flex items-center justify-center"
-            style={{ backgroundColor: "hsl(var(--secondary))" }}
+            className={cn(
+              "shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300",
+              open ? "bg-accent text-white" : ""
+            )}
+            style={!open ? { backgroundColor: "hsl(var(--secondary))" } : undefined}
           >
-            <Icon className="w-5 h-5 text-primary" />
+            <Icon className={cn("w-5 h-5", open ? "text-white" : "text-primary")} />
           </div>
           <h4 className="heading-subsection text-lg">{title}</h4>
         </div>
-        {open ? (
-          <ChevronUp className="w-5 h-5 text-muted-foreground" />
-        ) : (
-          <ChevronDown className="w-5 h-5 text-muted-foreground" />
-        )}
+        <ChevronDown
+          className="w-5 h-5 text-muted-foreground transition-transform duration-300"
+          style={{ transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
+        />
       </div>
       <AnimatePresence>
         {open && (
@@ -118,7 +177,7 @@ const ExpandableCard = ({
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.25 }}
+            transition={{ duration: 0.35, ease: "easeOut" }}
             className="overflow-hidden"
           >
             <div className="mt-4 text-body text-base">{children}</div>
@@ -129,128 +188,9 @@ const ExpandableCard = ({
   );
 };
 
-const ChildSupportQuiz = () => {
-  const [currentQ, setCurrentQ] = useState(0);
-  const [selected, setSelected] = useState<number | null>(null);
-  const [score, setScore] = useState(0);
-  const [showResult, setShowResult] = useState(false);
-  const [answered, setAnswered] = useState(false);
-
-  const q = quizQuestions[currentQ];
-
-  const handleSelect = (idx: number) => {
-    if (answered) return;
-    setSelected(idx);
-    setAnswered(true);
-    if (idx === q.correctIndex) setScore((s) => s + 1);
-  };
-
-  const handleNext = () => {
-    if (currentQ < quizQuestions.length - 1) {
-      setCurrentQ((c) => c + 1);
-      setSelected(null);
-      setAnswered(false);
-    } else {
-      setShowResult(true);
-    }
-  };
-
-  if (showResult) {
-    return (
-      <div className="text-center space-y-6">
-        <div
-          className="w-20 h-20 rounded-full mx-auto flex items-center justify-center"
-          style={{ backgroundColor: "hsla(152, 45%, 38%, 0.1)" }}
-        >
-          <Trophy className="w-10 h-10" style={{ color: "hsl(var(--green-accent))" }} />
-        </div>
-        <h3 className="heading-section text-3xl">
-          You scored {score}/{quizQuestions.length}!
-        </h3>
-        <p className="text-body">
-          {score === 3
-            ? "You're well-informed about Ohio child support law."
-            : score >= 2
-            ? "Good knowledge! A consultation can fill in the rest."
-            : "Child support law can be complex. Let our team guide you."}
-        </p>
-        <a href="tel:+16146624043" className="btn-cta inline-flex">
-          <Phone className="w-5 h-5 mr-2" />
-          Get Your Free Consultation
-        </a>
-      </div>
-    );
-  }
-
-  return (
-    <div className="space-y-6">
-      <div className="flex items-center justify-between mb-2">
-        <span className="text-base font-medium text-muted-foreground">
-          Question {currentQ + 1} of {quizQuestions.length}
-        </span>
-        <div className="flex gap-1">
-          {quizQuestions.map((_, i) => (
-            <div
-              key={i}
-              className="w-8 h-1.5 rounded-full"
-              style={{
-                backgroundColor:
-                  i <= currentQ
-                    ? "hsl(var(--green-accent))"
-                    : "hsl(var(--border))",
-              }}
-            />
-          ))}
-        </div>
-      </div>
-      <h3 className="heading-subsection text-2xl">{q.question}</h3>
-      <div className="grid gap-3">
-        {q.options.map((opt, idx) => {
-          let borderColor = "hsl(var(--border))";
-          let bgColor = "transparent";
-          if (answered && idx === q.correctIndex) {
-            borderColor = "hsl(var(--green-accent))";
-            bgColor = "hsla(152, 45%, 38%, 0.08)";
-          } else if (answered && idx === selected && idx !== q.correctIndex) {
-            borderColor = "hsl(var(--destructive))";
-            bgColor = "hsla(0, 72%, 51%, 0.05)";
-          } else if (idx === selected) {
-            borderColor = "hsl(var(--primary))";
-          }
-          return (
-            <button
-              key={idx}
-              onClick={() => handleSelect(idx)}
-              className="text-left px-5 py-4 rounded-lg border-2 transition-all duration-200 text-body text-lg"
-              style={{ borderColor, backgroundColor: bgColor }}
-            >
-              {opt}
-            </button>
-          );
-        })}
-      </div>
-      {answered && (
-        <motion.div
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="p-4 rounded-lg"
-          style={{ backgroundColor: "hsl(var(--secondary))" }}
-        >
-          <p className="text-body text-base">
-            <strong>{selected === q.correctIndex ? "Correct!" : "Not quite."}</strong>{" "}
-            {q.explanation}
-          </p>
-        </motion.div>
-      )}
-      {answered && (
-        <button onClick={handleNext} className="btn-cta">
-          {currentQ < quizQuestions.length - 1 ? "Next Question" : "See Results"}
-          <ArrowRight className="w-4 h-4 ml-2" />
-        </button>
-      )}
-    </div>
-  );
-};
+// ---------------------------------------------------------------------------
+// Main Page
+// ---------------------------------------------------------------------------
 
 const ChildSupport = () => {
   const { openConsultation } = useConsultation();
@@ -260,6 +200,7 @@ const ChildSupport = () => {
   const filingAnim = useScrollAnimation();
   const durationAnim = useScrollAnimation();
   const quizAnim = useScrollAnimation();
+  const faqAnim = useScrollAnimation();
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -377,7 +318,7 @@ const ChildSupport = () => {
         </section>
 
         {/* What a Lawyer Does */}
-        <section className="section-padding">
+        <section className="section-padding bg-secondary">
           <div
             ref={lawyerAnim.ref}
             className={`container max-w-4xl ${lawyerAnim.isVisible ? "scroll-visible" : "scroll-hidden"}`}
@@ -603,7 +544,7 @@ const ChildSupport = () => {
         </section>
 
         {/* Quiz */}
-        <section className="section-padding" style={{ borderTop: "3px solid hsl(var(--green-accent))" }}>
+        <section className="section-padding bg-card" style={{ borderTop: "3px solid hsl(var(--green-accent))" }}>
           <div
             ref={quizAnim.ref}
             className={`container max-w-2xl ${quizAnim.isVisible ? "scroll-visible" : "scroll-hidden"}`}
@@ -617,8 +558,50 @@ const ChildSupport = () => {
               <p className="text-body text-sm italic mt-1">For informational purposes only. This is not legal advice.</p>
             </div>
             <div className="card-elevated">
-              <ChildSupportQuiz />
+              <AnimatedQuiz questions={quizQuestions} />
             </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="section-padding">
+          <div
+            ref={faqAnim.ref}
+            className={`container max-w-2xl ${faqAnim.isVisible ? "scroll-visible" : "scroll-hidden"}`}
+          >
+            <div className="text-center mb-10">
+              <div className="flex items-center justify-center gap-2 mb-4">
+                <HelpCircle className="w-6 h-6 text-primary" />
+                <h2 className="heading-section mb-0">Common Questions About Child Support</h2>
+              </div>
+              <p className="text-body">Answers to the questions we hear most often.</p>
+            </div>
+            <PracticeAreaFAQ items={faqItems} />
+          </div>
+        </section>
+
+        {/* Final CTA */}
+        <section className="relative section-padding overflow-hidden">
+          <div className="absolute inset-0">
+            <img
+              src="https://images.unsplash.com/photo-1475503572774-15a45e5d60b9?w=1600&q=80"
+              alt=""
+              aria-hidden="true"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-foreground/70" />
+          </div>
+          <div className="container max-w-2xl text-center relative z-10">
+            <h2 className="heading-section mb-4 text-white drop-shadow-lg">
+              Your Child's Future Comes First
+            </h2>
+            <p className="text-lg text-white/90 mb-8 drop-shadow">
+              Whether you're seeking, modifying, or enforcing child support, our team is here to protect your child's interests. Call us for a free consultation.
+            </p>
+            <a href="tel:+16146624043" className="btn-cta text-xl px-12 py-5">
+              <Phone className="w-5 h-5 mr-2" />
+              Call Us Now: 614-662-4043
+            </a>
           </div>
         </section>
       </main>
