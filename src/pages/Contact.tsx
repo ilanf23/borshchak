@@ -196,7 +196,7 @@ const Contact = () => {
                   >
                     <Tag
                       {...linkProps}
-                      className={`block text-center p-6 rounded-2xl border border-white/10 backdrop-blur-sm group transition-all duration-300 ${
+                      className={`flex flex-col items-center text-center p-6 rounded-2xl border border-white/10 backdrop-blur-sm group transition-all duration-300 h-full ${
                         card.interactive
                           ? "bg-white/10 hover:bg-white/20 hover:scale-[1.02] cursor-pointer"
                           : "bg-white/10 hover:bg-white/15"
@@ -204,32 +204,34 @@ const Contact = () => {
                       style={{ borderTop: "3px solid hsl(var(--green-accent))" }}
                     >
                       <div
-                        className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4 transition-transform duration-300 group-hover:scale-110"
+                        className="w-14 h-14 rounded-full flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110"
                         style={{ backgroundColor: "hsla(153,30%,25%,0.25)" }}
                       >
                         <Icon className="w-6 h-6" style={{ color: "#7cc9a0" }} />
                       </div>
-                      <h3 className="font-serif text-xl font-semibold text-white mb-2">{card.title}</h3>
-                      {card.title === "Visit Us" ? (
-                        <p className="text-white/70 text-sm">
-                          1650 Lake Shore Drive<br />
-                          Suite 380<br />
-                          Columbus, OH 43204
-                        </p>
-                      ) : (
-                        <p
-                          className="font-medium text-lg"
-                          style={{ color: "#7cc9a0", wordBreak: card.title === "Email Us" ? "break-all" : undefined }}
-                        >
-                          {card.value}
-                        </p>
-                      )}
-                      {card.description && (
-                        <p className="text-sm text-white/50 mt-1">{card.description}</p>
-                      )}
+                      <h3 className="font-serif text-xl font-semibold text-white mb-3">{card.title}</h3>
+                      <div className="flex-1 flex flex-col items-center justify-center">
+                        {card.title === "Visit Us" ? (
+                          <p className="text-white/70 text-sm leading-relaxed">
+                            1650 Lake Shore Drive<br />
+                            Suite 380<br />
+                            Columbus, OH 43204
+                          </p>
+                        ) : (
+                          <p
+                            className="font-medium text-lg leading-snug"
+                            style={{ color: "#7cc9a0", wordBreak: card.title === "Email Us" ? "break-all" : undefined }}
+                          >
+                            {card.value}
+                          </p>
+                        )}
+                        {card.description && (
+                          <p className="text-sm text-white/50 mt-2">{card.description}</p>
+                        )}
+                      </div>
                       {/* Accent bar */}
                       <div
-                        className="h-1 mx-auto mt-4 rounded-full transition-all duration-300 group-hover:w-20"
+                        className="h-1 rounded-full transition-all duration-300 group-hover:w-20 mt-4"
                         style={{
                           width: "3rem",
                           backgroundColor: "hsl(var(--green-accent))",
