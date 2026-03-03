@@ -341,10 +341,10 @@ const Assets = () => {
                   className="text-2xl font-serif font-semibold mb-1"
                   style={{ color: "hsl(var(--green-accent))" }}
                 >
-                  $100M+
+                  Complex
                 </p>
                 <p className="text-body-sm text-base">
-                  In Assets Protected
+                  Asset Experience
                 </p>
               </div>
               <div className="card-bordered text-center py-5">
@@ -352,7 +352,7 @@ const Assets = () => {
                   className="text-2xl font-serif font-semibold mb-1"
                   style={{ color: "hsl(var(--green-accent))" }}
                 >
-                  Expert
+                  Professional
                 </p>
                 <p className="text-body-sm text-base">
                   Forensic & Valuation Network
@@ -573,7 +573,7 @@ const Assets = () => {
             </div>
             <p className="text-body text-base mt-6 italic">
               This is not an exhaustive list. If your divorce involves any
-              unusual or high-value assets, we have the expertise and expert
+              unusual or high-value assets, we have the experience and professional
               network to handle them.
             </p>
           </div>

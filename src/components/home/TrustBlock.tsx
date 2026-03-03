@@ -34,7 +34,7 @@ const TrustBlock = () => {
               ))}
             </div>
             <div>
-              <p className="font-semibold text-lg text-foreground">147+ Reviews • 4.8 Stars</p>
+              <p className="font-semibold text-lg text-foreground">Highly Rated on Google</p>
               <p className="text-base text-muted-foreground">on Google</p>
             </div>
           </div>
@@ -48,6 +48,7 @@ const TrustBlock = () => {
               </div>
             ))}
           </div>
+          <p className="text-xs text-muted-foreground mt-4 text-center">*Individual results vary. Past client experiences do not guarantee a similar outcome.</p>
         </div>
       </div>
     </section>

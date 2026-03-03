@@ -317,13 +317,13 @@ const Mediation = () => {
                 deserve and enduring months of adversarial litigation.
               </p>
               <p>
-                Mediation offers a third path — one where you and your spouse
+                Mediation offers a third path, one where you and your spouse
                 work together, with professional guidance, to reach an agreement
                 that works for both of you. It's not about being soft; it's
                 about being smart.
               </p>
               <p>
-                We've helped hundreds of Ohio families resolve their disputes
+                We've helped many Ohio families resolve their disputes
                 through mediation.{" "}
                 <strong>
                   Your attorney is with you every step of the way.
@@ -336,10 +336,10 @@ const Mediation = () => {
                   className="text-2xl font-serif font-semibold mb-1"
                   style={{ color: "hsl(var(--green-accent))" }}
                 >
-                  40-60%
+                  Often
                 </p>
                 <p className="text-body-sm text-base">
-                  Lower Cost Than Litigation
+                  Less Costly Than Litigation
                 </p>
               </div>
               <div className="card-bordered text-center py-5">
@@ -347,10 +347,10 @@ const Mediation = () => {
                   className="text-2xl font-serif font-semibold mb-1"
                   style={{ color: "hsl(var(--green-accent))" }}
                 >
-                  80%+
+                  High
                 </p>
                 <p className="text-body-sm text-base">
-                  Mediation Success Rate
+                  Resolution Rate
                 </p>
               </div>
               <div className="card-bordered text-center py-5">
@@ -397,7 +397,7 @@ const Mediation = () => {
                   When Talking It Through Makes More Sense Than Fighting It Out
                 </h3>
                 <p className="text-body">
-                  Mediation isn't about giving in — it's about finding common
+                  Mediation isn't about giving in; it's about finding common
                   ground. A trained mediator helps both parties communicate
                   productively, identify shared goals, and negotiate terms that
                   reflect each person's priorities.
@@ -440,7 +440,7 @@ const Mediation = () => {
                   </h3>
                 </div>
                 <p className="text-body text-lg">
-                  Both parties select a neutral, trained mediator — often a
+                  Both parties select a neutral, trained mediator, often a
                   retired judge or experienced family law attorney. Your lawyer
                   helps you choose someone well-suited to the issues in your
                   case.
@@ -496,7 +496,7 @@ const Mediation = () => {
                     Your Attorney's Role in Mediation
                   </h4>
                   <p className="text-body text-base">
-                    The mediator is neutral — they don't represent either party.
+                    The mediator is neutral; they don't represent either party.
                     That's why having your own attorney is essential. Your lawyer
                     prepares you for each session, evaluates proposals against
                     Ohio law, and ensures the final agreement protects your
@@ -580,7 +580,7 @@ const Mediation = () => {
         </section>
 
         {/* ---------------------------------------------------------------- */}
-        {/* 7. Dark Section — When Mediation Works Best */}
+        {/* 7. Dark Section - When Mediation Works Best */}
         {/* ---------------------------------------------------------------- */}
         <section
           className="relative py-20 md:py-28 bg-cover bg-center"
@@ -747,7 +747,7 @@ const Mediation = () => {
                   className="text-sm md:text-base leading-relaxed"
                   style={{ color: "hsla(40, 30%, 98%, 0.8)" }}
                 >
-                  Litigation costs add up fast — filing fees, discovery,
+                  Litigation costs add up fast: filing fees, discovery,
                   depositions, expert witnesses, and trial preparation. Mediation
                   typically resolves disputes at a fraction of the cost,
                   preserving resources for your family's future.

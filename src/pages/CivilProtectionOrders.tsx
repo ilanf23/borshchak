@@ -55,7 +55,7 @@ const provisions = [
     label: "No-Contact Orders",
     icon: FileText,
     description:
-      "Prohibits the respondent from contacting the petitioner by any means — phone, text, email, social media, or through third parties. This includes indirect contact through friends, family members, or coworkers. Any attempt to communicate, even through seemingly innocuous messages, can constitute a violation of the order.",
+      "Prohibits the respondent from contacting the petitioner by any means, including phone, text, email, social media, or through third parties. This includes indirect contact through friends, family members, or coworkers. Any attempt to communicate, even through seemingly innocuous messages, can constitute a violation of the order.",
   },
   {
     label: "Temporary Custody",

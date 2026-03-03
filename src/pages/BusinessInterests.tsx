@@ -143,7 +143,7 @@ const faqItems = [
     question:
       "What is the difference between enterprise goodwill and personal goodwill?",
     answer:
-      "Enterprise goodwill belongs to the business itself — its brand, reputation, and customer base — and is divisible in divorce. Personal goodwill is tied to the individual owner's skills and relationships and is generally not divisible. This distinction can significantly affect the valuation.",
+      "Enterprise goodwill belongs to the business itself, including its brand, reputation, and customer base, and is divisible in divorce. Personal goodwill is tied to the individual owner's skills and relationships and is generally not divisible. This distinction can significantly affect the valuation.",
   },
   {
     question: "What if my spouse is hiding business income?",
@@ -336,18 +336,18 @@ const BusinessInterests = () => {
             style={{ backgroundColor: "hsla(215, 45%, 22%, 0.75)" }}
           />
           <div className="relative z-10 text-center px-6 max-w-3xl">
-            <p
-              className="text-2xl md:text-3xl font-serif font-medium leading-relaxed italic"
+            <h3
+              className="text-2xl md:text-3xl font-serif font-semibold leading-relaxed mb-4"
               style={{ color: "hsl(var(--primary-foreground))" }}
             >
-              "Your business may be your most valuable asset. We work diligently
-              to help protect your interests throughout the divorce process."
-            </p>
+              Protecting What You've Built
+            </h3>
             <p
-              className="mt-4 text-base"
-              style={{ color: "hsla(40, 30%, 98%, 0.7)" }}
+              className="text-lg md:text-xl leading-relaxed"
+              style={{ color: "hsla(40, 30%, 98%, 0.8)" }}
             >
-              Borshchak Law Group
+              Your business may be your most valuable asset. We work diligently
+              to help protect your interests throughout the divorce process.
             </p>
           </div>
         </section>

@@ -34,7 +34,7 @@ const whatAPrenupCanDo = [
     title: "Protect from Each Other's Debts",
     icon: Shield,
     description:
-      "If your spouse has significant debts — from student loans, failed investments, medical bills, or other emergencies — a prenuptial agreement can shield your personal assets from being seized to satisfy those obligations. Without a prenup, creditors may pursue marital assets regardless of who incurred the debt. Establishing clear boundaries in advance gives both parties financial peace of mind.",
+      "If your spouse has significant debts, such as student loans, failed investments, medical bills, or other emergencies, a prenuptial agreement can shield your personal assets from being seized to satisfy those obligations. Without a prenup, creditors may pursue marital assets regardless of who incurred the debt. Establishing clear boundaries in advance gives both parties financial peace of mind.",
   },
   {
     title: "Set Rules on Marital Assets",
@@ -52,7 +52,7 @@ const whatAPrenupCanDo = [
     title: "Protect Children from Previous Relationships",
     icon: Users,
     description:
-      "If either spouse has children from a prior relationship, a prenuptial agreement can protect those children's financial interests — including inheritance rights, trust assets, and ongoing support obligations. Remarriage can create complex family dynamics, and without a prenup, your children's future financial security could be affected by the terms of a divorce settlement. A prenup ensures their needs are addressed up front.",
+      "If either spouse has children from a prior relationship, a prenuptial agreement can protect those children's financial interests, including inheritance rights, trust assets, and ongoing support obligations. Remarriage can create complex family dynamics, and without a prenup, your children's future financial security could be affected by the terms of a divorce settlement. A prenup ensures their needs are addressed up front.",
   },
 ];
 
@@ -67,7 +67,7 @@ const invalidReasons = [
     icon: Eye,
     title: "Inaccuracy",
     description:
-      "Misrepresentation of facts or incorrect information on the document — such as understating income or inflating debts — makes the prenup vulnerable to being voided. Both parties have a duty to present truthful information so the agreement reflects reality.",
+      "Misrepresentation of facts or incorrect information on the document, such as understating income or inflating debts, makes the prenup vulnerable to being voided. Both parties have a duty to present truthful information so the agreement reflects reality.",
   },
   {
     icon: Scale,
@@ -79,13 +79,13 @@ const invalidReasons = [
     icon: Ban,
     title: "Failure to Disclose",
     description:
-      "Full financial disclosure is a cornerstone of an enforceable prenuptial agreement. Failing to disclose all property, assets, income, or debts — whether intentionally or through oversight — can invalidate the entire agreement under Ohio law.",
+      "Full financial disclosure is a cornerstone of an enforceable prenuptial agreement. Failing to disclose all property, assets, income, or debts, whether intentionally or through oversight, can invalidate the entire agreement under Ohio law.",
   },
   {
     icon: HandHeart,
     title: "Unfairness",
     description:
-      "If the agreement is found to be unconscionable — meaning grossly unfair to one party at the time of enforcement — the court may refuse to uphold it. Ohio courts look at whether the disadvantaged party understood the terms and had a meaningful opportunity to negotiate.",
+      "If the agreement is found to be unconscionable, meaning grossly unfair to one party at the time of enforcement, the court may refuse to uphold it. Ohio courts look at whether the disadvantaged party understood the terms and had a meaningful opportunity to negotiate.",
   },
   {
     icon: Users,
@@ -576,7 +576,7 @@ const PrenuptialAgreement = () => {
               Start Your Marriage with Clarity
             </h2>
             <p className="text-lg text-white/90 mb-8 drop-shadow">
-              A prenuptial agreement isn't about distrust — it's about planning. Call us for a free consultation.
+              A prenuptial agreement isn't about distrust; it's about planning. Call us for a free consultation.
             </p>
             <a
               href="tel:+16146624043"

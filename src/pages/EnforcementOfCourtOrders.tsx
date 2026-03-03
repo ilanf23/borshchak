@@ -37,13 +37,13 @@ const contemptReasons = [
     title: "Not Following an Ordered Visitation Schedule",
     icon: Clock,
     description:
-      "Refusing to follow the court-ordered parenting time schedule — including denying visitation, failing to return children on time, or unilaterally changing pickup and drop-off arrangements — is one of the most common bases for enforcement action in Ohio family courts. Courts recognize that consistent parenting time is critical for a child's emotional stability and development. If the other parent is interfering with your court-ordered time, the court can modify the schedule, award make-up parenting time, or hold the violating party in contempt. An attorney can help you keep detailed records and present a compelling case to the judge.",
+      "Refusing to follow the court-ordered parenting time schedule, including denying visitation, failing to return children on time, or unilaterally changing pickup and drop-off arrangements, is one of the most common bases for enforcement action in Ohio family courts. Courts recognize that consistent parenting time is critical for a child's emotional stability and development. If the other parent is interfering with your court-ordered time, the court can modify the schedule, award make-up parenting time, or hold the violating party in contempt. An attorney can help you keep detailed records and present a compelling case to the judge.",
   },
   {
     title: "Not Relinquishing Marital Property",
     icon: ShieldAlert,
     description:
-      "When a party refuses to transfer property as ordered in the divorce decree — such as a home, vehicle, retirement account, or financial asset — enforcement proceedings can compel compliance. Ohio law requires strict adherence to property division orders, and courts have broad authority to enforce them. The court can order the transfer, impose sanctions, or award attorney fees to the party seeking enforcement. Having legal counsel ensures that all necessary documentation, such as QDROs for retirement accounts or deed transfers for real property, is handled correctly and efficiently.",
+      "When a party refuses to transfer property as ordered in the divorce decree, such as a home, vehicle, retirement account, or financial asset, enforcement proceedings can compel compliance. Ohio law requires strict adherence to property division orders, and courts have broad authority to enforce them. The court can order the transfer, impose sanctions, or award attorney fees to the party seeking enforcement. Having legal counsel ensures that all necessary documentation, such as QDROs for retirement accounts or deed transfers for real property, is handled correctly and efficiently.",
   },
   {
     title: "Not Following Judge Rulings on Divorce or Custody",

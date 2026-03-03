@@ -1,5 +1,4 @@
-import { Calendar, Phone, FileText, Scale, CheckCircle, ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Phone, FileText, Scale, CheckCircle, ArrowRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -129,10 +128,10 @@ const Process = () => {
             <p className="text-primary-foreground/70 text-lg mb-8">
               The first step is a free consultation. Let's discuss your situation and see how we can help.
             </p>
-            <Link to="/contact" className="btn-cta">
-              <Calendar className="w-5 h-5 mr-2" />
-              Book Free Consultation
-            </Link>
+            <a href="tel:+16146624043" className="btn-cta">
+              <Phone className="w-5 h-5 mr-2" />
+              Call Us Now: 614-662-4043
+            </a>
           </div>
         </section>
       </main>

@@ -37,19 +37,19 @@ const faultGrounds = [
     title: "Gross Neglect of Duty",
     icon: HeartOff,
     description:
-      "Under Ohio law, 'gross neglect of duty' occurs when a spouse neglects the fundamental marital obligations of respect, fidelity, and support. This is more than occasional disagreement — the neglect must be severe and sustained enough that it substantially undermines the marriage. Courts look at patterns of behavior such as financial abandonment, refusal to contribute to the household, or persistent emotional withdrawal. Your attorney will help you document these patterns to build a strong case.",
+      "Under Ohio law, 'gross neglect of duty' occurs when a spouse neglects the fundamental marital obligations of respect, fidelity, and support. This is more than occasional disagreement; the neglect must be severe and sustained enough that it substantially undermines the marriage. Courts look at patterns of behavior such as financial abandonment, refusal to contribute to the household, or persistent emotional withdrawal. Your attorney will help you document these patterns to build a strong case.",
   },
   {
     title: "Extreme Cruelty",
     icon: AlertTriangle,
     description:
-      "Ohio courts define extreme cruelty as conduct that makes it 'unsafe or improper for the parties to reside together as husband and wife.' This ground covers a wide range of behavior including physical abuse, ongoing emotional manipulation, threats, financial control, and verbal abuse. You do not need to show physical injuries — a documented pattern of controlling or degrading behavior can be sufficient. Protective orders and police reports, if any, can strengthen your case significantly.",
+      "Ohio courts define extreme cruelty as conduct that makes it 'unsafe or improper for the parties to reside together as husband and wife.' This ground covers a wide range of behavior including physical abuse, ongoing emotional manipulation, threats, financial control, and verbal abuse. You do not need to show physical injuries; a documented pattern of controlling or degrading behavior can be sufficient. Protective orders and police reports, if any, can strengthen your case significantly.",
   },
   {
     title: "Adultery",
     icon: Heart,
     description:
-      "Adultery is a fault ground meaning one spouse's infidelity contributed to the breakdown of the marriage. Ohio law does not require direct proof such as photographs — circumstantial evidence showing opportunity and inclination can be enough. Courts may consider adultery when making decisions about spousal support and, in some cases, property division. Your attorney can advise you on what evidence is needed and how it may affect the outcome of your case.",
+      "Adultery is a fault ground meaning one spouse's infidelity contributed to the breakdown of the marriage. Ohio law does not require direct proof such as photographs; circumstantial evidence showing opportunity and inclination can be enough. Courts may consider adultery when making decisions about spousal support and, in some cases, property division. Your attorney can advise you on what evidence is needed and how it may affect the outcome of your case.",
   },
   {
     title: "Bigamy",
@@ -73,7 +73,7 @@ const faultGrounds = [
     title: "Habitual Drunkenness",
     icon: Wine,
     description:
-      "Under Ohio law, habitual drunkenness means more than occasional alcohol use — it refers to a persistent pattern of excessive drinking or substance abuse that disrupts the marriage. You must demonstrate that your spouse's drinking or drug use is habitual rather than isolated, and that it has had a measurable impact on your family life, finances, or safety. Medical records, witness testimony, and documented incidents can all serve as evidence for this ground.",
+      "Under Ohio law, habitual drunkenness means more than occasional alcohol use; it refers to a persistent pattern of excessive drinking or substance abuse that disrupts the marriage. You must demonstrate that your spouse's drinking or drug use is habitual rather than isolated, and that it has had a measurable impact on your family life, finances, or safety. Medical records, witness testimony, and documented incidents can all serve as evidence for this ground.",
   },
   {
     title: "Imprisonment",
@@ -327,18 +327,18 @@ const Divorce = () => {
             <div className="space-y-4 text-body text-lg">
               <p>
                 If you're reading this page, you're already doing the hard
-                thing — looking for answers. That takes courage.
+                thing. You're looking for answers. That takes courage.
               </p>
               <p>
                 Every year, thousands of Ohio families go through this same
                 process. The uncertainty, the questions about your children,
-                your home, your future — it's completely normal to feel
+                your home, your future. It's completely normal to feel
                 overwhelmed.
               </p>
               <p>
-                We've guided hundreds of people through exactly what you're
+                We've guided many families through exactly what you're
                 facing right now. Before we talk about the law, we want you to
-                know: <strong>this is going to be okay.</strong>
+                know: <strong>you are not alone in this.</strong>
               </p>
             </div>
             <div className="grid sm:grid-cols-3 gap-4 mt-10">
@@ -347,16 +347,16 @@ const Divorce = () => {
                   className="text-2xl font-serif font-semibold mb-1"
                   style={{ color: "hsl(var(--green-accent))" }}
                 >
-                  500+
+                  Trusted
                 </p>
-                <p className="text-body-sm text-base">Ohio Families Helped</p>
+                <p className="text-body-sm text-base">By Ohio Families</p>
               </div>
               <div className="card-bordered text-center py-5">
                 <p
                   className="text-2xl font-serif font-semibold mb-1"
                   style={{ color: "hsl(var(--green-accent))" }}
                 >
-                  100%
+                  Always
                 </p>
                 <p className="text-body-sm text-base">
                   Confidential & Judgment-Free
@@ -409,8 +409,8 @@ const Divorce = () => {
                   No two families are the same. The path that's right for your
                   neighbor may not be right for you. During your free
                   consultation, we'll walk through your specific circumstances
-                  and help you understand which approach gives you the best
-                  outcome — on your timeline, within your budget.
+                  and help you understand which approach is best suited to
+                  your situation, on your timeline, within your budget.
                 </p>
               </div>
             </div>
@@ -426,7 +426,7 @@ const Divorce = () => {
             className={`container max-w-4xl ${methodsAnim.isVisible ? "scroll-visible" : "scroll-hidden"}`}
           >
             <h2 className="heading-section mb-10">
-              Two Paths Forward — Which Fits Your Situation?
+              Two Paths Forward: Which Fits Your Situation?
             </h2>
             <div
               className={`grid md:grid-cols-2 gap-6 mb-10 ${methodsAnim.isVisible ? "stagger-visible" : "stagger-children"}`}
@@ -492,8 +492,8 @@ const Divorce = () => {
                   </h3>
                 </div>
                 <p className="text-body text-lg mb-4">
-                  If you and your spouse can agree on everything — custody,
-                  property, support — dissolution is typically faster, less
+                  If you and your spouse can agree on everything, including custody,
+                  property, and support, dissolution is typically faster, less
                   expensive, and less adversarial. You both file together and
                   attend a brief final hearing.
                 </p>
@@ -616,7 +616,7 @@ const Divorce = () => {
         </section>
 
         {/* ---------------------------------------------------------------- */}
-        {/* 8. Common Divorce Matters — Full-Bleed Upgrade */}
+        {/* 8. Common Divorce Matters - Full-Bleed Upgrade */}
         {/* ---------------------------------------------------------------- */}
         <section
           className="relative py-20 md:py-28 bg-cover bg-center"
@@ -866,7 +866,7 @@ const Divorce = () => {
               You Deserve a Fresh Start
             </h2>
             <p className="text-lg text-white/90 mb-8 drop-shadow">
-              The first step is the hardest — but you don't have to take it
+              The first step is the hardest, but you don't have to take it
               alone. Call us for a free, confidential consultation. We'll listen
               to your situation, explain your options, and help you see a clear
               path forward.

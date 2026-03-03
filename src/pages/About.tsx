@@ -29,18 +29,18 @@ const About = () => {
             <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto text-center">
               <div>
                 <Scale className="w-8 h-8 mx-auto mb-3 text-primary" />
-                <div className="font-serif text-4xl font-semibold text-primary">100%</div>
-                <div className="text-base text-muted-foreground">Family Law Focus</div>
+                <div className="font-serif text-4xl font-semibold text-primary">Dedicated</div>
+                <div className="text-base text-muted-foreground">To Family Law</div>
               </div>
               <div>
                 <Users className="w-8 h-8 mx-auto mb-3 text-primary" />
-                <div className="font-serif text-4xl font-semibold text-primary">500+</div>
-                <div className="text-base text-muted-foreground">Families Helped</div>
+                <div className="font-serif text-4xl font-semibold text-primary">Trusted</div>
+                <div className="text-base text-muted-foreground">By Ohio Families</div>
               </div>
               <div>
                 <Award className="w-8 h-8 mx-auto mb-3 text-primary" />
-                <div className="font-serif text-4xl font-semibold text-primary">4.8</div>
-                <div className="text-base text-muted-foreground">Google Rating</div>
+                <div className="font-serif text-4xl font-semibold text-primary">5-Star</div>
+                <div className="text-base text-muted-foreground">Client Reviews</div>
               </div>
             </div>
           </div>

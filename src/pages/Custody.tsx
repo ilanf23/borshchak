@@ -680,12 +680,12 @@ const Custody = () => {
           </div>
           <div className="container max-w-2xl text-center relative z-10">
             <h2 className="heading-section mb-4 text-white drop-shadow-lg">
-              Your Child Deserves the Best Outcome
+              Your Child Deserves a Strong Advocate
             </h2>
             <p className="text-lg text-white/90 mb-8 drop-shadow">
               Don't navigate custody alone. Call us for a free consultation
               &mdash; we'll listen to your situation, explain your options, and
-              fight for your family.
+              advocate for your family.
             </p>
             <a
               href="tel:+16146624043"

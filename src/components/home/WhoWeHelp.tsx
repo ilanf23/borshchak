@@ -98,7 +98,7 @@ const WhoWeHelp = () => {
               style={{ color: "hsla(40, 30%, 98%, 0.72)" }}
             >
               Whatever brings you here, you don't have to face it alone. We've
-              helped hundreds of Ohio families through situations just like
+              helped Ohio families through situations just like
               yours.
             </p>
           </div>

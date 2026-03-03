@@ -462,7 +462,7 @@ const FathersRights = () => {
               ))}
             </div>
             <p className="text-body text-base mt-6 italic">
-              Every father's case is unique. Having experienced legal representation can make the difference between losing and protecting your parental rights.
+              Every father's case is unique. Having experienced legal representation is an important step in protecting your parental rights.
             </p>
           </div>
         </section>

@@ -36,7 +36,7 @@ const postDecreeTypes = [
     title: "Child Support Modifications",
     icon: DollarSign,
     description:
-      "If either parent's income has changed significantly — whether through job loss, promotion, disability, or retirement — child support obligations can be adjusted. Ohio law permits modification when the recalculated amount differs by at least 10% from the current order. We will review your financial situation, calculate the potential new amount, and guide you through the modification process from start to finish.",
+      "If either parent's income has changed significantly, whether through job loss, promotion, disability, or retirement, child support obligations can be adjusted. Ohio law permits modification when the recalculated amount differs by at least 10% from the current order. We will review your financial situation, calculate the potential new amount, and guide you through the modification process from start to finish.",
   },
   {
     title: "Spousal Support (Alimony) Modifications",
@@ -54,7 +54,7 @@ const postDecreeTypes = [
     title: "Contempt of Court",
     icon: Gavel,
     description:
-      "When a former spouse willfully violates a court order — such as refusing visitation, withholding support payments, or ignoring property transfer deadlines — the court can hold them in contempt. Penalties may include fines, jail time, or attorney fee awards. Our firm has extensive experience filing contempt motions and holding non-compliant parties accountable.",
+      "When a former spouse willfully violates a court order, such as refusing visitation, withholding support payments, or ignoring property transfer deadlines, the court can hold them in contempt. Penalties may include fines, jail time, or attorney fee awards. Our firm regularly handles contempt motions and works to hold non-compliant parties accountable.",
   },
   {
     title: "Relocation Issues",

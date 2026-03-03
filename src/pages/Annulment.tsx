@@ -339,7 +339,7 @@ const Annulment = () => {
               <div className="space-y-4">
                 <h3 className="heading-subsection">Protecting Your Rights From the Start</h3>
                 <p className="text-body">
-                  Annulment cases involve unique legal complexities that differ significantly from standard divorce proceedings. Whether you're dealing with fraud, coercion, or other qualifying grounds, having experienced legal counsel ensures your case is presented effectively. Our attorneys understand the evidentiary requirements for each ground and will guide you through every step. Protecting your rights from the outset is essential to achieving a favorable outcome.
+                  Annulment cases involve unique legal complexities that differ significantly from standard divorce proceedings. Whether you're dealing with fraud, coercion, or other qualifying grounds, having experienced legal counsel ensures your case is presented effectively. Our attorneys understand the evidentiary requirements for each ground and will guide you through every step. Protecting your rights from the outset is essential to navigating this process effectively.
                 </p>
               </div>
               <img
@@ -422,7 +422,7 @@ const Annulment = () => {
                 Court hearings can be daunting, especially when emotions are involved. At Borshchak Law Group, we provide you with a strong attorney-client relationship to evaluate whether your grounds for annulment qualify under Ohio law and guide you through the process.
               </p>
               <p>
-                Our experienced annulment attorneys will walk you through the court proceedings and present a compelling case for annulment. For most voidable marriages, Ohio law requires filing within <strong>two years</strong> of the marriage date, though certain void marriages (such as bigamy) have no time limit. Don't wait to explore your options.
+                Our experienced annulment attorneys will walk you through the court proceedings and advocate on your behalf. For most voidable marriages, Ohio law requires filing within <strong>two years</strong> of the marriage date, though certain void marriages (such as bigamy) have no time limit. Don't wait to explore your options.
               </p>
             </div>
             <div className="mt-8">

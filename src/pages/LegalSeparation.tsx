@@ -43,13 +43,13 @@ const separationItems = [
     title: "Child and Spousal Support",
     icon: Heart,
     description:
-      "The court determines appropriate financial support obligations for both the children and the lower-earning spouse based on income, needs, and other statutory factors. Ohio uses specific child support guidelines that take into account combined parental income, the number of children, healthcare costs, and childcare expenses. Spousal support is evaluated separately, considering the length of the marriage, each party's earning capacity, and contributions to the household. An attorney can help ensure that support calculations are accurate and that any special circumstances — such as a spouse's disability or a child's special needs — are properly presented to the court.",
+      "The court determines appropriate financial support obligations for both the children and the lower-earning spouse based on income, needs, and other statutory factors. Ohio uses specific child support guidelines that take into account combined parental income, the number of children, healthcare costs, and childcare expenses. Spousal support is evaluated separately, considering the length of the marriage, each party's earning capacity, and contributions to the household. An attorney can help ensure that support calculations are accurate and that any special circumstances, such as a spouse's disability or a child's special needs, are properly presented to the court.",
   },
   {
     title: "Property Division",
     icon: Home,
     description:
-      "Marital property is divided between the spouses, including real estate, vehicles, bank accounts, and personal property, following Ohio's equitable distribution principles. Equitable does not necessarily mean equal — the court considers factors such as the duration of the marriage, each spouse's assets and liabilities, and the desirability of awarding the family home to the custodial parent. Separate property, such as assets owned before the marriage or received as gifts or inheritances, is generally excluded from division. An attorney can help you identify, value, and protect your interest in marital and separate property throughout the process.",
+      "Marital property is divided between the spouses, including real estate, vehicles, bank accounts, and personal property, following Ohio's equitable distribution principles. Equitable does not necessarily mean equal; the court considers factors such as the duration of the marriage, each spouse's assets and liabilities, and the desirability of awarding the family home to the custodial parent. Separate property, such as assets owned before the marriage or received as gifts or inheritances, is generally excluded from division. An attorney can help you identify, value, and protect your interest in marital and separate property throughout the process.",
   },
   {
     title: "Debts and Assets",
@@ -154,7 +154,7 @@ const faqItems = [
   {
     question: "Can I date during a legal separation?",
     answer:
-      "While you are technically still married during a legal separation, Ohio is a no-fault state for dissolution purposes. However, dating during separation could potentially affect spousal support decisions or custody proceedings if the court finds it impacts the children.",
+      "While you are technically still married during a legal separation, Ohio does not prohibit dating. However, dating during separation could potentially affect spousal support decisions or custody proceedings if the court finds it impacts the children.",
   },
   {
     question: "Do I need to live in Ohio to file for legal separation?",

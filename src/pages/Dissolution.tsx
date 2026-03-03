@@ -113,7 +113,7 @@ const quizQuestions = [
 const faqItems = [
   {
     question: "What is the difference between dissolution and divorce in Ohio?",
-    answer: "A dissolution requires both spouses to agree on all terms — property division, custody, support, and debt allocation — before filing. A divorce can be filed unilaterally and allows the court to resolve disputed issues. Dissolution is generally faster and less expensive.",
+    answer: "A dissolution requires both spouses to agree on all terms, including property division, custody, support, and debt allocation, before filing. A divorce can be filed unilaterally and allows the court to resolve disputed issues. Dissolution is generally faster and less expensive.",
   },
   {
     question: "How long does a dissolution take in Ohio?",

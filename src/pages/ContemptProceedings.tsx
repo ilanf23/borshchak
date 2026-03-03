@@ -35,7 +35,7 @@ const contemptExamples = [
     title: "Violating a Visitation Schedule",
     icon: Clock,
     description:
-      "Refusing to follow the court-ordered parenting time schedule, whether by denying visitation or failing to return children on time, constitutes contempt. The court takes these violations seriously to protect the child's relationship with both parents. Even subtle interference — such as scheduling conflicting activities during the other parent's time or badmouthing the other parent — can be addressed through contempt proceedings. Documenting each violation with dates, times, and witnesses strengthens your case significantly.",
+      "Refusing to follow the court-ordered parenting time schedule, whether by denying visitation or failing to return children on time, constitutes contempt. The court takes these violations seriously to protect the child's relationship with both parents. Even subtle interference, such as scheduling conflicting activities during the other parent's time or badmouthing the other parent, can be addressed through contempt proceedings. Documenting each violation with dates, times, and witnesses strengthens your case significantly.",
   },
   {
     title: "Refusing to Relinquish Marital Property",
@@ -62,7 +62,7 @@ const consequences = [
     label: "Imprisonment",
     icon: Ban,
     description:
-      "Jail time may be ordered for willful and repeated violations of court orders. In civil contempt, the person holds the 'keys to their own cell' — they can be released by complying with the order. Criminal contempt sentences are fixed and serve as punishment for past disobedience.",
+      "Jail time may be ordered for willful and repeated violations of court orders. In civil contempt, the person holds the 'keys to their own cell'; they can be released by complying with the order. Criminal contempt sentences are fixed and serve as punishment for past disobedience.",
   },
   {
     label: "Wage Garnishment",
@@ -132,7 +132,7 @@ const faqItems = [
   {
     question: "What is the difference between civil and criminal contempt?",
     answer:
-      "Civil contempt is designed to compel compliance — the person can 'purge' the contempt by obeying the order. Criminal contempt is punishment for past disobedience. In family law, civil contempt is more common and gives the violating party an opportunity to comply.",
+      "Civil contempt is designed to compel compliance; the person can 'purge' the contempt by obeying the order. Criminal contempt is punishment for past disobedience. In family law, civil contempt is more common and gives the violating party an opportunity to comply.",
   },
   {
     question: "Can I file for contempt without a lawyer?",
@@ -326,7 +326,7 @@ const ContemptProceedings = () => {
         </section>
 
         {/* ---------------------------------------------------------------- */}
-        {/* 4. What Qualifies as Contempt — Expandable Cards */}
+        {/* 4. What Qualifies as Contempt - Expandable Cards */}
         {/* ---------------------------------------------------------------- */}
         <section className="section-padding bg-secondary">
           <div

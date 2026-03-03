@@ -117,6 +117,7 @@ const GoogleReviews = () => {
           ))}
         </div>
 
+        <p className="text-xs text-muted-foreground text-center mt-6">*Individual results vary. Past client experiences do not guarantee a similar outcome.</p>
       </div>
     </section>
   );

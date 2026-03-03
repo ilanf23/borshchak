@@ -167,10 +167,10 @@ export default function AnimatedQuiz({ questions }: { questions: QuizQuestion[] 
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}
         >
-          <button onClick={openConsultation} className="btn-cta inline-flex">
+          <a href="tel:+16146624043" className="btn-cta inline-flex">
             <Phone className="w-5 h-5 mr-2" />
-            Get Your Free Consultation
-          </button>
+            Call Us Now: 614-662-4043
+          </a>
         </motion.div>
       </motion.div>
     );
@@ -346,7 +346,7 @@ export default function AnimatedQuiz({ questions }: { questions: QuizQuestion[] 
                       ? streak >= 2
                         ? `Correct! ${streak} in a row!`
                         : "Correct!"
-                      : "Not quite — here's why:"}
+                      : "Not quite. Here's why:"}
                   </p>
                   <p className="text-body text-base">{q.explanation}</p>
                 </div>
