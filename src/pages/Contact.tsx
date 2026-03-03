@@ -212,7 +212,10 @@ const Contact = () => {
                       <h3 className="font-serif text-xl font-semibold text-white mb-3">{card.title}</h3>
                       <div className="flex-1 flex flex-col items-center justify-center">
                         {card.title === "Visit Us" ? (
-                          <p className="text-white/70 text-sm leading-relaxed">
+                          <p
+                            className="font-medium text-lg leading-snug"
+                            style={{ color: "#7cc9a0" }}
+                          >
                             1650 Lake Shore Drive<br />
                             Suite 380<br />
                             Columbus, OH 43204
