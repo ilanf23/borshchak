@@ -82,29 +82,16 @@ const DmitriyBorshchak = () => {
   /* Testimonials carousel */
   const dmitriyReviews = useMemo(() => reviews.filter((r) => dmitriyReviewIds.includes(r.id)), []);
   const [emblaRef, emblaApi] = useEmblaCarousel({ align: "start", loop: true, slidesToScroll: 1 });
-  const [selectedIndex, setSelectedIndex] = useState(0);
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
-  const onSelect = useCallback(() => {
-    if (!emblaApi) return;
-    setSelectedIndex(emblaApi.selectedScrollSnap());
-  }, [emblaApi]);
-
   useEffect(() => {
     if (!emblaApi) return;
-    onSelect();
-    emblaApi.on("select", onSelect);
-    emblaApi.on("reInit", onSelect);
     const interval = setInterval(() => emblaApi.scrollNext(), 6000);
     return () => {
       clearInterval(interval);
-      emblaApi.off("select", onSelect);
-      emblaApi.off("reInit", onSelect);
     };
-  }, [emblaApi, onSelect]);
-
-  const scrollSnaps = emblaApi?.scrollSnapList() || [];
+  }, [emblaApi]);
 
   /* CTA inView for AnimatedCTA */
   const finalCtaRef = useRef(null);
@@ -543,17 +530,6 @@ const DmitriyBorshchak = () => {
               </button>
             </div>
 
-            {/* Dots */}
-            <div className="flex justify-center gap-2 mt-6">
-              {scrollSnaps.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => emblaApi?.scrollTo(i)}
-                  className={`w-2.5 h-2.5 rounded-full transition-colors ${i === selectedIndex ? "bg-primary" : "bg-border"}`}
-                  aria-label={`Go to slide ${i + 1}`}
-                />
-              ))}
-            </div>
 
             <p className="text-xs text-muted-foreground text-center mt-6">
               *Individual results vary. Past client experiences do not guarantee a similar outcome.

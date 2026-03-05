@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
@@ -21,10 +21,6 @@ const Footer = () => {
               <a href="tel:+16146624043" className="flex items-center gap-3 text-base text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                 <Phone className="w-4 h-4" />
                 614-662-4043
-              </a>
-              <a href="mailto:info@borshchaklawgroup.com" className="flex items-center gap-3 text-base text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                <Mail className="w-4 h-4" />
-                info@borshchaklawgroup.com
               </a>
               <div className="flex items-start gap-3 text-base text-primary-foreground/80">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0" />

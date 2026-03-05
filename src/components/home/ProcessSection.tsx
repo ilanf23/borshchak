@@ -8,11 +8,11 @@ const steps = [
     number: "1",
     title: "Consultation",
     shortDesc: "Your situation, your questions",
-    fullDesc: "Schedule a confidential call with our team. We'll listen to what you're going through, explain how Ohio family law applies to your situation, and outline the realistic options available to you. There is no cost and no obligation.",
+    fullDesc: "Schedule a confidential consultation with our Columbus-based team. We will listen to your situation, explain how Ohio family law applies, and outline strategies for moving forward. There is no cost and no obligation.",
     icon: Phone,
     details: [
       "Confidential and private",
-      "In-person or by video",
+      "In-person at our Columbus office or by video",
       "Candid assessment of your options",
       "No cost, no obligation"
     ]
@@ -21,7 +21,7 @@ const steps = [
     number: "2",
     title: "Case Strategy",
     shortDesc: "A plan built around your goals",
-    fullDesc: "If you decide to move forward, we immediately get to work understanding your full situation. We develop a legal strategy tailored to your specific goals, circumstances, and timeline, and we present it to you clearly before anything is filed.",
+    fullDesc: "When you decide to move forward, we immediately get to work understanding your full situation. We develop a legal strategy tailored to your specific goals, circumstances, and timeline, and present it to you before taking any action. We work together as a team.",
     icon: FileText,
     details: [
       "Tailored to your circumstances",

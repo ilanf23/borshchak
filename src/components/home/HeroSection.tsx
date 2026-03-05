@@ -24,7 +24,7 @@ const HeroSection = () => {
             Trusted Family Law Attorneys in Columbus, Ohio
           </h1>
           <p className="text-xl md:text-2xl leading-relaxed text-white/95 mb-10 drop-shadow-md opacity-0 animate-fade-in-up" style={{ animationDelay: "300ms" }}>
-            Compassionate, strategic legal guidance for divorce, custody, and complex family law matters.
+            Compassionate, strategic legal guidance for divorce, custody, and complex family law matters — proudly serving Columbus and Central Ohio.
           </p>
           
           {/* CTAs */}

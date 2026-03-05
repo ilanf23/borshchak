@@ -3,24 +3,24 @@ import bgImage from "@/assets/hero-office.jpg";
 
 const audiences = [
   {
-    title: "Going Through Divorce",
+    title: "Navigating Divorce",
     description:
-      "Whether contested or uncontested, we guide you through every step with clarity while protecting your rights without prolonging the pain.",
+      "Whether contested or uncontested, we provide clear guidance at every stage, protecting your interests while working toward an efficient resolution.",
   },
   {
-    title: "Fighting for Your Children",
+    title: "Child Custody & Parenting Time",
     description:
-      "Custody and parenting time shape your child's future. We advocate decisively for arrangements that put your family first.",
+      "Custody and parenting time decisions have lasting impact. We advocate strategically for arrangements that serve your children's best interests.",
   },
   {
-    title: "Protecting What You've Built",
+    title: "Property & Asset Division",
     description:
-      "From the family home to retirement accounts and business interests, we fight for equitable division of everything you've worked for.",
+      "From real estate and retirement accounts to business interests, we pursue a fair and equitable division of marital assets on your behalf.",
   },
   {
-    title: "Moving Forward Post-Decree",
+    title: "Post-Decree Matters",
     description:
-      "Life changes after divorce. When orders need modification or enforcement, we move quickly to protect your new stability.",
+      "Circumstances evolve after a decree is finalized. When court orders require modification or enforcement, we act promptly to protect your interests.",
   },
 ];
 
@@ -97,9 +97,10 @@ const WhoWeHelp = () => {
               className="text-lg md:text-xl leading-relaxed"
               style={{ color: "hsla(40, 30%, 98%, 0.72)" }}
             >
-              Whatever brings you here, you don't have to face it alone. We've
-              helped Ohio families through situations just like
-              yours.
+              Whatever your situation, you do not have to navigate it alone. From
+              downtown Columbus to communities across Central Ohio, our firm has
+              guided families through complex legal matters with care and
+              professionalism.
             </p>
           </div>
 

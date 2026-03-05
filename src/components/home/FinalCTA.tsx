@@ -30,7 +30,7 @@ const FinalCTA = () => {
           You Don't Have to Go Through This Alone
         </h2>
         <p className="text-lg text-white/90 mb-8 drop-shadow">
-          Family law is one of the most personal and stressful areas of law. We walk with you through every stage, protect your interests, and help you make clear decisions during a difficult time.
+          Family law is one of the most personal and stressful areas of law. Right here in Columbus, Ohio, we walk with you through every stage, protect your interests, and help you make clear decisions during a difficult time.
         </p>
 
         <div ref={ctaRef} className="flex justify-center">

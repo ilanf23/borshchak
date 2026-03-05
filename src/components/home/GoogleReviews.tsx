@@ -24,7 +24,6 @@ const GoogleReviews = () => {
 
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(true);
-  const [selectedIndex, setSelectedIndex] = useState(0);
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
@@ -33,7 +32,6 @@ const GoogleReviews = () => {
     if (!emblaApi) return;
     setCanScrollPrev(emblaApi.canScrollPrev());
     setCanScrollNext(emblaApi.canScrollNext());
-    setSelectedIndex(emblaApi.selectedScrollSnap());
   }, [emblaApi]);
 
   useEffect(() => {
@@ -57,8 +55,6 @@ const GoogleReviews = () => {
       emblaApi.off("reInit", onSelect);
     };
   }, [emblaApi, onSelect]);
-
-  const scrollSnaps = emblaApi?.scrollSnapList() || [];
 
   return (
     <section className="py-16 md:py-24 bg-secondary/50">
@@ -103,19 +99,6 @@ const GoogleReviews = () => {
           </button>
         </div>
 
-        {/* Dots */}
-        <div className="flex justify-center gap-2 mt-6">
-          {scrollSnaps.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => emblaApi?.scrollTo(i)}
-              className={`w-2.5 h-2.5 rounded-full transition-colors ${
-                i === selectedIndex ? "bg-primary" : "bg-border"
-              }`}
-              aria-label={`Go to slide ${i + 1}`}
-            />
-          ))}
-        </div>
 
         <p className="text-xs text-muted-foreground text-center mt-6">*Individual results vary. Past client experiences do not guarantee a similar outcome.</p>
       </div>

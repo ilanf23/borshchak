@@ -12,10 +12,8 @@ import {
   BookOpen,
   HelpCircle,
   AlertTriangle,
-  Baby,
   Brain,
   MessageCircle,
-  Eye,
   HandHeart,
   FileText,
 } from "lucide-react";
@@ -76,46 +74,46 @@ const custodyTypes = [
 
 const courtFactors = [
   {
-    icon: AlertTriangle,
-    title: "Domestic Violence or Abuse",
+    icon: Users,
+    title: "Wishes of the Parents",
     description:
-      "Any history of domestic violence, child abuse, or neglect by either parent is a critical factor in custody decisions.",
-  },
-  {
-    icon: Brain,
-    title: "Substance Abuse History",
-    description:
-      "Alcohol or drug abuse by either parent that could endanger the child's physical or emotional safety.",
-  },
-  {
-    icon: Eye,
-    title: "Psychiatric Concerns",
-    description:
-      "Mental health issues affecting a parent's ability to provide safe, stable care for the child.",
-  },
-  {
-    icon: Baby,
-    title: "Age-Appropriate Decisions",
-    description:
-      "Each parent's ability to make decisions that are appropriate for the child's developmental stage and needs.",
+      "Each parent's desires regarding the child's care, including proposed living arrangements and parenting schedules.",
   },
   {
     icon: MessageCircle,
-    title: "Communication with the Child",
+    title: "Child's Wishes",
     description:
-      "The quality of each parent's relationship and communication with the child, including emotional bonds.",
+      "If the court interviews the child, the child's own wishes and concerns regarding custody and living arrangements.",
+  },
+  {
+    icon: Heart,
+    title: "Parent-Child Relationships",
+    description:
+      "The child's interaction and interrelationship with each parent, siblings, and any other person who may significantly affect the child's well-being.",
   },
   {
     icon: Home,
-    title: "Safe Living Conditions",
+    title: "Adjustment to Home, School & Community",
     description:
-      "Whether each parent can provide a safe, adequate, and stable living environment for the child.",
+      "How well the child is adjusted to their current home, school, and community environment.",
   },
   {
-    icon: Users,
-    title: "Child's Own Preferences",
+    icon: Brain,
+    title: "Mental & Physical Health",
     description:
-      "For older children, the court may consider the child's own wishes regarding which parent they prefer to live with.",
+      "The mental and physical health of all persons involved, including both parents and the child.",
+  },
+  {
+    icon: Scale,
+    title: "Compliance with Court Orders",
+    description:
+      "Which parent is more likely to honor and facilitate court-approved parenting time with the other parent.",
+  },
+  {
+    icon: AlertTriangle,
+    title: "History of Domestic Violence or Abuse",
+    description:
+      "Any prior convictions or findings involving domestic violence, child abuse, neglect, or sexually oriented offenses by either parent.",
   },
 ];
 
@@ -482,11 +480,22 @@ const Custody = () => {
             className={`container max-w-4xl ${factorsAnim.isVisible ? "scroll-visible" : "scroll-hidden"}`}
           >
             <h2
-              className="heading-section mb-10"
+              className="heading-section mb-4"
               style={{ color: "hsl(var(--primary-foreground))" }}
             >
               How Ohio Courts Decide Custody
             </h2>
+            <p
+              className="text-lg leading-relaxed mb-10"
+              style={{ color: "hsla(40, 30%, 98%, 0.85)" }}
+            >
+              Under Ohio Revised Code Section 3109.04, courts apply the
+              "best interest of the child" standard when allocating parental
+              rights and responsibilities. If either parent seeks shared
+              parenting, that parent must demonstrate that shared parenting is
+              in the best interest of the minor children. The court considers
+              all relevant factors, including but not limited to the following:
+            </p>
             <div className="grid md:grid-cols-2 gap-6">
               {courtFactors.map((factor) => (
                 <div
