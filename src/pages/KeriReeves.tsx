@@ -14,10 +14,10 @@ const KeriReeves = () => {
       <Header />
       <main className="flex-1">
         {/* Hero */}
-        <section className="relative bg-navy min-h-[500px] md:min-h-[600px]">
-          <div className="flex flex-col md:flex-row min-h-[500px] md:min-h-[600px]">
-            <div className="flex-1 flex items-center section-padding">
-              <div className="max-w-xl ml-auto mr-8">
+        <section className="relative bg-navy min-h-[550px] md:min-h-[650px]">
+          <div className="flex flex-col-reverse md:flex-row min-h-[550px] md:min-h-[650px]">
+            <div className="flex-1 flex items-center section-padding relative z-10">
+              <div className="max-w-xl ml-auto mr-4 md:mr-8">
                 <p
                   className="text-base font-medium uppercase tracking-wider mb-4 opacity-0 animate-fade-in"
                   style={{ color: "hsla(40, 30%, 98%, 0.7)", animationDelay: "100ms" }}
@@ -38,18 +38,26 @@ const KeriReeves = () => {
                 </p>
               </div>
             </div>
-            <div className="md:w-[35%] relative">
+            <div className="md:w-[45%] relative h-[350px] md:h-auto">
               <img
                 src={keriPhoto}
                 alt="Keri Reeves"
                 className="w-full h-full object-cover object-top"
+              />
+              <div
+                className="absolute inset-0 pointer-events-none hidden md:block"
+                style={{ background: "linear-gradient(to right, hsl(var(--trust-navy)) 0%, transparent 50%)" }}
+              />
+              <div
+                className="absolute inset-0 pointer-events-none md:hidden"
+                style={{ background: "linear-gradient(to top, hsl(var(--trust-navy)) 0%, transparent 40%)" }}
               />
             </div>
           </div>
         </section>
 
         {/* Video */}
-        <section className="section-padding-sm bg-navy">
+        <section className="section-padding bg-navy">
           <div className="container">
             <div
               ref={videoAnim.ref}
@@ -61,7 +69,7 @@ const KeriReeves = () => {
               >
                 Meet Keri
               </h2>
-              <div className="aspect-video rounded-lg overflow-hidden shadow-lg">
+              <div className="aspect-video rounded-xl overflow-hidden shadow-xl">
                 <iframe
                   src="https://www.youtube.com/embed/NZ5tMXCZ5k4"
                   title="Keri Reeves - Borshchak Law Group"

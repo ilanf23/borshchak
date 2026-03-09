@@ -256,7 +256,8 @@ const FathersRights = () => {
                   <h3 className="heading-subsection text-xl">Married Fathers</h3>
                 </div>
                 <p className="text-body text-lg mb-4">
-                  When a child is born during a marriage, the husband is presumed to be the legal father under Ohio law. This means parental rights are established automatically, including the right to custody and parenting time.
+                  When a child is born during a marriage, the husband is presumed to be the legal father under Ohio law. This means parental rights are established automatically, including the right to custody and parenting time. See{" "}
+                  <a href="https://codes.ohio.gov/ohio-revised-code/section-3109.03" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Ohio Revised Code Section 3109.03</a>.
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-start gap-2 text-body text-base">
@@ -310,7 +311,7 @@ const FathersRights = () => {
                 <div>
                   <h4 className="heading-subsection text-lg mb-2">Ohio Paternity Law (ORC 3111)</h4>
                   <p className="text-body text-base">
-                    Under Ohio Revised Code Section 3111, any man alleging to be the father of a child may bring an action to establish paternity. Once established, the father gains the legal standing to seek custody, parenting time, and decision-making authority, the same rights afforded to any parent under Ohio law.
+                    Under <a href="https://codes.ohio.gov/ohio-revised-code/section-3111.02" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Ohio Revised Code Section 3111</a>, any man alleging to be the father of a child may bring an action to establish paternity. Once established, the father gains the legal standing to seek custody, parenting time, and decision-making authority, the same rights afforded to any parent under Ohio law.
                   </p>
                 </div>
               </div>
@@ -331,7 +332,7 @@ const FathersRights = () => {
               <div className="space-y-4">
                 <h3 className="heading-subsection">Fighting for Equal Parenting Time</h3>
                 <p className="text-body">
-                  Ohio courts determine custody and parenting time based on the best interest of the child under ORC 3109.04. Factors include the child's relationship with each parent, each parent's living situation, the child's community ties, and the parents' willingness to cooperate. Fathers have every right to pursue equal or even majority parenting time when it serves the child's best interest.
+                  Ohio courts determine custody and parenting time based on the best interest of the child under <a href="https://codes.ohio.gov/ohio-revised-code/section-3109.04" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">ORC 3109.04</a>. Factors include the child's relationship with each parent, each parent's living situation, the child's community ties, and the parents' willingness to cooperate. Fathers have every right to pursue equal or even majority parenting time when it serves the child's best interest.
                 </p>
               </div>
             </div>
@@ -401,7 +402,7 @@ const FathersRights = () => {
                   Parenting Time & Visitation
                 </h3>
                 <p className="text-sm md:text-base leading-relaxed" style={{ color: "hsla(40, 30%, 98%, 0.8)" }}>
-                  Under ORC 3109.051, non-residential parents are entitled to reasonable parenting time. Courts can award more time based on circumstances. Your rights go far beyond every-other-weekend.
+                  Under <a href="https://codes.ohio.gov/ohio-revised-code/section-3109.051" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80" style={{ color: "hsla(40, 30%, 98%, 0.9)" }}>ORC 3109.051</a>, non-residential parents are entitled to reasonable parenting time. Courts can award more time based on circumstances. Your rights go far beyond every-other-weekend.
                 </p>
               </div>
 

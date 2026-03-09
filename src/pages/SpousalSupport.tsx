@@ -361,7 +361,8 @@ const SpousalSupport = () => {
               Factors the Court Considers
             </h2>
             <p className="text-body mb-8">
-              Ohio courts evaluate several factors under Ohio R.C. 3105.18
+              Ohio courts evaluate several factors under{" "}
+              <a href="https://codes.ohio.gov/ohio-revised-code/section-3105.18" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Ohio R.C. 3105.18</a>{" "}
               when determining spousal support. Tap each factor to learn more.
             </p>
             <div className="grid gap-4">
@@ -395,7 +396,7 @@ const SpousalSupport = () => {
               className="text-2xl md:text-3xl font-serif font-medium leading-relaxed"
               style={{ color: "hsl(var(--primary-foreground))" }}
             >
-              Under Ohio R.C. 3105.18, courts weigh fourteen statutory factors
+              Under <a href="https://codes.ohio.gov/ohio-revised-code/section-3105.18" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80" style={{ color: "hsl(var(--primary-foreground))" }}>Ohio R.C. 3105.18</a>, courts weigh fourteen statutory factors
               when determining spousal support, including length of marriage,
               income disparity, and each party's earning capacity.
             </p>
@@ -403,7 +404,7 @@ const SpousalSupport = () => {
               className="mt-4 text-base"
               style={{ color: "hsla(40, 30%, 98%, 0.7)" }}
             >
-              Ohio Revised Code &sect; 3105.18
+              <a href="https://codes.ohio.gov/ohio-revised-code/section-3105.18" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80" style={{ color: "hsla(40, 30%, 98%, 0.7)" }}>Ohio Revised Code &sect; 3105.18</a>
             </p>
           </div>
         </section>
@@ -448,7 +449,9 @@ const SpousalSupport = () => {
                   Whether spousal support can be modified depends on the
                   original court order. If the order's terms allow future
                   modification, the court will evaluate current circumstances to
-                  determine if a change is warranted.
+                  determine if a change is warranted. Modification of spousal
+                  support is addressed under{" "}
+                  <a href="https://codes.ohio.gov/ohio-revised-code/section-3105.18" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Ohio Revised Code Section 3105.18(E)</a>.
                 </p>
                 <p>
                   Common reasons for modification include a significant change

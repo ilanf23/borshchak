@@ -30,7 +30,7 @@ const postDecreeTypes = [
     title: "Child Custody Modifications",
     icon: Users,
     description:
-      "Circumstances change after divorce. If you or your former spouse has relocated, remarried, or experienced a shift in work schedule, the original custody arrangement may no longer serve your child's best interests. Ohio courts allow modifications when there is a substantial change in circumstances. Our attorneys will help you document the changes and present a compelling case to the court.",
+      <>Circumstances change after divorce. If you or your former spouse has relocated, remarried, or experienced a shift in work schedule, the original custody arrangement may no longer serve your child's best interests. Under <a href="https://codes.ohio.gov/ohio-revised-code/section-3109.04" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Ohio Revised Code Section 3109.04(E)</a>, Ohio courts allow modifications when there is a substantial change in circumstances. Our attorneys will help you document the changes and present a compelling case to the court.</>,
   },
   {
     title: "Child Support Modifications",
@@ -42,7 +42,7 @@ const postDecreeTypes = [
     title: "Spousal Support (Alimony) Modifications",
     icon: Heart,
     description:
-      "A sudden loss of assets, change in employment, or remarriage of the receiving spouse can warrant a modification to spousal support. The original decree must allow for future modification for the court to consider changes. Our attorneys will review your decree's language, assess whether your circumstances qualify, and advocate for a fair adjustment that reflects your current reality.",
+      <>A sudden loss of assets, change in employment, or remarriage of the receiving spouse can warrant a modification to spousal support. Under <a href="https://codes.ohio.gov/ohio-revised-code/section-3105.18" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Ohio Revised Code Section 3105.18(E)</a>, the original decree must allow for future modification for the court to consider changes. Our attorneys will review your decree's language, assess whether your circumstances qualify, and advocate for a fair adjustment that reflects your current reality.</>,
   },
   {
     title: "Property Division Disputes",
@@ -259,7 +259,7 @@ const PostDecreeMatters = () => {
                 Post-decree matters arise when issues develop after a divorce or dissolution has been finalized. Life doesn't stop when a judge signs a decree: jobs change, people relocate, children grow, and sometimes one party simply stops following the court's orders.
               </p>
               <p>
-                Ohio law provides mechanisms to address these changes through either <strong>modifications</strong> (changing the terms of the original order) or <strong>enforcement actions</strong> (compelling compliance with existing orders). Borshchak Law Group handles both types of post-decree matters in Columbus.
+                Ohio law provides mechanisms to address these changes through either <strong>modifications</strong> (changing the terms of the original order) or <strong>enforcement actions</strong> (compelling compliance with existing orders). For example, custody modifications are governed by <a href="https://codes.ohio.gov/ohio-revised-code/section-3109.04" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Ohio Revised Code Section 3109.04</a>, while spousal support modifications fall under <a href="https://codes.ohio.gov/ohio-revised-code/section-3105.18" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Ohio Revised Code Section 3105.18</a>. Borshchak Law Group handles both types of post-decree matters in Columbus.
               </p>
             </div>
 

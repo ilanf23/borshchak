@@ -255,7 +255,8 @@ const ChildSupport = () => {
                   <h3 className="heading-subsection text-xl">The Obligation</h3>
                 </div>
                 <p className="text-body text-lg mb-4">
-                  Child support is a monetary obligation owed by the noncustodial parent to the custodial parent for the support of their children after divorce or separation.
+                  Child support is a monetary obligation owed by the noncustodial parent to the custodial parent for the support of their children after divorce or separation. Ohio's calculation framework is established under{" "}
+                  <a href="https://codes.ohio.gov/ohio-revised-code/section-3119.02" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Ohio Revised Code Section 3119.02</a>.
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-start gap-2 text-body text-base">
@@ -309,7 +310,8 @@ const ChildSupport = () => {
                 <div>
                   <h4 className="heading-subsection text-lg mb-2">Ohio Child Support Agencies</h4>
                   <p className="text-body text-base">
-                    In Ohio, child support can be established through the <strong>County Child Support Enforcement Agency (CSEA)</strong>, the Domestic Relations Court, or the Juvenile Court. Each county in Ohio has all three available.
+                    In Ohio, child support can be established through the <strong>County Child Support Enforcement Agency (CSEA)</strong>, the Domestic Relations Court, or the Juvenile Court. Each county in Ohio has all three available. Under{" "}
+                    <a href="https://codes.ohio.gov/ohio-revised-code/section-3109.05" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Ohio Revised Code Section 3109.05</a>, a parent may not withhold child support because of disputes over parenting time, and vice versa.
                   </p>
                 </div>
               </div>
@@ -366,7 +368,8 @@ const ChildSupport = () => {
               How Child Support Is Calculated in Ohio
             </h2>
             <p className="text-lg leading-relaxed mb-8" style={{ color: "hsla(40, 30%, 98%, 0.85)" }}>
-              Ohio uses the Child Support Guidelines worksheet to determine the amount owed. The worksheet considers all circumstances, income sources, and financial expenses of both parents to arrive at a fair figure.
+              Ohio uses the Child Support Guidelines worksheet, codified under{" "}
+              <a href="https://codes.ohio.gov/ohio-revised-code/chapter-3119" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80" style={{ color: "hsla(40, 30%, 98%, 0.9)" }}>ORC Chapter 3119</a>, to determine the amount owed. The worksheet considers all circumstances, income sources, and financial expenses of both parents to arrive at a fair figure.
             </p>
             <div className="grid md:grid-cols-2 gap-6">
               {calculationFactors.map((factor) => (

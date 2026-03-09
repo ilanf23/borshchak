@@ -497,7 +497,9 @@ const Mediation = () => {
                   </h4>
                   <p className="text-body text-base">
                     The mediator is neutral; they don't represent either party.
-                    That's why having your own attorney is essential. Your lawyer
+                    That's why having your own attorney is essential. Under{" "}
+                    <a href="https://codes.ohio.gov/ohio-revised-code/section-3109.052" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Ohio Revised Code Section 3109.052</a>,
+                    courts may order mediation in custody disputes. Your lawyer
                     prepares you for each session, evaluates proposals against
                     Ohio law, and ensures the final agreement protects your
                     rights and your children's wellbeing.
@@ -522,7 +524,10 @@ const Mediation = () => {
             <p className="text-body mb-8">
               Mediation offers meaningful advantages for families who want to
               resolve their disputes with less conflict, less cost, and more
-              control. Tap any benefit below to learn more.
+              control.{" "}
+              <a href="https://codes.ohio.gov/ohio-revised-code/section-3109.052" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Ohio Revised Code Section 3109.052</a>{" "}
+              also addresses important protections, including domestic violence considerations in court-ordered mediation.
+              Tap any benefit below to learn more.
             </p>
             <div
               className={`grid gap-4 ${benefitsAnim.isVisible ? "stagger-visible" : "stagger-children"}`}

@@ -304,7 +304,9 @@ const PrenuptialAgreement = () => {
                   <h3 className="heading-subsection text-xl">The Contract</h3>
                 </div>
                 <p className="text-body text-lg mb-4">
-                  A prenuptial agreement is a legally binding contract between couples about to marry. It outlines how assets and debts would be divided in the event of a divorce, giving both parties clarity and control over their financial futures.
+                  A prenuptial agreement is a legally binding contract between couples about to marry, governed by{" "}
+                  <a href="https://codes.ohio.gov/ohio-revised-code/section-3103.06" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Ohio Revised Code Section 3103.06</a>.
+                  It outlines how assets and debts would be divided in the event of a divorce, giving both parties clarity and control over their financial futures.
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-start gap-2 text-body text-base">
@@ -415,7 +417,9 @@ const PrenuptialAgreement = () => {
               How a Prenuptial Agreement Can Become Invalid
             </h2>
             <p className="text-lg leading-relaxed mb-8" style={{ color: "hsla(40, 30%, 98%, 0.85)" }}>
-              While prenuptial agreements are legally binding contracts, there are circumstances under which they may be invalidated by the court. Understanding these pitfalls is essential to drafting an agreement that will hold up when it matters most.
+              While prenuptial agreements are legally binding contracts, there are circumstances under which they may be invalidated by the court. Under{" "}
+              <a href="https://codes.ohio.gov/ohio-revised-code/section-3103.061" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80" style={{ color: "hsla(40, 30%, 98%, 0.9)" }}>Ohio Revised Code Section 3103.061</a>,
+              specific validity requirements must be met. Understanding these pitfalls is essential to drafting an agreement that will hold up when it matters most.
             </p>
             <div className="grid md:grid-cols-2 gap-6">
               {invalidReasons.map((reason) => (
@@ -444,7 +448,9 @@ const PrenuptialAgreement = () => {
               <div className="space-y-4 order-2 md:order-1">
                 <h3 className="heading-subsection">Built on Transparency</h3>
                 <p className="text-body">
-                  A valid prenuptial agreement requires full disclosure, fairness, and independent legal representation for both parties. Ohio courts closely examine whether each spouse had a genuine opportunity to review and negotiate the terms. Our attorneys ensure your agreement meets every standard Ohio courts require, so it stands up when it matters most.
+                  A valid prenuptial agreement requires full disclosure, fairness, and independent legal representation for both parties, as outlined in{" "}
+                  <a href="https://codes.ohio.gov/ohio-revised-code/section-3103.061" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Ohio Revised Code Section 3103.061</a>.
+                  Ohio courts closely examine whether each spouse had a genuine opportunity to review and negotiate the terms. Our attorneys ensure your agreement meets every standard Ohio courts require, so it stands up when it matters most.
                 </p>
               </div>
               <img

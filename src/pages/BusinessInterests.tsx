@@ -78,7 +78,9 @@ const valuationFactors = [
     title: "Goodwill and Brand Value",
     icon: Building2,
     description:
-      "The reputation, customer relationships, and brand recognition built over time contribute to the overall value beyond just physical assets. Ohio courts distinguish between enterprise goodwill, which belongs to the business, and personal goodwill, which is tied to the individual owner. This distinction is critical because only enterprise goodwill is typically divisible as marital property in an Ohio divorce.",
+      (<>The reputation, customer relationships, and brand recognition built over time contribute to the overall value beyond just physical assets. Under{" "}
+        <a href="https://codes.ohio.gov/ohio-revised-code/section-3105.171" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Ohio Revised Code Section 3105.171(A)(3)</a>,
+        marital property includes business interests and their associated goodwill. Ohio courts distinguish between enterprise goodwill, which belongs to the business, and personal goodwill, which is tied to the individual owner. This distinction is critical because only enterprise goodwill is typically divisible as marital property in an Ohio divorce.</>),
   },
 ];
 
@@ -279,7 +281,9 @@ const BusinessInterests = () => {
             <div className="space-y-4 text-body">
               <p>
                 Contact Borshchak Law Group to help you make important decisions
-                about your divorce business assets in Columbus, Ohio. We work to
+                about your divorce business assets in Columbus, Ohio. Under{" "}
+                <a href="https://codes.ohio.gov/ohio-revised-code/section-3105.171" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Ohio Revised Code Section 3105.171</a>,
+                Ohio courts follow equitable division principles when dividing marital property, including business interests. We work to
                 accurately assess the business' value so you can make informed
                 decisions moving forward.
               </p>

@@ -319,7 +319,8 @@ const Assets = () => {
               <p>
                 When significant assets are at stake in a divorce, the decisions
                 made today will shape your financial security for decades.
-                Business interests, retirement accounts, real estate, and
+                Under Ohio's equitable division framework established in{" "}
+                <a href="https://codes.ohio.gov/ohio-revised-code/section-3105.171" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Ohio Revised Code Section 3105.171</a>, business interests, retirement accounts, real estate, and
                 investments all require careful analysis and expert valuation.
               </p>
               <p>
@@ -444,7 +445,8 @@ const Assets = () => {
                 <p className="text-body text-lg mb-4">
                   Marital property includes virtually all assets and debts
                   acquired during the marriage, regardless of which spouse's name
-                  is on the title. Ohio courts divide marital property equitably
+                  is on the title, as defined in{" "}
+                  <a href="https://codes.ohio.gov/ohio-revised-code/section-3105.171" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Ohio Revised Code § 3105.171(A)(3)</a>. Ohio courts divide marital property equitably
                   &mdash; fairly, but not always equally.
                 </p>
                 <div className="space-y-2">
@@ -490,7 +492,8 @@ const Assets = () => {
                   </h3>
                 </div>
                 <p className="text-body text-lg mb-4">
-                  Separate property belongs solely to one spouse and is generally
+                  Separate property, as defined in{" "}
+                  <a href="https://codes.ohio.gov/ohio-revised-code/section-3105.171" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Ohio Revised Code § 3105.171(A)(6)</a>, belongs solely to one spouse and is generally
                   not subject to division. However, commingling separate property
                   with marital assets can convert it into marital property
                   &mdash; a critical distinction your attorney must protect.

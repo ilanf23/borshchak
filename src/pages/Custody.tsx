@@ -413,7 +413,8 @@ const Custody = () => {
                     <strong>unmarried</strong> and no court order has been
                     issued, the mother is presumed to have sole custody of the
                     child. The father must establish paternity and file for
-                    custody or visitation rights through the court.
+                    custody or visitation rights through the court. See{" "}
+                    <a href="https://codes.ohio.gov/ohio-revised-code/section-3109.04" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Ohio Revised Code Section 3109.04</a>.
                   </p>
                 </div>
               </div>
@@ -489,7 +490,7 @@ const Custody = () => {
               className="text-lg leading-relaxed mb-10"
               style={{ color: "hsla(40, 30%, 98%, 0.85)" }}
             >
-              Under Ohio Revised Code Section 3109.04, courts apply the
+              Under <a href="https://codes.ohio.gov/ohio-revised-code/section-3109.04" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80" style={{ color: "hsla(40, 30%, 98%, 0.9)" }}>Ohio Revised Code Section 3109.04</a>, courts apply the
               "best interest of the child" standard when allocating parental
               rights and responsibilities. If either parent seeks shared
               parenting, that parent must demonstrate that shared parenting is
@@ -555,6 +556,8 @@ const Custody = () => {
                 Life changes, and sometimes custody orders need to change too.
                 Ohio courts allow modifications when circumstances have
                 significantly changed since the original order was issued.
+                Custody modifications are governed by{" "}
+                <a href="https://codes.ohio.gov/ohio-revised-code/section-3109.04" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Ohio Revised Code Section 3109.04(E)</a>.
               </p>
               <div className="grid sm:grid-cols-3 gap-4">
                 <div className="card-bordered text-center">

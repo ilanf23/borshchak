@@ -271,7 +271,11 @@ const CivilProtectionOrders = () => {
                 A Civil Protection Order (CPO) is a court order designed to
                 protect individuals from domestic violence, stalking, or
                 sexually oriented offenses. In Ohio, CPOs are governed by
-                specific statutes that allow victims to seek immediate judicial
+                specific statutes &mdash; including{" "}
+                <a href="https://codes.ohio.gov/ohio-revised-code/section-3113.31" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Ohio Revised Code Section 3113.31</a>{" "}
+                and{" "}
+                <a href="https://codes.ohio.gov/ohio-revised-code/section-2903.214" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Ohio Revised Code Section 2903.214</a>{" "}
+                &mdash; that allow victims to seek immediate judicial
                 protection from threatening or harmful behavior.
               </p>
               <p>
@@ -386,7 +390,7 @@ const CivilProtectionOrders = () => {
               className="mt-4 text-base"
               style={{ color: "hsla(40, 30%, 98%, 0.7)" }}
             >
-              Ohio Revised Code § 3113.31
+              <a href="https://codes.ohio.gov/ohio-revised-code/section-3113.31" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80" style={{ color: "hsla(40, 30%, 98%, 0.9)" }}>Ohio Revised Code § 3113.31</a>
             </p>
           </div>
         </section>
@@ -433,8 +437,8 @@ const CivilProtectionOrders = () => {
             </h2>
             <div className="space-y-4 text-body">
               <p>
-                Violating a Civil Protection Order is a criminal offense under
-                Ohio Revised Code § 2919.27. A first violation is charged as a{" "}
+                Violating a Civil Protection Order is a criminal offense under{" "}
+                <a href="https://codes.ohio.gov/ohio-revised-code/section-2919.27" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Ohio Revised Code § 2919.27</a>. A first violation is charged as a{" "}
                 <strong>first-degree misdemeanor</strong>, carrying up to 180
                 days in jail and a $1,000 fine. Subsequent violations or
                 violations involving physical harm can be elevated to a{" "}

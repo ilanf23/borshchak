@@ -277,14 +277,15 @@ const ContemptProceedings = () => {
               <p>
                 Emotionally charged family law proceedings do not always wrap up
                 neatly. The opposing party's refusal to follow the court's
-                decision may be an act of court contempt. To find a violation of
+                decision may be an act of court contempt. Under <a href="https://codes.ohio.gov/ohio-revised-code/section-2705.02" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Ohio Revised Code Section 2705.02</a>, to find a violation of
                 a court order, the offended party must prove that the offender
                 willfully ignored a court order.
               </p>
               <p>
                 Contempt proceedings provide a legal mechanism to enforce court
                 orders when one party fails to comply. Whether the issue
-                involves unpaid support, custody violations, or property
+                involves unpaid support, custody violations, or protection order
+                violations under <a href="https://codes.ohio.gov/ohio-revised-code/section-2919.27" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Ohio Revised Code Section 2919.27</a>, or property
                 disputes, the court has tools to compel compliance and hold
                 violators accountable.
               </p>

@@ -37,7 +37,7 @@ const separationItems = [
     title: "Child Custody",
     icon: Users,
     description:
-      "Parental rights and responsibilities are allocated, including where the children will live, visitation schedules, and decision-making authority for education, healthcare, and other important matters. Ohio courts apply the 'best interest of the child' standard under Section 3109.04 of the Ohio Revised Code, weighing factors such as each parent's relationship with the child, the child's adjustment to home and school, and the mental and physical health of all parties involved. Because custody orders in a legal separation carry the same legal weight as those in a divorce, it is critical to have skilled legal representation from the outset. Your attorney will help you build a strong case for the custody arrangement that best serves your children's needs.",
+      (<>Parental rights and responsibilities are allocated, including where the children will live, visitation schedules, and decision-making authority for education, healthcare, and other important matters. Ohio courts apply the &lsquo;best interest of the child&rsquo; standard under <a href="https://codes.ohio.gov/ohio-revised-code/section-3109.04" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Ohio Revised Code Section 3109.04</a>, weighing factors such as each parent's relationship with the child, the child's adjustment to home and school, and the mental and physical health of all parties involved. Because custody orders in a legal separation carry the same legal weight as those in a divorce, it is critical to have skilled legal representation from the outset. Your attorney will help you build a strong case for the custody arrangement that best serves your children's needs.</>),
   },
   {
     title: "Child and Spousal Support",
@@ -298,7 +298,8 @@ const LegalSeparation = () => {
             <div className="space-y-4 text-body">
               <p>
                 A legal separation is a court order where the married couple
-                remains married but lives separate and apart. While the court
+                remains married but lives separate and apart, as provided under{" "}
+                <a href="https://codes.ohio.gov/ohio-revised-code/section-3105.17" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Ohio Revised Code Section 3105.17</a>. While the court
                 order does not legally end the marriage, it does allow the court
                 to issue orders regarding marital property division, the
                 allocation of parental rights and responsibilities, and spousal
@@ -317,6 +318,10 @@ const LegalSeparation = () => {
                 An attorney at Borshchak Law Group in Columbus, OH can assist
                 you in understanding the legal implications and walk you through
                 the process, step by step.
+              </p>
+              <p>
+                Importantly, under{" "}
+                <a href="https://codes.ohio.gov/ohio-revised-code/section-3105.17" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">ORC Section 3105.17(B)</a>, either spouse retains the right to file for divorce after a legal separation has been granted, preserving flexibility if circumstances change.
               </p>
             </div>
           </div>

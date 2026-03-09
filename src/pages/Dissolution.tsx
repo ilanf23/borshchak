@@ -33,7 +33,7 @@ const requirements = [
   {
     title: "Residency Requirement",
     icon: Home,
-    description: "The husband or wife must have been residing in Ohio for six or more months before filing. This is required under Ohio Rev. Code § 3105.62 (2022).",
+    description: <>The husband or wife must have been residing in Ohio for six or more months before filing. This is required under <a href="https://codes.ohio.gov/ohio-revised-code/section-3105.62" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Ohio Rev. Code § 3105.62</a>.</>,
   },
 ];
 
@@ -243,7 +243,7 @@ const Dissolution = () => {
             <h2 className="heading-section mb-6">What Is a Dissolution of Marriage in Ohio?</h2>
             <div className="space-y-4 text-body">
               <p>
-                Marriage dissolution in Ohio is a no-fault proceeding where both husband and wife mutually agree to end their marriage legally. Both parties file a joint petition to terminate the marriage after signing a separation agreement.
+                Marriage dissolution in Ohio is a no-fault proceeding where both husband and wife mutually agree to end their marriage legally. Both parties file a joint petition to terminate the marriage after signing a separation agreement, as required under{" "}<a href="https://codes.ohio.gov/ohio-revised-code/section-3105.63" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Ohio Revised Code Section 3105.63</a>.
               </p>
               <p>
                 Unlike divorce, dissolution allows you to skip many costly steps. But you and your spouse must satisfy certain requirements, and you need to file all the required documents properly to avoid issues down the road.
@@ -329,7 +329,7 @@ const Dissolution = () => {
                 The timeline depends on how quickly you and your spouse reach a separation agreement. Once you've agreed and filed the petition, at least <strong>30 days</strong> must pass before the court hearing commences. The judge must hear your case within <strong>90 days</strong> of filing.
               </p>
               <p>
-                At the hearing, the judge reviews the agreement and inquires about parenting, liabilities, and assets. If both parties are satisfied and in agreement, the judge grants the decision, and the separation agreement becomes a court order per Ohio Rev. Code §§ 3105.64, 3105.65.
+                At the hearing, the judge reviews the agreement and inquires about parenting, liabilities, and assets. If both parties are satisfied and in agreement, the judge grants the decision, and the separation agreement becomes a court order per Ohio Rev. Code §§{" "}<a href="https://codes.ohio.gov/ohio-revised-code/section-3105.64" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">3105.64</a>,{" "}<a href="https://codes.ohio.gov/ohio-revised-code/section-3105.65" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">3105.65</a>.
               </p>
             </div>
             <div className="grid sm:grid-cols-3 gap-6 mt-8">

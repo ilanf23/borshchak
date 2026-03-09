@@ -274,7 +274,8 @@ const Annulment = () => {
             <h2 className="heading-section mb-6">What Is an Annulment?</h2>
             <div className="space-y-4 text-body">
               <p>
-                An annulment is a legally accepted procedure that cancels a marriage. From a legal perspective, an annulled marriage was never valid or never technically existed. Unlike divorce, which ends a valid marriage, annulment treats the marriage as if it never happened.
+                An annulment is a legally accepted procedure that cancels a marriage, as outlined in{" "}
+                <a href="https://codes.ohio.gov/ohio-revised-code/section-3105.31" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Ohio Revised Code Section 3105.31</a>. From a legal perspective, an annulled marriage was never valid or never technically existed. Unlike divorce, which ends a valid marriage, annulment treats the marriage as if it never happened.
               </p>
               <p>
                 In Franklin County and the rest of Ohio, the annulment process cannot proceed if your reasons for termination don't fall under the legally recognized grounds for nullification. Understanding whether your situation qualifies is the critical first step.
@@ -315,7 +316,8 @@ const Annulment = () => {
           >
             <h2 className="heading-section mb-4">Grounds for Annulment in Ohio</h2>
             <p className="text-body mb-8">
-              Before filing for an annulment, it's important to verify that your marriage qualifies. In Ohio, a voidable marriage can be annulled on the following grounds. Tap each to learn more.
+              Before filing for an annulment, it's important to verify that your marriage qualifies.{" "}
+              <a href="https://codes.ohio.gov/ohio-revised-code/section-3105.31" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Ohio Revised Code Section 3105.31</a> lists six causes for which a voidable marriage can be annulled. Tap each to learn more.
             </p>
             <div className="grid gap-4">
               {annulmentGrounds.map((ground) => (
@@ -422,7 +424,8 @@ const Annulment = () => {
                 Court hearings can be daunting, especially when emotions are involved. At Borshchak Law Group, we provide you with a strong attorney-client relationship to evaluate whether your grounds for annulment qualify under Ohio law and guide you through the process.
               </p>
               <p>
-                Our experienced annulment attorneys will walk you through the court proceedings and advocate on your behalf. For most voidable marriages, Ohio law requires filing within <strong>two years</strong> of the marriage date, though certain void marriages (such as bigamy) have no time limit. Don't wait to explore your options.
+                Our experienced annulment attorneys will walk you through the court proceedings and advocate on your behalf. Under{" "}
+                <a href="https://codes.ohio.gov/ohio-revised-code/section-3105.32" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Ohio Revised Code Section 3105.32</a>, most voidable marriages must be filed within <strong>two years</strong> of the marriage date, though certain void marriages (such as bigamy) have no time limit. Don't wait to explore your options.
               </p>
             </div>
             <div className="mt-8">

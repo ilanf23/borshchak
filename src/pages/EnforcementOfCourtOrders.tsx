@@ -31,7 +31,7 @@ const contemptReasons = [
     title: "Not Paying Child or Spousal Support",
     icon: DollarSign,
     description:
-      "When a party fails to make court-ordered support payments, the receiving party can file a motion for contempt to compel payment. Ohio courts take support obligations seriously because they directly affect the financial well-being of children and former spouses. The court may order wage garnishment, intercept tax refunds, suspend professional or driver's licenses, or impose other enforcement measures to ensure compliance. An experienced attorney can help you document the arrearage and pursue every available remedy under Ohio law.",
+      <>When a party fails to make court-ordered support payments, the receiving party can file a motion for contempt to compel payment. Under <a href="https://codes.ohio.gov/ohio-revised-code/section-3109.05" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Ohio Revised Code Section 3109.05</a>, Ohio courts take support obligations seriously because they directly affect the financial well-being of children and former spouses. The court may order wage garnishment, intercept tax refunds, suspend professional or driver's licenses, or impose other enforcement measures to ensure compliance. An experienced attorney can help you document the arrearage and pursue every available remedy under Ohio law.</>,
   },
   {
     title: "Not Following an Ordered Visitation Schedule",
@@ -296,7 +296,9 @@ const EnforcementOfCourtOrders = () => {
                 What do you do if a party is failing to comply with a court
                 order in Ohio? When a party fails to follow a court order, you
                 may file for contempt of court and request that the court take
-                steps to enforce the order.
+                steps to enforce the order. Violations of protection orders may
+                be prosecuted under <a href="https://codes.ohio.gov/ohio-revised-code/section-2919.27" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Ohio Revised Code Section 2919.27</a>, and
+                support enforcement is governed by <a href="https://codes.ohio.gov/ohio-revised-code/section-3109.05" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Ohio Revised Code Section 3109.05</a>.
               </p>
               <p>
                 Before filing a contempt, it is essential that there is proof to
