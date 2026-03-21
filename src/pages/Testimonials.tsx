@@ -166,6 +166,26 @@ const Testimonials = () => {
                 className="w-full h-full"
               />
             </div>
+
+            {/* Dmitriy Interview */}
+            <h3 className="font-playfair text-2xl md:text-3xl font-bold text-center mt-16 mb-4">
+              See How We Protect Families in Action
+            </h3>
+            <p className="text-body text-center text-muted-foreground mb-10 max-w-2xl mx-auto">
+              Attorney Dmitriy Borshchak walks through a real family law case, from the challenges the client faced to the strategy we used to protect their interests and secure a favorable outcome.
+            </p>
+            <div
+              className="aspect-video rounded-xl overflow-hidden shadow-xl border-2"
+              style={{ borderColor: "hsl(var(--green-accent))" }}
+            >
+              <video
+                src="/dmitriy-interview.mp4"
+                controls
+                preload="metadata"
+                className="w-full h-full"
+                title="Interview with Dmitriy Borshchak"
+              />
+            </div>
           </div>
         </div>
       </section>
