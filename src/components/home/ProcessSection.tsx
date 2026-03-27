@@ -48,7 +48,7 @@ const steps = [
     number: "4",
     title: "Case Conclusion",
     shortDesc: "Documentation and next steps",
-    fullDesc: "Whether your case concludes by agreement or by court decision after trial, we ensure all final orders are properly drafted, filed, and enforceable. We walk you through exactly what the order means, what your obligations ar and what to do if circumstances change. Our relationship does not end when the case does.",
+    fullDesc: "Whether your case concludes by agreement or by court decision after trial, we ensure all final orders are properly drafted, filed, and enforceable. We walk you through exactly what the order means, what your obligations are and what to do if circumstances change. Our relationship does not end when the case does.",
     icon: Shield,
     details: [
       "Final order review and filing",
