@@ -28,6 +28,11 @@ import { useConsultation } from "@/contexts/ConsultationContext";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { cn } from "@/lib/utils";
 import divorceBgImage from "@/assets/service-bg-divorce.jpg";
+import awardAvvoClientsChoice from "@/assets/award-avvo-clients-choice.png";
+import awardExpertise from "@/assets/award-expertise.png";
+import awardTop40Under40 from "@/assets/award-top40-under40.png";
+import awardTop10FamilyLaw from "@/assets/award-top10-family-law.png";
+import award10BestClientSatisfaction from "@/assets/award-10best-client-satisfaction.png";
 
 // ---------------------------------------------------------------------------
 // Data
@@ -126,7 +131,7 @@ const faqItems = [
   {
     question: "How long does a divorce take in Ohio?",
     answer:
-      "That depends on the level of agreement, the complexity of the issues, whether temporary orders are needed, and the court's schedule. A cooperative case usually moves faster than a heavily contested one.",
+      "It depends on the level of agreement, the complexity of the issues, and the court's schedule. The Ohio Supreme Court has established general timelines: divorces without children should ideally resolve within 9 to 12 months, while divorces involving children should resolve within 18 months. Many cases resolve by negotiated agreement before trial, which can significantly shorten the timeline. Heavily contested cases that proceed to trial will take longer. The earlier you have experienced legal representation, the better positioned you are to move efficiently through the process.",
   },
   {
     question: "How much does a divorce cost in Ohio?",
@@ -136,7 +141,7 @@ const faqItems = [
   {
     question: "Do I have to go to court for a divorce?",
     answer:
-      "Sometimes, yes. The amount of court involvement depends on whether the case is contested and whether major issues can be resolved through agreement.",
+      "In a divorce, yes — more often than not, you will need to appear in court. Divorce proceedings are conducted before a judge, particularly when issues are contested. Dissolution is different. In a dissolution, both spouses agree on all terms in advance and the court appearance is typically a brief, uncontested hearing. If avoiding court is important to you, dissolution may be worth exploring if you and your spouse are in agreement.",
   },
   {
     question: "What happens to our house in a divorce?",
@@ -225,6 +230,7 @@ const Divorce = () => {
   const relatedAnim = useScrollAnimation();
   const quizAnim = useScrollAnimation();
   const faqAnim = useScrollAnimation();
+  const teamAnim = useScrollAnimation();
   const ctaContentAnim = useScrollAnimation(0.2);
   const ctaRef = useRef(null);
   const ctaInView = useInView(ctaRef, { once: true, margin: "-100px" });
@@ -332,6 +338,15 @@ const Divorce = () => {
                 At Borshchak Law Group, we help clients in Columbus and Central
                 Ohio understand their options, protect what matters most, and
                 move forward with a clearer plan.
+              </p>
+              <p>
+                Divorce is one of the most emotionally charged experiences a
+                person can face — especially when children are involved. Strong
+                emotions can lead to decisions that feel right in the moment but
+                carry long-term consequences. Our job is to help you stay
+                grounded. We work tirelessly to ensure every client we represent
+                makes calculated, informed decisions that protect their future
+                and insulate them from unnecessary risk.
               </p>
             </div>
             <div className="grid sm:grid-cols-3 gap-4 mt-10">
@@ -524,6 +539,103 @@ const Divorce = () => {
               </div>
             </div>
 
+            <div
+              className={`grid md:grid-cols-2 gap-6 mb-10 ${methodsAnim.isVisible ? "stagger-visible" : "stagger-children"}`}
+            >
+              <div className="card-bordered transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-accent">
+                <div className="flex items-center gap-3 mb-4">
+                  <div
+                    className="shrink-0 w-12 h-12 rounded-full flex items-center justify-center"
+                    style={{ backgroundColor: "hsl(var(--secondary))" }}
+                  >
+                    <Gavel className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="heading-subsection text-xl">
+                    Contested Divorce
+                  </h3>
+                </div>
+                <p className="text-body text-lg mb-4">
+                  A contested divorce occurs when spouses cannot agree on one or
+                  more major issues — such as property division, parenting
+                  arrangements, or spousal support. The court steps in to resolve
+                  disputed matters, which typically means more time, more cost,
+                  and a greater need for experienced legal representation.
+                </p>
+                <div className="space-y-2">
+                  <div className="flex items-start gap-2 text-body text-base">
+                    <CheckCircle2
+                      className="w-4 h-4 shrink-0 mt-0.5"
+                      style={{ color: "hsl(var(--green-accent))" }}
+                    />
+                    Court decides unresolved issues
+                  </div>
+                  <div className="flex items-start gap-2 text-body text-base">
+                    <CheckCircle2
+                      className="w-4 h-4 shrink-0 mt-0.5"
+                      style={{ color: "hsl(var(--green-accent))" }}
+                    />
+                    Requires strong legal advocacy
+                  </div>
+                  <div className="flex items-start gap-2 text-body text-base">
+                    <CheckCircle2
+                      className="w-4 h-4 shrink-0 mt-0.5"
+                      style={{ color: "hsl(var(--green-accent))" }}
+                    />
+                    Can involve hearings, discovery, and trial
+                  </div>
+                </div>
+              </div>
+
+              <div className="card-bordered transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-accent">
+                <div className="flex items-center gap-3 mb-4">
+                  <div
+                    className="shrink-0 w-12 h-12 rounded-full flex items-center justify-center"
+                    style={{
+                      backgroundColor: "hsla(152, 45%, 38%, 0.1)",
+                    }}
+                  >
+                    <Scale
+                      className="w-6 h-6"
+                      style={{ color: "hsl(var(--green-accent))" }}
+                    />
+                  </div>
+                  <h3 className="heading-subsection text-xl">
+                    Uncontested Divorce
+                  </h3>
+                </div>
+                <p className="text-body text-lg mb-4">
+                  An uncontested divorce occurs when both spouses agree on all
+                  major issues but one spouse initiates the filing. Unlike
+                  dissolution, an uncontested divorce still follows the divorce
+                  process — but agreement on terms can significantly reduce time
+                  and cost.
+                </p>
+                <div className="space-y-2">
+                  <div className="flex items-start gap-2 text-body text-base">
+                    <CheckCircle2
+                      className="w-4 h-4 shrink-0 mt-0.5"
+                      style={{ color: "hsl(var(--green-accent))" }}
+                    />
+                    One spouse files, both agree on terms
+                  </div>
+                  <div className="flex items-start gap-2 text-body text-base">
+                    <CheckCircle2
+                      className="w-4 h-4 shrink-0 mt-0.5"
+                      style={{ color: "hsl(var(--green-accent))" }}
+                    />
+                    Faster and less expensive than contested
+                  </div>
+                  <div className="flex items-start gap-2 text-body text-base">
+                    <CheckCircle2
+                      className="w-4 h-4 shrink-0 mt-0.5"
+                      style={{ color: "hsl(var(--green-accent))" }}
+                    />
+                    Still follows the divorce process, not dissolution
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div className="card-elevated">
               <div className="flex items-start gap-3">
                 <BookOpen className="w-5 h-5 text-primary shrink-0 mt-1" />
@@ -539,74 +651,6 @@ const Divorce = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* ---------------------------------------------------------------- */}
-        {/* 5. Legal Grounds for Fault Divorce */}
-        {/* ---------------------------------------------------------------- */}
-        <section className="section-padding bg-secondary">
-          <div
-            ref={groundsAnim.ref}
-            className={`container max-w-4xl ${groundsAnim.isVisible ? "scroll-visible" : "scroll-hidden"}`}
-          >
-            <h2 className="heading-section mb-4">
-              Understanding Your Legal Options: Grounds for Divorce
-            </h2>
-            <p className="text-body mb-8">
-              Ohio law allows divorce on specific legal grounds. In many cases,
-              incompatibility is the most practical route. In others, the facts
-              may shape strategy, negotiations, or the issues that need to be
-              addressed in court. Ohio lists causes including adultery, extreme
-              cruelty, gross neglect of duty, habitual drunkenness, imprisonment
-              at the time of filing, living separate and apart for one year
-              without cohabitation, and incompatibility unless denied.
-            </p>
-            <div
-              className={`grid gap-4 ${groundsAnim.isVisible ? "stagger-visible" : "stagger-children"}`}
-            >
-              {faultGrounds.map((ground) => (
-                <ExpandableCard
-                  key={ground.title}
-                  title={ground.title}
-                  icon={ground.icon}
-                >
-                  {ground.description}
-                </ExpandableCard>
-              ))}
-            </div>
-            <p className="text-body text-base mt-6 italic">
-              Every case is different. The right legal strategy depends on the
-              facts, the evidence, and the issues that matter most in your case.
-            </p>
-          </div>
-        </section>
-
-        {/* ---------------------------------------------------------------- */}
-        {/* 7. Full-Bleed Quote */}
-        {/* ---------------------------------------------------------------- */}
-        <section
-          className="relative min-h-[300px] md:min-h-[400px] flex items-center justify-center bg-cover bg-center"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1600&q=80')",
-          }}
-        >
-          <div
-            className="absolute inset-0"
-            style={{ backgroundColor: "hsla(215, 45%, 22%, 0.75)" }}
-          />
-          <div
-            ref={quoteAnim.ref}
-            className={`relative z-10 text-center px-6 max-w-3xl ${quoteAnim.isVisible ? "scroll-visible-scale" : "scroll-hidden-scale"}`}
-          >
-            <p
-              className="text-2xl md:text-3xl font-serif font-medium leading-relaxed"
-              style={{ color: "hsl(var(--primary-foreground))" }}
-            >
-              A divorce case is not just about ending a marriage. It is about
-              resolving the issues that shape what comes next.
-            </p>
           </div>
         </section>
 
@@ -804,6 +848,153 @@ const Divorce = () => {
         </section>
 
         {/* ---------------------------------------------------------------- */}
+        {/* Team Approach */}
+        {/* ---------------------------------------------------------------- */}
+        <section className="section-padding bg-card">
+          <div
+            ref={teamAnim.ref}
+            className={`container max-w-4xl ${teamAnim.isVisible ? "scroll-visible" : "scroll-hidden"}`}
+          >
+            <h2 className="heading-section mb-4">
+              A Team Approach to Your Case
+            </h2>
+            <p className="text-body mb-10">
+              Some divorce cases involve complicated financial situations — closely
+              held business interests, stock options, deferred compensation, real
+              estate holdings, trusts, or complex tax consequences. In these
+              matters, legal expertise alone is not enough. At Borshchak Law Group,
+              we work closely with a network of outside professionals to ensure our
+              strategy is supported by expert analysis and hard data.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="card-bordered">
+                <h3 className="text-lg font-serif font-semibold text-navy mb-2">
+                  Forensic Accountants
+                </h3>
+                <p className="text-body text-base">
+                  Uncovering hidden assets, tracing funds, and analyzing complex
+                  financial records to ensure nothing is missed.
+                </p>
+              </div>
+              <div className="card-bordered">
+                <h3 className="text-lg font-serif font-semibold text-navy mb-2">
+                  CPAs &amp; Tax Experts
+                </h3>
+                <p className="text-body text-base">
+                  Evaluating the tax implications of asset division, spousal
+                  support, and settlement terms so you understand the full
+                  financial picture.
+                </p>
+              </div>
+              <div className="card-bordered">
+                <h3 className="text-lg font-serif font-semibold text-navy mb-2">
+                  Business Valuators
+                </h3>
+                <p className="text-body text-base">
+                  Providing defensible, court-ready valuations of businesses,
+                  partnerships, and professional practices.
+                </p>
+              </div>
+              <div className="card-bordered">
+                <h3 className="text-lg font-serif font-semibold text-navy mb-2">
+                  Real Estate Appraisers
+                </h3>
+                <p className="text-body text-base">
+                  Accurately valuing the marital home and all real property
+                  interests to support a fair division.
+                </p>
+              </div>
+              <div className="card-bordered">
+                <h3 className="text-lg font-serif font-semibold text-navy mb-2">
+                  Child Psychologists
+                </h3>
+                <p className="text-body text-base">
+                  Offering expert insight on parenting arrangements and the best
+                  interests of children in contested custody matters.
+                </p>
+              </div>
+              <div className="card-bordered">
+                <h3 className="text-lg font-serif font-semibold text-navy mb-2">
+                  Other Expert Witnesses
+                </h3>
+                <p className="text-body text-base">
+                  Including forensic examiners, former FBI agents, and other
+                  specialists when the complexity of a case demands it.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ---------------------------------------------------------------- */}
+        {/* 7. Full-Bleed Quote */}
+        {/* ---------------------------------------------------------------- */}
+        <section
+          className="relative min-h-[300px] md:min-h-[400px] flex items-center justify-center bg-cover bg-center"
+          style={{
+            backgroundImage:
+              "url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1600&q=80')",
+          }}
+        >
+          <div
+            className="absolute inset-0"
+            style={{ backgroundColor: "hsla(215, 45%, 22%, 0.75)" }}
+          />
+          <div
+            ref={quoteAnim.ref}
+            className={`relative z-10 text-center px-6 max-w-3xl ${quoteAnim.isVisible ? "scroll-visible-scale" : "scroll-hidden-scale"}`}
+          >
+            <p
+              className="text-2xl md:text-3xl font-serif font-medium leading-relaxed"
+              style={{ color: "hsl(var(--primary-foreground))" }}
+            >
+              A divorce case is not just about ending a marriage. It is about
+              resolving the issues that shape what comes next.
+            </p>
+          </div>
+        </section>
+
+        {/* ---------------------------------------------------------------- */}
+        {/* 5. Legal Grounds for Fault Divorce */}
+        {/* ---------------------------------------------------------------- */}
+        <section className="section-padding bg-secondary">
+          <div
+            ref={groundsAnim.ref}
+            className={`container max-w-4xl ${groundsAnim.isVisible ? "scroll-visible" : "scroll-hidden"}`}
+          >
+            <h2 className="heading-section mb-4">
+              Understanding Your Legal Options: Grounds for Divorce
+            </h2>
+            <p className="text-body mb-8">
+              Ohio law allows divorce on specific legal grounds. In many cases,
+              incompatibility is the most practical route. In others, the facts
+              may shape strategy, negotiations, or the issues that need to be
+              addressed in court. Ohio lists causes including adultery, extreme
+              cruelty, gross neglect of duty, habitual drunkenness, imprisonment
+              at the time of filing, living separate and apart for one year
+              without cohabitation, and incompatibility unless denied.
+            </p>
+            <div
+              className={`grid gap-4 ${groundsAnim.isVisible ? "stagger-visible" : "stagger-children"}`}
+            >
+              {faultGrounds.map((ground) => (
+                <ExpandableCard
+                  key={ground.title}
+                  title={ground.title}
+                  icon={ground.icon}
+                >
+                  {ground.description}
+                </ExpandableCard>
+              ))}
+            </div>
+            <p className="text-body text-base mt-6 italic">
+              Every case is different. The right legal strategy depends on the
+              facts, the evidence, and the issues that matter most in your case.
+            </p>
+          </div>
+        </section>
+
+        {/* ---------------------------------------------------------------- */}
         {/* 8b. Related Practice Areas */}
         {/* ---------------------------------------------------------------- */}
         <section
@@ -962,6 +1153,24 @@ const Divorce = () => {
               </p>
             </div>
             <PracticeAreaFAQ items={faqItems} />
+          </div>
+        </section>
+
+        {/* ---------------------------------------------------------------- */}
+        {/* Award Badges */}
+        {/* ---------------------------------------------------------------- */}
+        <section className="section-padding-sm bg-card">
+          <div className="container">
+            <p className="text-center text-sm font-medium uppercase tracking-wider text-muted-foreground mb-6">
+              Recognized for Excellence
+            </p>
+            <div className="flex flex-wrap justify-center gap-6">
+              <img src={awardAvvoClientsChoice} alt="Avvo Clients' Choice" className="h-16 object-contain opacity-80" />
+              <img src={awardExpertise} alt="Expertise" className="h-16 object-contain opacity-80" />
+              <img src={awardTop40Under40} alt="Top 40 Under 40" className="h-16 object-contain opacity-80" />
+              <img src={awardTop10FamilyLaw} alt="Top 10 Family Law" className="h-16 object-contain opacity-80" />
+              <img src={award10BestClientSatisfaction} alt="10 Best Client Satisfaction" className="h-16 object-contain opacity-80" />
+            </div>
           </div>
         </section>
 
