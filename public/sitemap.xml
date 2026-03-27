@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://borshchaklawgroup.com/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://borshchaklawgroup.com/about</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://borshchaklawgroup.com/contact</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://borshchaklawgroup.com/testimonials</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://borshchaklawgroup.com/process</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://borshchaklawgroup.com/resources</loc><priority>0.7</priority><changefreq>weekly</changefreq></url>
+  <!-- Practice Areas -->
+  <url><loc>https://borshchaklawgroup.com/divorce</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://borshchaklawgroup.com/custody</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://borshchaklawgroup.com/child-support</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://borshchaklawgroup.com/assets</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://borshchaklawgroup.com/spousal-support</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://borshchaklawgroup.com/mediation</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://borshchaklawgroup.com/prenuptial-agreement</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://borshchaklawgroup.com/fathers-rights</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://borshchaklawgroup.com/annulment</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://borshchaklawgroup.com/dissolution</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://borshchaklawgroup.com/legal-separation</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://borshchaklawgroup.com/post-decree-matters</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://borshchaklawgroup.com/contempt-proceedings</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://borshchaklawgroup.com/business-interests</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://borshchaklawgroup.com/enforcement-of-court-orders</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://borshchaklawgroup.com/civil-protection-orders</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <!-- Attorneys -->
+  <url><loc>https://borshchaklawgroup.com/attorneys/dmitriy-borshchak</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://borshchaklawgroup.com/attorneys/hank-sonderman</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://borshchaklawgroup.com/attorneys/keri-reeves</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+</urlset>
