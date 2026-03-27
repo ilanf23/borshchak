@@ -112,6 +112,8 @@ const Footer = () => {
               <span>Licensed to Practice Law in Ohio</span>
             </div>
           </div>
+          <p className="text-sm text-primary-foreground/50 text-center mt-4">Licensed to practice in all 88 Ohio counties.</p>
+          <p className="text-sm text-primary-foreground/50 text-center mt-2">Consultations with Dmitriy Borshchak are by paid engagement. Free consultations are available with other members of our team.</p>
         </div>
       </div>
     </footer>

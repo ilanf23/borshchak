@@ -5,6 +5,7 @@ import AwardLogos from "@/components/home/AwardLogos";
 import WhoWeHelp from "@/components/home/WhoWeHelp";
 import VideoSection from "@/components/home/VideoSection";
 import GoogleReviews from "@/components/home/GoogleReviews";
+import WhyChooseUs from "@/components/home/WhyChooseUs";
 import ServicesOverview from "@/components/home/ServicesOverview";
 import ProcessSection from "@/components/home/ProcessSection";
 import RecentBlogs from "@/components/home/RecentBlogs";
@@ -21,6 +22,7 @@ const Index = () => {
         <WhoWeHelp />
         <VideoSection />
         <GoogleReviews />
+        <WhyChooseUs />
         <ServicesOverview />
         <ProcessSection />
         <RecentBlogs />

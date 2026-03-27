@@ -25,7 +25,7 @@ const services = [
   },
   {
     title: "Property & Assets",
-    description: "The equitable division of property, retirement accounts, and real estate requires careful legal analysis. We fight for a fair outcome that protects your financial future.",
+    description: "We pursue a fair and equitable division of marital assets with our client's objectives at the forefront. Our firm works closely with forensic examiners, accountants, CPAs, business valuators, real estate agents, appraisers, and other professionals to ensure our strategy is supported by data and built around your goals.",
     href: "/assets",
     icon: Landmark,
   },

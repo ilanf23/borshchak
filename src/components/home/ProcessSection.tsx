@@ -27,27 +27,28 @@ const steps = [
       "Tailored to your circumstances",
       "Transparent fee structure",
       "Realistic timeline expectations",
-      "Your approval before we act"
+      "Collaborative — you lead, we guide"
     ]
   },
   {
     number: "3",
     title: "Active Representation",
     shortDesc: "Negotiations and court",
-    fullDesc: "We handle all filings, court appearances, negotiations, and communications with opposing counsel. You'll receive regular updates and will be consulted before any significant decision is made. You are never left uninformed.",
+    fullDesc: "We handle all filings, court appearances, negotiations, and communications with opposing counsel. When cases cannot be resolved by agreement, we prepare thoroughly for trial — including preparing you. You will never walk into a courtroom unprepared. You'll receive regular updates and will be consulted before any significant decision is made.",
     icon: Scale,
     details: [
       "Direct attorney communication",
       "Negotiation and mediation",
-      "Court representation when needed",
-      "Regular case updates"
+      "Aggressive court representation when needed",
+      "Trial preparation and client coaching",
+      "Regular case updates throughout"
     ]
   },
   {
     number: "4",
     title: "Case Conclusion",
     shortDesc: "Documentation and next steps",
-    fullDesc: "We ensure all final agreements and court orders are properly drafted, filed, and enforceable. We walk you through what the order means, what your obligations are, and what to do if circumstances change down the road.",
+    fullDesc: "Whether your case concludes by agreement or by court decision after trial, we ensure all final orders are properly drafted, filed, and enforceable. We walk you through exactly what the order means, what your obligations ar and what to do if circumstances change. Our relationship does not end when the case does.",
     icon: Shield,
     details: [
       "Final order review and filing",
