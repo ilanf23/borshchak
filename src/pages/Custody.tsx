@@ -603,6 +603,92 @@ const Custody = () => {
           </div>
         </section>
 
+        {/* Paternity in Ohio */}
+        <section className="section-padding bg-card">
+          <div
+            ref={paternityAnim.ref}
+            className={`container max-w-4xl ${paternityAnim.isVisible ? "scroll-visible" : "scroll-hidden"}`}
+          >
+            <h2 className="heading-section mb-6">
+              Paternity in Ohio
+            </h2>
+            <p className="text-body text-lg mb-10">
+              For unmarried parents, establishing paternity is a critical first
+              step before pursuing custody or parenting time. Without established
+              paternity, a father has no legal rights to custody or visitation —
+              and a child may be denied important benefits including inheritance
+              rights, access to family medical history, and financial support.
+            </p>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="card-bordered">
+                <div className="flex items-center gap-3 mb-4">
+                  <div
+                    className="shrink-0 w-12 h-12 rounded-full flex items-center justify-center"
+                    style={{ backgroundColor: "hsl(var(--secondary))" }}
+                  >
+                    <BookOpen className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="heading-subsection text-xl">
+                    Presumption of Paternity
+                  </h3>
+                </div>
+                <p className="text-body text-lg">
+                  If a mother is married at the time of her child's birth, her
+                  husband is presumed to be the natural father under Ohio law.
+                  This presumption also applies if the child is born within 300
+                  days of the finalization of a divorce, dissolution, annulment,
+                  or the husband's death. In these cases, paternity does not need
+                  to be separately established.
+                </p>
+              </div>
+              <div className="card-bordered">
+                <div className="flex items-center gap-3 mb-4">
+                  <div
+                    className="shrink-0 w-12 h-12 rounded-full flex items-center justify-center"
+                    style={{ backgroundColor: "hsl(var(--secondary))" }}
+                  >
+                    <FileText className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="heading-subsection text-xl">
+                    Establishing Paternity
+                  </h3>
+                </div>
+                <p className="text-body text-lg">
+                  When paternity is not presumed, it can be established in
+                  several ways. Both parents may sign an Acknowledgment of
+                  Paternity, which is filed with the Ohio Department of Health.
+                  If either parent refuses, paternity may be determined through
+                  the Child Support Enforcement Agency (CSEA) or through a court
+                  action, both of which may involve DNA testing. Once
+                  established, the father gains legal rights to seek custody and
+                  parenting time.
+                </p>
+              </div>
+              <div className="card-bordered">
+                <div className="flex items-center gap-3 mb-4">
+                  <div
+                    className="shrink-0 w-12 h-12 rounded-full flex items-center justify-center"
+                    style={{ backgroundColor: "hsl(var(--secondary))" }}
+                  >
+                    <Heart className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="heading-subsection text-xl">
+                    Why It Matters
+                  </h3>
+                </div>
+                <p className="text-body text-lg">
+                  Establishing paternity protects everyone involved. It gives the
+                  child access to both parents' medical history, inheritance
+                  rights, and potential benefits such as Social Security or
+                  veterans' benefits. It gives the father the legal standing to
+                  seek custody or parenting time. And it ensures both parents
+                  share responsibility for the child's financial support.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Parenting Time, Visitation, and Companionship Time */}
         <section className="section-padding bg-card">
           <div
