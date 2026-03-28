@@ -64,12 +64,6 @@ const custodyTypes = [
     description:
       "Joint legal custody means both parents share the right and responsibility to make important decisions about the child's welfare. Both parents must communicate and agree on matters like schooling, medical treatment, and religious instruction. While Ohio courts generally favor joint legal custody, it requires a demonstrated ability by both parents to cooperate and communicate effectively. Mediation is often recommended to help parents work through disagreements.",
   },
-  {
-    title: "Grandparent Visitation Rights",
-    icon: Heart,
-    description:
-      "In Ohio, grandparents can petition the court for visitation rights under certain circumstances, such as when the child's parents are divorced, separated, or when one parent is deceased. The court must find that visitation serves the child's best interest. Grandparents must also show an existing relationship with the child that would be harmed by denial of visitation. An attorney experienced in grandparent rights can help navigate this often-emotional process.",
-  },
 ];
 
 const courtFactors = [
@@ -171,7 +165,7 @@ const faqItems = [
   {
     question: "How long does a custody case take?",
     answer:
-      "The timeline varies significantly depending on whether custody is contested. An agreed-upon custody arrangement can be finalized in a few weeks. Contested cases may take 6\u201312 months or longer, especially if evaluations, mediation, or trial are involved.",
+      "The timeline depends heavily on the level of cooperation between the parties. When both parents are in full agreement, an agreed custody arrangement can be reached relatively quickly — though the timeframe varies based on court scheduling and how promptly documents are prepared and filed. Contested custody cases are a different story. When parents cannot agree, cases often take 6 to 12 months or longer, particularly when evaluations, a Guardian ad Litem, mediation, or trial are involved. The more cooperation there is on both sides, the faster and less expensive the process will be.",
   },
   {
     question: "Can a custody order be changed later?",
@@ -181,7 +175,7 @@ const faqItems = [
   {
     question: "What is a Guardian ad Litem?",
     answer:
-      "A Guardian ad Litem (GAL) is an attorney appointed by the court to represent the child's best interests in a custody case. The GAL investigates by interviewing both parents, the child, teachers, and other relevant individuals, then makes a recommendation to the court.",
+      "A Guardian ad Litem (GAL) is a court-appointed neutral — often a licensed attorney, though some Ohio counties allow non-attorneys — who investigates the circumstances of a custody case and submits a written recommendation to the court regarding custody and parenting time. The GAL interviews both parents, the child, teachers, and other relevant individuals. While their recommendation is not binding, judges give it significant weight. A GAL can also be an invaluable resource in reducing conflict and in-court litigation, even though they do represent an added cost to the proceedings.",
   },
 ];
 
@@ -251,6 +245,9 @@ const Custody = () => {
   const { openConsultation } = useConsultation();
   const methodsAnim = useScrollAnimation();
   const typesAnim = useScrollAnimation();
+  const parentingTimeAnim = useScrollAnimation();
+  const galAnim = useScrollAnimation();
+  const paternityAnim = useScrollAnimation();
   const factorsAnim = useScrollAnimation();
   const modAnim = useScrollAnimation();
   const quizAnim = useScrollAnimation();
@@ -314,6 +311,31 @@ const Custody = () => {
             <h2 className="heading-section mb-10">
               How Custody Is Allocated in Ohio
             </h2>
+            <div className="text-body text-lg mb-8">
+              <p className="mb-4">
+                Custody refers to the parent or individual who is responsible for
+                making major decisions for the children. In Ohio, there are two
+                options for custodial designation: sole custody or joint custody.
+                Joint custody is commonly referred to as 'shared parenting.' Any
+                agreement or decision that awards joint custody to parents will be
+                referred to as a Shared Parenting Plan, and will contain all terms
+                relating to the allocation of parental rights and
+                responsibilities — including child support, parenting time, school
+                placement, and more. If parents are awarded joint custody, they
+                must work together to reach an agreement regarding all major
+                decisions for their children, such as healthcare and schooling.
+              </p>
+              <p>
+                In cases of sole custody, the parent designated as custodian may
+                make all major decisions for the children without discussion with
+                the other parent. The parent who does not have custody — commonly
+                referred to as the non-custodial or non-residential parent — may
+                not make major decisions for their children, but they do have the
+                right to obtain copies of medical, school, and daycare records. A
+                non-residential parent may also attend all school functions to
+                which parents are invited.
+              </p>
+            </div>
             <div className="grid md:grid-cols-2 gap-6 mb-10">
               <div className="card-bordered hover:shadow-md transition-shadow duration-200">
                 <div className="flex items-center gap-3 mb-4">
@@ -474,6 +496,173 @@ const Custody = () => {
           </div>
         </section>
 
+        {/* Guardian Ad Litem */}
+        <section className="section-padding bg-secondary">
+          <div
+            ref={galAnim.ref}
+            className={`container max-w-4xl ${galAnim.isVisible ? "scroll-visible" : "scroll-hidden"}`}
+          >
+            <h2 className="heading-section mb-4">
+              Guardian Ad Litem (GAL)
+            </h2>
+            <p className="text-body mb-10">
+              In some instances — whether during a divorce, initial custody
+              proceeding, or a post-decree modification — a Guardian ad Litem may
+              be appointed by the court on its own or after a request by either
+              party. A Guardian ad Litem is often a licensed attorney, though some
+              Ohio counties allow non-attorneys to serve in this role.
+            </p>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="card-bordered">
+                <div className="flex items-center gap-3 mb-3">
+                  <div
+                    className="shrink-0 w-10 h-10 rounded-full flex items-center justify-center"
+                    style={{ backgroundColor: "hsla(152, 45%, 38%, 0.1)" }}
+                  >
+                    <Scale
+                      className="w-5 h-5"
+                      style={{ color: "hsl(var(--green-accent))" }}
+                    />
+                  </div>
+                  <h3 className="heading-subsection text-lg">What a GAL Does</h3>
+                </div>
+                <p className="text-body text-base">
+                  The Guardian ad Litem conducts a thorough investigation into the
+                  circumstances of the case. This typically includes interviewing
+                  both parents, the child, teachers, doctors, and other relevant
+                  individuals. The GAL then files a written recommendation with the
+                  court regarding custody and parenting time — a recommendation that
+                  carries significant weight in the judge's final decision.
+                </p>
+              </div>
+              <div className="card-bordered">
+                <div className="flex items-center gap-3 mb-3">
+                  <div
+                    className="shrink-0 w-10 h-10 rounded-full flex items-center justify-center"
+                    style={{ backgroundColor: "hsla(152, 45%, 38%, 0.1)" }}
+                  >
+                    <Gavel
+                      className="w-5 h-5"
+                      style={{ color: "hsl(var(--green-accent))" }}
+                    />
+                  </div>
+                  <h3 className="heading-subsection text-lg">When a GAL Is Appointed</h3>
+                </div>
+                <p className="text-body text-base">
+                  A GAL is typically appointed in cases involving allegations of
+                  abuse or neglect, high-conflict custody disputes, situations where
+                  the child's safety may be at risk, or when neither parent appears
+                  to be adequately representing the child's interests. Either party
+                  may request a GAL, or the court may appoint one on its own motion.
+                </p>
+              </div>
+              <div className="card-bordered">
+                <div className="flex items-center gap-3 mb-3">
+                  <div
+                    className="shrink-0 w-10 h-10 rounded-full flex items-center justify-center"
+                    style={{ backgroundColor: "hsla(152, 45%, 38%, 0.1)" }}
+                  >
+                    <FileText
+                      className="w-5 h-5"
+                      style={{ color: "hsl(var(--green-accent))" }}
+                    />
+                  </div>
+                  <h3 className="heading-subsection text-lg">The Cost of a GAL</h3>
+                </div>
+                <p className="text-body text-base">
+                  While a Guardian ad Litem does represent an added cost to the
+                  proceedings, they can also be an invaluable resource. A GAL helps
+                  resolve conflicts — large and small — throughout the case, which
+                  can actually reduce the amount of in-court litigation and
+                  ultimately lower overall costs for both parties.
+                </p>
+              </div>
+              <div className="card-bordered">
+                <div className="flex items-center gap-3 mb-3">
+                  <div
+                    className="shrink-0 w-10 h-10 rounded-full flex items-center justify-center"
+                    style={{ backgroundColor: "hsla(152, 45%, 38%, 0.1)" }}
+                  >
+                    <Shield
+                      className="w-5 h-5"
+                      style={{ color: "hsl(var(--green-accent))" }}
+                    />
+                  </div>
+                  <h3 className="heading-subsection text-lg">Impact on Your Case</h3>
+                </div>
+                <p className="text-body text-base">
+                  The GAL's written report and recommendation to the court is not
+                  binding, but judges give it substantial weight. Understanding the
+                  GAL's role and cooperating fully with their investigation is
+                  critical. Our attorneys prepare clients thoroughly for GAL
+                  interviews and work to ensure your relationship with your children
+                  is accurately represented throughout the process.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Parenting Time, Visitation, and Companionship Time */}
+        <section className="section-padding bg-card">
+          <div
+            ref={parentingTimeAnim.ref}
+            className={`container max-w-4xl ${parentingTimeAnim.isVisible ? "scroll-visible" : "scroll-hidden"}`}
+          >
+            <h2 className="heading-section mb-10">
+              Parenting Time, Visitation, and Companionship Time
+            </h2>
+            <div className="grid gap-6">
+              <div className="card-bordered">
+                <h3 className="heading-subsection text-xl mb-3">
+                  Parenting Time
+                </h3>
+                <p className="text-body text-lg">
+                  Parenting time refers to court-awarded time that a parent
+                  spends with their children. When determining a parenting time
+                  schedule, the court refers to the best interest factors under
+                  Ohio Revised Code Section 3109.04(F)(1), including the wishes
+                  of the parents, the mental and physical health of all parties,
+                  and whether the child support obligor is current on payments.
+                  Parenting time schedules vary widely based on the circumstances
+                  of each family.
+                </p>
+              </div>
+
+              <div className="card-bordered">
+                <h3 className="heading-subsection text-xl mb-3">
+                  Supervised Parenting Time
+                </h3>
+                <p className="text-body text-lg">
+                  In some cases, significant concerns arise about the parenting
+                  abilities of one parent — such as substance abuse, domestic
+                  violence, or mental health issues. When the court determines
+                  that unsupervised contact may pose a risk to the child, it may
+                  order supervised parenting time. This means visits occur in the
+                  presence of a designated third party or at an approved
+                  facility. Supervised parenting time is intended to protect the
+                  child while preserving the parent-child relationship.
+                </p>
+              </div>
+
+              <div className="card-bordered">
+                <h3 className="heading-subsection text-xl mb-3">
+                  Companionship Time
+                </h3>
+                <p className="text-body text-lg">
+                  Companionship time refers to the time a non-parent — such as a
+                  grandparent or other relative — is granted with a child by
+                  court order. Ohio law recognizes that maintaining these
+                  relationships can serve the child's best interests.
+                  Companionship time rights are governed by separate statutory
+                  provisions and require meeting specific legal standards before
+                  the court will intervene.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* How Courts Decide */}
         <section className="section-padding bg-navy">
           <div
@@ -535,8 +724,8 @@ const Custody = () => {
         {/* Full-Bleed Edge-to-Edge */}
         <section>
           <img
-            src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1600&q=80"
-            alt="Peaceful nature scene"
+            src="https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=1600&q=80"
+            alt="Parent and child together"
             className="w-full h-64 md:h-96 object-cover"
             loading="lazy"
           />
@@ -549,15 +738,15 @@ const Custody = () => {
             className={`container max-w-4xl ${modAnim.isVisible ? "scroll-visible" : "scroll-hidden"}`}
           >
             <h2 className="heading-section mb-6">
-              Modifying a Custody Order
+              Modifying Custody or Parenting Time
             </h2>
             <div className="space-y-6 text-body">
               <p>
-                Life changes, and sometimes custody orders need to change too.
-                Ohio courts allow modifications when circumstances have
-                significantly changed since the original order was issued.
-                Custody modifications are governed by{" "}
-                <a href="https://codes.ohio.gov/ohio-revised-code/section-3109.04" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Ohio Revised Code Section 3109.04(E)</a>.
+                Life changes — and sometimes court orders need to change with
+                it. It is important to understand that modification requests are
+                not always about changing custody itself. In many cases, a parent
+                seeks only to modify their parenting time or visitation schedule,
+                which is a separate and distinct process from modifying custody.
               </p>
               <div className="grid sm:grid-cols-3 gap-4">
                 <div className="card-bordered text-center">
@@ -603,6 +792,38 @@ const Custody = () => {
                   <p className="text-body-sm text-base">
                     The judge evaluates whether the proposed change serves the
                     child's best interest.
+                  </p>
+                </div>
+              </div>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="card-bordered">
+                  <h3 className="heading-subsection text-xl mb-3">
+                    Modifying Custody
+                  </h3>
+                  <p className="text-body text-lg">
+                    To modify custody in Ohio, the requesting parent must
+                    demonstrate a substantial change in circumstances of the
+                    child or either parent since the original order was issued.
+                    The court then determines whether the proposed change is in
+                    the child's best interest. Common grounds include
+                    relocation, remarriage, changes in a parent's living
+                    situation, or documented safety concerns. This is a higher
+                    legal standard than modifying parenting time alone.
+                  </p>
+                </div>
+                <div className="card-bordered">
+                  <h3 className="heading-subsection text-xl mb-3">
+                    Modifying Parenting Time
+                  </h3>
+                  <p className="text-body text-lg">
+                    A parent may seek to modify their parenting time or
+                    visitation schedule without seeking a full change in
+                    custody. In these cases, the court applies the best interest
+                    standard under Ohio Revised Code Section 3109.04(F)(1) —
+                    without necessarily requiring proof of a substantial change
+                    in circumstances. Even if both parents informally agree to a
+                    new schedule, that agreement is not legally binding unless it
+                    is incorporated into a new court order.
                   </p>
                 </div>
               </div>
