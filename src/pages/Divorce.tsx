@@ -491,52 +491,54 @@ const Divorce = () => {
                 </div>
               </div>
 
-              <div className="card-bordered transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-accent">
-                <div className="flex items-center gap-3 mb-4">
-                  <div
-                    className="shrink-0 w-12 h-12 rounded-full flex items-center justify-center"
-                    style={{
-                      backgroundColor: "hsla(152, 45%, 38%, 0.1)",
-                    }}
-                  >
-                    <Scale
-                      className="w-6 h-6"
-                      style={{ color: "hsl(var(--green-accent))" }}
-                    />
+              <Link to="/dissolution" className="block">
+                <div className="card-bordered transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-accent">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div
+                      className="shrink-0 w-12 h-12 rounded-full flex items-center justify-center"
+                      style={{
+                        backgroundColor: "hsla(152, 45%, 38%, 0.1)",
+                      }}
+                    >
+                      <Scale
+                        className="w-6 h-6"
+                        style={{ color: "hsl(var(--green-accent))" }}
+                      />
+                    </div>
+                    <h3 className="heading-subsection text-xl">
+                      Dissolution
+                    </h3>
                   </div>
-                  <h3 className="heading-subsection text-xl">
-                    Dissolution
-                  </h3>
+                  <p className="text-body text-lg mb-4">
+                    A dissolution is a joint filing. Both spouses must fully agree
+                    on all terms before filing, including property division,
+                    support, and parenting arrangements if children are involved.
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-start gap-2 text-body text-base">
+                      <CheckCircle2
+                        className="w-4 h-4 shrink-0 mt-0.5"
+                        style={{ color: "hsl(var(--green-accent))" }}
+                      />
+                      Both spouses file together
+                    </div>
+                    <div className="flex items-start gap-2 text-body text-base">
+                      <CheckCircle2
+                        className="w-4 h-4 shrink-0 mt-0.5"
+                        style={{ color: "hsl(var(--green-accent))" }}
+                      />
+                      Full agreement is required in advance
+                    </div>
+                    <div className="flex items-start gap-2 text-body text-base">
+                      <CheckCircle2
+                        className="w-4 h-4 shrink-0 mt-0.5"
+                        style={{ color: "hsl(var(--green-accent))" }}
+                      />
+                      Often more efficient and less adversarial
+                    </div>
+                  </div>
                 </div>
-                <p className="text-body text-lg mb-4">
-                  A dissolution is a joint filing. Both spouses must fully agree
-                  on all terms before filing, including property division,
-                  support, and parenting arrangements if children are involved.
-                </p>
-                <div className="space-y-2">
-                  <div className="flex items-start gap-2 text-body text-base">
-                    <CheckCircle2
-                      className="w-4 h-4 shrink-0 mt-0.5"
-                      style={{ color: "hsl(var(--green-accent))" }}
-                    />
-                    Both spouses file together
-                  </div>
-                  <div className="flex items-start gap-2 text-body text-base">
-                    <CheckCircle2
-                      className="w-4 h-4 shrink-0 mt-0.5"
-                      style={{ color: "hsl(var(--green-accent))" }}
-                    />
-                    Full agreement is required in advance
-                  </div>
-                  <div className="flex items-start gap-2 text-body text-base">
-                    <CheckCircle2
-                      className="w-4 h-4 shrink-0 mt-0.5"
-                      style={{ color: "hsl(var(--green-accent))" }}
-                    />
-                    Often more efficient and less adversarial
-                  </div>
-                </div>
-              </div>
+              </Link>
             </div>
 
             <div
@@ -1026,7 +1028,7 @@ const Divorce = () => {
               , the court allocates parental rights and responsibilities based
               on the child's best interests.
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-3">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-3">
               <Link
                 to="/custody"
                 className="block py-3 px-4 text-xs md:text-sm font-bold tracking-widest uppercase text-center transition-all duration-200 rounded hover:opacity-80"
@@ -1066,6 +1068,26 @@ const Divorce = () => {
                 }}
               >
                 Property & Assets
+              </Link>
+              <Link
+                to="/high-asset-divorce"
+                className="block py-3 px-4 text-xs md:text-sm font-bold tracking-widest uppercase text-center transition-all duration-200 rounded hover:opacity-80"
+                style={{
+                  backgroundColor: "hsl(var(--secondary))",
+                  color: "hsl(var(--primary))",
+                }}
+              >
+                High Asset Divorce
+              </Link>
+              <Link
+                to="/dissolution"
+                className="block py-3 px-4 text-xs md:text-sm font-bold tracking-widest uppercase text-center transition-all duration-200 rounded hover:opacity-80"
+                style={{
+                  backgroundColor: "hsl(var(--secondary))",
+                  color: "hsl(var(--primary))",
+                }}
+              >
+                Dissolution
               </Link>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
