@@ -365,6 +365,47 @@ const PrenuptialAgreement = () => {
                 </div>
               </div>
             </div>
+
+            <div className="card-elevated mt-8">
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-1" />
+                <div>
+                  <h4 className="heading-subsection text-lg mb-4">
+                    Three Requirements for a Valid Prenuptial Agreement in Ohio
+                  </h4>
+                  <div className="space-y-4 text-body text-base">
+                    <p>
+                      <strong>1.</strong> Voluntary execution — The agreement
+                      must be entered into freely and voluntarily by both
+                      parties, without fraud, duress, coercion, or undue
+                      influence of any kind.
+                    </p>
+                    <p>
+                      <strong>2.</strong> Full financial disclosure — Both
+                      parties must provide full and accurate disclosure of their
+                      assets, liabilities, income, and financial obligations
+                      before signing. Concealing or misrepresenting financial
+                      information can invalidate the entire agreement.
+                    </p>
+                    <p>
+                      <strong>3.</strong> Fairness and no encouragement of
+                      divorce — The terms must be fair to both parties and must
+                      not be so one-sided as to create extreme
+                      unconscionability. Additionally, the agreement cannot
+                      contain provisions that actively encourage or incentivize
+                      divorce.
+                    </p>
+                  </div>
+                  <p className="text-body-sm italic mt-4">
+                    If any of these requirements are not met, an Ohio court may
+                    refuse to enforce the agreement. Working with an experienced
+                    family law attorney ensures your prenuptial agreement is
+                    drafted to meet all legal standards and will hold up if
+                    challenged.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 

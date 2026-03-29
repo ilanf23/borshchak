@@ -345,8 +345,8 @@ const Annulment = () => {
                 </p>
               </div>
               <img
-                src="https://images.unsplash.com/photo-1450101215322-bf5cd27642fc?w=1200&q=80"
-                alt="Open book pages representing legal knowledge"
+                src="https://images.unsplash.com/photo-1521790945508-bf2a36316344?w=1200&q=80"
+                alt="Attorney reviewing legal documents"
                 className="w-full h-72 md:h-96 object-cover rounded-lg"
                 loading="lazy"
               />
@@ -372,7 +372,7 @@ const Annulment = () => {
               {differences.map((diff) => (
                 <div key={diff.aspect} className="grid md:grid-cols-3 gap-4 p-6 rounded-lg" style={{ backgroundColor: "hsla(40, 30%, 98%, 0.08)" }}>
                   <div>
-                    <h3 className="text-xl font-serif font-medium mb-2" style={{ color: "hsl(var(--green-accent))" }}>
+                    <h3 className="text-xl font-serif font-medium mb-2" style={{ color: "hsl(var(--primary-foreground))" }}>
                       {diff.aspect}
                     </h3>
                   </div>
@@ -508,8 +508,8 @@ const Annulment = () => {
         <section className="relative section-padding overflow-hidden">
           <div className="absolute inset-0">
             <img
-              src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=1600&q=80"
-              alt=""
+              src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=1600&q=80"
+              alt="Moving forward after annulment"
               aria-hidden="true"
               className="w-full h-full object-cover"
             />

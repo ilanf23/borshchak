@@ -89,7 +89,7 @@ const modificationVsEnforcement = [
 
 const quizQuestions = [
   {
-    question: "When can you file for a post-decree modification in Ohio?",
+    question: "When can you seek to modify custody or support in a post-decree proceeding in Ohio?",
     options: [
       "Any time you want a change",
       "Only within 1 year of the divorce",
@@ -97,7 +97,7 @@ const quizQuestions = [
       "Only if both parties agree",
     ],
     correctIndex: 2,
-    explanation: "Ohio courts require a substantial change in circumstances to modify a divorce decree. Simply wanting a different outcome is not sufficient grounds.",
+    explanation: "Ohio courts require a substantial change in circumstances to modify custody or support after a divorce decree. However, it is important to understand that property division generally cannot be modified after a decree is final — unless the court specifically retained jurisdiction over that issue, or both parties agree to a change. Custody modifications require a substantial change in circumstances plus a best interest finding. Parenting time alone requires only a best interest determination.",
   },
   {
     question: "What is the difference between modification and enforcement?",
@@ -130,7 +130,7 @@ const faqItems = [
   },
   {
     question: "When can I modify a court order?",
-    answer: "You can request a modification when there has been a substantial change in circumstances since the original order was issued. Examples include job loss, relocation, significant income changes, remarriage, or changes in the children's needs.",
+    answer: "It depends on what type of order you are seeking to modify. For custody modifications — including modifications to a Shared Parenting Plan — Ohio courts require a substantial change in circumstances of the child or either parent since the original order was issued. You may also seek termination of a Shared Parenting Plan entirely, which the court can grant if it is in the child's best interest. For parenting time modifications alone, the court applies only the best interest standard — a substantial change in circumstances is not required. For child support, modification is available when the calculated amount differs by at least 10% from the current order. Property division generally cannot be modified after a final decree unless both parties agree or the court specifically retained jurisdiction.",
   },
   {
     question: "How do I enforce a court order my ex isn't following?",
@@ -347,7 +347,7 @@ const PostDecreeMatters = () => {
               {modificationVsEnforcement.map((item) => (
                 <div key={item.aspect} className="grid md:grid-cols-3 gap-4 p-6 rounded-lg" style={{ backgroundColor: "hsla(40, 30%, 98%, 0.08)" }}>
                   <div>
-                    <h3 className="text-xl font-serif font-medium mb-2" style={{ color: "hsl(var(--green-accent))" }}>
+                    <h3 className="text-xl font-serif font-medium mb-2" style={{ color: "hsl(var(--primary-foreground))" }}>
                       {item.aspect}
                     </h3>
                   </div>

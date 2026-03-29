@@ -457,8 +457,45 @@ const SpousalSupport = () => {
                   Common reasons for modification include a significant change
                   in either party's income or the receiving party's
                   cohabitation with a new partner. If the receiving spouse or
-                  either party dies, payments stop automatically.
+                  either spouse dies, payments stop automatically.
                 </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* How Spousal Support Is Paid */}
+        <section className="section-padding bg-secondary">
+          <div className="container max-w-4xl">
+            <div className="card-elevated">
+              <div className="flex items-start gap-3">
+                <DollarSign className="w-5 h-5 text-primary shrink-0 mt-1" />
+                <div>
+                  <h3 className="heading-subsection text-lg mb-2">
+                    How Spousal Support Is Paid in Ohio
+                  </h3>
+                  <div className="space-y-4 text-body text-base">
+                    <p>
+                      In Ohio, spousal support is typically paid through a wage
+                      withholding order, similar to how child support is
+                      collected. Payments are processed through the Ohio Child
+                      Support Payment Central (CSPC), which acts as a
+                      clearinghouse — the paying spouse's employer withholds the
+                      amount from their paycheck and forwards it to CSPC, which
+                      then disburses it to the receiving spouse. This creates an
+                      official payment record for both parties.
+                    </p>
+                    <p>
+                      In some cases, particularly where both parties agree,
+                      support may be paid directly between spouses without going
+                      through CSPC. However, direct payment arrangements carry
+                      more risk since there is no automatic record of compliance.
+                      An attorney can advise you on which arrangement makes sense
+                      for your situation and ensure the payment terms are clearly
+                      documented in your court order.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -491,7 +528,7 @@ const SpousalSupport = () => {
             >
               <h3
                 className="text-lg font-serif font-medium mb-4"
-                style={{ color: "hsl(var(--green-accent))" }}
+                style={{ color: "hsl(var(--primary-foreground))" }}
               >
                 The IRS Definition of Spousal Support Excludes:
               </h3>
@@ -500,7 +537,7 @@ const SpousalSupport = () => {
                   <div key={item} className="flex items-start gap-2">
                     <DollarSign
                       className="w-4 h-4 shrink-0 mt-1"
-                      style={{ color: "hsl(var(--green-accent))" }}
+                      style={{ color: "hsl(var(--primary-foreground))" }}
                     />
                     <span
                       className="text-base"

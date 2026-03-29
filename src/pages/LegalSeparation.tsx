@@ -28,7 +28,7 @@ import { cn } from "@/lib/utils";
 
 const separationItems = [
   {
-    title: "Alimony",
+    title: "Spousal Support",
     icon: DollarSign,
     description:
       "The court can issue orders regarding spousal support payments, ensuring the lower-earning spouse maintains financial stability while the marriage remains legally intact. Ohio courts consider factors such as the duration of the marriage, each spouse's income and earning ability, and the standard of living established during the marriage. Unlike divorce, a legal separation preserves the marital relationship, which can affect how support is calculated and modified over time. An experienced attorney can help you understand what level of support is reasonable and advocate for an arrangement that protects your financial future.",
@@ -323,6 +323,12 @@ const LegalSeparation = () => {
                 Importantly, under{" "}
                 <a href="https://codes.ohio.gov/ohio-revised-code/section-3105.17" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">ORC Section 3105.17(B)</a>, either spouse retains the right to file for divorce after a legal separation has been granted, preserving flexibility if circumstances change.
               </p>
+              <p>
+                Importantly, Ohio law does not require that spouses actually be
+                living separately and apart at the time of filing. Either spouse
+                may file for legal separation regardless of the current living
+                arrangement.
+              </p>
             </div>
           </div>
         </section>
@@ -378,7 +384,7 @@ const LegalSeparation = () => {
           className="relative min-h-[300px] md:min-h-[400px] flex items-center justify-center bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1500534314263-a834e29a41e7?w=1600&q=80')",
+              "url('https://images.unsplash.com/photo-1511895426328-dc8714191011?w=1600&q=80')",
           }}
         >
           <div
