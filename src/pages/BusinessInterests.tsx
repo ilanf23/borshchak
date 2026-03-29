@@ -82,6 +82,18 @@ const valuationFactors = [
         <a href="https://codes.ohio.gov/ohio-revised-code/section-3105.171" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Ohio Revised Code Section 3105.171(A)(3)</a>,
         marital property includes business interests and their associated goodwill. Ohio courts distinguish between enterprise goodwill, which belongs to the business, and personal goodwill, which is tied to the individual owner. This distinction is critical because only enterprise goodwill is typically divisible as marital property in an Ohio divorce.</>),
   },
+  {
+    title: "History of the Business",
+    icon: FileText,
+    description:
+      "The history of how the business was founded, grown, and operated is a critical valuation factor. Courts and experts examine how long the business has been operating, its trajectory over time, major milestones or setbacks, and whether its current value reflects a temporary condition or an established trend. A business with a long, stable history of profitability is valued differently than one in its early growth stages.",
+  },
+  {
+    title: "Control and Ownership Structure",
+    icon: Users,
+    description:
+      "Who controls the business — and how much control they have — directly affects its value. A minority ownership interest, for example, is typically discounted because the minority owner cannot unilaterally make business decisions. Conversely, a controlling interest commands a premium. The operating agreement, shareholder agreements, and voting rights all factor into how control is assessed and valued during divorce proceedings.",
+  },
 ];
 
 const quizQuestions = [
@@ -108,7 +120,7 @@ const quizQuestions = [
     ],
     correctIndex: 1,
     explanation:
-      "If you or your spouse owned the business before the marriage, it is generally considered separate property and does not have to be divided. However, any increase in value during the marriage may be subject to division.",
+      "This is more nuanced than a simple yes or no. A business owned before marriage is generally considered separate property — but it must still be formally allocated to its owner as part of the divorce proceedings. Additionally, if the business appreciated in value during the marriage due to either spouse's efforts or marital funds (known as active appreciation), that increase may be considered marital property and subject to division. Proving the business remains entirely separate property requires tracing and, in many cases, expert analysis.",
   },
   {
     question:
@@ -218,7 +230,9 @@ const ExpandableCard = ({
 
 const BusinessInterests = () => {
   const { openConsultation } = useConsultation();
+  const expertsAnim = useScrollAnimation();
   const scenariosAnim = useScrollAnimation();
+  const appreciationAnim = useScrollAnimation();
   const factorsAnim = useScrollAnimation();
   const quizAnim = useScrollAnimation();
   const faqAnim = useScrollAnimation();
@@ -293,6 +307,128 @@ const BusinessInterests = () => {
                 can guide you through the business valuation process and help
                 protect your interests.
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Expert Professionals */}
+        <section className="section-padding bg-navy">
+          <div
+            ref={expertsAnim.ref}
+            className={`container max-w-4xl ${expertsAnim.isVisible ? "scroll-visible" : "scroll-hidden"}`}
+          >
+            <h2
+              className="heading-section mb-4"
+              style={{ color: "hsl(var(--primary-foreground))" }}
+            >
+              Our Network of Expert Professionals
+            </h2>
+            <p
+              className="text-lg leading-relaxed mb-10"
+              style={{ color: "hsla(40, 30%, 98%, 0.85)" }}
+            >
+              Business divorce cases involving significant assets, complex
+              ownership structures, or disputed valuations rarely succeed on legal
+              expertise alone. At Borshchak Law Group, we build a team around your
+              case — drawing on a trusted network of outside professionals who
+              provide the analysis, data, and expert testimony needed to evaluate
+              risk, calculate exposure, and strategize the best path forward.
+            </p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div
+                className="rounded-lg p-6"
+                style={{ backgroundColor: "hsla(40, 30%, 98%, 0.08)" }}
+              >
+                <h3
+                  className="text-xl font-serif font-semibold mb-2"
+                  style={{ color: "hsl(var(--primary-foreground))" }}
+                >
+                  Forensic Accountants
+                </h3>
+                <p style={{ color: "hsla(40, 30%, 98%, 0.75)" }}>
+                  Uncovering hidden income, tracing assets, and analyzing complex
+                  financial records to build a court-ready picture of the
+                  business's true financial position.
+                </p>
+              </div>
+              <div
+                className="rounded-lg p-6"
+                style={{ backgroundColor: "hsla(40, 30%, 98%, 0.08)" }}
+              >
+                <h3
+                  className="text-xl font-serif font-semibold mb-2"
+                  style={{ color: "hsl(var(--primary-foreground))" }}
+                >
+                  CPAs &amp; Tax Experts
+                </h3>
+                <p style={{ color: "hsla(40, 30%, 98%, 0.75)" }}>
+                  Evaluating the tax consequences of business division, buyout
+                  structures, deferred compensation, and settlement terms.
+                </p>
+              </div>
+              <div
+                className="rounded-lg p-6"
+                style={{ backgroundColor: "hsla(40, 30%, 98%, 0.08)" }}
+              >
+                <h3
+                  className="text-xl font-serif font-semibold mb-2"
+                  style={{ color: "hsl(var(--primary-foreground))" }}
+                >
+                  Business Valuators
+                </h3>
+                <p style={{ color: "hsla(40, 30%, 98%, 0.75)" }}>
+                  Providing defensible, methodology-based valuations of
+                  businesses, partnerships, professional practices, and business
+                  interests of all sizes.
+                </p>
+              </div>
+              <div
+                className="rounded-lg p-6"
+                style={{ backgroundColor: "hsla(40, 30%, 98%, 0.08)" }}
+              >
+                <h3
+                  className="text-xl font-serif font-semibold mb-2"
+                  style={{ color: "hsl(var(--primary-foreground))" }}
+                >
+                  Real Estate Agents &amp; Appraisers
+                </h3>
+                <p style={{ color: "hsla(40, 30%, 98%, 0.75)" }}>
+                  Accurately valuing real property interests held by or within the
+                  business, including commercial holdings and investment
+                  properties.
+                </p>
+              </div>
+              <div
+                className="rounded-lg p-6"
+                style={{ backgroundColor: "hsla(40, 30%, 98%, 0.08)" }}
+              >
+                <h3
+                  className="text-xl font-serif font-semibold mb-2"
+                  style={{ color: "hsl(var(--primary-foreground))" }}
+                >
+                  Forensic Examiners &amp; Former FBI Agents
+                </h3>
+                <p style={{ color: "hsla(40, 30%, 98%, 0.75)" }}>
+                  Investigating financial fraud, asset concealment, and complex
+                  schemes in high-stakes business divorce matters.
+                </p>
+              </div>
+              <div
+                className="rounded-lg p-6"
+                style={{ backgroundColor: "hsla(40, 30%, 98%, 0.08)" }}
+              >
+                <h3
+                  className="text-xl font-serif font-semibold mb-2"
+                  style={{ color: "hsl(var(--primary-foreground))" }}
+                >
+                  Psychologists &amp; Psychiatrists
+                </h3>
+                <p style={{ color: "hsla(40, 30%, 98%, 0.75)" }}>
+                  Providing expert insight in cases where personal conduct,
+                  capacity, or family dynamics intersect with business ownership
+                  and control.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -380,6 +516,101 @@ const BusinessInterests = () => {
                   {item.description}
                 </ExpandableCard>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Separate Property vs. Marital Property */}
+        <section className="section-padding bg-card">
+          <div
+            ref={appreciationAnim.ref}
+            className={`container max-w-4xl ${appreciationAnim.isVisible ? "scroll-visible" : "scroll-hidden"}`}
+          >
+            <h2 className="heading-section mb-6">
+              Separate Property vs. Marital Property: Active and Passive
+              Appreciation
+            </h2>
+            <p className="text-body text-lg mb-10">
+              One of the most misunderstood issues in business divorce cases is
+              the distinction between separate and marital property — and how
+              appreciation of separate property can create a marital interest.
+              Understanding whether appreciation is 'active' or 'passive' can
+              significantly affect how a business or asset is divided.
+            </p>
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <div className="card-bordered">
+                <div className="flex items-center gap-3 mb-4">
+                  <div
+                    className="shrink-0 w-12 h-12 rounded-full flex items-center justify-center"
+                    style={{ backgroundColor: "hsl(var(--secondary))" }}
+                  >
+                    <TrendingUp className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="heading-subsection text-xl">
+                    Passive Appreciation
+                  </h3>
+                </div>
+                <p className="text-body text-lg">
+                  Passive appreciation occurs when the value of separate property
+                  increases due to market forces or economic conditions — not
+                  because of any effort by either spouse. For example, if one
+                  spouse owned a business before marriage and its value increased
+                  simply due to favorable market conditions, that increase may
+                  remain separate property. The key factor is that neither
+                  spouse's contributions drove the growth.
+                </p>
+              </div>
+              <div className="card-bordered">
+                <div className="flex items-center gap-3 mb-4">
+                  <div
+                    className="shrink-0 w-12 h-12 rounded-full flex items-center justify-center"
+                    style={{ backgroundColor: "hsl(var(--secondary))" }}
+                  >
+                    <Building2 className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="heading-subsection text-xl">
+                    Active Appreciation
+                  </h3>
+                </div>
+                <p className="text-body text-lg">
+                  Active appreciation occurs when the value of separate property
+                  increases due to the efforts, contributions, or involvement of
+                  either spouse during the marriage. For example, if one spouse
+                  owned a business before marriage but both spouses contributed to
+                  its growth — through labor, management decisions, or marital
+                  funds — that appreciation may be considered marital property and
+                  subject to division. This is a critical distinction that
+                  requires expert analysis.
+                </p>
+              </div>
+            </div>
+            <div className="card-elevated">
+              <div className="flex items-start gap-3">
+                <Scale className="w-5 h-5 text-primary shrink-0 mt-1" />
+                <div>
+                  <h4 className="heading-subsection text-lg mb-2">
+                    Why This Matters for Your Case
+                  </h4>
+                  <p className="text-body text-base">
+                    Proving or disproving active appreciation requires detailed
+                    financial analysis, historical records, and often expert
+                    testimony. Our attorneys work closely with forensic
+                    accountants and business valuators to trace the source of any
+                    appreciation — protecting your separate property interests or
+                    establishing a marital claim where one exists. Under{" "}
+                    <a
+                      href="https://codes.ohio.gov/ohio-revised-code/section-3105.171"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline hover:opacity-80"
+                    >
+                      Ohio Revised Code Section 3105.171
+                    </a>
+                    , the burden is on the party asserting separate property to
+                    trace it clearly.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
