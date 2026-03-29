@@ -45,15 +45,21 @@ const requiredDocuments = [
   "Parenting proceeding affidavit",
   "Shared parenting plan",
   "Health insurance affidavit",
+  "Confidential disclosure form",
+  "Certificate of assignment",
+  "Waiver of service",
+  "Decree of dissolution",
+  "Acknowledgment of legal representation",
   "Judgment entry",
 ];
 
 const separationAgreementItems = [
-  { label: "Alimony", icon: DollarSign },
+  { label: "Spousal Support", icon: DollarSign },
   { label: "Child Support", icon: Heart },
-  { label: "Property Division", icon: Home },
-  { label: "Child Custody", icon: Users },
-  { label: "Debt Allocation", icon: CreditCard },
+  { label: "Division of Marital & Separate Property", icon: Home },
+  { label: "Division of Marital Debt", icon: CreditCard },
+  { label: "Allocation of Parental Rights", icon: Users },
+  { label: "Parenting Time", icon: Baby },
 ];
 
 const differences = [
@@ -69,7 +75,7 @@ const differences = [
   },
   {
     aspect: "Expenses",
-    dissolution: "Allows a joint petition, meaning you can split filing charges ($150 to $400 depending on county).",
+    dissolution: "Does not require separate filings. The filing fee ($150 to $400 depending on county) may be split between both parties if they agree to do so — but this is not required.",
     divorce: "You bear the filing cost alone. The process is more complex, so you often require a lawyer.",
   },
 ];
@@ -106,7 +112,7 @@ const quizQuestions = [
       "The other spouse receives a default judgment",
     ],
     correctIndex: 2,
-    explanation: "If the court cannot hear the case within 90 days due to a party's absence, it must dismiss or convert the case to a divorce, which costs more time and money.",
+    explanation: "If a spouse does not attend, the hearing may be continued to a later date depending on the circumstances. However, if the court cannot hear the case within 90 days of filing, it must dismiss the case or convert it to a divorce — which typically costs more time and money.",
   },
 ];
 
@@ -298,7 +304,7 @@ const Dissolution = () => {
                 The first step is to obtain the standardized forms from the Ohio Judicial System. The Petition for Dissolution of Marriage and Waiver of Summons are the key documents. Confirm with the court clerk that you have all required forms.
               </p>
               <p>
-                Both spouses are considered "plaintiffs" in Ohio dissolution law. You can file with the Court of Common Pleas in the county where you or your spouse have been living for the past 90 days. Filing fees range from <strong>$150 to $400</strong> depending on the county, and you and your spouse can split the charges.
+                Both spouses are considered "petitioners" in Ohio dissolution law. You can file with the Court of Common Pleas in the county where you or your spouse have been living for the past 90 days. Filing fees range from <strong>$150 to $400</strong> depending on the county, and you and your spouse can split the charges.
               </p>
             </div>
 
@@ -315,6 +321,57 @@ const Dissolution = () => {
                     <span className="text-body text-base">{doc}</span>
                   </div>
                 ))}
+              </div>
+            </div>
+
+            {/* Access Court Forms by County */}
+            <h3 className="heading-subsection mt-10 mb-4">
+              Access Court Forms by County
+            </h3>
+            <p className="text-body mb-6">
+              The following county courts provide standardized dissolution forms
+              online. Your attorney can help you identify which forms apply to
+              your case and ensure they are completed correctly.
+            </p>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="card-bordered">
+                <h4 className="heading-subsection text-lg mb-2">
+                  Franklin County
+                </h4>
+                <p className="text-body text-base mb-1">
+                  Franklin County Court of Common Pleas, Domestic Relations and
+                  Juvenile Division
+                </p>
+                <p className="text-body text-sm mb-3">
+                  373 South High Street, 4th Floor, Columbus, Ohio 43215
+                </p>
+                <a
+                  href="https://drj.fccourts.org/Court-Services/Forms"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent underline hover:opacity-80"
+                >
+                  Access Franklin County Forms →
+                </a>
+              </div>
+              <div className="card-bordered">
+                <h4 className="heading-subsection text-lg mb-2">
+                  Delaware County
+                </h4>
+                <p className="text-body text-base mb-1">
+                  Delaware County Domestic Relations Court
+                </p>
+                <p className="text-body text-sm mb-3">
+                  117 N. Union St., 400 Level, Delaware, Ohio 43015
+                </p>
+                <a
+                  href="https://domestic.co.delaware.oh.us/forms/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent underline hover:opacity-80"
+                >
+                  Access Delaware County Forms →
+                </a>
               </div>
             </div>
           </div>
@@ -410,7 +467,7 @@ const Dissolution = () => {
               {differences.map((diff) => (
                 <div key={diff.aspect} className="grid md:grid-cols-3 gap-4 p-6 rounded-lg" style={{ backgroundColor: "hsla(40, 30%, 98%, 0.08)" }}>
                   <div>
-                    <h3 className="text-xl font-serif font-medium mb-2" style={{ color: "hsl(var(--green-accent))" }}>
+                    <h3 className="text-xl font-serif font-medium mb-2" style={{ color: "hsl(var(--primary-foreground))" }}>
                       {diff.aspect}
                     </h3>
                   </div>
@@ -448,6 +505,18 @@ const Dissolution = () => {
               </p>
               <p>
                 With our family law attorneys in Columbus, we walk with you from working out a separation agreement to ensuring you've met all the requirements and filed the petition. Contact us today for a no-cost consultation.
+              </p>
+              <p>
+                Perhaps most importantly, an attorney can strategically evaluate
+                what the agreement actually means for your future. Beyond
+                reviewing the terms, we assess the consequences of each
+                provision — the financial exposure, the restrictions, and the
+                long-term implications. When children are involved, this means
+                projecting what the agreement looks like not just today, but over
+                the next 3 to 10 years. Parenting time schedules, support
+                obligations, and decision-making rights all evolve as children
+                grow. An experienced dissolution attorney helps you see around
+                corners before you sign.
               </p>
             </div>
             <div className="mt-8">
