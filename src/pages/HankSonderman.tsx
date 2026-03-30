@@ -116,7 +116,7 @@ const HankSonderman = () => {
                     </div>
                     <div>
                       <h4 className="heading-subsection text-xl mb-1">Dedicated Family Law Attorney</h4>
-                      <p className="text-body text-lg">Family law is an inherently unpredictable field that requires patience, understanding, and dedication to the client's objectives. Hank is happy to work with individuals who exemplify those characteristics every day.</p>
+                      <p className="text-body text-lg">Family law is an inherently unpredictable field. No two cases are the same, and outcomes are never guaranteed. What Hank brings to every case is patience, genuine understanding, and an unwavering dedication to his client's objectives — from the first consultation through final resolution.</p>
                     </div>
                   </div>
 
@@ -126,7 +126,7 @@ const HankSonderman = () => {
                     </div>
                     <div>
                       <h4 className="heading-subsection text-xl mb-1">A Collaborative Partnership</h4>
-                      <p className="text-body text-lg">Hank and Dmitriy's friendship goes back to law school, where they were often asked to leave the library at late hours by the Capital Law School custodial staff. Today, they work together as a small, tight-knit firm operating as one collaborative brain trust.</p>
+                      <p className="text-body text-lg">Hank and Dmitriy's friendship goes back to law school, where they were often asked to leave the library at late hours by the Capital Law School custodial staff. Today, they work together as a small, tight-knit firm where every attorney is deeply invested in every client's outcome — sharing strategy, insight, and accountability at every stage of a case.</p>
                     </div>
                   </div>
 
