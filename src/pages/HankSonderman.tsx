@@ -1,4 +1,4 @@
-import { Award, GraduationCap, Briefcase, Heart, BookOpen, Scale, Users, MapPin, CheckCircle2, Handshake, Trophy } from "lucide-react";
+import { Award, GraduationCap, Briefcase, Heart, BookOpen, Scale, Users, MapPin, CheckCircle2, Handshake, Trophy, Star } from "lucide-react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -8,6 +8,7 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 const HankSonderman = () => {
   const videoAnim = useScrollAnimation();
   const tabsAnim = useScrollAnimation();
+  const reviewsAnim = useScrollAnimation();
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -191,6 +192,71 @@ const HankSonderman = () => {
                 </div>
               </TabsContent>
             </Tabs>
+          </div>
+        </section>
+
+        {/* Client Reviews */}
+        <section className="section-padding bg-secondary/30">
+          <div
+            ref={reviewsAnim.ref}
+            className={`container max-w-4xl ${reviewsAnim.isVisible ? "scroll-visible" : "scroll-hidden"}`}
+          >
+            <h2 className="heading-section text-center mb-10">
+              What Clients Say About Hank
+            </h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="card-bordered flex flex-col gap-3 p-6">
+                <div className="flex gap-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-body italic">
+                  "Hank was my attorney. He kept things simple and let me know
+                  realistic expectations. His rates were very reasonable. I would
+                  absolutely recommend him and this firm."
+                </p>
+                <p className="text-sm text-muted-foreground mt-1">
+                  — Verified Google Review
+                </p>
+              </div>
+
+              <div className="card-bordered flex flex-col gap-3 p-6">
+                <div className="flex gap-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-body italic">
+                  "Hank is the guy you want in your corner. He's thorough,
+                  communicative, creative, and truly is vested in you and your
+                  child as people, not as paychecks."
+                </p>
+                <p className="text-sm text-muted-foreground mt-1">
+                  — Verified Google Review
+                </p>
+              </div>
+
+              <div className="card-bordered flex flex-col gap-3 p-6">
+                <div className="flex gap-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-body italic">
+                  "Attorney Hank provided exceptional representation for my son.
+                  He fought for what was best for my granddaughter. We LOVE Hank
+                  Sonderman and HIGHLY recommend him."
+                </p>
+                <p className="text-sm text-muted-foreground mt-1">
+                  — Verified Google Review
+                </p>
+              </div>
+            </div>
+            <p className="text-sm text-muted-foreground text-center mt-6 italic">
+              Reviews sourced from Google. Live reviews will be implemented via
+              plugin.
+            </p>
           </div>
         </section>
 
