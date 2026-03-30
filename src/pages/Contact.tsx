@@ -19,12 +19,12 @@ const contactCards = [
     description: "Speak directly with our team",
   },
   {
-    href: "mailto:info@borshchaklawgroup.com",
+    href: "mailto:dmitriy@dlbcounsel.com",
     interactive: true,
     icon: Mail,
     title: "Email Us",
-    value: "info@borshchaklawgroup.com",
-    description: "We respond within one business day",
+    value: "dmitriy@dlbcounsel.com",
+    description: "We do our best to respond promptly to all inquiries.",
   },
   {
     href: undefined,
@@ -56,7 +56,7 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
-    alert("Thank you for contacting us. We will reach out within one business day.");
+    alert("Thank you for contacting us. We do our best to respond promptly to all inquiries.");
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
