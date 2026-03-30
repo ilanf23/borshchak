@@ -1,6 +1,7 @@
 import { Star, ExternalLink, Users, Scale, Heart } from "lucide-react";
 import { motion, useMotionValue, useTransform, animate, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AwardLogos from "@/components/home/AwardLogos";
@@ -40,6 +41,7 @@ const CountUpNumber = ({ value, decimals, suffix }: { value: number; decimals: n
 
 const Testimonials = () => {
   const { ref: videoRef, isVisible: videoVisible } = useScrollAnimation();
+  const pressAnim = useScrollAnimation();
 
   return (
     <div className="min-h-screen bg-background">
@@ -63,7 +65,7 @@ const Testimonials = () => {
             className="font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6"
             style={{ textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}
           >
-            Testimonials for Borshchak Law Group
+            We've Changed the Trajectory of Our Clients' Lives.
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -72,8 +74,9 @@ const Testimonials = () => {
             className="font-lora text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-8"
             style={{ textShadow: "0 1px 4px rgba(0,0,0,0.3)" }}
           >
-            Our clients' words mean everything to us. See how we've helped
-            families navigate difficult times with compassion and results.
+            Don't take our word for it. Hear directly from the families we've
+            represented — through some of the most difficult moments of their lives —
+            and the outcomes we helped them achieve.
           </motion.p>
           <motion.a
             initial={{ opacity: 0, y: 20 }}
@@ -151,41 +154,153 @@ const Testimonials = () => {
               Hear From Our Clients
             </h2>
             <p className="text-body text-center text-muted-foreground mb-10 max-w-2xl mx-auto">
-              Real stories from real clients who trusted Borshchak Law Group
+              Real stories from real families who trusted Borshchak Law Group
               during some of the most challenging moments of their lives.
             </p>
-            <div
-              className="aspect-video rounded-xl overflow-hidden shadow-xl border-2"
-              style={{ borderColor: "hsl(var(--green-accent))" }}
-            >
+            {/* TODO: Replace YouTube embed IDs with actual testimonial video IDs from Dmitriy */}
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="card-bordered">
+                <p className="text-body mb-4">
+                  After a high-conflict custody dispute, this client came to us
+                  feeling overwhelmed and uncertain about her future as a parent.
+                  Watch how we helped her protect her relationship with her
+                  children and reach an outcome that gave her family stability.
+                </p>
+                <div
+                  className="relative w-full rounded-xl overflow-hidden shadow-lg border-2"
+                  style={{ paddingBottom: "52%", borderColor: "hsl(var(--green-accent))" }}
+                >
+                  <iframe
+                    src="https://www.youtube.com/embed/AHfY54OdW2E"
+                    title="Client Testimonial - Custody Dispute"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="absolute inset-0 w-full h-full"
+                  />
+                </div>
+              </div>
+
+              <div className="card-bordered">
+                <p className="text-body mb-4">
+                  Facing a complex divorce with significant assets and business
+                  interests, this client needed a team that understood both the
+                  legal and financial dimensions of his case. Here's what working
+                  with Borshchak Law Group looked like from his perspective.
+                </p>
+                <div
+                  className="relative w-full rounded-xl overflow-hidden shadow-lg border-2"
+                  style={{ paddingBottom: "52%", borderColor: "hsl(var(--green-accent))" }}
+                >
+                  <iframe
+                    src="https://www.youtube.com/embed/AHfY54OdW2E"
+                    title="Client Testimonial - Complex Divorce"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="absolute inset-0 w-full h-full"
+                  />
+                </div>
+              </div>
+
+              <div className="card-bordered">
+                <p className="text-body mb-4">
+                  This client came to us after a difficult experience with a
+                  previous attorney. Our team stepped in, stabilized the case,
+                  and fought to get her the outcome she deserved. In her own
+                  words — what made the difference.
+                </p>
+                <div
+                  className="relative w-full rounded-xl overflow-hidden shadow-lg border-2"
+                  style={{ paddingBottom: "52%", borderColor: "hsl(var(--green-accent))" }}
+                >
+                  <iframe
+                    src="https://www.youtube.com/embed/AHfY54OdW2E"
+                    title="Client Testimonial - Case Recovery"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="absolute inset-0 w-full h-full"
+                  />
+                </div>
+              </div>
+
+              <div className="card-bordered">
+                <p className="text-body mb-4">
+                  A father's rights case that required aggressive advocacy and
+                  careful strategy. Watch how we protected this client's role in
+                  his children's lives and secured a parenting arrangement that
+                  worked for his family.
+                </p>
+                <div
+                  className="relative w-full rounded-xl overflow-hidden shadow-lg border-2"
+                  style={{ paddingBottom: "52%", borderColor: "hsl(var(--green-accent))" }}
+                >
+                  <iframe
+                    src="https://www.youtube.com/embed/AHfY54OdW2E"
+                    title="Client Testimonial - Father's Rights"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="absolute inset-0 w-full h-full"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Press / Media Appearance */}
+      <section className="section-padding bg-navy">
+        <div
+          ref={pressAnim.ref}
+          className={`container max-w-4xl ${pressAnim.isVisible ? "scroll-visible" : "scroll-hidden"}`}
+        >
+          <p
+            className="text-sm font-medium uppercase tracking-widest mb-3 text-center"
+            style={{ color: "hsl(var(--green-accent))" }}
+          >
+            As Seen On
+          </p>
+          <h2
+            className="heading-section mb-4 text-center"
+            style={{ color: "hsl(var(--primary-foreground))" }}
+          >
+            Borshchak Law Group in the Media
+          </h2>
+          <p
+            className="text-lg leading-relaxed text-center max-w-2xl mx-auto mb-10"
+            style={{ color: "hsla(40, 30%, 98%, 0.75)" }}
+          >
+            The following clip is a media appearance — not a client testimonial.
+            Dmitriy Borshchak was featured on Court TV discussing family law
+            matters. Skip to the timestamp below to see Dmitriy's segment.
+          </p>
+
+          <div className="max-w-3xl mx-auto text-center">
+            <span className="inline-block bg-accent text-white text-sm font-medium px-4 py-1 rounded-full mb-4">
+              Court TV Feature — Not a Testimonial
+            </span>
+            <div className="aspect-video rounded-xl overflow-hidden shadow-xl">
               <iframe
-                src="https://www.youtube.com/embed/AHfY54OdW2E"
-                title="Client Testimonial - Borshchak Law Group"
+                src="https://www.youtube.com/embed/GbBf903XVh4"
+                title="Court TV Feature — Dmitriy Borshchak"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 className="w-full h-full"
               />
             </div>
-
-            {/* Dmitriy Interview */}
-            <h3 className="font-playfair text-2xl md:text-3xl font-bold text-center mt-16 mb-4">
-              See How We Protect Families in Action
-            </h3>
-            <p className="text-body text-center text-muted-foreground mb-10 max-w-2xl mx-auto">
-              Attorney Dmitriy Borshchak walks through a real family law case, from the challenges the client faced to the strategy we used to protect their interests and secure a favorable outcome.
-            </p>
-            <div
-              className="aspect-video rounded-xl overflow-hidden shadow-xl border-2"
-              style={{ borderColor: "hsl(var(--green-accent))" }}
+            {/* TODO: Add confirmed timestamp from Dmitriy */}
+            <p
+              className="text-sm mt-4"
+              style={{ color: "hsla(40, 30%, 98%, 0.6)" }}
             >
-              <video
-                src="/dmitriy-interview.mp4"
-                controls
-                preload="metadata"
-                className="w-full h-full"
-                title="Interview with Dmitriy Borshchak"
-              />
-            </div>
+              ⏱ Dmitriy Borshchak appears at approximately [TIMESTAMP] —
+              update this once confirmed
+            </p>
+            <Link
+              to="/press"
+              className="inline-block mt-6 text-accent underline hover:opacity-80 transition-opacity"
+            >
+              View all press appearances →
+            </Link>
           </div>
         </div>
       </section>
