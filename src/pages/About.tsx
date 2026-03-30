@@ -292,14 +292,20 @@ const About = () => {
         {/* CTA */}
         <section className="section-padding bg-secondary/50">
           <div className="container max-w-2xl text-center">
-            <h2 className="heading-section mb-4">Meet With Us</h2>
+            <h2 className="heading-section mb-4">Ready to Work With a Team You Can Trust?</h2>
             <p className="text-body mb-8">
-              Schedule a consultation to discuss your situation and see if we're the right fit.
+              Taking the next step in your divorce or custody matter requires a
+              team that will fight for your financial security, protect your
+              relationship with your children, and stand beside you at every
+              stage of the process. Reach out today for a confidential
+              consultation. Free consultations are available with Hank Sonderman
+              and Keri Reeves. Consultations with Dmitriy Borshchak are by paid
+              engagement.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="tel:+16146624043" className="btn-cta">
+              <a href="tel:+16143346851" className="btn-cta">
                 <Phone className="w-5 h-5 mr-2" />
-                Call Us Now: 614-662-4043
+                Call Us: 614-334-6851
               </a>
             </div>
           </div>
