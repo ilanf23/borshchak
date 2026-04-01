@@ -167,9 +167,9 @@ export default function AnimatedQuiz({ questions }: { questions: QuizQuestion[] 
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}
         >
-          <a href="tel:+16146624043" className="btn-cta inline-flex">
+          <a href="tel:+16143346851" className="btn-cta inline-flex">
             <Phone className="w-5 h-5 mr-2" />
-            Call Us Now: 614-662-4043
+            Call Us Now: 614-334-6851
           </a>
         </motion.div>
       </motion.div>

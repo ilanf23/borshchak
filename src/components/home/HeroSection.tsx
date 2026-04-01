@@ -30,9 +30,9 @@ const HeroSection = () => {
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <AnimatedCTA delay={0.6}>
-              <a href="tel:+16146624043" className="btn-cta">
+              <a href="tel:+16143346851" className="btn-cta">
                 <Phone className="w-5 h-5 mr-2" />
-                Call Us Now: 614-662-4043
+                Call Us Now: 614-334-6851
               </a>
             </AnimatedCTA>
           </div>

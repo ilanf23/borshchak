@@ -228,9 +228,9 @@ const ChildSupport = () => {
               Every parent wants the best for their child, even amidst separation or divorce. Understanding Ohio's child support laws is essential to ensuring your child's needs are met and your rights are protected.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-8 opacity-0 animate-fade-in" style={{ animationDelay: "550ms" }}>
-              <a href="tel:+16146624043" className="btn-cta">
+              <a href="tel:+16143346851" className="btn-cta">
                 <Phone className="w-5 h-5 mr-2" />
-                Free Consultation: 614-662-4043
+                Free Consultation: 614-334-6851
               </a>
             </div>
           </div>
@@ -601,9 +601,9 @@ const ChildSupport = () => {
             <p className="text-lg text-white/90 mb-8 drop-shadow">
               Whether you're seeking, modifying, or enforcing child support, our team is here to protect your child's interests. Call us for a free consultation.
             </p>
-            <a href="tel:+16146624043" className="btn-cta text-xl px-12 py-5">
+            <a href="tel:+16143346851" className="btn-cta text-xl px-12 py-5">
               <Phone className="w-5 h-5 mr-2" />
-              Call Us Now: 614-662-4043
+              Call Us Now: 614-334-6851
             </a>
           </div>
         </section>

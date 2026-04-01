@@ -158,9 +158,9 @@ const DmitriyBorshchak = () => {
                 <div ref={heroCtaRef} className="flex flex-wrap gap-4">
                   {heroCtaInView ? (
                     <AnimatedCTA delay={1.6}>
-                      <a href="tel:+16146624043" className="btn-cta text-lg px-8 py-4 inline-flex items-center gap-2 whitespace-nowrap">
+                      <a href="tel:+16143346851" className="btn-cta text-lg px-8 py-4 inline-flex items-center gap-2 whitespace-nowrap">
                         <Phone className="w-5 h-5" />
-                        Call Us Now: 614-662-4043
+                        Call Us Now: 614-334-6851
                       </a>
                     </AnimatedCTA>
                   ) : (
@@ -562,9 +562,9 @@ const DmitriyBorshchak = () => {
             <div ref={finalCtaRef} className="flex justify-center">
               {finalCtaInView ? (
                 <AnimatedCTA delay={0.3}>
-                  <a href="tel:+16146624043" className="btn-cta text-lg px-10 py-4 inline-flex items-center gap-2 whitespace-nowrap">
+                  <a href="tel:+16143346851" className="btn-cta text-lg px-10 py-4 inline-flex items-center gap-2 whitespace-nowrap">
                     <Phone className="w-5 h-5" />
-                    Call Us Now: 614-662-4043
+                    Call Us Now: 614-334-6851
                   </a>
                 </AnimatedCTA>
               ) : (

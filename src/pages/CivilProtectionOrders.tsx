@@ -247,9 +247,9 @@ const CivilProtectionOrders = () => {
               className="flex flex-col sm:flex-row gap-4 mt-8 opacity-0 animate-fade-in"
               style={{ animationDelay: "550ms" }}
             >
-              <a href="tel:+16146624043" className="btn-cta">
+              <a href="tel:+16143346851" className="btn-cta">
                 <Phone className="w-5 h-5 mr-2" />
-                Call Us Now: 614-662-4043
+                Call Us Now: 614-334-6851
               </a>
             </div>
           </div>
@@ -529,11 +529,11 @@ const CivilProtectionOrders = () => {
               help. Call us now for immediate assistance.
             </p>
             <a
-              href="tel:+16146624043"
+              href="tel:+16143346851"
               className="btn-cta text-xl px-12 py-5"
             >
               <Phone className="w-5 h-5 mr-2" />
-              Call Us Now: 614-662-4043
+              Call Us Now: 614-334-6851
             </a>
           </div>
         </section>

@@ -235,9 +235,9 @@ const Dissolution = () => {
               Ending a marriage doesn't have to be a stress-filled journey. If you and your spouse agree on all terms, dissolution offers a faster, more affordable alternative to divorce in Ohio.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-8 opacity-0 animate-fade-in" style={{ animationDelay: "550ms" }}>
-              <a href="tel:+16146624043" className="btn-cta">
+              <a href="tel:+16143346851" className="btn-cta">
                 <Phone className="w-5 h-5 mr-2" />
-                Free Consultation: 614-662-4043
+                Free Consultation: 614-334-6851
               </a>
             </div>
           </div>
@@ -520,9 +520,9 @@ const Dissolution = () => {
               </p>
             </div>
             <div className="mt-8">
-              <a href="tel:+16146624043" className="btn-cta">
+              <a href="tel:+16143346851" className="btn-cta">
                 <Phone className="w-5 h-5 mr-2" />
-                Call Us Now: 614-662-4043
+                Call Us Now: 614-334-6851
               </a>
             </div>
           </div>
@@ -598,9 +598,9 @@ const Dissolution = () => {
             <p className="text-lg text-white/90 mb-8 drop-shadow">
               If you and your spouse agree it's time, dissolution can give you both a fresh start. Call us for a free consultation to see if dissolution is right for you.
             </p>
-            <a href="tel:+16146624043" className="btn-cta text-xl px-12 py-5">
+            <a href="tel:+16143346851" className="btn-cta text-xl px-12 py-5">
               <Phone className="w-5 h-5 mr-2" />
-              Call Us Now: 614-662-4043
+              Call Us Now: 614-334-6851
             </a>
           </div>
         </section>

@@ -117,6 +117,52 @@ const Resources = () => {
           </div>
         </section>
 
+        {/* Court Resources & Local Information */}
+        <section className="section-padding bg-card">
+          <div className="container max-w-5xl">
+            <h2 className="heading-section mb-6">Court Resources &amp; Local Information</h2>
+            <p className="text-body mb-10">
+              The following resources are provided for informational purposes. Borshchak Law Group serves families across Central Ohio, including Franklin, Delaware, Pickaway, Licking, Union, Madison, and Fairfield counties. Links below connect directly to official county court resources.
+            </p>
+
+            <h3 className="heading-subsection mb-6">County Domestic Relations Courts</h3>
+            <div className="grid md:grid-cols-2 gap-6 mb-10">
+              {/* Franklin County */}
+              <div className="card-bordered">
+                <h4 className="text-lg font-semibold text-foreground mb-3">Franklin County Domestic Relations Court</h4>
+                <p className="text-sm text-muted-foreground mb-1">373 South High Street, 4th Floor, Columbus, OH 43215</p>
+                <p className="text-sm text-muted-foreground mb-4">(614) 525-3628</p>
+                <div className="flex flex-col gap-2">
+                  <a href="https://drj.fccourts.org" target="_blank" rel="noopener noreferrer" className="text-accent underline hover:opacity-80">Court Homepage →</a>
+                  <a href="https://drj.fccourrt-Services/Forms" target="_blank" rel="noopener noreferrer" className="text-accent underline hover:opacity-80">Forms &amp; Documents →</a>
+                  <a href="https://drj.fccourts.org/files/assets/courtofpleas/v/1/court-services/documents/forms/parenting-time-guideline-model-dr-rule-27-1-juv-rule-22-1-1_1-2015_.pdf" target="_blank" rel="noopener noreferrer" className="text-accent underline hover:opacity-80">Local Parenting Time Schedule →</a>
+                </div>
+              </div>
+
+              {/* Delaware County */}
+              <div className="card-bordered">
+                <h4 className="text-lg font-semibold text-foreground mb-3">Delaware County Domestic Relations Court</h4>
+                <p className="text-sm text-muted-foreground mb-1">117 N. Union St., 400 Level, Delaware, OH 43015</p>
+                <p className="text-sm text-muted-foreground mb-4">(740) 833-2025</p>
+                <div className="flex flex-col gap-2">
+                  <a href="https://domestic.co.delaware.oh.us" target="_blank" rel="noopener noreferrer" className="text-accent underline hover:opacity-80">Court Homepage →</a>
+                  <a href="https://domestic.co.delaware.oh.us/forms/" target="_blank" rel="noopener noreferrer" className="text-accent underline hover:opacity-80">Forms &amp; Documents →</a>
+                  <a href="https://domestic.co.delaware.oh.us/wp-content/uploads/sites/44/2022/02/Local-Parenting-Time-Schedule.pdf" target="_blank" rel="noopener noreferrer" className="text-accent underline hover:opacity-80">Local Parenting Time Schedule →</a>
+                </div>
+              </div>
+            </div>
+
+            <h3 className="heading-subsection mt-10 mb-6">Areas We Serve</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {["Franklin County", "Delaware County", "Pickaway County", "Licking County", "Union County", "Madison County", "Fairfield County"].map((county) => (
+                <div key={county} className="card-elevated text-center py-4 px-6 text-base font-medium">
+                  {county}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Blog Grid */}
         <section className="section-padding">
           <div className="container max-w-5xl">
@@ -179,9 +225,9 @@ const Resources = () => {
             <p className="text-body mb-8">
               Schedule a free consultation to get answers tailored to your situation.
             </p>
-            <a href="tel:+16146624043" className="btn-cta">
+            <a href="tel:+16143346851" className="btn-cta">
               <Phone className="w-5 h-5 mr-2" />
-              Call Us Now: 614-662-4043
+              Call Us Now: 614-334-6851
             </a>
           </div>
         </section>

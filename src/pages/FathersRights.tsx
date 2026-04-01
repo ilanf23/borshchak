@@ -229,9 +229,9 @@ const FathersRights = () => {
               Fathers deserve equal treatment in custody, child support, and parenting time decisions. Our attorneys fight to protect your rights and your relationship with your children under Ohio law.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-8 opacity-0 animate-fade-in" style={{ animationDelay: "550ms" }}>
-              <a href="tel:+16146624043" className="btn-cta">
+              <a href="tel:+16143346851" className="btn-cta">
                 <Phone className="w-5 h-5 mr-2" />
-                Free Consultation: 614-662-4043
+                Free Consultation: 614-334-6851
               </a>
             </div>
           </div>
@@ -596,7 +596,7 @@ const FathersRights = () => {
           <div className="container max-w-2xl text-center relative z-10">
             <h2 className="heading-section mb-4 text-white drop-shadow-lg">Your Rights as a Father Matter</h2>
             <p className="text-lg text-white/90 mb-8 drop-shadow">Don't let outdated assumptions define your role. Call us for a free consultation to protect your parental rights.</p>
-            <a href="tel:+16146624043" className="btn-cta text-xl px-12 py-5"><Phone className="w-5 h-5 mr-2" />Call Us Now: 614-662-4043</a>
+            <a href="tel:+16143346851" className="btn-cta text-xl px-12 py-5"><Phone className="w-5 h-5 mr-2" />Call Us Now: 614-334-6851</a>
           </div>
         </section>
       </main>

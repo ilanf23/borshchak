@@ -31,6 +31,8 @@ import EnforcementOfCourtOrders from "./pages/EnforcementOfCourtOrders";
 import CivilProtectionOrders from "./pages/CivilProtectionOrders";
 import FathersRights from "./pages/FathersRights";
 import Testimonials from "./pages/Testimonials";
+import HighAssetDivorce from "./pages/HighAssetDivorce";
+import Press from "./pages/Press";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -70,6 +72,8 @@ const App = () => (
             <Route path="/civil-protection-orders" element={<CivilProtectionOrders />} />
             <Route path="/fathers-rights" element={<FathersRights />} />
             <Route path="/testimonials" element={<Testimonials />} />
+            <Route path="/high-asset-divorce" element={<HighAssetDivorce />} />
+            <Route path="/press" element={<Press />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

@@ -308,9 +308,9 @@ const Divorce = () => {
               style={{ animationDelay: "550ms" }}
             >
               <AnimatedCTA delay={0.6}>
-                <a href="tel:+16146624043" className="btn-cta">
+                <a href="tel:+16143346851" className="btn-cta">
                   <Phone className="w-5 h-5 mr-2" />
-                  Free Consultation: 614-662-4043
+                  Free Consultation: 614-334-6851
                 </a>
               </AnimatedCTA>
             </div>
@@ -1112,7 +1112,7 @@ const Divorce = () => {
                 Post-Decree Matters
               </Link>
               <a
-                href="tel:+16146624043"
+                href="tel:+16143346851"
                 className="block py-3 px-4 text-xs md:text-sm font-bold tracking-widest uppercase text-center transition-all duration-200 rounded hover:opacity-80"
                 style={{
                   backgroundColor: "hsl(var(--accent))",
@@ -1225,21 +1225,21 @@ const Divorce = () => {
               {ctaInView ? (
                 <AnimatedCTA delay={0.3}>
                   <a
-                    href="tel:+16146624043"
+                    href="tel:+16143346851"
                     className="btn-cta text-xl px-12 py-5"
                   >
                     <Phone className="w-5 h-5 mr-2" />
-                    Call Us Now: 614-662-4043
+                    Call Us Now: 614-334-6851
                   </a>
                 </AnimatedCTA>
               ) : (
                 <div className="opacity-0">
                   <a
-                    href="tel:+16146624043"
+                    href="tel:+16143346851"
                     className="btn-cta text-xl px-12 py-5"
                   >
                     <Phone className="w-5 h-5 mr-2" />
-                    Call Us Now: 614-662-4043
+                    Call Us Now: 614-334-6851
                   </a>
                 </div>
               )}

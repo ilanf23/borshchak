@@ -203,7 +203,7 @@ const Header = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <a href="tel:+16146624043" className="hidden sm:flex btn-cta text-base px-6 py-2 whitespace-nowrap">
+            <a href="tel:+16143346851" className="hidden sm:flex btn-cta text-base px-6 py-2 whitespace-nowrap">
               <Phone className="w-5 h-5 mr-2" />
               Call Us Now
             </a>
@@ -307,9 +307,9 @@ const Header = () => {
 
                   {/* CTA */}
                   <div className="mt-6 pt-6 border-t border-border">
-                    <a href="tel:+16146624043" className="btn-cta w-full justify-center text-base px-6 py-3">
+                    <a href="tel:+16143346851" className="btn-cta w-full justify-center text-base px-6 py-3">
                       <Phone className="w-4 h-4 mr-2" />
-                      Call Us Now: 614-662-4043
+                      Call Us Now: 614-334-6851
                     </a>
                   </div>
                 </nav>
