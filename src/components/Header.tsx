@@ -99,6 +99,9 @@ const PracticeAreasFlyout = () => (
     <Link to="/divorce" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
       Divorce
     </Link>
+    <Link to="/high-asset-divorce" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
+      High Asset Divorce
+    </Link>
     <Link to="/custody" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
       Child Custody
     </Link>
@@ -250,6 +253,9 @@ const Header = () => {
                     <CollapsibleContent className="pl-4">
                       <Link to="/divorce" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-base text-muted-foreground hover:text-foreground transition-colors">
                         Divorce
+                      </Link>
+                      <Link to="/high-asset-divorce" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-base text-muted-foreground hover:text-foreground transition-colors">
+                        High Asset Divorce
                       </Link>
                       <Link to="/custody" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-base text-muted-foreground hover:text-foreground transition-colors">
                         Child Custody

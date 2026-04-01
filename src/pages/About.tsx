@@ -1,4 +1,4 @@
-import { Calendar, Phone, Scale, Users, Award } from "lucide-react";
+import { Calendar, CheckCircle2, Phone, Scale, Users, Award } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -35,6 +35,20 @@ const About = () => {
               secondary here — they are our top priority, shaping every strategy
               we build for you.
             </p>
+            <ul className="mt-6 space-y-3">
+              <li className="flex items-start gap-3 text-body text-lg">
+                <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5 text-primary" />
+                Safeguarding your assets and protecting your role in your children's lives
+              </li>
+              <li className="flex items-start gap-3 text-body text-lg">
+                <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5 text-primary" />
+                Supporting you before, during, and long after the divorce is final
+              </li>
+              <li className="flex items-start gap-3 text-body text-lg">
+                <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5 text-primary" />
+                Your financial and family interests are always our top priority
+              </li>
+            </ul>
           </div>
         </section>
 
@@ -212,6 +226,60 @@ const About = () => {
           </div>
         </section>
 
+        {/* Guardian Ad Litem */}
+        <section className="section-padding bg-secondary/50">
+          <div className="container max-w-4xl">
+            <h2 className="heading-section mb-6">
+              Understanding the Guardian Ad Litem (GAL)
+            </h2>
+            <p className="text-body text-lg mb-8">
+              In Ohio, a Guardian Ad Litem (GAL) is a court-appointed, neutral
+              person — often a licensed attorney — who investigates and
+              recommends what is in a child's best interest during custody,
+              divorce, or post-decree proceedings. Understanding the GAL's role
+              is critical for any parent navigating a contested custody matter.
+            </p>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="card-bordered">
+                <h3 className="heading-subsection text-xl mb-3">
+                  What a GAL Does
+                </h3>
+                <p className="text-body">
+                  The GAL conducts a thorough investigation — interviewing both
+                  parents, the child, teachers, doctors, and other relevant
+                  parties. They then file a written recommendation with the court
+                  regarding custody and parenting time. While not binding, this
+                  recommendation carries significant weight with the judge.
+                </p>
+              </div>
+              <div className="card-bordered">
+                <h3 className="heading-subsection text-xl mb-3">
+                  When a GAL Is Appointed
+                </h3>
+                <p className="text-body">
+                  A GAL may be appointed by the court on its own or after a
+                  request by either party. They are typically appointed in cases
+                  involving child safety concerns, high-conflict disputes,
+                  allegations of abuse or neglect, or situations where neither
+                  parent appears to adequately represent the child's interests.
+                </p>
+              </div>
+              <div className="card-bordered">
+                <h3 className="heading-subsection text-xl mb-3">
+                  Cost vs. Value
+                </h3>
+                <p className="text-body">
+                  While a Guardian Ad Litem represents an added cost, they can be
+                  an invaluable resource. By helping resolve conflicts throughout
+                  the case — regardless of size — a GAL can actually reduce the
+                  amount of in-court litigation and lower overall legal costs for
+                  both parties.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Our Story */}
         <section className="section-padding">
           <div className="container max-w-4xl">
@@ -266,9 +334,9 @@ const About = () => {
           <div className="container max-w-4xl">
             <h2 className="heading-section mb-6">Our Attorneys</h2>
             <p className="text-body mb-8">
-              Borshchak Law Group is led by Dmitriy Borshchak and supported by a team of experienced family law attorneys. Every case is handled by a licensed attorney and never delegated to paralegals for substantive legal work. Our team is completed by Leigh Tennison, our Executive Assistant, whose responsiveness and care are consistently highlighted in client reviews.
+              Borshchak Law Group is led by Dmitriy Borshchak and supported by a team of experienced family law attorneys. Every case is handled by a licensed attorney and never delegated to paralegals for substantive legal work.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               <Link to="/attorneys/dmitriy-borshchak" className="p-6 border border-border rounded-lg hover:border-primary transition-colors">
                 <p className="font-serif text-lg font-semibold text-foreground">Dmitriy Borshchak</p>
                 <p className="text-sm text-muted-foreground mt-1">Managing Attorney</p>
@@ -280,10 +348,6 @@ const About = () => {
               <Link to="/attorneys/hank-sonderman" className="p-6 border border-border rounded-lg hover:border-primary transition-colors">
                 <p className="font-serif text-lg font-semibold text-foreground">Hank Sonderman</p>
                 <p className="text-sm text-muted-foreground mt-1">Family Law Attorney</p>
-              </Link>
-              <Link to="/attorneys/leigh" className="p-6 border border-border rounded-lg hover:border-primary transition-colors">
-                <p className="font-serif text-lg font-semibold text-foreground">Leigh Tennison</p>
-                <p className="text-sm text-muted-foreground mt-1">Executive Assistant</p>
               </Link>
             </div>
           </div>
