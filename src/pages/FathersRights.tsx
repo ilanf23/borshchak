@@ -21,7 +21,7 @@ import { useConsultation } from "@/contexts/ConsultationContext";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { cn } from "@/lib/utils";
 import fathersRightsHero from "@/assets/fathers-rights-hero.jpg";
-import lawyerWithKid from "@/assets/lawyerwithkid.jpg";
+import lawyerworking9 from "@/assets/lawyerworking-9.jpg";
 
 // ---------------------------------------------------------------------------
 // Data
@@ -542,8 +542,8 @@ const FathersRights = () => {
                 style={{ backgroundColor: "hsl(var(--trust-navy))" }}
               />
               <img
-                src={lawyerWithKid}
-                alt="Attorney Dmitriy Borshchak walking with his child"
+                src={lawyerworking9}
+                alt="Attorney Dmitriy Borshchak in his office"
                 className="relative z-10 w-full h-64 md:h-80 object-cover rounded-lg"
                 loading="lazy"
               />

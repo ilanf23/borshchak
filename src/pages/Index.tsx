@@ -8,6 +8,7 @@ import GoogleReviews from "@/components/home/GoogleReviews";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
 import ServicesOverview from "@/components/home/ServicesOverview";
 import ProcessSection from "@/components/home/ProcessSection";
+import CourtInfoSection from "@/components/home/CourtInfoSection";
 import RecentBlogs from "@/components/home/RecentBlogs";
 import FAQSection from "@/components/home/FAQSection";
 import FinalCTA from "@/components/home/FinalCTA";
@@ -25,6 +26,7 @@ const Index = () => {
         <WhyChooseUs />
         <ServicesOverview />
         <ProcessSection />
+        <CourtInfoSection />
         <RecentBlogs />
         <FAQSection />
         <FinalCTA />

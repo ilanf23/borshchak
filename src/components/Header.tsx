@@ -198,6 +198,12 @@ const Header = () => {
               Blog
             </Link>
             <Link
+              to="/court-info"
+              className={`inline-flex h-12 items-center justify-center px-4 py-2 text-lg font-medium transition-colors ${isTransparent ? "text-white hover:text-white/80" : "text-foreground hover:text-primary"}`}
+            >
+              Court Info
+            </Link>
+            <Link
               to="/contact"
               className={`inline-flex h-12 items-center justify-center px-4 py-2 text-lg font-medium transition-colors ${isTransparent ? "text-white hover:text-white/80" : "text-foreground hover:text-primary"}`}
             >
@@ -305,6 +311,9 @@ const Header = () => {
                   </Link>
                   <Link to="/resources" onClick={() => setIsOpen(false)} className="py-3 px-2 text-lg font-medium hover:bg-secondary rounded-md transition-colors">
                     Blog
+                  </Link>
+                  <Link to="/court-info" onClick={() => setIsOpen(false)} className="py-3 px-2 text-lg font-medium hover:bg-secondary rounded-md transition-colors">
+                    Court Info
                   </Link>
 
                   <Link to="/contact" onClick={() => setIsOpen(false)} className="py-3 px-2 text-lg font-medium hover:bg-secondary rounded-md transition-colors">

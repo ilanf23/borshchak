@@ -154,6 +154,25 @@ const faqItems = [
     answer:
       "Yes, potentially. A dissolution requires agreement by both spouses. A divorce does not. Ohio law allows a divorce action to proceed on recognized legal grounds even if the other spouse does not want the divorce.",
   },
+  {
+    question: "What is the difference between marital and separate property in Ohio?",
+    answer:
+      "Marital property includes all assets and debts accumulated during the marriage and is subject to division. Separate property — such as assets owned before the marriage, inheritances, or gifts received by one spouse — is generally not subject to division, but the party claiming it must be able to trace and prove it. If separate property has been commingled with marital assets, it can lose its separate character. An experienced attorney will work to identify and protect your separate property throughout the divorce process.",
+  },
+  {
+    question: "Does Ohio recognize same-sex divorce?",
+    answer:
+      "Yes. Following the Supreme Court's decision in Obergefell v. Hodges, same-sex couples in Ohio have the same rights to marry — and to divorce — as any other couple. All the same legal processes, property division rules, custody standards, and support considerations apply equally to same-sex divorces in Ohio.",
+  },
+  {
+    question: "What if my divorce involves significant assets or a business?",
+    answer: (
+      <>
+        High-asset divorces involving business interests, investment portfolios, real estate holdings, stock options, or complex financial arrangements require specialized legal and financial expertise. Borshchak Law Group works with forensic accountants, business valuators, CPAs, and other experts to ensure your assets are accurately valued and fairly divided.
+        <span> <Link to="/high-asset-divorce" className="text-accent underline hover:opacity-80">Learn more about high-asset divorce →</Link></span>
+      </>
+    ),
+  },
 ];
 
 // ---------------------------------------------------------------------------
@@ -232,6 +251,7 @@ const Divorce = () => {
   const quizAnim = useScrollAnimation();
   const faqAnim = useScrollAnimation();
   const teamAnim = useScrollAnimation();
+  const assetDivisionAnim = useScrollAnimation();
   const ctaContentAnim = useScrollAnimation(0.2);
   const ctaRef = useRef(null);
   const ctaInView = useInView(ctaRef, { once: true, margin: "-100px" });
@@ -924,6 +944,65 @@ const Divorce = () => {
                   Including forensic examiners, former FBI agents, and other
                   specialists when the complexity of a case demands it.
                 </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ---------------------------------------------------------------- */}
+        {/* Understanding Asset Division */}
+        {/* ---------------------------------------------------------------- */}
+        <section className="section-padding bg-card">
+          <div
+            ref={assetDivisionAnim.ref}
+            className={`container max-w-4xl ${assetDivisionAnim.isVisible ? "scroll-visible" : "scroll-hidden"}`}
+          >
+            <h2 className="heading-section mb-8">
+              Understanding Asset Division in an Ohio Divorce
+            </h2>
+
+            <div className="card-elevated mb-6">
+              <div className="flex items-start gap-3">
+                <Scale className="w-5 h-5 text-primary shrink-0 mt-1" />
+                <div>
+                  <h3 className="heading-subsection mb-2">
+                    Marital Property vs. Separate Property
+                  </h3>
+                  <p className="text-body text-base">
+                    In Ohio, all property acquired during the marriage is presumed to be marital property and subject to division — unless a party can prove otherwise. Separate property includes assets owned before the marriage, inheritances, and gifts received by one spouse, provided they have not been commingled with marital assets. Ohio courts will equally divide marital assets and debts unless such equal division would be unfair. A detail-oriented attorney will trace, identify, and establish your separate property so that it is protected and your spouse does not receive property to which they are not entitled.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="card-elevated mb-6">
+              <div className="flex items-start gap-3">
+                <Home className="w-5 h-5 text-primary shrink-0 mt-1" />
+                <div>
+                  <h3 className="heading-subsection mb-2">
+                    Dividing Assets in a Long-Term Marriage
+                  </h3>
+                  <p className="text-body text-base">
+                    Divorces involving marriages of 20 years or longer carry unique challenges. The amount of accumulated property — real estate, retirement accounts, pensions, investments, and personal assets — requires thorough identification and valuation. For older couples, issues like Social Security benefits, retirement income, and healthcare coverage add further complexity. These financial decisions can have life-altering consequences if not handled carefully by an experienced attorney.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="card-elevated mb-6">
+              <div className="flex items-start gap-3">
+                <Gavel className="w-5 h-5 text-primary shrink-0 mt-1" />
+                <div>
+                  <h3 className="heading-subsection mb-2">
+                    When a Divorce Decree Can Be Modified
+                  </h3>
+                  <p className="text-body text-base">
+                    Most divorce settlements are final once approved by the court. However, certain terms can be revisited if the court retained jurisdiction to modify them. Spousal support and child-related matters are the most common areas subject to post-decree modification. Property division, on the other hand, generally cannot be modified after a final decree unless both parties agree or the court specifically retained jurisdiction over those terms.
+                  </p>
+                  <Link to="/post-decree-matters" className="text-accent underline hover:opacity-80 text-sm mt-2 inline-block">
+                    Learn more about Post-Decree Matters →
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

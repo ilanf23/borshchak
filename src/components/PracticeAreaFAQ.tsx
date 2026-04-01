@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-export type FAQItem = { question: string; answer: string };
+export type FAQItem = { question: string; answer: React.ReactNode };
 
 export default function PracticeAreaFAQ({ items }: { items: FAQItem[] }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
