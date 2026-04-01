@@ -102,6 +102,9 @@ const PracticeAreasFlyout = () => (
     <Link to="/high-asset-divorce" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
       High Asset Divorce
     </Link>
+    <Link to="/mediation" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
+      Mediation & Alternative Resolution
+    </Link>
     <Link to="/custody" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
       Child Custody
     </Link>
@@ -131,6 +134,9 @@ const PracticeAreasFlyout = () => (
     </Link>
     <Link to="/business-interests" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
       Business Interests
+    </Link>
+    <Link to="/assets" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
+      Property & Asset Division
     </Link>
     <Link to="/enforcement-of-court-orders" className="block px-4 py-2.5 text-lg text-foreground hover:bg-secondary rounded-md transition-colors">
       Enforcement of Court Orders
@@ -253,6 +259,9 @@ const Header = () => {
                       <Link to="/high-asset-divorce" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-base text-muted-foreground hover:text-foreground transition-colors">
                         High Asset Divorce
                       </Link>
+                      <Link to="/mediation" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-base text-muted-foreground hover:text-foreground transition-colors">
+                        Mediation & Alternative Resolution
+                      </Link>
                       <Link to="/custody" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-base text-muted-foreground hover:text-foreground transition-colors">
                         Child Custody
                       </Link>
@@ -282,6 +291,9 @@ const Header = () => {
                       </Link>
                       <Link to="/business-interests" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-base text-muted-foreground hover:text-foreground transition-colors">
                         Business Interests
+                      </Link>
+                      <Link to="/assets" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-base text-muted-foreground hover:text-foreground transition-colors">
+                        Property & Asset Division
                       </Link>
                       <Link to="/enforcement-of-court-orders" onClick={() => setIsOpen(false)} className="block py-2 px-2 text-base text-muted-foreground hover:text-foreground transition-colors">
                         Enforcement of Court Orders
