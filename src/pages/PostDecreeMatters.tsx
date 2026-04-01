@@ -20,6 +20,7 @@ import PracticeAreaFAQ from "@/components/PracticeAreaFAQ";
 import { useConsultation } from "@/contexts/ConsultationContext";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { cn } from "@/lib/utils";
+import lawyerworking6 from "@/assets/lawyerworking-6.jpg";
 
 // ---------------------------------------------------------------------------
 // Data
@@ -282,8 +283,8 @@ const PostDecreeMatters = () => {
           <div className="container max-w-5xl">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <img
-                src="https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=1200&q=80"
-                alt="Person looking ahead toward new possibilities"
+                src={lawyerworking6}
+                alt="Attorney discussing post-decree options with a client"
                 className="w-full h-72 md:h-96 object-cover rounded-lg"
                 loading="lazy"
               />

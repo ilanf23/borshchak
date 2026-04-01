@@ -33,6 +33,7 @@ import awardExpertise from "@/assets/award-expertise.png";
 import awardTop40Under40 from "@/assets/award-top40-under40.png";
 import awardTop10FamilyLaw from "@/assets/award-top10-family-law.png";
 import award10BestClientSatisfaction from "@/assets/award-10best-client-satisfaction.png";
+import lawyerworking1 from "@/assets/lawyerworking-1.jpg";
 
 // ---------------------------------------------------------------------------
 // Data
@@ -400,8 +401,8 @@ const Divorce = () => {
                 }
               >
                 <img
-                  src="https://images.unsplash.com/photo-1769037211237-7b570b22165f?w=1200&q=80"
-                  alt="Woman looking out a sunlit window"
+                  src={lawyerworking1}
+                  alt="Attorney Dmitriy Borshchak meeting with a client in Columbus"
                   className="w-full h-72 md:h-96 object-cover rounded-lg"
                   loading="lazy"
                 />

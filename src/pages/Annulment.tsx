@@ -22,6 +22,7 @@ import PracticeAreaFAQ from "@/components/PracticeAreaFAQ";
 import { useConsultation } from "@/contexts/ConsultationContext";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { cn } from "@/lib/utils";
+import lawyerworking11 from "@/assets/lawyerworking-11.jpg";
 
 // ---------------------------------------------------------------------------
 // Data
@@ -448,8 +449,8 @@ const Annulment = () => {
                 style={{ backgroundColor: "hsl(var(--green-accent))" }}
               />
               <img
-                src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=1200&q=80"
-                alt="Dramatic sky symbolizing new beginnings"
+                src={lawyerworking11}
+                alt="Attorney Dmitriy Borshchak"
                 className="relative z-10 w-full h-64 md:h-80 object-cover rounded-lg"
                 loading="lazy"
               />

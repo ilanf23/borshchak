@@ -21,6 +21,7 @@ import PracticeAreaFAQ from "@/components/PracticeAreaFAQ";
 import { useConsultation } from "@/contexts/ConsultationContext";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { cn } from "@/lib/utils";
+import lawyerworking2 from "@/assets/lawyerworking-2.jpg";
 
 // ---------------------------------------------------------------------------
 // Data
@@ -620,8 +621,8 @@ const BusinessInterests = () => {
           <div className="container max-w-5xl">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <img
-                src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80"
-                alt="Attorney discussing business valuation with client"
+                src={lawyerworking2}
+                alt="Attorney discussing business valuation strategy with a client"
                 className="w-full h-72 md:h-96 object-cover rounded-lg"
                 loading="lazy"
               />

@@ -20,6 +20,7 @@ import PracticeAreaFAQ from "@/components/PracticeAreaFAQ";
 import { useConsultation } from "@/contexts/ConsultationContext";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { cn } from "@/lib/utils";
+import lawyerworking16 from "@/assets/lawyerworking-16.jpg";
 
 const courtFactors = [
   {
@@ -342,8 +343,8 @@ const SpousalSupport = () => {
                 </p>
               </div>
               <img
-                src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1200&q=80"
-                alt="Woman writing notes while reviewing financial documents"
+                src={lawyerworking16}
+                alt="Attorney consulting with a client about spousal support"
                 className="w-full h-72 md:h-96 object-cover rounded-lg"
                 loading="lazy"
               />

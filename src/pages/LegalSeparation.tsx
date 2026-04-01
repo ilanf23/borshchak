@@ -21,6 +21,7 @@ import PracticeAreaFAQ from "@/components/PracticeAreaFAQ";
 import { useConsultation } from "@/contexts/ConsultationContext";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { cn } from "@/lib/utils";
+import lawyerworking13 from "@/assets/lawyerworking-13.jpg";
 
 // ---------------------------------------------------------------------------
 // Data
@@ -337,8 +338,8 @@ const LegalSeparation = () => {
         {/* 3. Edge-to-Edge Image */}
         {/* ---------------------------------------------------------------- */}
         <img
-          src="https://images.unsplash.com/photo-1500534314263-a834e29a41e7?w=1600&q=80"
-          alt="Lone tree symbolizing a new path forward"
+          src={lawyerworking13}
+          alt="Attorney and family member looking ahead together"
           className="w-full h-64 md:h-80 object-cover"
           loading="lazy"
         />

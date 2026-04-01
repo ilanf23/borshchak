@@ -28,6 +28,7 @@ import AnimatedCTA from "@/components/AnimatedCTA";
 import { useConsultation } from "@/contexts/ConsultationContext";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { cn } from "@/lib/utils";
+import lawyerworking8 from "@/assets/lawyerworking-8.jpg";
 import assetsBgImage from "@/assets/service-bg-assets.jpg";
 
 // ---------------------------------------------------------------------------
@@ -389,8 +390,8 @@ const Assets = () => {
                 }
               >
                 <img
-                  src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=1200&q=80"
-                  alt="Financial documents and analysis on a desk"
+                  src={lawyerworking8}
+                  alt="Attorney reviewing financial documents at his desk"
                   className="w-full h-72 md:h-96 object-cover rounded-lg"
                   loading="lazy"
                 />

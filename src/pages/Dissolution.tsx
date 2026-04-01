@@ -8,6 +8,8 @@ import PracticeAreaFAQ from "@/components/PracticeAreaFAQ";
 import { useConsultation } from "@/contexts/ConsultationContext";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { cn } from "@/lib/utils";
+import lawyerworking12 from "@/assets/lawyerworking-12.jpg";
+import lawyerworking5 from "@/assets/lawyerworking-5.jpg";
 
 const requirements = [
   {
@@ -286,8 +288,8 @@ const Dissolution = () => {
                 </p>
               </div>
               <img
-                src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&q=80"
-                alt="Two people talking calmly"
+                src={lawyerworking12}
+                alt="Attorney Dmitriy Borshchak with a client"
                 className="w-full h-72 md:h-96 object-cover rounded-lg"
                 loading="lazy"
               />
@@ -532,8 +534,8 @@ const Dissolution = () => {
         <section className="section-padding-sm">
           <div className="container max-w-4xl">
             <img
-              src="https://images.unsplash.com/photo-1606836591695-4d58a73eba1e?w=1200&q=80"
-              alt="Couple reviewing legal documents together"
+              src={lawyerworking5}
+              alt="Attorney walking with a client discussing their case"
               className="w-full h-64 md:h-80 object-cover rounded-lg"
               loading="lazy"
             />

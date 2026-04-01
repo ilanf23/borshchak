@@ -26,6 +26,8 @@ import AnimatedCTA from "@/components/AnimatedCTA";
 import { useConsultation } from "@/contexts/ConsultationContext";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { cn } from "@/lib/utils";
+import lawyerWithKid from "@/assets/lawyerwithkid.jpg";
+import lawyerworking7 from "@/assets/lawyerworking-7.jpg";
 
 const custodyTypes = [
   {
@@ -460,8 +462,8 @@ const Custody = () => {
                 </p>
               </div>
               <img
-                src="https://images.unsplash.com/photo-1536640712-4d4c36ff0e4e?w=1200&q=80"
-                alt="Parent holding child's hand"
+                src={lawyerWithKid}
+                alt="Attorney Dmitriy Borshchak with his child"
                 className="w-full h-72 md:h-96 object-cover rounded-lg order-1 md:order-2"
                 loading="lazy"
               />
@@ -925,8 +927,8 @@ const Custody = () => {
         <section className="section-padding-sm">
           <div className="container max-w-4xl">
             <img
-              src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80"
-              alt="Child playing happily outdoors"
+              src={lawyerworking7}
+              alt="Attorney providing supportive guidance to a client"
               className="w-full h-64 md:h-80 object-cover rounded-lg"
               loading="lazy"
             />

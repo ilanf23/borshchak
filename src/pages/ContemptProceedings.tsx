@@ -19,6 +19,7 @@ import PracticeAreaFAQ from "@/components/PracticeAreaFAQ";
 import { useConsultation } from "@/contexts/ConsultationContext";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { cn } from "@/lib/utils";
+import lawyerworking from "@/assets/lawyerworking.jpg";
 
 // ---------------------------------------------------------------------------
 // Data
@@ -300,8 +301,8 @@ const ContemptProceedings = () => {
           <div className="container max-w-5xl">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <img
-                src="https://images.unsplash.com/photo-1436450412740-6b988f486c6b?w=1200&q=80"
-                alt="Gavel close-up representing court enforcement"
+                src={lawyerworking}
+                alt="Attorney in a face-to-face consultation with a client"
                 className="w-full h-72 md:h-96 object-cover rounded-lg"
                 loading="lazy"
               />

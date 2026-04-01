@@ -27,6 +27,7 @@ import AnimatedCTA from "@/components/AnimatedCTA";
 import { useConsultation } from "@/contexts/ConsultationContext";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { cn } from "@/lib/utils";
+import lawyerworking14 from "@/assets/lawyerworking-14.jpg";
 
 // ---------------------------------------------------------------------------
 // Data
@@ -531,8 +532,8 @@ const ChildSupport = () => {
           <div className="container max-w-5xl">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <img
-                src="https://images.unsplash.com/photo-1475503572774-15a45e5d60b9?w=1200&q=80"
-                alt="Family enjoying time together outdoors"
+                src={lawyerworking14}
+                alt="Attorney meeting with a client to discuss child support options"
                 className="w-full h-72 md:h-96 object-cover rounded-lg"
                 loading="lazy"
               />

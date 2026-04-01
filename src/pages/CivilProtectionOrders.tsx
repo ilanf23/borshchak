@@ -18,6 +18,7 @@ import PracticeAreaFAQ from "@/components/PracticeAreaFAQ";
 import { useConsultation } from "@/contexts/ConsultationContext";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { cn } from "@/lib/utils";
+import lawyerworking15 from "@/assets/lawyerworking-15.jpg";
 
 // ---------------------------------------------------------------------------
 // Data
@@ -296,8 +297,8 @@ const CivilProtectionOrders = () => {
           <div className="container max-w-5xl">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <img
-                src="https://images.unsplash.com/photo-1453847668862-487637052f8a?w=1200&q=80"
-                alt="Woman looking thoughtfully out window"
+                src={lawyerworking15}
+                alt="Attorney listening attentively to a client"
                 className="w-full h-72 md:h-96 object-cover rounded-lg"
                 loading="lazy"
               />
