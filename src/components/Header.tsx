@@ -35,7 +35,7 @@ const FlyoutLink = ({
       onMouseLeave={() => setOpen(false)}
       className="relative h-fit w-fit"
     >
-      <button className={`relative inline-flex h-12 items-center justify-center px-4 py-2 text-lg font-medium transition-colors ${isTransparent ? "text-white hover:text-white/80" : "text-foreground hover:text-primary"}`}>
+      <button className={`relative inline-flex h-12 items-center justify-center px-3 py-2 text-base font-medium whitespace-nowrap transition-colors ${isTransparent ? "text-white hover:text-white/80" : "text-foreground hover:text-primary"}`}>
         {children}
         {content && <ChevronDown className="ml-1 w-3.5 h-3.5" />}
         <span
