@@ -35,7 +35,7 @@ const FlyoutLink = ({
       onMouseLeave={() => setOpen(false)}
       className="relative h-fit w-fit"
     >
-      <button className={`relative inline-flex h-12 items-center justify-center px-4 py-2 text-lg font-medium transition-colors ${isTransparent ? "text-white hover:text-white/80" : "text-foreground hover:text-primary"}`}>
+      <button className={`relative inline-flex h-12 items-center justify-center px-3 py-2 text-base font-medium whitespace-nowrap transition-colors ${isTransparent ? "text-white hover:text-white/80" : "text-foreground hover:text-primary"}`}>
         {children}
         {content && <ChevronDown className="ml-1 w-3.5 h-3.5" />}
         <span
@@ -182,33 +182,23 @@ const Header = () => {
             />
           </Link>
 
-          <div className="hidden lg:flex items-center gap-0">
+          <div className="hidden lg:flex items-center gap-0 flex-nowrap">
             <FlyoutLink content={<AttorneysFlyout />} isTransparent={isTransparent}>Attorneys</FlyoutLink>
             <FlyoutLink content={<PracticeAreasFlyout />} isTransparent={isTransparent}>Practice Areas</FlyoutLink>
-            <Link
-              to="/why-us"
-              className={`inline-flex h-12 items-center justify-center px-4 py-2 text-lg font-medium transition-colors ${isTransparent ? "text-white hover:text-white/80" : "text-foreground hover:text-primary"}`}
-            >
-              Why Us
-            </Link>
-            <Link
-              to="/testimonials"
-              className={`inline-flex h-12 items-center justify-center px-4 py-2 text-lg font-medium transition-colors ${isTransparent ? "text-white hover:text-white/80" : "text-foreground hover:text-primary"}`}
-            >
-              Testimonials
-            </Link>
-            <Link
-              to="/resources"
-              className={`inline-flex h-12 items-center justify-center px-4 py-2 text-lg font-medium transition-colors ${isTransparent ? "text-white hover:text-white/80" : "text-foreground hover:text-primary"}`}
-            >
-              Blog
-            </Link>
-            <Link
-              to="/contact"
-              className={`inline-flex h-12 items-center justify-center px-4 py-2 text-lg font-medium transition-colors ${isTransparent ? "text-white hover:text-white/80" : "text-foreground hover:text-primary"}`}
-            >
-              Contact
-            </Link>
+            {[
+              { to: "/why-us", label: "Why Us" },
+              { to: "/testimonials", label: "Testimonials" },
+              { to: "/resources", label: "Blog" },
+              { to: "/contact", label: "Contact" },
+            ].map(({ to, label }) => (
+              <Link
+                key={to}
+                to={to}
+                className={`inline-flex h-12 items-center justify-center px-3 py-2 text-base font-medium whitespace-nowrap transition-colors ${isTransparent ? "text-white hover:text-white/80" : "text-foreground hover:text-primary"}`}
+              >
+                {label}
+              </Link>
+            ))}
           </div>
 
           <div className="flex items-center gap-4">
