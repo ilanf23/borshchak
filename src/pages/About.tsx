@@ -1,376 +1,338 @@
-import { Calendar, CheckCircle2, Phone, Scale, Users, Award } from "lucide-react";
+import { Phone, Shield, Users, Scale, Heart, Calendar, Award, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
+import dmitriyPhoto from "@/assets/dmitriy-borshchak.png";
+import hankPhoto from "@/assets/hank-sonderman-hero.png";
+import keriPhoto from "@/assets/keri-reeves.jpg";
+
 const About = () => {
+  const pillarsAnim = useScrollAnimation();
+  const approachAnim = useScrollAnimation();
   const whyHireAnim = useScrollAnimation();
+  const teamAnim = useScrollAnimation();
+  const galAnim = useScrollAnimation();
+  const ctaAnim = useScrollAnimation();
 
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1">
-        {/* Hero */}
-        <section className="section-padding bg-secondary/50">
-          <div className="container max-w-4xl">
-            <p className="text-base font-medium text-muted-foreground uppercase tracking-wider mb-4">
-              Borshchak Law Group | Columbus, Ohio
-            </p>
-            <h1 className="heading-hero mb-6">
-              Divorce Is a Turning Point. We're Here to Make Sure You Land on Your Feet.
+        {/* SECTION 1 — HERO */}
+        <section className="bg-navy min-h-[70vh] flex items-center">
+          <div className="container max-w-4xl py-20">
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+              Why Families in Columbus Choose Borshchak Law Group
             </h1>
-            <p className="text-body text-xl">
-              At Borshchak Law Group, we know divorce touches every part of your
-              life — your finances, your future, and most importantly, your
-              children. That's why we specialize in expertly safeguarding your
-              assets while fiercely protecting your essential role in your
-              children's lives. From the earliest planning stages before filing,
-              through every negotiation and court hearing, to the critical
-              follow-through once the divorce is final, we stand with you at
-              every turn.
+            <p className="text-xl md:text-2xl text-white/80 mb-10 max-w-2xl">
+              Divorce and custody cases define futures. We treat them that way.
             </p>
-            <p className="text-body text-lg mt-4">
-              Your financial security and your family's well-being are never
-              secondary here — they are our top priority, shaping every strategy
-              we build for you.
+            <div className="flex flex-wrap items-center gap-6 md:gap-10 mb-10">
+              <div className="text-center">
+                <div className="font-serif text-3xl font-bold text-white">A+</div>
+                <div className="text-sm text-white/60">BBB</div>
+              </div>
+              <div className="w-px h-10 bg-white/20 hidden sm:block" />
+              <div className="text-center">
+                <div className="font-serif text-3xl font-bold text-white">88</div>
+                <div className="text-sm text-white/60">Ohio Counties</div>
+              </div>
+              <div className="w-px h-10 bg-white/20 hidden sm:block" />
+              <div className="text-center">
+                <div className="font-serif text-3xl font-bold text-white">5-Star</div>
+                <div className="text-sm text-white/60">Reviews</div>
+              </div>
+            </div>
+            <a href="tel:+16143346851" className="btn-cta text-lg px-8 py-3">
+              <Phone className="w-5 h-5 mr-2" />
+              Call Us 614-334-6851
+            </a>
+          </div>
+        </section>
+
+        {/* SECTION 2 — THREE PILLARS */}
+        <section className="bg-navy section-padding">
+          <div
+            ref={pillarsAnim.ref}
+            className={`container ${pillarsAnim.className}`}
+          >
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="relative">
+                <span className="font-serif text-6xl font-bold text-white/10 absolute -top-2 -left-1">01</span>
+                <div className="pt-12">
+                  <Shield className="w-8 h-8 text-green-400 mb-4" />
+                  <h3 className="font-serif text-xl font-semibold text-white mb-3">
+                    We Protect What Matters Most
+                  </h3>
+                  <p className="text-white/70 leading-relaxed">
+                    Your assets, your parenting role, and your financial future. We fight for all of it.
+                  </p>
+                </div>
+              </div>
+              <div className="relative">
+                <span className="font-serif text-6xl font-bold text-white/10 absolute -top-2 -left-1">02</span>
+                <div className="pt-12">
+                  <Users className="w-8 h-8 text-green-400 mb-4" />
+                  <h3 className="font-serif text-xl font-semibold text-white mb-3">
+                    We Stand With You Every Step
+                  </h3>
+                  <p className="text-white/70 leading-relaxed">
+                    From the first consultation through post-decree follow-up, we never disappear.
+                  </p>
+                </div>
+              </div>
+              <div className="relative">
+                <span className="font-serif text-6xl font-bold text-white/10 absolute -top-2 -left-1">03</span>
+                <div className="pt-12">
+                  <Scale className="w-8 h-8 text-green-400 mb-4" />
+                  <h3 className="font-serif text-xl font-semibold text-white mb-3">
+                    We Are Calculated, Not Just Strategic
+                  </h3>
+                  <p className="text-white/70 leading-relaxed">
+                    Every recommendation is grounded in data, legal precedent, and real risk assessment.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 3 — OUR APPROACH */}
+        <section className="section-padding">
+          <div
+            ref={approachAnim.ref}
+            className={`container max-w-4xl ${approachAnim.className}`}
+          >
+            <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-3">
+              Our Approach
             </p>
-            <ul className="mt-6 space-y-3">
+            <h2 className="heading-section mb-6">
+              Attention to Detail Changes Outcomes
+            </h2>
+            <div className="space-y-4 text-body text-lg mb-8">
+              <p>
+                The strength of a case lives in the details. A carefully reviewed financial record, a precisely worded parenting plan, a well-timed filing. We leave nothing to chance.
+              </p>
+              <p>
+                Ohio family law is also emotionally charged — especially when children are involved. We help clients make calculated decisions that insulate them from risk, not just today but three, five, and ten years from now.
+              </p>
+            </div>
+            <ul className="space-y-3">
               <li className="flex items-start gap-3 text-body text-lg">
                 <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5 text-primary" />
-                Safeguarding your assets and protecting your role in your children's lives
+                Direct attorney involvement — never paralegal-handled
               </li>
               <li className="flex items-start gap-3 text-body text-lg">
                 <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5 text-primary" />
-                Supporting you before, during, and long after the divorce is final
+                Licensed in all 88 Ohio counties
               </li>
               <li className="flex items-start gap-3 text-body text-lg">
                 <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5 text-primary" />
-                Your financial and family interests are always our top priority
+                Free consultations with Hank & Keri
               </li>
             </ul>
           </div>
         </section>
 
-        {/* Stats */}
-        <section className="section-padding-sm bg-card border-y border-border">
-          <div className="container">
-            <div className="grid grid-cols-2 sm:grid-cols-5 gap-8 max-w-4xl mx-auto text-center">
-              <div>
-                <Scale className="w-8 h-8 mx-auto mb-3 text-primary" />
-                <div className="font-serif text-4xl font-semibold text-primary">Dedicated</div>
-                <div className="text-base text-muted-foreground">To Family Law</div>
-              </div>
-              <div>
-                <Users className="w-8 h-8 mx-auto mb-3 text-primary" />
-                <div className="font-serif text-4xl font-semibold text-primary">Trusted</div>
-                <div className="text-base text-muted-foreground">By Ohio Families</div>
-              </div>
-              <div>
-                <Award className="w-8 h-8 mx-auto mb-3 text-primary" />
-                <div className="font-serif text-4xl font-semibold text-primary">5-Star</div>
-                <div className="text-base text-muted-foreground">Client Reviews</div>
-              </div>
-              <div>
-                <Award className="w-8 h-8 mx-auto mb-3 text-primary" />
-                <div className="font-serif text-4xl font-semibold text-primary">A+</div>
-                <div className="text-base text-muted-foreground">BBB Rating</div>
-              </div>
-              <div>
-                <Scale className="w-8 h-8 mx-auto mb-3 text-primary" />
-                <div className="font-serif text-4xl font-semibold text-primary">88</div>
-                <div className="text-base text-muted-foreground">Ohio Counties</div>
-              </div>
-            </div>
-            <div className="card-elevated mt-8 max-w-4xl mx-auto">
-              <div className="flex items-start gap-3">
-                <Phone className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                <p className="text-body text-sm">
-                  Consultations with Dmitriy Borshchak are by paid engagement.
-                  Free consultations are available with other members of our
-                  team — Hank Sonderman and Keri Reeves.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Why Hire a Specialized Family Law Firm */}
+        {/* SECTION 4 — WHY HIRE */}
         <section className="section-padding bg-card">
           <div
             ref={whyHireAnim.ref}
-            className={`container max-w-4xl ${whyHireAnim.isVisible ? "scroll-visible" : "scroll-hidden"}`}
+            className={`container ${whyHireAnim.className}`}
           >
-            <h2 className="heading-section mb-4">
-              Why Hire a Specialized Family Law Firm
-            </h2>
-            <p className="text-body text-lg mb-10">
-              Family law is one of the few areas of the law that is simultaneously
-              complex, deeply personal, and emotionally charged. Hiring a firm that
-              focuses exclusively on family law — rather than a general practice —
-              means every attorney on your case has dedicated their career to
-              understanding the law, the courts, and the strategies that produce
-              the best outcomes for families like yours.
-            </p>
+            <div className="max-w-3xl mx-auto text-center mb-12">
+              <h2 className="heading-section mb-4">
+                Why a Specialized Family Law Firm?
+              </h2>
+              <p className="text-body text-lg">
+                General practice firms handle everything. We handle one thing — and we've dedicated our careers to it.
+              </p>
+            </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="card-bordered">
                 <div className="flex items-center gap-3 mb-3">
-                  <div
-                    className="shrink-0 w-10 h-10 rounded-full flex items-center justify-center"
-                    style={{ backgroundColor: "hsl(var(--secondary))" }}
-                  >
+                  <div className="shrink-0 w-10 h-10 rounded-full flex items-center justify-center bg-secondary">
                     <Scale className="w-5 h-5 text-primary" />
                   </div>
-                  <h3 className="heading-subsection text-lg">
-                    Experienced Legal Representation
-                  </h3>
+                  <h3 className="heading-subsection text-lg">Experienced Representation</h3>
                 </div>
                 <p className="text-body text-base">
-                  Every case is handled by a licensed family law attorney — never
-                  delegated to paralegals for substantive legal work. You get direct
-                  attorney involvement from consultation through conclusion.
+                  Every case handled by a licensed family law attorney. No paralegals doing substantive work.
                 </p>
               </div>
               <div className="card-bordered">
                 <div className="flex items-center gap-3 mb-3">
-                  <div
-                    className="shrink-0 w-10 h-10 rounded-full flex items-center justify-center"
-                    style={{ backgroundColor: "hsl(var(--secondary))" }}
-                  >
+                  <div className="shrink-0 w-10 h-10 rounded-full flex items-center justify-center bg-secondary">
                     <Users className="w-5 h-5 text-primary" />
                   </div>
-                  <h3 className="heading-subsection text-lg">
-                    Strategic Negotiation
-                  </h3>
+                  <h3 className="heading-subsection text-lg">Strategic Negotiation</h3>
                 </div>
                 <p className="text-body text-base">
-                  Most cases resolve before trial. Our attorneys are skilled
-                  negotiators who know how to protect your interests at the table
-                  while keeping your goals front and center.
+                  Most cases resolve before trial. We know how to protect you at the table.
                 </p>
               </div>
               <div className="card-bordered">
                 <div className="flex items-center gap-3 mb-3">
-                  <div
-                    className="shrink-0 w-10 h-10 rounded-full flex items-center justify-center"
-                    style={{ backgroundColor: "hsl(var(--secondary))" }}
-                  >
-                    <Award className="w-5 h-5 text-primary" />
+                  <div className="shrink-0 w-10 h-10 rounded-full flex items-center justify-center bg-secondary">
+                    <Heart className="w-5 h-5 text-primary" />
                   </div>
-                  <h3 className="heading-subsection text-lg">
-                    Personalized Emotional Support
-                  </h3>
+                  <h3 className="heading-subsection text-lg">Genuine Compassion</h3>
                 </div>
                 <p className="text-body text-base">
-                  We understand that this is one of the most difficult experiences
-                  of your life. We bring both legal precision and genuine compassion
-                  to every client relationship.
+                  We bring legal precision and real human understanding to every client relationship.
                 </p>
               </div>
               <div className="card-bordered">
                 <div className="flex items-center gap-3 mb-3">
-                  <div
-                    className="shrink-0 w-10 h-10 rounded-full flex items-center justify-center"
-                    style={{ backgroundColor: "hsl(var(--secondary))" }}
-                  >
+                  <div className="shrink-0 w-10 h-10 rounded-full flex items-center justify-center bg-secondary">
                     <Calendar className="w-5 h-5 text-primary" />
                   </div>
-                  <h3 className="heading-subsection text-lg">
-                    Compliance with Ohio Law
-                  </h3>
+                  <h3 className="heading-subsection text-lg">Current on Ohio Law</h3>
                 </div>
                 <p className="text-body text-base">
-                  Ohio family law evolves. Our attorneys stay current on statutory
-                  changes, case law developments, and local court procedures that
-                  affect your case.
+                  Family law evolves. We stay ahead of statutory changes and local court procedures.
                 </p>
               </div>
               <div className="card-bordered">
                 <div className="flex items-center gap-3 mb-3">
-                  <div
-                    className="shrink-0 w-10 h-10 rounded-full flex items-center justify-center"
-                    style={{ backgroundColor: "hsl(var(--secondary))" }}
-                  >
+                  <div className="shrink-0 w-10 h-10 rounded-full flex items-center justify-center bg-secondary">
                     <Phone className="w-5 h-5 text-primary" />
                   </div>
-                  <h3 className="heading-subsection text-lg">
-                    Responsive Communication
-                  </h3>
+                  <h3 className="heading-subsection text-lg">Responsive Communication</h3>
                 </div>
                 <p className="text-body text-base">
-                  You will always know who to call. We pride ourselves on timely
-                  responses and proactive updates so you are never left wondering
-                  about the status of your case.
+                  You'll always know who to call and never wonder about your case status.
                 </p>
               </div>
               <div className="card-bordered">
                 <div className="flex items-center gap-3 mb-3">
-                  <div
-                    className="shrink-0 w-10 h-10 rounded-full flex items-center justify-center"
-                    style={{ backgroundColor: "hsl(var(--secondary))" }}
-                  >
-                    <Scale className="w-5 h-5 text-primary" />
+                  <div className="shrink-0 w-10 h-10 rounded-full flex items-center justify-center bg-secondary">
+                    <Award className="w-5 h-5 text-primary" />
                   </div>
-                  <h3 className="heading-subsection text-lg">
-                    Protecting Your Future
-                  </h3>
+                  <h3 className="heading-subsection text-lg">Protecting Your Future</h3>
                 </div>
                 <p className="text-body text-base">
-                  From asset division to parenting arrangements, we think beyond
-                  the immediate outcome — helping you make calculated decisions that
-                  protect your financial security and your family's wellbeing for
-                  years to come.
+                  We think beyond the outcome — helping you make decisions that hold up for years to come.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Guardian Ad Litem */}
-        <section className="section-padding bg-secondary/50">
-          <div className="container max-w-4xl">
-            <h2 className="heading-section mb-6">
-              Understanding the Guardian Ad Litem (GAL)
+        {/* SECTION 5 — TEAM */}
+        <section className="bg-navy section-padding">
+          <div
+            ref={teamAnim.ref}
+            className={`container ${teamAnim.className}`}
+          >
+            <div className="max-w-3xl mx-auto text-center mb-12">
+              <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-4">
+                The Team Behind Your Case
+              </h2>
+              <p className="text-lg text-white/70">
+                Every case is handled by a licensed attorney. You will always know who is working for you.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                { photo: dmitriyPhoto, name: "Dmitriy Borshchak", title: "Managing Attorney", link: "/attorneys/dmitriy-borshchak", position: "right 30%" },
+                { photo: keriPhoto, name: "Keri Reeves", title: "Family Law Attorney", link: "/attorneys/keri-reeves", position: "center 20%" },
+                { photo: hankPhoto, name: "Hank Sonderman", title: "Family Law Attorney", link: "/attorneys/hank-sonderman", position: "right 70%" },
+              ].map((attorney) => (
+                <div
+                  key={attorney.name}
+                  className="bg-navy/50 border border-white/10 rounded-xl overflow-hidden"
+                >
+                  <img
+                    src={attorney.photo}
+                    alt={attorney.name}
+                    className="h-[260px] w-full object-cover"
+                    style={{ objectPosition: attorney.position }}
+                  />
+                  <div className="p-6">
+                    <h3 className="font-serif text-xl font-semibold text-white">
+                      {attorney.name}
+                    </h3>
+                    <p className="text-white/60 text-sm mb-4">{attorney.title}</p>
+                    <Link
+                      to={attorney.link}
+                      className="text-green-400 hover:text-green-300 text-sm font-medium transition-colors"
+                    >
+                      View Profile &rarr;
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 6 — GAL */}
+        <section className="bg-secondary/30 section-padding">
+          <div
+            ref={galAnim.ref}
+            className={`container max-w-5xl ${galAnim.className}`}
+          >
+            <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-3">
+              Important to Know
+            </p>
+            <h2 className="heading-section mb-4">
+              What Is a Guardian Ad Litem?
             </h2>
-            <p className="text-body text-lg mb-8">
-              In Ohio, a Guardian Ad Litem (GAL) is a court-appointed, neutral
-              person — often a licensed attorney — who investigates and
-              recommends what is in a child's best interest during custody,
-              divorce, or post-decree proceedings. Understanding the GAL's role
-              is critical for any parent navigating a contested custody matter.
+            <p className="text-body text-lg mb-10 max-w-3xl">
+              A GAL is a court-appointed neutral — often a licensed attorney — who investigates custody matters and recommends what is in the child's best interest.
             </p>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="card-bordered">
-                <h3 className="heading-subsection text-xl mb-3">
-                  What a GAL Does
-                </h3>
+                <h3 className="heading-subsection text-xl mb-3">What They Do</h3>
                 <p className="text-body">
-                  The GAL conducts a thorough investigation — interviewing both
-                  parents, the child, teachers, doctors, and other relevant
-                  parties. They then file a written recommendation with the court
-                  regarding custody and parenting time. While not binding, this
-                  recommendation carries significant weight with the judge.
+                  Interviews parents, children, teachers, doctors. Files a written recommendation with the court carrying significant judicial weight.
                 </p>
               </div>
               <div className="card-bordered">
-                <h3 className="heading-subsection text-xl mb-3">
-                  When a GAL Is Appointed
-                </h3>
+                <h3 className="heading-subsection text-xl mb-3">When They're Appointed</h3>
                 <p className="text-body">
-                  A GAL may be appointed by the court on its own or after a
-                  request by either party. They are typically appointed in cases
-                  involving child safety concerns, high-conflict disputes,
-                  allegations of abuse or neglect, or situations where neither
-                  parent appears to adequately represent the child's interests.
+                  High-conflict disputes, child safety concerns, allegations of abuse or neglect, or when the court determines it is in the child's best interest.
                 </p>
               </div>
               <div className="card-bordered">
-                <h3 className="heading-subsection text-xl mb-3">
-                  Cost vs. Value
-                </h3>
+                <h3 className="heading-subsection text-xl mb-3">Cost vs. Value</h3>
                 <p className="text-body">
-                  While a Guardian Ad Litem represents an added cost, they can be
-                  an invaluable resource. By helping resolve conflicts throughout
-                  the case — regardless of size — a GAL can actually reduce the
-                  amount of in-court litigation and lower overall legal costs for
-                  both parties.
+                  A GAL adds cost but can reduce litigation. By resolving conflicts early, they often lower total legal costs for both parties.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Our Story */}
-        <section className="section-padding">
-          <div className="container max-w-4xl">
-            <h2 className="heading-section mb-6">Our Philosophy</h2>
-            <div className="space-y-6 text-body">
-              <p>
-                Family law is personal. When someone walks into our office, they're not just bringing a legal problem. They're bringing fear, uncertainty, and often grief about the life they expected. We never forget that.
-              </p>
-              <p>
-                At the same time, family law requires clear-headed strategy. Emotional decisions often lead to regrettable outcomes. Our job is to help you think through decisions rationally while honoring what you're going through emotionally.
-              </p>
-              <p>
-                We've built our practice on direct attorney involvement. Every client has a dedicated attorney handling their case. You'll know exactly who to call, and you'll get answers, not callbacks in three days. Our attorneys take ownership of your matter from start to finish.
-              </p>
-              <p>
-                We pride ourselves on attention to detail. The strength of a
-                case often lives in the details — a carefully reviewed financial
-                record, a precisely worded parenting plan, a well-timed filing.
-                We leave nothing to chance and nothing to assumption.
-              </p>
-              <p>
-                We are not just strategic — we are calculated. Every
-                recommendation we make is grounded in data, legal precedent, and
-                a clear-eyed assessment of risk and outcome. We help our clients
-                make decisions that feel right not just today, but three, five,
-                and ten years from now.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Local Focus */}
-        <section className="section-padding bg-card">
-          <div className="container max-w-4xl">
-            <h2 className="heading-section mb-6">Deep Local Experience</h2>
-            <div className="space-y-6 text-body">
-              <p>
-                We practice almost exclusively in Franklin County and surrounding Central Ohio courts. This focus means we understand local judicial preferences, procedural quirks, and what arguments resonate with the judges who will decide your case.
-              </p>
-              <p>
-                We know the opposing attorneys, the court staff, and the procedures that can expedite or delay your case. This institutional knowledge matters when you need results efficiently.
-              </p>
-              <p>
-                Our office in downtown Columbus is convenient for clients across the metro area, and we offer video consultations for those who prefer them.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Our Attorneys */}
-        <section className="section-padding">
-          <div className="container max-w-4xl">
-            <h2 className="heading-section mb-6">Our Attorneys</h2>
-            <p className="text-body mb-8">
-              Borshchak Law Group is led by Dmitriy Borshchak and supported by a team of experienced family law attorneys. Every case is handled by a licensed attorney and never delegated to paralegals for substantive legal work.
+        {/* SECTION 8 — CTA */}
+        <section className="bg-navy section-padding">
+          <div
+            ref={ctaAnim.ref}
+            className={`container max-w-3xl text-center ${ctaAnim.className}`}
+          >
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Work With a Team You Can Trust?
+            </h2>
+            <p className="text-lg text-white/75 mb-6 leading-relaxed">
+              Taking the next step requires a team that will fight for your financial security, protect your relationship with your children, and stand beside you at every stage. Reach out for a confidential consultation.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-              <Link to="/attorneys/dmitriy-borshchak" className="p-6 border border-border rounded-lg hover:border-primary transition-colors">
-                <p className="font-serif text-lg font-semibold text-foreground">Dmitriy Borshchak</p>
-                <p className="text-sm text-muted-foreground mt-1">Managing Attorney</p>
-              </Link>
-              <Link to="/attorneys/keri-reeves" className="p-6 border border-border rounded-lg hover:border-primary transition-colors">
-                <p className="font-serif text-lg font-semibold text-foreground">Keri Reeves</p>
-                <p className="text-sm text-muted-foreground mt-1">Family Law Attorney</p>
-              </Link>
-              <Link to="/attorneys/hank-sonderman" className="p-6 border border-border rounded-lg hover:border-primary transition-colors">
-                <p className="font-serif text-lg font-semibold text-foreground">Hank Sonderman</p>
-                <p className="text-sm text-muted-foreground mt-1">Family Law Attorney</p>
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA */}
-        <section className="section-padding bg-secondary/50">
-          <div className="container max-w-2xl text-center">
-            <h2 className="heading-section mb-4">Ready to Work With a Team You Can Trust?</h2>
-            <p className="text-body mb-8">
-              Taking the next step in your divorce or custody matter requires a
-              team that will fight for your financial security, protect your
-              relationship with your children, and stand beside you at every
-              stage of the process. Reach out today for a confidential
-              consultation. Free consultations are available with Hank Sonderman
-              and Keri Reeves. Consultations with Dmitriy Borshchak are by paid
-              engagement.
+            <p className="text-sm text-white/50 mb-8">
+              Free consultations with Hank & Keri. Paid engagements with Dmitriy.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a href="tel:+16143346851" className="btn-cta">
                 <Phone className="w-5 h-5 mr-2" />
-                Call Us: 614-334-6851
+                Call 614-334-6851
               </a>
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center px-6 py-3 border border-white text-white rounded-md hover:bg-white/10 transition-colors font-medium"
+              >
+                Schedule a Consultation
+              </Link>
             </div>
           </div>
         </section>

@@ -77,7 +77,7 @@ const differences = [
   },
   {
     aspect: "Expenses",
-    dissolution: "Does not require separate filings. The filing fee ($150 to $400 depending on county) may be split between both parties if they agree to do so — but this is not required.",
+    dissolution: "Does not require separate filings. The filing fee ($150 to $400 depending on county) may be split between both parties if they agree to do so - but this is not required.",
     divorce: "You bear the filing cost alone. The process is more complex, so you often require a lawyer.",
   },
 ];
@@ -114,7 +114,7 @@ const quizQuestions = [
       "The other spouse receives a default judgment",
     ],
     correctIndex: 2,
-    explanation: "If a spouse does not attend, the hearing may be continued to a later date depending on the circumstances. However, if the court cannot hear the case within 90 days of filing, it must dismiss the case or convert it to a divorce — which typically costs more time and money.",
+    explanation: "If a spouse does not attend, the hearing may be continued to a later date depending on the circumstances. However, if the court cannot hear the case within 90 days of filing, it must dismiss the case or convert it to a divorce - which typically costs more time and money.",
   },
 ];
 
@@ -220,7 +220,7 @@ const Dissolution = () => {
           <div className="container max-w-4xl section-padding relative z-10">
             <p
               className="text-base font-medium uppercase tracking-wider mb-4 opacity-0 animate-fade-in"
-              style={{ color: "hsla(40, 30%, 98%, 0.7)", animationDelay: "100ms" }}
+              style={{ color: "hsla(40, 30%, 98%, 0.85)", animationDelay: "100ms" }}
             >
               Columbus, OH Dissolution Lawyers
             </p>
@@ -421,7 +421,7 @@ const Dissolution = () => {
             <p className="text-2xl md:text-3xl font-serif font-medium leading-relaxed italic" style={{ color: "hsl(var(--primary-foreground))" }}>
               "A smooth dissolution begins with the right guidance and mutual agreement."
             </p>
-            <p className="mt-4 text-base" style={{ color: "hsla(40, 30%, 98%, 0.7)" }}>Let our experienced attorneys simplify the process</p>
+            <p className="mt-4 text-base" style={{ color: "hsla(40, 30%, 98%, 0.85)" }}>Let our experienced attorneys simplify the process</p>
           </div>
         </section>
 
@@ -474,13 +474,13 @@ const Dissolution = () => {
                     </h3>
                   </div>
                   <div>
-                    <p className="text-sm font-medium uppercase tracking-wide mb-1" style={{ color: "hsla(40, 30%, 98%, 0.5)" }}>Dissolution</p>
+                    <p className="text-sm font-medium uppercase tracking-wide mb-1" style={{ color: "hsla(40, 30%, 98%, 0.7)" }}>Dissolution</p>
                     <p className="text-base leading-relaxed" style={{ color: "hsla(40, 30%, 98%, 0.85)" }}>
                       {diff.dissolution}
                     </p>
                   </div>
                   <div>
-                    <p className="text-sm font-medium uppercase tracking-wide mb-1" style={{ color: "hsla(40, 30%, 98%, 0.5)" }}>Divorce</p>
+                    <p className="text-sm font-medium uppercase tracking-wide mb-1" style={{ color: "hsla(40, 30%, 98%, 0.7)" }}>Divorce</p>
                     <p className="text-base leading-relaxed" style={{ color: "hsla(40, 30%, 98%, 0.85)" }}>
                       {diff.divorce}
                     </p>
@@ -512,7 +512,7 @@ const Dissolution = () => {
                 Perhaps most importantly, an attorney can strategically evaluate
                 what the agreement actually means for your future. Beyond
                 reviewing the terms, we assess the consequences of each
-                provision — the financial exposure, the restrictions, and the
+                provision - the financial exposure, the restrictions, and the
                 long-term implications. When children are involved, this means
                 projecting what the agreement looks like not just today, but over
                 the next 3 to 10 years. Parenting time schedules, support

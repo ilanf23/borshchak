@@ -245,7 +245,7 @@ const EnforcementOfCourtOrders = () => {
             <p
               className="text-base font-medium uppercase tracking-wider mb-4 opacity-0 animate-fade-in"
               style={{
-                color: "hsla(40, 30%, 98%, 0.7)",
+                color: "hsla(40, 30%, 98%, 0.85)",
                 animationDelay: "100ms",
               }}
             >
@@ -377,7 +377,7 @@ const EnforcementOfCourtOrders = () => {
             </p>
             <p
               className="mt-4 text-base"
-              style={{ color: "hsla(40, 30%, 98%, 0.7)" }}
+              style={{ color: "hsla(40, 30%, 98%, 0.85)" }}
             >
               Ohio Family Law
             </p>

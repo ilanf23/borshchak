@@ -98,7 +98,7 @@ const quizQuestions = [
       "Only if both parties agree",
     ],
     correctIndex: 2,
-    explanation: "Ohio courts require a substantial change in circumstances to modify custody or support after a divorce decree. However, it is important to understand that property division generally cannot be modified after a decree is final — unless the court specifically retained jurisdiction over that issue, or both parties agree to a change. Custody modifications require a substantial change in circumstances plus a best interest finding. Parenting time alone requires only a best interest determination.",
+    explanation: "Ohio courts require a substantial change in circumstances to modify custody or support after a divorce decree. However, it is important to understand that property division generally cannot be modified after a decree is final - unless the court specifically retained jurisdiction over that issue, or both parties agree to a change. Custody modifications require a substantial change in circumstances plus a best interest finding. Parenting time alone requires only a best interest determination.",
   },
   {
     question: "What is the difference between modification and enforcement?",
@@ -131,7 +131,7 @@ const faqItems = [
   },
   {
     question: "When can I modify a court order?",
-    answer: "It depends on what type of order you are seeking to modify. For custody modifications — including modifications to a Shared Parenting Plan — Ohio courts require a substantial change in circumstances of the child or either parent since the original order was issued. You may also seek termination of a Shared Parenting Plan entirely, which the court can grant if it is in the child's best interest. For parenting time modifications alone, the court applies only the best interest standard — a substantial change in circumstances is not required. For child support, modification is available when the calculated amount differs by at least 10% from the current order. Property division generally cannot be modified after a final decree unless both parties agree or the court specifically retained jurisdiction.",
+    answer: "It depends on what type of order you are seeking to modify. For custody modifications - including modifications to a Shared Parenting Plan - Ohio courts require a substantial change in circumstances of the child or either parent since the original order was issued. You may also seek termination of a Shared Parenting Plan entirely, which the court can grant if it is in the child's best interest. For parenting time modifications alone, the court applies only the best interest standard - a substantial change in circumstances is not required. For child support, modification is available when the calculated amount differs by at least 10% from the current order. Property division generally cannot be modified after a final decree unless both parties agree or the court specifically retained jurisdiction.",
   },
   {
     question: "How do I enforce a court order my ex isn't following?",
@@ -226,7 +226,7 @@ const PostDecreeMatters = () => {
           <div className="container max-w-4xl section-padding relative z-10">
             <p
               className="text-base font-medium uppercase tracking-wider mb-4 opacity-0 animate-fade-in"
-              style={{ color: "hsla(40, 30%, 98%, 0.7)", animationDelay: "100ms" }}
+              style={{ color: "hsla(40, 30%, 98%, 0.85)", animationDelay: "100ms" }}
             >
               Columbus, OH Post-Decree Lawyers
             </p>
@@ -328,7 +328,7 @@ const PostDecreeMatters = () => {
             <p className="text-2xl md:text-3xl font-serif font-medium leading-relaxed italic" style={{ color: "hsl(var(--primary-foreground))" }}>
               "Your divorce was already stressful enough. Don't let your ex-spouse take advantage of a hard-won agreement."
             </p>
-            <p className="mt-4 text-base" style={{ color: "hsla(40, 30%, 98%, 0.7)" }}>We help you enforce what's rightfully yours</p>
+            <p className="mt-4 text-base" style={{ color: "hsla(40, 30%, 98%, 0.85)" }}>We help you enforce what's rightfully yours</p>
           </div>
         </section>
 
@@ -353,13 +353,13 @@ const PostDecreeMatters = () => {
                     </h3>
                   </div>
                   <div>
-                    <p className="text-sm font-medium uppercase tracking-wide mb-1" style={{ color: "hsla(40, 30%, 98%, 0.5)" }}>Modification</p>
+                    <p className="text-sm font-medium uppercase tracking-wide mb-1" style={{ color: "hsla(40, 30%, 98%, 0.7)" }}>Modification</p>
                     <p className="text-base leading-relaxed" style={{ color: "hsla(40, 30%, 98%, 0.85)" }}>
                       {item.modification}
                     </p>
                   </div>
                   <div>
-                    <p className="text-sm font-medium uppercase tracking-wide mb-1" style={{ color: "hsla(40, 30%, 98%, 0.5)" }}>Enforcement</p>
+                    <p className="text-sm font-medium uppercase tracking-wide mb-1" style={{ color: "hsla(40, 30%, 98%, 0.7)" }}>Enforcement</p>
                     <p className="text-base leading-relaxed" style={{ color: "hsla(40, 30%, 98%, 0.85)" }}>
                       {item.enforcement}
                     </p>

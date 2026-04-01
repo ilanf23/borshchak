@@ -258,7 +258,7 @@ const PrenuptialAgreement = () => {
           <div className="container max-w-4xl section-padding relative z-10">
             <p
               className="text-base font-medium uppercase tracking-wider mb-4 opacity-0 animate-fade-in"
-              style={{ color: "hsla(40, 30%, 98%, 0.7)", animationDelay: "100ms" }}
+              style={{ color: "hsla(40, 30%, 98%, 0.85)", animationDelay: "100ms" }}
             >
               Columbus, OH Prenuptial Agreement Lawyers
             </p>
@@ -375,13 +375,13 @@ const PrenuptialAgreement = () => {
                   </h4>
                   <div className="space-y-4 text-body text-base">
                     <p>
-                      <strong>1.</strong> Voluntary execution — The agreement
+                      <strong>1.</strong> Voluntary execution - The agreement
                       must be entered into freely and voluntarily by both
                       parties, without fraud, duress, coercion, or undue
                       influence of any kind.
                     </p>
                     <p>
-                      <strong>2.</strong> Full financial disclosure — Both
+                      <strong>2.</strong> Full financial disclosure - Both
                       parties must provide full and accurate disclosure of their
                       assets, liabilities, income, and financial obligations
                       before signing. Concealing or misrepresenting financial
@@ -389,7 +389,7 @@ const PrenuptialAgreement = () => {
                     </p>
                     <p>
                       <strong>3.</strong> Fairness and no encouragement of
-                      divorce — The terms must be fair to both parties and must
+                      divorce - The terms must be fair to both parties and must
                       not be so one-sided as to create extreme
                       unconscionability. Additionally, the agreement cannot
                       contain provisions that actively encourage or incentivize
@@ -556,7 +556,7 @@ const PrenuptialAgreement = () => {
             <p className="text-2xl md:text-3xl font-serif font-medium leading-relaxed italic" style={{ color: "hsl(var(--primary-foreground))" }}>
               "The best time to plan for the unexpected is before it happens."
             </p>
-            <p className="mt-4 text-base" style={{ color: "hsla(40, 30%, 98%, 0.7)" }}>Planning for your future together</p>
+            <p className="mt-4 text-base" style={{ color: "hsla(40, 30%, 98%, 0.85)" }}>Planning for your future together</p>
           </div>
         </section>
 

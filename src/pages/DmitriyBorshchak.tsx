@@ -43,8 +43,8 @@ const CountUpNumber = ({ value, suffix = "", prefix = "" }: { value: number; suf
 const timelineEntries = [
   { year: "2010", title: "Ohio University", subtitle: "B.A. Political Science", description: "Joined the student senate and began investigating how he could personally help the local community and students.", icon: GraduationCap, current: false },
   { year: "2013", title: "Capital University Law School", subtitle: "Juris Doctor", description: "Dean's List, CALI Award recipient, and member of the American Association for Justice Mock Trial Team.", icon: Scale, current: false },
-  { year: "2013", title: "Pro Bono — Litigation Clinic", subtitle: "Capital University", description: "Represented individuals who could not afford an attorney at no charge during law school.", icon: Users, current: false },
-  { year: "2014", title: "Milegroup Consulting", subtitle: "Mayfield Village, OH", description: "Gained concrete experience dealing with financial risk — knowledge he uses today to help clients foresee and pinpoint financial issues.", icon: TrendingUp, current: false },
+  { year: "2013", title: "Pro Bono - Litigation Clinic", subtitle: "Capital University", description: "Represented individuals who could not afford an attorney at no charge during law school.", icon: Users, current: false },
+  { year: "2014", title: "Milegroup Consulting", subtitle: "Mayfield Village, OH", description: "Gained concrete experience dealing with financial risk - knowledge he uses today to help clients foresee and pinpoint financial issues.", icon: TrendingUp, current: false },
   { year: "2014", title: "Kats Law", subtitle: "Shaker Heights, OH", description: "Handled personal injury claims including correspondence with insurance companies, meeting with clients, and compiling demand packets.", icon: FileText, current: false },
   { year: "2015", title: "Franklin County Prosecutor's Office", subtitle: "Columbus, OH", description: "Focused on felonies while simultaneously working as a supervised assistant prosecutor at Hilliard's Mayor's Court.", icon: Gavel, current: false },
   { year: "2016", title: "Weis & O'Connor, LLC", subtitle: "Columbus, OH", description: "Started as Law Clerk, promoted to Associate. Gained extensive experience in family law: preparing pleadings, responding to motions, and advising clients.", icon: Building2, current: false },
@@ -117,7 +117,7 @@ const DmitriyBorshchak = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.1 }}
                   className="text-base font-medium uppercase tracking-wider mb-4"
-                  style={{ color: "hsla(40, 30%, 98%, 0.7)" }}
+                  style={{ color: "hsla(40, 30%, 98%, 0.85)" }}
                 >
                   Borshchak Law Group | Columbus, OH
                 </motion.p>
@@ -225,7 +225,7 @@ const DmitriyBorshchak = () => {
         <section className="section-padding bg-secondary/30">
           <div className="container max-w-6xl">
             <div className="grid md:grid-cols-5 gap-10 md:gap-14 items-start">
-              {/* Left — Philosophy Points */}
+              {/* Left - Philosophy Points */}
               <div
                 ref={philosophyAnim.ref}
                 className={`md:col-span-3 ${philosophyAnim.className}`}
@@ -257,7 +257,7 @@ const DmitriyBorshchak = () => {
                 </div>
               </div>
 
-              {/* Right — Image with Overlaid Quote */}
+              {/* Right - Image with Overlaid Quote */}
               <div
                 ref={quoteAnim.ref}
                 className={`md:col-span-2 relative ${quoteAnim.className}`}
@@ -276,7 +276,7 @@ const DmitriyBorshchak = () => {
                   <blockquote className="text-base italic text-foreground/80 mb-3 leading-relaxed">
                     "He told me the stress was on his shoulders… I put my life into Dmitriy's hands… He really made me feel protected."
                   </blockquote>
-                  <cite className="text-sm font-semibold text-primary not-italic">— Kate Oakley, Google Review</cite>
+                  <cite className="text-sm font-semibold text-primary not-italic">- Kate Oakley, Google Review</cite>
                 </div>
               </div>
             </div>

@@ -186,6 +186,12 @@ const Header = () => {
             <FlyoutLink content={<AttorneysFlyout />} isTransparent={isTransparent}>Attorneys</FlyoutLink>
             <FlyoutLink content={<PracticeAreasFlyout />} isTransparent={isTransparent}>Practice Areas</FlyoutLink>
             <Link
+              to="/why-us"
+              className={`inline-flex h-12 items-center justify-center px-4 py-2 text-lg font-medium transition-colors ${isTransparent ? "text-white hover:text-white/80" : "text-foreground hover:text-primary"}`}
+            >
+              Why Us
+            </Link>
+            <Link
               to="/testimonials"
               className={`inline-flex h-12 items-center justify-center px-4 py-2 text-lg font-medium transition-colors ${isTransparent ? "text-white hover:text-white/80" : "text-foreground hover:text-primary"}`}
             >
@@ -196,12 +202,6 @@ const Header = () => {
               className={`inline-flex h-12 items-center justify-center px-4 py-2 text-lg font-medium transition-colors ${isTransparent ? "text-white hover:text-white/80" : "text-foreground hover:text-primary"}`}
             >
               Blog
-            </Link>
-            <Link
-              to="/court-info"
-              className={`inline-flex h-12 items-center justify-center px-4 py-2 text-lg font-medium transition-colors ${isTransparent ? "text-white hover:text-white/80" : "text-foreground hover:text-primary"}`}
-            >
-              Court Info
             </Link>
             <Link
               to="/contact"
@@ -306,16 +306,15 @@ const Header = () => {
                   </Collapsible>
 
                   {/* Simple Links */}
+                  <Link to="/why-us" onClick={() => setIsOpen(false)} className="py-3 px-2 text-lg font-medium hover:bg-secondary rounded-md transition-colors">
+                    Why Us
+                  </Link>
                   <Link to="/testimonials" onClick={() => setIsOpen(false)} className="py-3 px-2 text-lg font-medium hover:bg-secondary rounded-md transition-colors">
                     Testimonials
                   </Link>
                   <Link to="/resources" onClick={() => setIsOpen(false)} className="py-3 px-2 text-lg font-medium hover:bg-secondary rounded-md transition-colors">
                     Blog
                   </Link>
-                  <Link to="/court-info" onClick={() => setIsOpen(false)} className="py-3 px-2 text-lg font-medium hover:bg-secondary rounded-md transition-colors">
-                    Court Info
-                  </Link>
-
                   <Link to="/contact" onClick={() => setIsOpen(false)} className="py-3 px-2 text-lg font-medium hover:bg-secondary rounded-md transition-colors">
                     Contact
                   </Link>

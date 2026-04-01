@@ -32,7 +32,6 @@ import CivilProtectionOrders from "./pages/CivilProtectionOrders";
 import FathersRights from "./pages/FathersRights";
 import Testimonials from "./pages/Testimonials";
 import HighAssetDivorce from "./pages/HighAssetDivorce";
-import CourtInfo from "./pages/CourtInfo";
 import Press from "./pages/Press";
 import NotFound from "./pages/NotFound";
 
@@ -55,6 +54,7 @@ const App = () => (
             <Route path="/prenuptial-agreement" element={<PrenuptialAgreement />} />
             <Route path="/mediation" element={<Mediation />} />
             <Route path="/about" element={<About />} />
+            <Route path="/why-us" element={<About />} />
             <Route path="/attorneys/dmitriy-borshchak" element={<DmitriyBorshchak />} />
             <Route path="/attorneys/hank-sonderman" element={<HankSonderman />} />
             <Route path="/attorneys/keri-reeves" element={<KeriReeves />} />
@@ -74,7 +74,6 @@ const App = () => (
             <Route path="/fathers-rights" element={<FathersRights />} />
             <Route path="/testimonials" element={<Testimonials />} />
             <Route path="/high-asset-divorce" element={<HighAssetDivorce />} />
-            <Route path="/court-info" element={<CourtInfo />} />
             <Route path="/press" element={<Press />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

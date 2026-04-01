@@ -232,7 +232,7 @@ const SpousalSupport = () => {
             <p
               className="text-base font-medium uppercase tracking-wider mb-4 opacity-0 animate-fade-in"
               style={{
-                color: "hsla(40, 30%, 98%, 0.7)",
+                color: "hsla(40, 30%, 98%, 0.85)",
                 animationDelay: "100ms",
               }}
             >
@@ -403,9 +403,9 @@ const SpousalSupport = () => {
             </p>
             <p
               className="mt-4 text-base"
-              style={{ color: "hsla(40, 30%, 98%, 0.7)" }}
+              style={{ color: "hsla(40, 30%, 98%, 0.85)" }}
             >
-              <a href="https://codes.ohio.gov/ohio-revised-code/section-3105.18" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80" style={{ color: "hsla(40, 30%, 98%, 0.7)" }}>Ohio Revised Code &sect; 3105.18</a>
+              <a href="https://codes.ohio.gov/ohio-revised-code/section-3105.18" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80" style={{ color: "hsla(40, 30%, 98%, 0.85)" }}>Ohio Revised Code &sect; 3105.18</a>
             </p>
           </div>
         </section>
@@ -481,7 +481,7 @@ const SpousalSupport = () => {
                       withholding order, similar to how child support is
                       collected. Payments are processed through the Ohio Child
                       Support Payment Central (CSPC), which acts as a
-                      clearinghouse — the paying spouse's employer withholds the
+                      clearinghouse - the paying spouse's employer withholds the
                       amount from their paycheck and forwards it to CSPC, which
                       then disburses it to the receiving spouse. This creates an
                       official payment record for both parties.

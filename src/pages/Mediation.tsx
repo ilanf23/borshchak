@@ -258,7 +258,7 @@ const Mediation = () => {
             <p
               className="text-base font-medium uppercase tracking-wider mb-4 opacity-0 animate-fade-in"
               style={{
-                color: "hsla(40, 30%, 98%, 0.7)",
+                color: "hsla(40, 30%, 98%, 0.85)",
                 animationDelay: "100ms",
               }}
             >
@@ -577,7 +577,7 @@ const Mediation = () => {
             </p>
             <p
               className="mt-4 text-base"
-              style={{ color: "hsla(40, 30%, 98%, 0.7)" }}
+              style={{ color: "hsla(40, 30%, 98%, 0.85)" }}
             >
               Mahatma Gandhi
             </p>
@@ -625,7 +625,7 @@ const Mediation = () => {
             </h2>
             <p
               className="text-center text-lg md:text-xl max-w-3xl mx-auto mb-16 leading-relaxed"
-              style={{ color: "hsla(40, 30%, 98%, 0.7)" }}
+              style={{ color: "hsla(40, 30%, 98%, 0.85)" }}
             >
               Mediation is most effective when certain conditions are present.
               Here are the scenarios where it tends to produce the best
@@ -656,7 +656,7 @@ const Mediation = () => {
                 </h3>
                 <p
                   className="text-sm md:text-base leading-relaxed"
-                  style={{ color: "hsla(40, 30%, 98%, 0.8)" }}
+                  style={{ color: "hsla(40, 30%, 98%, 0.9)" }}
                 >
                   Mediation works best when both spouses genuinely want to reach
                   an agreement. Willingness to negotiate in good faith is the
@@ -687,7 +687,7 @@ const Mediation = () => {
                 </h3>
                 <p
                   className="text-sm md:text-base leading-relaxed"
-                  style={{ color: "hsla(40, 30%, 98%, 0.8)" }}
+                  style={{ color: "hsla(40, 30%, 98%, 0.9)" }}
                 >
                   When you'll need to co-parent for years to come, mediation
                   helps establish a cooperative tone. Children benefit when their
@@ -718,7 +718,7 @@ const Mediation = () => {
                 </h3>
                 <p
                   className="text-sm md:text-base leading-relaxed"
-                  style={{ color: "hsla(40, 30%, 98%, 0.8)" }}
+                  style={{ color: "hsla(40, 30%, 98%, 0.9)" }}
                 >
                   Court proceedings are public record. If you want to keep
                   financial details, personal matters, and family business out of
@@ -750,7 +750,7 @@ const Mediation = () => {
                 </h3>
                 <p
                   className="text-sm md:text-base leading-relaxed"
-                  style={{ color: "hsla(40, 30%, 98%, 0.8)" }}
+                  style={{ color: "hsla(40, 30%, 98%, 0.9)" }}
                 >
                   Litigation costs add up fast: filing fees, discovery,
                   depositions, expert witnesses, and trial preparation. Mediation

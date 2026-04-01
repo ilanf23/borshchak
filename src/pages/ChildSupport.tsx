@@ -212,7 +212,7 @@ const ChildSupport = () => {
           <div className="container max-w-4xl section-padding relative z-10">
             <p
               className="text-base font-medium uppercase tracking-wider mb-4 opacity-0 animate-fade-in"
-              style={{ color: "hsla(40, 30%, 98%, 0.7)", animationDelay: "100ms" }}
+              style={{ color: "hsla(40, 30%, 98%, 0.85)", animationDelay: "100ms" }}
             >
               Columbus, OH Child Support Lawyers
             </p>

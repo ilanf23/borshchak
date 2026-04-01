@@ -21,7 +21,7 @@ const KeriReeves = () => {
               <div className="max-w-xl ml-auto mr-4 md:mr-8">
                 <p
                   className="text-base font-medium uppercase tracking-wider mb-4 opacity-0 animate-fade-in"
-                  style={{ color: "hsla(40, 30%, 98%, 0.7)", animationDelay: "100ms" }}
+                  style={{ color: "hsla(40, 30%, 98%, 0.85)", animationDelay: "100ms" }}
                 >
                   Borshchak Law Group | Columbus, OH
                 </p>
@@ -227,7 +227,7 @@ const KeriReeves = () => {
                   recommend this office."
                 </p>
                 <p className="text-sm text-muted-foreground mt-1">
-                  — Verified Google Review
+                  - Verified Google Review
                 </p>
               </div>
               <div className="flex flex-col gap-3 p-6 card-bordered">
@@ -240,11 +240,11 @@ const KeriReeves = () => {
                   "I had the great privilege of having Keri represent myself and
                   my son. I always felt so safe and supported. She was always
                   there if I had questions and really fought for what was right.
-                  She's amazing — without a doubt the best attorney I have ever
+                  She's amazing - without a doubt the best attorney I have ever
                   worked with."
                 </p>
                 <p className="text-sm text-muted-foreground mt-1">
-                  — Verified Google Review
+                  - Verified Google Review
                 </p>
               </div>
               <div className="flex flex-col gap-3 p-6 card-bordered">
@@ -259,7 +259,7 @@ const KeriReeves = () => {
                   painful time. I can't express my relief and gratitude enough."
                 </p>
                 <p className="text-sm text-muted-foreground mt-1">
-                  — Verified Google Review
+                  - Verified Google Review
                 </p>
               </div>
             </div>

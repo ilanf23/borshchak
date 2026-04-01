@@ -93,7 +93,7 @@ const valuationFactors = [
     title: "Control and Ownership Structure",
     icon: Users,
     description:
-      "Who controls the business — and how much control they have — directly affects its value. A minority ownership interest, for example, is typically discounted because the minority owner cannot unilaterally make business decisions. Conversely, a controlling interest commands a premium. The operating agreement, shareholder agreements, and voting rights all factor into how control is assessed and valued during divorce proceedings.",
+      "Who controls the business - and how much control they have - directly affects its value. A minority ownership interest, for example, is typically discounted because the minority owner cannot unilaterally make business decisions. Conversely, a controlling interest commands a premium. The operating agreement, shareholder agreements, and voting rights all factor into how control is assessed and valued during divorce proceedings.",
   },
 ];
 
@@ -121,7 +121,7 @@ const quizQuestions = [
     ],
     correctIndex: 1,
     explanation:
-      "This is more nuanced than a simple yes or no. A business owned before marriage is generally considered separate property — but it must still be formally allocated to its owner as part of the divorce proceedings. Additionally, if the business appreciated in value during the marriage due to either spouse's efforts or marital funds (known as active appreciation), that increase may be considered marital property and subject to division. Proving the business remains entirely separate property requires tracing and, in many cases, expert analysis.",
+      "This is more nuanced than a simple yes or no. A business owned before marriage is generally considered separate property - but it must still be formally allocated to its owner as part of the divorce proceedings. Additionally, if the business appreciated in value during the marriage due to either spouse's efforts or marital funds (known as active appreciation), that increase may be considered marital property and subject to division. Proving the business remains entirely separate property requires tracing and, in many cases, expert analysis.",
   },
   {
     question:
@@ -249,7 +249,7 @@ const BusinessInterests = () => {
             <p
               className="text-base font-medium uppercase tracking-wider mb-4 opacity-0 animate-fade-in"
               style={{
-                color: "hsla(40, 30%, 98%, 0.7)",
+                color: "hsla(40, 30%, 98%, 0.85)",
                 animationDelay: "100ms",
               }}
             >
@@ -331,7 +331,7 @@ const BusinessInterests = () => {
               Business divorce cases involving significant assets, complex
               ownership structures, or disputed valuations rarely succeed on legal
               expertise alone. At Borshchak Law Group, we build a team around your
-              case — drawing on a trusted network of outside professionals who
+              case - drawing on a trusted network of outside professionals who
               provide the analysis, data, and expert testimony needed to evaluate
               risk, calculate exposure, and strategize the best path forward.
             </p>
@@ -346,7 +346,7 @@ const BusinessInterests = () => {
                 >
                   Forensic Accountants
                 </h3>
-                <p style={{ color: "hsla(40, 30%, 98%, 0.75)" }}>
+                <p style={{ color: "hsla(40, 30%, 98%, 0.85)" }}>
                   Uncovering hidden income, tracing assets, and analyzing complex
                   financial records to build a court-ready picture of the
                   business's true financial position.
@@ -362,7 +362,7 @@ const BusinessInterests = () => {
                 >
                   CPAs &amp; Tax Experts
                 </h3>
-                <p style={{ color: "hsla(40, 30%, 98%, 0.75)" }}>
+                <p style={{ color: "hsla(40, 30%, 98%, 0.85)" }}>
                   Evaluating the tax consequences of business division, buyout
                   structures, deferred compensation, and settlement terms.
                 </p>
@@ -377,7 +377,7 @@ const BusinessInterests = () => {
                 >
                   Business Valuators
                 </h3>
-                <p style={{ color: "hsla(40, 30%, 98%, 0.75)" }}>
+                <p style={{ color: "hsla(40, 30%, 98%, 0.85)" }}>
                   Providing defensible, methodology-based valuations of
                   businesses, partnerships, professional practices, and business
                   interests of all sizes.
@@ -393,7 +393,7 @@ const BusinessInterests = () => {
                 >
                   Real Estate Agents &amp; Appraisers
                 </h3>
-                <p style={{ color: "hsla(40, 30%, 98%, 0.75)" }}>
+                <p style={{ color: "hsla(40, 30%, 98%, 0.85)" }}>
                   Accurately valuing real property interests held by or within the
                   business, including commercial holdings and investment
                   properties.
@@ -409,7 +409,7 @@ const BusinessInterests = () => {
                 >
                   Forensic Examiners &amp; Former FBI Agents
                 </h3>
-                <p style={{ color: "hsla(40, 30%, 98%, 0.75)" }}>
+                <p style={{ color: "hsla(40, 30%, 98%, 0.85)" }}>
                   Investigating financial fraud, asset concealment, and complex
                   schemes in high-stakes business divorce matters.
                 </p>
@@ -424,7 +424,7 @@ const BusinessInterests = () => {
                 >
                   Psychologists &amp; Psychiatrists
                 </h3>
-                <p style={{ color: "hsla(40, 30%, 98%, 0.75)" }}>
+                <p style={{ color: "hsla(40, 30%, 98%, 0.85)" }}>
                   Providing expert insight in cases where personal conduct,
                   capacity, or family dynamics intersect with business ownership
                   and control.
@@ -485,7 +485,7 @@ const BusinessInterests = () => {
             </h3>
             <p
               className="text-lg md:text-xl leading-relaxed"
-              style={{ color: "hsla(40, 30%, 98%, 0.8)" }}
+              style={{ color: "hsla(40, 30%, 98%, 0.9)" }}
             >
               Your business may be your most valuable asset. We work diligently
               to help protect your interests throughout the divorce process.
@@ -533,7 +533,7 @@ const BusinessInterests = () => {
             </h2>
             <p className="text-body text-lg mb-10">
               One of the most misunderstood issues in business divorce cases is
-              the distinction between separate and marital property — and how
+              the distinction between separate and marital property - and how
               appreciation of separate property can create a marital interest.
               Understanding whether appreciation is 'active' or 'passive' can
               significantly affect how a business or asset is divided.
@@ -553,7 +553,7 @@ const BusinessInterests = () => {
                 </div>
                 <p className="text-body text-lg">
                   Passive appreciation occurs when the value of separate property
-                  increases due to market forces or economic conditions — not
+                  increases due to market forces or economic conditions - not
                   because of any effort by either spouse. For example, if one
                   spouse owned a business before marriage and its value increased
                   simply due to favorable market conditions, that increase may
@@ -578,8 +578,8 @@ const BusinessInterests = () => {
                   increases due to the efforts, contributions, or involvement of
                   either spouse during the marriage. For example, if one spouse
                   owned a business before marriage but both spouses contributed to
-                  its growth — through labor, management decisions, or marital
-                  funds — that appreciation may be considered marital property and
+                  its growth - through labor, management decisions, or marital
+                  funds - that appreciation may be considered marital property and
                   subject to division. This is a critical distinction that
                   requires expert analysis.
                 </p>
@@ -597,7 +597,7 @@ const BusinessInterests = () => {
                     financial analysis, historical records, and often expert
                     testimony. Our attorneys work closely with forensic
                     accountants and business valuators to trace the source of any
-                    appreciation — protecting your separate property interests or
+                    appreciation - protecting your separate property interests or
                     establishing a marital claim where one exists. Under{" "}
                     <a
                       href="https://codes.ohio.gov/ohio-revised-code/section-3105.171"

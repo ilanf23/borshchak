@@ -59,7 +59,7 @@ const keyIssues = [
     title: "Trusts & Inherited Assets",
     icon: Lock,
     description:
-      "Assets held in trust or received as inheritance may be separate property — but commingling can create marital interests.",
+      "Assets held in trust or received as inheritance may be separate property - but commingling can create marital interests.",
   },
   {
     title: "Hidden Assets",
@@ -102,7 +102,7 @@ const quizQuestions = [
       "The court decides automatically",
       "The spouse claiming it is separate property",
       "The higher-earning spouse",
-      "Neither spouse — it's split equally",
+      "Neither spouse - it's split equally",
     ],
     correctIndex: 1,
     explanation:
@@ -114,7 +114,7 @@ const faqItems = [
   {
     question: "What qualifies as a high-asset divorce?",
     answer:
-      "A high-asset divorce involves complex financial circumstances — not simply a large amount of money. Examples include closely held businesses, multiple real estate holdings, stock options, deferred compensation, trusts, and significant retirement assets.",
+      "A high-asset divorce involves complex financial circumstances - not simply a large amount of money. Examples include closely held businesses, multiple real estate holdings, stock options, deferred compensation, trusts, and significant retirement assets.",
   },
   {
     question: "How are businesses valued in an Ohio divorce?",
@@ -129,7 +129,7 @@ const faqItems = [
   {
     question: "Do I need a different attorney for a high-asset divorce?",
     answer:
-      "Not a different attorney — but you need one with the right team and experience. High-asset cases require attorneys who understand complex financial instruments and who work closely with forensic accountants, business valuators, and other experts.",
+      "Not a different attorney - but you need one with the right team and experience. High-asset cases require attorneys who understand complex financial instruments and who work closely with forensic accountants, business valuators, and other experts.",
   },
 ];
 
@@ -276,7 +276,7 @@ const HighAssetDivorce = () => {
               <p>
                 A high-asset divorce is not simply a divorce between wealthy
                 people. It is a divorce in which the financial situation is
-                genuinely complicated — involving closely held business interests,
+                genuinely complicated - involving closely held business interests,
                 stock options, deferred compensation, real estate holdings,
                 retirement accounts, trusts, or complex tax consequences. These
                 cases require more than legal expertise alone. They require a
@@ -302,7 +302,7 @@ const HighAssetDivorce = () => {
             </h2>
             <p
               className="text-center text-lg max-w-3xl mx-auto mb-12 leading-relaxed"
-              style={{ color: "hsla(40, 30%, 98%, 0.7)" }}
+              style={{ color: "hsla(40, 30%, 98%, 0.85)" }}
             >
               High-asset cases demand more than legal expertise. We work with a
               trusted network of professionals to build your case.
@@ -427,7 +427,7 @@ const HighAssetDivorce = () => {
                   Ohio Revised Code Section 3105.171
                 </a>
                 , separate property includes assets owned before marriage,
-                inheritances, and gifts — but only if they have not been
+                inheritances, and gifts - but only if they have not been
                 commingled with marital assets.
               </p>
             </div>

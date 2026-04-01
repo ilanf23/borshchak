@@ -124,20 +124,6 @@ const Resources = () => {
             <p className="text-body mb-6">
               The following resources are provided for informational purposes. Borshchak Law Group serves families across Central Ohio, including Franklin, Delaware, Pickaway, Licking, Union, Madison, and Fairfield counties. Links below connect directly to official county court resources.
             </p>
-            <Link
-              to="/court-info"
-              className="card-elevated flex items-center justify-between group hover:shadow-lg transition-all duration-300 mb-10"
-            >
-              <div>
-                <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
-                  Columbus Family Courts Guide
-                </h3>
-                <p className="text-sm text-muted-foreground mt-1">
-                  Full directory of domestic relations courts across all 7 counties we serve, with addresses, phone numbers, and helpful links.
-                </p>
-              </div>
-              <ArrowRight className="w-5 h-5 text-primary shrink-0 ml-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
 
             <h3 className="heading-subsection mb-6">County Domestic Relations Courts</h3>
             <div className="grid md:grid-cols-2 gap-6 mb-10">

@@ -53,7 +53,7 @@ const Press = () => {
               <p className="text-body mb-6">
                 Attorney Dmitriy Borshchak was featured on Court TV discussing
                 family law matters and divorce proceedings. This is a media
-                appearance — not a client testimonial.
+                appearance - not a client testimonial.
               </p>
               <div className="aspect-video rounded-xl overflow-hidden shadow-xl">
                 <iframe

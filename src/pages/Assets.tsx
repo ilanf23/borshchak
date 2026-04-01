@@ -264,7 +264,7 @@ const Assets = () => {
             <p
               className="text-base font-medium uppercase tracking-wider mb-4 opacity-0 animate-fade-in"
               style={{
-                color: "hsla(40, 30%, 98%, 0.7)",
+                color: "hsla(40, 30%, 98%, 0.85)",
                 animationDelay: "100ms",
               }}
             >
@@ -609,7 +609,7 @@ const Assets = () => {
             </p>
             <p
               className="mt-4 text-base"
-              style={{ color: "hsla(40, 30%, 98%, 0.7)" }}
+              style={{ color: "hsla(40, 30%, 98%, 0.85)" }}
             >
               Proverb
             </p>
@@ -658,7 +658,7 @@ const Assets = () => {
             </h2>
             <p
               className="text-center text-lg md:text-xl max-w-3xl mx-auto mb-16 leading-relaxed"
-              style={{ color: "hsla(40, 30%, 98%, 0.7)" }}
+              style={{ color: "hsla(40, 30%, 98%, 0.85)" }}
             >
               Protecting your assets requires attention to these critical areas.
               Understanding them now gives you a strategic advantage.
@@ -688,7 +688,7 @@ const Assets = () => {
                 </h3>
                 <p
                   className="text-sm md:text-base leading-relaxed"
-                  style={{ color: "hsla(40, 30%, 98%, 0.8)" }}
+                  style={{ color: "hsla(40, 30%, 98%, 0.9)" }}
                 >
                   Every asset must be properly valued at the right point in time.
                   Undervaluation or using the wrong date can cost you hundreds of
@@ -720,7 +720,7 @@ const Assets = () => {
                 </h3>
                 <p
                   className="text-sm md:text-base leading-relaxed"
-                  style={{ color: "hsla(40, 30%, 98%, 0.8)" }}
+                  style={{ color: "hsla(40, 30%, 98%, 0.9)" }}
                 >
                   Not all assets are created equal after taxes. A $500,000
                   retirement account and $500,000 in cash have very different
@@ -752,7 +752,7 @@ const Assets = () => {
                 </h3>
                 <p
                   className="text-sm md:text-base leading-relaxed"
-                  style={{ color: "hsla(40, 30%, 98%, 0.8)" }}
+                  style={{ color: "hsla(40, 30%, 98%, 0.9)" }}
                 >
                   Asset concealment is more common than you think. We use
                   forensic discovery, subpoenas, and financial analysis to ensure
@@ -784,7 +784,7 @@ const Assets = () => {
                 </h3>
                 <p
                   className="text-sm md:text-base leading-relaxed"
-                  style={{ color: "hsla(40, 30%, 98%, 0.8)" }}
+                  style={{ color: "hsla(40, 30%, 98%, 0.9)" }}
                 >
                   Your business shouldn't be forced into sale because of
                   inadequate representation. We understand enterprise vs.

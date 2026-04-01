@@ -85,7 +85,7 @@ const Contact = () => {
       <main className="flex-1">
 
         {/* ════════════════════════════════════════════════════════
-            1. HERO — Parallax + Staggered Text
+            1. HERO - Parallax + Staggered Text
         ════════════════════════════════════════════════════════ */}
         <section
           ref={heroRef}
@@ -119,7 +119,7 @@ const Contact = () => {
 
             <p
               className="text-base font-medium uppercase tracking-wider mb-4 opacity-0 animate-fade-in"
-              style={{ color: "hsla(40, 30%, 98%, 0.7)", animationDelay: "100ms" }}
+              style={{ color: "hsla(40, 30%, 98%, 0.85)", animationDelay: "100ms" }}
             >
               Columbus, OH Family Law Firm
             </p>
@@ -141,7 +141,7 @@ const Contact = () => {
         </section>
 
         {/* ════════════════════════════════════════════════════════
-            2. CONTACT INFO — Navy + Glassmorphism Cards
+            2. CONTACT INFO - Navy + Glassmorphism Cards
         ════════════════════════════════════════════════════════ */}
         <section className="relative py-16 md:py-24 bg-navy overflow-hidden">
           {/* Dot pattern overlay */}
@@ -163,7 +163,7 @@ const Contact = () => {
             >
               <p
                 className="text-base font-medium uppercase tracking-wider mb-3"
-                style={{ color: "hsla(40, 30%, 98%, 0.5)" }}
+                style={{ color: "hsla(40, 30%, 98%, 0.7)" }}
               >
                 Reach Us Directly
               </p>
@@ -250,7 +250,7 @@ const Contact = () => {
         </section>
 
         {/* ════════════════════════════════════════════════════════
-            3. CONTACT FORM — Scroll Animations + Accents
+            3. CONTACT FORM - Scroll Animations + Accents
         ════════════════════════════════════════════════════════ */}
         <section className="relative section-padding overflow-hidden">
           {/* Decorative background blob */}

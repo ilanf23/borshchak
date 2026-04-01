@@ -242,7 +242,7 @@ const Annulment = () => {
           <div className="container max-w-4xl section-padding relative z-10">
             <p
               className="text-base font-medium uppercase tracking-wider mb-4 opacity-0 animate-fade-in"
-              style={{ color: "hsla(40, 30%, 98%, 0.7)", animationDelay: "100ms" }}
+              style={{ color: "hsla(40, 30%, 98%, 0.85)", animationDelay: "100ms" }}
             >
               Columbus, OH Annulment Lawyers
             </p>
@@ -378,13 +378,13 @@ const Annulment = () => {
                     </h3>
                   </div>
                   <div>
-                    <p className="text-sm font-medium uppercase tracking-wide mb-1" style={{ color: "hsla(40, 30%, 98%, 0.5)" }}>Divorce</p>
+                    <p className="text-sm font-medium uppercase tracking-wide mb-1" style={{ color: "hsla(40, 30%, 98%, 0.7)" }}>Divorce</p>
                     <p className="text-base leading-relaxed" style={{ color: "hsla(40, 30%, 98%, 0.85)" }}>
                       {diff.divorce}
                     </p>
                   </div>
                   <div>
-                    <p className="text-sm font-medium uppercase tracking-wide mb-1" style={{ color: "hsla(40, 30%, 98%, 0.5)" }}>Annulment</p>
+                    <p className="text-sm font-medium uppercase tracking-wide mb-1" style={{ color: "hsla(40, 30%, 98%, 0.7)" }}>Annulment</p>
                     <p className="text-base leading-relaxed" style={{ color: "hsla(40, 30%, 98%, 0.85)" }}>
                       {diff.annulment}
                     </p>
@@ -407,7 +407,7 @@ const Annulment = () => {
             <p className="text-2xl md:text-3xl font-serif font-medium leading-relaxed italic" style={{ color: "hsl(var(--primary-foreground))" }}>
               "It's a verified war strategy to never go to a battlefield alone."
             </p>
-            <p className="mt-4 text-base" style={{ color: "hsla(40, 30%, 98%, 0.7)" }}>Let our attorneys stand with you</p>
+            <p className="mt-4 text-base" style={{ color: "hsla(40, 30%, 98%, 0.85)" }}>Let our attorneys stand with you</p>
           </div>
         </section>
 

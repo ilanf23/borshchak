@@ -142,7 +142,7 @@ const faqItems = [
   {
     question: "Do I have to go to court for a divorce?",
     answer:
-      "In a divorce, yes — more often than not, you will need to appear in court. Divorce proceedings are conducted before a judge, particularly when issues are contested. Dissolution is different. In a dissolution, both spouses agree on all terms in advance and the court appearance is typically a brief, uncontested hearing. If avoiding court is important to you, dissolution may be worth exploring if you and your spouse are in agreement.",
+      "In a divorce, yes - more often than not, you will need to appear in court. Divorce proceedings are conducted before a judge, particularly when issues are contested. Dissolution is different. In a dissolution, both spouses agree on all terms in advance and the court appearance is typically a brief, uncontested hearing. If avoiding court is important to you, dissolution may be worth exploring if you and your spouse are in agreement.",
   },
   {
     question: "What happens to our house in a divorce?",
@@ -157,12 +157,12 @@ const faqItems = [
   {
     question: "What is the difference between marital and separate property in Ohio?",
     answer:
-      "Marital property includes all assets and debts accumulated during the marriage and is subject to division. Separate property — such as assets owned before the marriage, inheritances, or gifts received by one spouse — is generally not subject to division, but the party claiming it must be able to trace and prove it. If separate property has been commingled with marital assets, it can lose its separate character. An experienced attorney will work to identify and protect your separate property throughout the divorce process.",
+      "Marital property includes all assets and debts accumulated during the marriage and is subject to division. Separate property - such as assets owned before the marriage, inheritances, or gifts received by one spouse - is generally not subject to division, but the party claiming it must be able to trace and prove it. If separate property has been commingled with marital assets, it can lose its separate character. An experienced attorney will work to identify and protect your separate property throughout the divorce process.",
   },
   {
     question: "Does Ohio recognize same-sex divorce?",
     answer:
-      "Yes. Following the Supreme Court's decision in Obergefell v. Hodges, same-sex couples in Ohio have the same rights to marry — and to divorce — as any other couple. All the same legal processes, property division rules, custody standards, and support considerations apply equally to same-sex divorces in Ohio.",
+      "Yes. Following the Supreme Court's decision in Obergefell v. Hodges, same-sex couples in Ohio have the same rights to marry - and to divorce - as any other couple. All the same legal processes, property division rules, custody standards, and support considerations apply equally to same-sex divorces in Ohio.",
   },
   {
     question: "What if my divorce involves significant assets or a business?",
@@ -301,7 +301,7 @@ const Divorce = () => {
             <p
               className="text-base font-medium uppercase tracking-wider mb-4 opacity-0 animate-fade-in"
               style={{
-                color: "hsla(40, 30%, 98%, 0.7)",
+                color: "hsla(40, 30%, 98%, 0.85)",
                 animationDelay: "100ms",
               }}
             >
@@ -362,7 +362,7 @@ const Divorce = () => {
               </p>
               <p>
                 Divorce is one of the most emotionally charged experiences a
-                person can face — especially when children are involved. Strong
+                person can face - especially when children are involved. Strong
                 emotions can lead to decisions that feel right in the moment but
                 carry long-term consequences. Our job is to help you stay
                 grounded. We work tirelessly to ensure every client we represent
@@ -579,7 +579,7 @@ const Divorce = () => {
                 </div>
                 <p className="text-body text-lg mb-4">
                   A contested divorce occurs when spouses cannot agree on one or
-                  more major issues — such as property division, parenting
+                  more major issues - such as property division, parenting
                   arrangements, or spousal support. The court steps in to resolve
                   disputed matters, which typically means more time, more cost,
                   and a greater need for experienced legal representation.
@@ -630,7 +630,7 @@ const Divorce = () => {
                   An uncontested divorce occurs when both spouses agree on all
                   major issues but one spouse initiates the filing. Unlike
                   dissolution, an uncontested divorce still follows the divorce
-                  process — but agreement on terms can significantly reduce time
+                  process - but agreement on terms can significantly reduce time
                   and cost.
                 </p>
                 <div className="space-y-2">
@@ -716,7 +716,7 @@ const Divorce = () => {
             </h2>
             <p
               className="text-center text-lg md:text-xl max-w-3xl mx-auto mb-16 leading-relaxed"
-              style={{ color: "hsla(40, 30%, 98%, 0.7)" }}
+              style={{ color: "hsla(40, 30%, 98%, 0.85)" }}
             >
               Most divorce cases come down to a few major issues.
               Understanding them early can help you make better decisions
@@ -747,7 +747,7 @@ const Divorce = () => {
                 </h3>
                 <p
                   className="text-sm md:text-base leading-relaxed"
-                  style={{ color: "hsla(40, 30%, 98%, 0.8)" }}
+                  style={{ color: "hsla(40, 30%, 98%, 0.9)" }}
                 >
                   Ohio follows an equitable division framework for marital
                   property. Courts often begin with equal division, but may
@@ -781,7 +781,7 @@ const Divorce = () => {
                 </h3>
                 <p
                   className="text-sm md:text-base leading-relaxed"
-                  style={{ color: "hsla(40, 30%, 98%, 0.8)" }}
+                  style={{ color: "hsla(40, 30%, 98%, 0.9)" }}
                 >
                   Spousal support is not automatic in Ohio. If requested, the
                   court may award reasonable support after considering statutory
@@ -815,7 +815,7 @@ const Divorce = () => {
                 </h3>
                 <p
                   className="text-sm md:text-base leading-relaxed"
-                  style={{ color: "hsla(40, 30%, 98%, 0.8)" }}
+                  style={{ color: "hsla(40, 30%, 98%, 0.9)" }}
                 >
                   Under{" "}
                   <a
@@ -857,7 +857,7 @@ const Divorce = () => {
                 </h3>
                 <p
                   className="text-sm md:text-base leading-relaxed"
-                  style={{ color: "hsla(40, 30%, 98%, 0.8)" }}
+                  style={{ color: "hsla(40, 30%, 98%, 0.9)" }}
                 >
                   Child support is typically determined under Ohio's statutory
                   framework and depends on the facts of the case, including
@@ -882,7 +882,7 @@ const Divorce = () => {
               A Team Approach to Your Case
             </h2>
             <p className="text-body mb-10">
-              Some divorce cases involve complicated financial situations — closely
+              Some divorce cases involve complicated financial situations - closely
               held business interests, stock options, deferred compensation, real
               estate holdings, trusts, or complex tax consequences. In these
               matters, legal expertise alone is not enough. At Borshchak Law Group,
@@ -969,7 +969,7 @@ const Divorce = () => {
                     Marital Property vs. Separate Property
                   </h3>
                   <p className="text-body text-base">
-                    In Ohio, all property acquired during the marriage is presumed to be marital property and subject to division — unless a party can prove otherwise. Separate property includes assets owned before the marriage, inheritances, and gifts received by one spouse, provided they have not been commingled with marital assets. Ohio courts will equally divide marital assets and debts unless such equal division would be unfair. A detail-oriented attorney will trace, identify, and establish your separate property so that it is protected and your spouse does not receive property to which they are not entitled.
+                    In Ohio, all property acquired during the marriage is presumed to be marital property and subject to division - unless a party can prove otherwise. Separate property includes assets owned before the marriage, inheritances, and gifts received by one spouse, provided they have not been commingled with marital assets. Ohio courts will equally divide marital assets and debts unless such equal division would be unfair. A detail-oriented attorney will trace, identify, and establish your separate property so that it is protected and your spouse does not receive property to which they are not entitled.
                   </p>
                 </div>
               </div>
@@ -983,7 +983,7 @@ const Divorce = () => {
                     Dividing Assets in a Long-Term Marriage
                   </h3>
                   <p className="text-body text-base">
-                    Divorces involving marriages of 20 years or longer carry unique challenges. The amount of accumulated property — real estate, retirement accounts, pensions, investments, and personal assets — requires thorough identification and valuation. For older couples, issues like Social Security benefits, retirement income, and healthcare coverage add further complexity. These financial decisions can have life-altering consequences if not handled carefully by an experienced attorney.
+                    Divorces involving marriages of 20 years or longer carry unique challenges. The amount of accumulated property - real estate, retirement accounts, pensions, investments, and personal assets - requires thorough identification and valuation. For older couples, issues like Social Security benefits, retirement income, and healthcare coverage add further complexity. These financial decisions can have life-altering consequences if not handled carefully by an experienced attorney.
                   </p>
                 </div>
               </div>

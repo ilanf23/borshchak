@@ -213,7 +213,7 @@ const FathersRights = () => {
           <div className="container max-w-4xl section-padding relative z-10">
             <p
               className="text-base font-medium uppercase tracking-wider mb-4 opacity-0 animate-fade-in"
-              style={{ color: "hsla(40, 30%, 98%, 0.7)", animationDelay: "100ms" }}
+              style={{ color: "hsla(40, 30%, 98%, 0.85)", animationDelay: "100ms" }}
             >
               Columbus, OH Father's Rights Lawyers
             </p>
@@ -365,7 +365,7 @@ const FathersRights = () => {
             </h2>
             <p
               className="text-center text-lg md:text-xl max-w-3xl mx-auto mb-16 leading-relaxed"
-              style={{ color: "hsla(40, 30%, 98%, 0.7)" }}
+              style={{ color: "hsla(40, 30%, 98%, 0.85)" }}
             >
               Experienced Columbus Family Law Attorneys Protecting Fathers' Custody, Parenting Time, & Legal Rights
             </p>
@@ -384,7 +384,7 @@ const FathersRights = () => {
                 >
                   Custody & Shared Parenting
                 </h3>
-                <p className="text-sm md:text-base leading-relaxed" style={{ color: "hsla(40, 30%, 98%, 0.8)" }}>
+                <p className="text-sm md:text-base leading-relaxed" style={{ color: "hsla(40, 30%, 98%, 0.9)" }}>
                   Ohio allows shared parenting plans where both parents retain decision-making authority. Courts evaluate cooperation, stability, and the child's wishes. Fathers can and do receive equal custody.
                 </p>
               </div>
@@ -402,7 +402,7 @@ const FathersRights = () => {
                 >
                   Parenting Time & Visitation
                 </h3>
-                <p className="text-sm md:text-base leading-relaxed" style={{ color: "hsla(40, 30%, 98%, 0.8)" }}>
+                <p className="text-sm md:text-base leading-relaxed" style={{ color: "hsla(40, 30%, 98%, 0.9)" }}>
                   Under <a href="https://codes.ohio.gov/ohio-revised-code/section-3109.051" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80" style={{ color: "hsla(40, 30%, 98%, 0.9)" }}>ORC 3109.051</a>, non-residential parents are entitled to reasonable parenting time. Courts can award more time based on circumstances. Your rights go far beyond every-other-weekend.
                 </p>
               </div>
@@ -420,7 +420,7 @@ const FathersRights = () => {
                 >
                   Child Support Rights
                 </h3>
-                <p className="text-sm md:text-base leading-relaxed" style={{ color: "hsla(40, 30%, 98%, 0.8)" }}>
+                <p className="text-sm md:text-base leading-relaxed" style={{ color: "hsla(40, 30%, 98%, 0.9)" }}>
                   Ohio calculates support based on both parents' incomes, number of children, and parenting time. Fathers have the right to request modifications when circumstances change, including income or schedule shifts.
                 </p>
               </div>
@@ -438,7 +438,7 @@ const FathersRights = () => {
                 >
                   Paternity Establishment
                 </h3>
-                <p className="text-sm md:text-base leading-relaxed" style={{ color: "hsla(40, 30%, 98%, 0.8)" }}>
+                <p className="text-sm md:text-base leading-relaxed" style={{ color: "hsla(40, 30%, 98%, 0.9)" }}>
                   Establishing paternity is the essential first step for unmarried fathers. Once confirmed through voluntary acknowledgment or court order, you gain the legal right to seek custody, parenting time, and decision-making authority.
                 </p>
               </div>
@@ -479,7 +479,7 @@ const FathersRights = () => {
             <p className="text-2xl md:text-3xl font-serif font-medium leading-relaxed italic" style={{ color: "hsl(var(--primary-foreground))" }}>
               "The bond between a father and his child is one that the law must recognize, respect, and protect."
             </p>
-            <p className="mt-4 text-base" style={{ color: "hsla(40, 30%, 98%, 0.7)" }}>Borshchak Law Group</p>
+            <p className="mt-4 text-base" style={{ color: "hsla(40, 30%, 98%, 0.85)" }}>Borshchak Law Group</p>
           </div>
         </section>
 

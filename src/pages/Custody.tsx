@@ -167,7 +167,7 @@ const faqItems = [
   {
     question: "How long does a custody case take?",
     answer:
-      "The timeline depends heavily on the level of cooperation between the parties. When both parents are in full agreement, an agreed custody arrangement can be reached relatively quickly — though the timeframe varies based on court scheduling and how promptly documents are prepared and filed. Contested custody cases are a different story. When parents cannot agree, cases often take 6 to 12 months or longer, particularly when evaluations, a Guardian ad Litem, mediation, or trial are involved. The more cooperation there is on both sides, the faster and less expensive the process will be.",
+      "The timeline depends heavily on the level of cooperation between the parties. When both parents are in full agreement, an agreed custody arrangement can be reached relatively quickly - though the timeframe varies based on court scheduling and how promptly documents are prepared and filed. Contested custody cases are a different story. When parents cannot agree, cases often take 6 to 12 months or longer, particularly when evaluations, a Guardian ad Litem, mediation, or trial are involved. The more cooperation there is on both sides, the faster and less expensive the process will be.",
   },
   {
     question: "Can a custody order be changed later?",
@@ -177,7 +177,7 @@ const faqItems = [
   {
     question: "What is a Guardian ad Litem?",
     answer:
-      "A Guardian ad Litem (GAL) is a court-appointed neutral — often a licensed attorney, though some Ohio counties allow non-attorneys — who investigates the circumstances of a custody case and submits a written recommendation to the court regarding custody and parenting time. The GAL interviews both parents, the child, teachers, and other relevant individuals. While their recommendation is not binding, judges give it significant weight. A GAL can also be an invaluable resource in reducing conflict and in-court litigation, even though they do represent an added cost to the proceedings.",
+      "A Guardian ad Litem (GAL) is a court-appointed neutral - often a licensed attorney, though some Ohio counties allow non-attorneys - who investigates the circumstances of a custody case and submits a written recommendation to the court regarding custody and parenting time. The GAL interviews both parents, the child, teachers, and other relevant individuals. While their recommendation is not binding, judges give it significant weight. A GAL can also be an invaluable resource in reducing conflict and in-court litigation, even though they do represent an added cost to the proceedings.",
   },
 ];
 
@@ -265,7 +265,7 @@ const Custody = () => {
             <p
               className="text-base font-medium uppercase tracking-wider mb-4 opacity-0 animate-fade-in"
               style={{
-                color: "hsla(40, 30%, 98%, 0.7)",
+                color: "hsla(40, 30%, 98%, 0.85)",
                 animationDelay: "100ms",
               }}
             >
@@ -322,7 +322,7 @@ const Custody = () => {
                 agreement or decision that awards joint custody to parents will be
                 referred to as a Shared Parenting Plan, and will contain all terms
                 relating to the allocation of parental rights and
-                responsibilities — including child support, parenting time, school
+                responsibilities - including child support, parenting time, school
                 placement, and more. If parents are awarded joint custody, they
                 must work together to reach an agreement regarding all major
                 decisions for their children, such as healthcare and schooling.
@@ -330,8 +330,8 @@ const Custody = () => {
               <p>
                 In cases of sole custody, the parent designated as custodian may
                 make all major decisions for the children without discussion with
-                the other parent. The parent who does not have custody — commonly
-                referred to as the non-custodial or non-residential parent — may
+                the other parent. The parent who does not have custody - commonly
+                referred to as the non-custodial or non-residential parent - may
                 not make major decisions for their children, but they do have the
                 right to obtain copies of medical, school, and daycare records. A
                 non-residential parent may also attend all school functions to
@@ -508,8 +508,8 @@ const Custody = () => {
               Guardian Ad Litem (GAL)
             </h2>
             <p className="text-body mb-10">
-              In some instances — whether during a divorce, initial custody
-              proceeding, or a post-decree modification — a Guardian ad Litem may
+              In some instances - whether during a divorce, initial custody
+              proceeding, or a post-decree modification - a Guardian ad Litem may
               be appointed by the court on its own or after a request by either
               party. A Guardian ad Litem is often a licensed attorney, though some
               Ohio counties allow non-attorneys to serve in this role.
@@ -533,7 +533,7 @@ const Custody = () => {
                   circumstances of the case. This typically includes interviewing
                   both parents, the child, teachers, doctors, and other relevant
                   individuals. The GAL then files a written recommendation with the
-                  court regarding custody and parenting time — a recommendation that
+                  court regarding custody and parenting time - a recommendation that
                   carries significant weight in the judge's final decision.
                 </p>
               </div>
@@ -574,7 +574,7 @@ const Custody = () => {
                 <p className="text-body text-base">
                   While a Guardian ad Litem does represent an added cost to the
                   proceedings, they can also be an invaluable resource. A GAL helps
-                  resolve conflicts — large and small — throughout the case, which
+                  resolve conflicts - large and small - throughout the case, which
                   can actually reduce the amount of in-court litigation and
                   ultimately lower overall costs for both parties.
                 </p>
@@ -617,7 +617,7 @@ const Custody = () => {
             <p className="text-body text-lg mb-10">
               For unmarried parents, establishing paternity is a critical first
               step before pursuing custody or parenting time. Without established
-              paternity, a father has no legal rights to custody or visitation —
+              paternity, a father has no legal rights to custody or visitation -
               and a child may be denied important benefits including inheritance
               rights, access to family medical history, and financial support.
             </p>
@@ -723,7 +723,7 @@ const Custody = () => {
                 </h3>
                 <p className="text-body text-lg">
                   In some cases, significant concerns arise about the parenting
-                  abilities of one parent — such as substance abuse, domestic
+                  abilities of one parent - such as substance abuse, domestic
                   violence, or mental health issues. When the court determines
                   that unsupervised contact may pose a risk to the child, it may
                   order supervised parenting time. This means visits occur in the
@@ -738,8 +738,8 @@ const Custody = () => {
                   Companionship Time
                 </h3>
                 <p className="text-body text-lg">
-                  Companionship time refers to the time a non-parent — such as a
-                  grandparent or other relative — is granted with a child by
+                  Companionship time refers to the time a non-parent - such as a
+                  grandparent or other relative - is granted with a child by
                   court order. Ohio law recognizes that maintaining these
                   relationships can serve the child's best interests.
                   Companionship time rights are governed by separate statutory
@@ -830,7 +830,7 @@ const Custody = () => {
             </h2>
             <div className="space-y-6 text-body">
               <p>
-                Life changes — and sometimes court orders need to change with
+                Life changes - and sometimes court orders need to change with
                 it. It is important to understand that modification requests are
                 not always about changing custody itself. In many cases, a parent
                 seeks only to modify their parenting time or visitation schedule,
@@ -907,7 +907,7 @@ const Custody = () => {
                     A parent may seek to modify their parenting time or
                     visitation schedule without seeking a full change in
                     custody. In these cases, the court applies the best interest
-                    standard under Ohio Revised Code Section 3109.04(F)(1) —
+                    standard under Ohio Revised Code Section 3109.04(F)(1) -
                     without necessarily requiring proof of a substantial change
                     in circumstances. Even if both parents informally agree to a
                     new schedule, that agreement is not legally binding unless it

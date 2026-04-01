@@ -12,13 +12,13 @@ const items = [
     icon: Brain,
     title: "Calculated Decision-Making",
     description:
-      "We are not just strategic — we are calculated. Every recommendation we make is grounded in data, legal precedent, and a clear-eyed assessment of risk and outcome.",
+      "We are not just strategic - we are calculated. Every recommendation we make is grounded in data, legal precedent, and a clear-eyed assessment of risk and outcome.",
   },
   {
     icon: MapPin,
     title: "Central Ohio Focused",
     description:
-      "From downtown Columbus to communities across Franklin, Delaware, Pickaway, Licking, Union, Madison, and Fairfield counties — we know these courts, these judges, and this community.",
+      "From downtown Columbus to communities across Franklin, Delaware, Pickaway, Licking, Union, Madison, and Fairfield counties - we know these courts, these judges, and this community.",
   },
 ];
 

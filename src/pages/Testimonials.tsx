@@ -1,6 +1,6 @@
 import { Star, ExternalLink, Users, Scale, Heart } from "lucide-react";
 import { motion, useMotionValue, useTransform, animate, useInView } from "framer-motion";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -9,6 +9,49 @@ import GoogleReviews from "@/components/home/GoogleReviews";
 import FinalCTA from "@/components/home/FinalCTA";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import testimonialsHero from "@/assets/testimonials-hero.jpg";
+import dmitriyPhoto from "@/assets/dmitriy-borshchak.png";
+
+const LiteYouTube = ({ videoId, title }: { videoId: string; title: string }) => {
+  const [playing, setPlaying] = useState(false);
+  const handlePlay = useCallback(() => setPlaying(true), []);
+
+  if (playing) {
+    return (
+      <div className="aspect-video rounded-xl overflow-hidden shadow-xl">
+        <iframe
+          src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+          title={title}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          className="w-full h-full"
+        />
+      </div>
+    );
+  }
+
+  return (
+    <button
+      onClick={handlePlay}
+      className="relative aspect-video w-full rounded-xl overflow-hidden shadow-xl group cursor-pointer"
+      aria-label={`Play ${title}`}
+    >
+      <img
+        src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
+        alt={title}
+        className="w-full h-full object-cover"
+        loading="lazy"
+      />
+      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors" />
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="w-16 h-16 md:w-20 md:h-20 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+          <svg className="w-7 h-7 md:w-9 md:h-9 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        </div>
+      </div>
+    </button>
+  );
+};
 
 const stats = [
   { icon: Users, numValue: 20, suffix: "+", label: "Years of Experience", decimals: 0, color: "from-blue-500 to-blue-600", iconBg: "bg-blue-500/25", iconColor: "text-blue-400" },
@@ -75,7 +118,7 @@ const Testimonials = () => {
             style={{ textShadow: "0 1px 4px rgba(0,0,0,0.3)" }}
           >
             Don't take our word for it. Hear directly from the families we've
-            represented — through some of the most difficult moments of their lives —
+            represented - through some of the most difficult moments of their lives -
             and the outcomes we helped them achieve.
           </motion.p>
           <motion.a
@@ -157,92 +200,12 @@ const Testimonials = () => {
               Real stories from real families who trusted Borshchak Law Group
               during some of the most challenging moments of their lives.
             </p>
-            {/* TODO: Replace YouTube embed IDs with actual testimonial video IDs from Dmitriy */}
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="card-bordered">
-                <p className="text-body mb-4">
-                  After a high-conflict custody dispute, this client came to us
-                  feeling overwhelmed and uncertain about her future as a parent.
-                  Watch how we helped her protect her relationship with her
-                  children and reach an outcome that gave her family stability.
-                </p>
-                <div
-                  className="relative w-full rounded-xl overflow-hidden shadow-lg border-2"
-                  style={{ paddingBottom: "52%", borderColor: "hsl(var(--green-accent))" }}
-                >
-                  <iframe
-                    src="https://www.youtube.com/embed/AHfY54OdW2E"
-                    title="Client Testimonial - Custody Dispute"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="absolute inset-0 w-full h-full"
-                  />
-                </div>
-              </div>
-
-              <div className="card-bordered">
-                <p className="text-body mb-4">
-                  Facing a complex divorce with significant assets and business
-                  interests, this client needed a team that understood both the
-                  legal and financial dimensions of his case. Here's what working
-                  with Borshchak Law Group looked like from his perspective.
-                </p>
-                <div
-                  className="relative w-full rounded-xl overflow-hidden shadow-lg border-2"
-                  style={{ paddingBottom: "52%", borderColor: "hsl(var(--green-accent))" }}
-                >
-                  <iframe
-                    src="https://www.youtube.com/embed/AHfY54OdW2E"
-                    title="Client Testimonial - Complex Divorce"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="absolute inset-0 w-full h-full"
-                  />
-                </div>
-              </div>
-
-              <div className="card-bordered">
-                <p className="text-body mb-4">
-                  This client came to us after a difficult experience with a
-                  previous attorney. Our team stepped in, stabilized the case,
-                  and fought to get her the outcome she deserved. In her own
-                  words — what made the difference.
-                </p>
-                <div
-                  className="relative w-full rounded-xl overflow-hidden shadow-lg border-2"
-                  style={{ paddingBottom: "52%", borderColor: "hsl(var(--green-accent))" }}
-                >
-                  <iframe
-                    src="https://www.youtube.com/embed/AHfY54OdW2E"
-                    title="Client Testimonial - Case Recovery"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="absolute inset-0 w-full h-full"
-                  />
-                </div>
-              </div>
-
-              <div className="card-bordered">
-                <p className="text-body mb-4">
-                  A father's rights case that required aggressive advocacy and
-                  careful strategy. Watch how we protected this client's role in
-                  his children's lives and secured a parenting arrangement that
-                  worked for his family.
-                </p>
-                <div
-                  className="relative w-full rounded-xl overflow-hidden shadow-lg border-2"
-                  style={{ paddingBottom: "52%", borderColor: "hsl(var(--green-accent))" }}
-                >
-                  <iframe
-                    src="https://www.youtube.com/embed/AHfY54OdW2E"
-                    title="Client Testimonial - Father's Rights"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="absolute inset-0 w-full h-full"
-                  />
-                </div>
-              </div>
+            <div className="space-y-10">
+              <LiteYouTube videoId="AHfY54OdW2E" title="Client Testimonial" />
+              <LiteYouTube videoId="YbH9wGdOMbc" title="Client Testimonial - Linda Bowers" />
+              <LiteYouTube videoId="wlhS80XSOic" title="Client Testimonial" />
             </div>
+
           </div>
         </div>
       </section>
@@ -263,38 +226,27 @@ const Testimonials = () => {
             className="heading-section mb-4 text-center"
             style={{ color: "hsl(var(--primary-foreground))" }}
           >
-            Borshchak Law Group in the Media
+            See How We Protect Families in Action
           </h2>
           <p
             className="text-lg leading-relaxed text-center max-w-2xl mx-auto mb-10"
-            style={{ color: "hsla(40, 30%, 98%, 0.75)" }}
+            style={{ color: "hsla(40, 30%, 98%, 0.85)" }}
           >
-            The following clip is a media appearance — not a client testimonial.
-            Dmitriy Borshchak was featured on Court TV discussing family law
-            matters. Skip to the timestamp below to see Dmitriy's segment.
+            Attorney Dmitriy Borshchak walks through a real family law case,
+            from the challenges the client faced to the strategy we used to
+            protect their interests and secure a favorable outcome.
           </p>
 
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block bg-accent text-white text-sm font-medium px-4 py-1 rounded-full mb-4">
-              Court TV Feature — Not a Testimonial
-            </span>
+          <div className="max-w-5xl mx-auto text-center">
             <div className="aspect-video rounded-xl overflow-hidden shadow-xl">
-              <iframe
-                src="https://www.youtube.com/embed/GbBf903XVh4"
-                title="Court TV Feature — Dmitriy Borshchak"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
+              <video
+                src="/dmitriy-interview.mp4"
+                controls
+                preload="auto"
                 className="w-full h-full"
+                title="Interview with Dmitriy Borshchak"
               />
             </div>
-            {/* TODO: Add confirmed timestamp from Dmitriy */}
-            <p
-              className="text-sm mt-4"
-              style={{ color: "hsla(40, 30%, 98%, 0.6)" }}
-            >
-              ⏱ Dmitriy Borshchak appears at approximately [TIMESTAMP] —
-              update this once confirmed
-            </p>
             <Link
               to="/press"
               className="inline-block mt-6 text-accent underline hover:opacity-80 transition-opacity"

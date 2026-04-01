@@ -27,14 +27,14 @@ const steps = [
       "Tailored to your circumstances",
       "Transparent fee structure",
       "Realistic timeline expectations",
-      "Collaborative — you lead, we guide"
+      "Collaborative - you lead, we guide"
     ]
   },
   {
     number: "3",
     title: "Active Representation",
     shortDesc: "Negotiations and court",
-    fullDesc: "We handle all filings, court appearances, negotiations, and communications with opposing counsel. When cases cannot be resolved by agreement, we prepare thoroughly for trial — including preparing you. You will never walk into a courtroom unprepared. You'll receive regular updates and will be consulted before any significant decision is made.",
+    fullDesc: "We handle all filings, court appearances, negotiations, and communications with opposing counsel. When cases cannot be resolved by agreement, we prepare thoroughly for trial - including preparing you. You will never walk into a courtroom unprepared. You'll receive regular updates and will be consulted before any significant decision is made.",
     icon: Scale,
     details: [
       "Direct attorney communication",

@@ -134,7 +134,7 @@ const WhoWeHelp = () => {
 
                 <p
                   className="text-base leading-relaxed"
-                  style={{ color: "hsla(40, 30%, 98%, 0.68)" }}
+                  style={{ color: "hsla(40, 30%, 98%, 0.85)" }}
                 >
                   {item.description}
                 </p>
