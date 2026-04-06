@@ -22,7 +22,7 @@ export const chatbotFlow: Record<string, ChatNode> = {
   welcome: {
     id: "welcome",
     message:
-      "Welcome to Borshchak Law Group. I'm here to help you find the information you need — no pressure, just guidance. How can I assist you today?",
+      "Welcome to Borshchak Law Group. I'm here to help you find the information you need - no pressure, just guidance. How can I assist you today?",
     options: [
       { label: "I need help with a family law matter", nextNodeId: "area_select" },
       { label: "I'd like to schedule a consultation", nextNodeId: "schedule" },
@@ -33,7 +33,7 @@ export const chatbotFlow: Record<string, ChatNode> = {
   // ── Practice area selection ───────────────────────────
   area_select: {
     id: "area_select",
-    message: "I understand — taking this step can feel overwhelming, but you're in the right place. Which area best describes your situation?",
+    message: "I understand - taking this step can feel overwhelming, but you're in the right place. Which area best describes your situation?",
     options: [
       { label: "Divorce", nextNodeId: "divorce" },
       { label: "Child Custody", nextNodeId: "custody" },
@@ -70,7 +70,7 @@ export const chatbotFlow: Record<string, ChatNode> = {
   divorce_timeline: {
     id: "divorce_timeline",
     message:
-      "Colorado requires a minimum 91-day waiting period from filing. Uncontested cases can wrap up in 3–4 months, while contested matters may take 6–12+ months. Every case is different — we can give you a more accurate timeline after reviewing your situation.",
+      "Colorado requires a minimum 91-day waiting period from filing. Uncontested cases can wrap up in 3–4 months, while contested matters may take 6–12+ months. Every case is different - we can give you a more accurate timeline after reviewing your situation.",
     options: [
       { label: "Schedule a consultation", nextNodeId: "schedule" },
       { label: "Tell me about costs", nextNodeId: "costs" },
@@ -147,7 +147,7 @@ export const chatbotFlow: Record<string, ChatNode> = {
   support_modify: {
     id: "support_modify",
     message:
-      "Support orders can be modified when there's a significant change in circumstances — such as a job change, income shift, or change in parenting time. We'll review your current order and advise you on whether modification makes sense.",
+      "Support orders can be modified when there's a significant change in circumstances - such as a job change, income shift, or change in parenting time. We'll review your current order and advise you on whether modification makes sense.",
     options: [
       { label: "Schedule a consultation", nextNodeId: "schedule" },
       { label: "Back to topics", nextNodeId: "area_select" },
@@ -158,7 +158,7 @@ export const chatbotFlow: Record<string, ChatNode> = {
   assets: {
     id: "assets",
     message:
-      "Dividing property and assets is one of the most complex parts of divorce. Colorado is an \"equitable distribution\" state, meaning assets are divided fairly — but not always equally. What's your concern?",
+      "Dividing property and assets is one of the most complex parts of divorce. Colorado is an \"equitable distribution\" state, meaning assets are divided fairly - but not always equally. What's your concern?",
     options: [
       { label: "High-value or complex assets", nextNodeId: "high_assets" },
       { label: "Business ownership", nextNodeId: "business" },
@@ -240,7 +240,7 @@ export const chatbotFlow: Record<string, ChatNode> = {
       { label: "Protection Orders", nextNodeId: "protection_orders" },
       { label: "Post-Decree Modifications", nextNodeId: "post_decree" },
       { label: "Contempt / Enforcement", nextNodeId: "contempt" },
-      { label: "I'm not sure — I need guidance", nextNodeId: "schedule" },
+      { label: "I'm not sure - I need guidance", nextNodeId: "schedule" },
     ],
   },
 
@@ -257,7 +257,7 @@ export const chatbotFlow: Record<string, ChatNode> = {
   legal_separation: {
     id: "legal_separation",
     message:
-      "A legal separation addresses the same issues as divorce — custody, support, and property — without dissolving the marriage. It may be right for couples who need space but aren't ready for divorce.",
+      "A legal separation addresses the same issues as divorce - custody, support, and property - without dissolving the marriage. It may be right for couples who need space but aren't ready for divorce.",
     options: [
       { label: "Schedule a consultation", nextNodeId: "schedule" },
       { label: "Back to topics", nextNodeId: "area_select" },
@@ -293,7 +293,7 @@ export const chatbotFlow: Record<string, ChatNode> = {
   post_decree: {
     id: "post_decree",
     message:
-      "Life changes after a divorce decree — and sometimes the court order needs to change too. We handle modifications to custody, support, and parenting plans when circumstances warrant it.",
+      "Life changes after a divorce decree - and sometimes the court order needs to change too. We handle modifications to custody, support, and parenting plans when circumstances warrant it.",
     options: [
       { label: "Schedule a consultation", nextNodeId: "schedule" },
       { label: "Back to topics", nextNodeId: "area_select" },
@@ -303,7 +303,7 @@ export const chatbotFlow: Record<string, ChatNode> = {
   contempt: {
     id: "contempt",
     message:
-      "When a court order isn't being followed, we can help you file a motion for contempt or enforcement. You shouldn't have to tolerate non-compliance — let us hold the other party accountable.",
+      "When a court order isn't being followed, we can help you file a motion for contempt or enforcement. You shouldn't have to tolerate non-compliance - let us hold the other party accountable.",
     options: [
       { label: "Schedule a consultation", nextNodeId: "schedule" },
       { label: "Back to topics", nextNodeId: "area_select" },
@@ -313,7 +313,7 @@ export const chatbotFlow: Record<string, ChatNode> = {
   // ── General questions ─────────────────────────────────
   general_question: {
     id: "general_question",
-    message: "Of course — what would you like to know?",
+    message: "Of course - what would you like to know?",
     options: [
       { label: "What areas of law do you practice?", nextNodeId: "practice_areas" },
       { label: "How much does it cost?", nextNodeId: "costs" },
@@ -336,7 +336,7 @@ export const chatbotFlow: Record<string, ChatNode> = {
   costs: {
     id: "costs",
     message:
-      "Every case is unique, so costs vary. We're transparent about fees from the start and offer a free initial consultation so you can understand your options without any financial commitment. There are no surprises — just honest guidance.",
+      "Every case is unique, so costs vary. We're transparent about fees from the start and offer a free initial consultation so you can understand your options without any financial commitment. There are no surprises - just honest guidance.",
     options: [
       { label: "Schedule a free consultation", nextNodeId: "schedule" },
       { label: "Back to topics", nextNodeId: "area_select" },
@@ -382,7 +382,7 @@ export const chatbotFlow: Record<string, ChatNode> = {
   schedule: {
     id: "schedule",
     message:
-      "We'd love to help. You can schedule a free, confidential consultation with one of our attorneys. There's no obligation — just an opportunity to discuss your situation and understand your options.",
+      "We'd love to help. You can schedule a free, confidential consultation with one of our attorneys. There's no obligation - just an opportunity to discuss your situation and understand your options.",
     action: {
       type: "consultation",
       label: "Schedule Free Consultation",
@@ -412,7 +412,7 @@ export const chatbotFlow: Record<string, ChatNode> = {
   freetext_fallback: {
     id: "freetext_fallback",
     message:
-      "Thank you for your question. For the most accurate and helpful response, I'd recommend speaking directly with one of our attorneys — they can address the specifics of your situation. In the meantime, I can point you in the right direction.",
+      "Thank you for your question. For the most accurate and helpful response, I'd recommend speaking directly with one of our attorneys - they can address the specifics of your situation. In the meantime, I can point you in the right direction.",
     options: [
       { label: "Schedule a free consultation", nextNodeId: "schedule" },
       { label: "Browse practice areas", nextNodeId: "area_select" },

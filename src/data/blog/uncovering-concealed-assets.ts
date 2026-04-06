@@ -14,7 +14,7 @@ const post: BlogPostData = {
   category: "Financial Matters",
   image: blogConcealedAssets,
   sections: [
-    { type: "paragraph", content: "The house, the cars, the vacation home — who gets these in a divorce? There are many questions surrounding divorce." },
+    { type: "paragraph", content: "The house, the cars, the vacation home - who gets these in a divorce? There are many questions surrounding divorce." },
     { type: "paragraph", content: "In Ohio, which is an equitable distribution state, property and assets are divided in a way that is determined to be fair. This might be an equal division or it might not, depending on what the court thinks is equitable." },
     { type: "paragraph", content: "But what if your spouse is hiding assets? How can the court fairly divide assets if one person is concealing assets to avoid having to share them with their soon-to-be ex-spouse?" },
     { type: "paragraph", content: "If you suspect that your spouse has concealed assets and is trying to hide things from you and the courts, you'll want to take steps to uncover those assets so that a fair division of property can occur." },

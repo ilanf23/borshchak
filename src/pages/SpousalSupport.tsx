@@ -10,7 +10,14 @@ import {
   Calendar,
   Scale,
   TrendingUp,
+  TrendingDown,
   Home,
+  Wallet,
+  Landmark,
+  Users,
+  Award,
+  BookOpen,
+  Receipt,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Header from "@/components/Header";
@@ -24,40 +31,88 @@ import lawyerworking16 from "@/assets/lawyerworking-16.jpg";
 
 const courtFactors = [
   {
-    title: "Income and Earning Ability",
+    title: "Income of the Parties",
+    icon: Wallet,
+    description:
+      "The court examines each party's income from all sources, including income derived from property divided, disbursed, or distributed under the divorce. This provides a comprehensive picture of the financial resources available to each spouse after the marriage ends.",
+  },
+  {
+    title: "Relative Earning Abilities",
     icon: TrendingUp,
     description:
-      "The court examines each party's current income and their capacity to earn. This includes employment history, job skills, and potential for future earnings growth. If one spouse sacrificed career opportunities to support the household, that history is weighed carefully. The goal is to assess what each party can reasonably earn going forward.",
+      "The court assesses each spouse's capacity to earn income. This includes employment history, job skills, marketability, and potential for future earnings growth. If one spouse sacrificed career opportunities to support the household, that history is weighed carefully.",
   },
   {
-    title: "Age and Physical Condition",
+    title: "Ages and Physical, Mental, and Emotional Conditions",
     icon: Heart,
     description:
-      "The age, physical health, and emotional condition of both spouses play a role. Health issues that limit earning capacity can increase the likelihood of a spousal support award. Chronic conditions or disabilities are evaluated for their impact on employability. The court considers both current health and anticipated future needs.",
+      "The age, physical health, mental health, and emotional condition of both spouses play a role. Health issues that limit earning capacity can increase the likelihood of a spousal support award. Chronic conditions or disabilities are evaluated for their impact on employability and overall needs.",
   },
   {
-    title: "Education and Training Needs",
-    icon: GraduationCap,
+    title: "Retirement Benefits",
+    icon: Landmark,
     description:
-      "The court considers what education or training the requesting spouse needs to obtain appropriate employment and become self-sufficient after the divorce. This may include college degrees, vocational certifications, or professional licensing. The time and cost required to complete such training are factored into the support determination. Support may be structured to cover the period needed for the spouse to re-enter the workforce.",
+      "The court considers each party's retirement benefits, including pensions, 401(k) accounts, IRAs, and other retirement savings. These benefits represent a significant financial resource and factor into the overall support determination separately from other assets.",
   },
   {
-    title: "Duration of Marriage",
+    title: "Duration of the Marriage",
     icon: Calendar,
     description:
-      "The duration of the marriage is a key factor. Longer marriages may result in more substantial and longer-lasting support awards. Shorter marriages may result in limited or no support, depending on the parties' circumstances. There is no fixed formula, and each case is evaluated individually.",
+      "The length of the marriage is a key factor. Longer marriages may result in more substantial and longer-lasting support awards. Shorter marriages may result in limited or no support, depending on the circumstances. There is no fixed formula, and each case is evaluated individually.",
   },
   {
-    title: "Standard of Living",
+    title: "Custodial Parent Considerations",
+    icon: Users,
+    description:
+      "The court considers the extent to which it would be inappropriate for a party to seek employment outside the home because that party will be custodian of a minor child of the marriage. A parent who needs to remain home to care for young children may have a stronger case for support.",
+  },
+  {
+    title: "Standard of Living During the Marriage",
     icon: Home,
     description:
-      "The lifestyle the couple maintained during the marriage is a key factor. The court aims to help the lower-earning spouse maintain a reasonable approximation of that standard. This includes housing, transportation, and day-to-day expenses that reflect the marital lifestyle. A significant disparity in post-divorce living standards may weigh in favor of a support award.",
+      "The lifestyle the couple established during the marriage is a key factor. The court aims to help the lower-earning spouse maintain a reasonable approximation of that standard. This includes housing, transportation, and day-to-day expenses that reflect the marital lifestyle.",
   },
   {
-    title: "Assets and Liabilities",
+    title: "Relative Extent of Education",
+    icon: GraduationCap,
+    description:
+      "The court compares each party's level of education. A significant disparity in educational attainment can affect earning capacity and may weigh in favor of a support award to the less-educated spouse, particularly if they deferred their education during the marriage.",
+  },
+  {
+    title: "Relative Assets and Liabilities",
     icon: DollarSign,
     description:
-      "The relative assets and debts of each party, including retirement benefits, are evaluated to determine the financial picture and appropriate support levels. This encompasses real estate, investment accounts, business interests, and outstanding obligations. The court looks at the overall financial balance between the parties. How property is divided can directly affect the amount and duration of support.",
+      "The relative assets and debts of each party, including court-ordered payments, are evaluated to determine the financial picture and appropriate support levels. This encompasses real estate, investment accounts, business interests, and outstanding obligations.",
+  },
+  {
+    title: "Contribution to Other Party's Education or Earning Ability",
+    icon: Award,
+    description:
+      "The court considers the contribution of each party to the education, training, or earning ability of the other party, including any party's contribution to the acquisition of a professional degree of the other party. A spouse who worked to put the other through school may be entitled to support that reflects that investment.",
+  },
+  {
+    title: "Time and Expense for Education or Training",
+    icon: BookOpen,
+    description:
+      "The court evaluates the time and expense necessary for the spouse who is seeking spousal support to acquire education, training, or job experience so that the spouse will be qualified to obtain appropriate employment — provided the education, training, or job experience, and employment is, in fact, sought.",
+  },
+  {
+    title: "Tax Consequences",
+    icon: Receipt,
+    description:
+      "The tax consequences for each party of an award of spousal support are considered. For orders issued after January 1, 2019, alimony is no longer deductible by the payor or taxable to the recipient under federal law, but the court still evaluates the overall tax impact on both parties.",
+  },
+  {
+    title: "Lost Income Production Capacity",
+    icon: TrendingDown,
+    description:
+      "The court considers the lost income production capacity of either party that resulted from that party's marital responsibilities. A spouse who left the workforce, reduced hours, or passed on career advancement to manage the home or raise children may have diminished earning power as a result.",
+  },
+  {
+    title: "Any Other Relevant Factor",
+    icon: Scale,
+    description:
+      "The court may consider any other factor that it expressly finds to be relevant and equitable. This catch-all provision gives judges discretion to account for unique circumstances in each case that may not be captured by the other thirteen factors.",
   },
 ];
 

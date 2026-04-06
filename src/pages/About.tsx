@@ -2,6 +2,7 @@ import { Phone, Shield, Users, Scale, Heart, Calendar, Award, CheckCircle2 } fro
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import GoogleReviews from "@/components/home/GoogleReviews";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 import dmitriyPhoto from "@/assets/dmitriy-borshchak.png";
@@ -19,7 +20,7 @@ const About = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1">
-        {/* SECTION 1 — HERO */}
+        {/* SECTION 1 - HERO */}
         <section className="bg-navy min-h-[70vh] flex items-center">
           <div className="container max-w-4xl py-20">
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
@@ -51,7 +52,7 @@ const About = () => {
           </div>
         </section>
 
-        {/* SECTION 2 — THREE PILLARS */}
+        {/* SECTION 2 - THREE PILLARS */}
         <section className="bg-navy section-padding">
           <div
             ref={pillarsAnim.ref}
@@ -98,7 +99,7 @@ const About = () => {
           </div>
         </section>
 
-        {/* SECTION 3 — OUR APPROACH */}
+        {/* SECTION 3 - OUR APPROACH */}
         <section className="section-padding">
           <div
             ref={approachAnim.ref}
@@ -115,7 +116,7 @@ const About = () => {
                 The strength of a case lives in the details. A carefully reviewed financial record, a precisely worded parenting plan, a well-timed filing. We leave nothing to chance.
               </p>
               <p>
-                Ohio family law is also emotionally charged — especially when children are involved. We help clients make calculated decisions that insulate them from risk, not just today but three, five, and ten years from now.
+                Ohio family law is also emotionally charged - especially when children are involved. We help clients make calculated decisions that insulate them from risk, not just today but three, five, and ten years from now.
               </p>
             </div>
             <ul className="space-y-3">
@@ -139,7 +140,7 @@ const About = () => {
           </div>
         </section>
 
-        {/* SECTION 4 — WHY HIRE */}
+        {/* SECTION 4 - WHY HIRE */}
         <section className="section-padding bg-card">
           <div
             ref={whyHireAnim.ref}
@@ -150,7 +151,7 @@ const About = () => {
                 Why a Family Law Firm that Solely Focuses on Family Law?
               </h2>
               <p className="text-body text-lg">
-                General practice firms handle everything. We handle one thing — and we've dedicated our careers to it.
+                General practice firms handle everything. We handle one thing - and we've dedicated our careers to it.
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -162,7 +163,7 @@ const About = () => {
                   <h3 className="heading-subsection text-lg">Experienced Representation</h3>
                 </div>
                 <p className="text-body text-base">
-                  Every case handled by a licensed family law attorney — from strategy through resolution.
+                  Every case handled by a licensed family law attorney - from strategy through resolution.
                 </p>
               </div>
               <div className="card-bordered">
@@ -173,7 +174,7 @@ const About = () => {
                   <h3 className="heading-subsection text-lg">Strategic Negotiation</h3>
                 </div>
                 <p className="text-body text-base">
-                  Most cases resolve before trial. We know how to protect you at the table — and we work alongside a network of professionals including real estate agents, real estate appraisers, accoPAs, forensic accountants, former FBI agents, psychologists, and psychiatrists to ensure every position is backed by the right expertise.
+                  Most cases resolve before trial. We know how to protect you at the table - and we work alongside a network of professionals including real estate agents, real estate appraisers, accoPAs, forensic accountants, former FBI agents, psychologists, and psychiatrists to ensure every position is backed by the right expertise.
                 </p>
               </div>
               <div className="card-bordered">
@@ -217,14 +218,14 @@ const About = () => {
                   <h3 className="heading-subsection text-lg">Protecting Your Future</h3>
                 </div>
                 <p className="text-body text-base">
-                  We think beyond the outcome — helping you make decisions that hold up for years to come.
+                  We think beyond the outcome - helping you make decisions that hold up for years to come.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* SECTION 5 — TEAM */}
+        {/* SECTION 5 - TEAM */}
         <section className="bg-navy section-padding">
           <div
             ref={teamAnim.ref}
@@ -272,7 +273,10 @@ const About = () => {
           </div>
         </section>
 
-        {/* SECTION 8 — CTA */}
+        {/* SECTION 6 - REVIEWS */}
+        <GoogleReviews />
+
+        {/* SECTION 8 - CTA */}
         <section className="bg-navy section-padding">
           <div
             ref={ctaAnim.ref}

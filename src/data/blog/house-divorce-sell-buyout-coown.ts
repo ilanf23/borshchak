@@ -4,17 +4,17 @@ import type { BlogPostData } from "./custody-state-lines";
 const post: BlogPostData = {
   slug: "house-divorce-sell-buyout-coown",
   title: "What Happens to Your House in an Ohio Divorce? Sell, Buyout, or Co-Own",
-  excerpt: "For many couples in Ohio, the family home is their largest asset. Understanding your options—sell, buyout, or co-own—is crucial for protecting your interests and future stability.",
+  excerpt: "For many couples in Ohio, the family home is their largest asset. Understanding your options-sell, buyout, or co-own-is crucial for protecting your interests and future stability.",
   date: "April 5, 2026",
   category: "Property Division",
   image: blogHeroImage,
   sections: [
     { type: "paragraph", content: "Divorce is never easy, especially when it comes to dividing assets that hold both financial and emotional value. For many couples in Ohio, the family home is their largest asset and the center of countless memories. But what actually happens to your house when you and your spouse decide to part ways? Whether you're a small business owner, developer, or simply a homeowner facing this crossroads, understanding your options is crucial for protecting your interests and future stability." },
-    { type: "paragraph", content: "Ohio law treats marital property—including your house—differently than separate property, and the outcome can depend on a variety of factors: when the home was purchased, how it was titled, and even how mortgage payments were made. You might be wondering if you'll need to sell the house, if one spouse can buy out the other's share, or if it's possible (or wise) to continue co-owning the property after your marriage ends. Each path comes with its own legal, financial, and emotional implications." },
+    { type: "paragraph", content: "Ohio law treats marital property-including your house-differently than separate property, and the outcome can depend on a variety of factors: when the home was purchased, how it was titled, and even how mortgage payments were made. You might be wondering if you'll need to sell the house, if one spouse can buy out the other's share, or if it's possible (or wise) to continue co-owning the property after your marriage ends. Each path comes with its own legal, financial, and emotional implications." },
     { type: "paragraph", content: "In this comprehensive guide, we'll break down the key considerations for dividing your home in an Ohio divorce. We'll explore how courts approach property division, the pros and cons of selling, buyouts, and co-ownership, and what you need to know to make informed decisions. Whether you're seeking clarity for your own situation or simply want to understand how Ohio courts handle these matters, this article will equip you with the knowledge to move forward with confidence." },
 
     { type: "heading", content: "Dividing the Marital Home in a Columbus Divorce" },
-    { type: "paragraph", content: "In Columbus, the family home is often the most valuable asset to be addressed in a divorce. Under Ohio law, property acquired during the marriage is generally considered marital property and subject to equitable division. This means the court aims for a fair—not necessarily equal—distribution based on a variety of factors, including each spouse's income, contributions to the marriage, and the needs of any children involved." },
+    { type: "paragraph", content: "In Columbus, the family home is often the most valuable asset to be addressed in a divorce. Under Ohio law, property acquired during the marriage is generally considered marital property and subject to equitable division. This means the court aims for a fair-not necessarily equal-distribution based on a variety of factors, including each spouse's income, contributions to the marriage, and the needs of any children involved." },
     { type: "paragraph", content: "The first step is to determine whether the home is marital or separate property. If the house was purchased before the marriage or inherited by one spouse, it may be classified as separate property. However, if both spouses contributed to mortgage payments or improvements during the marriage, a portion of the home's value could be considered marital. This distinction is critical, as only marital property is divided in the divorce process." },
     { type: "paragraph", content: "Once the status of the home is established, couples in Columbus have several options for handling it. The most common are selling the home and splitting the proceeds, arranging for one spouse to buy out the other's interest, or continuing to co-own the property post-divorce. Each option has its own advantages and drawbacks, and the best choice depends on your financial situation, emotional needs, and long-term goals." },
     { type: "paragraph", content: "If you're navigating a divorce in Columbus, it's essential to understand how local courts interpret Ohio's property division laws and what factors might influence your outcome. Working with a knowledgeable attorney can help you protect your interests and ensure a fair resolution." },
@@ -27,7 +27,7 @@ const post: BlogPostData = {
 
     { type: "heading", content: "Understanding Home Division in Columbus, Ohio Divorces" },
     { type: "paragraph", content: "In Columbus, Ohio, the process of dividing the marital home during a divorce is shaped by state laws, local court practices, and the unique circumstances of each couple. Ohio is an equitable distribution state, meaning the court strives for a division of property that is fair, considering all relevant factors, rather than strictly splitting everything 50/50." },
-    { type: "paragraph", content: "The court will first classify the home as marital or separate property. If the house was acquired during the marriage, it's typically considered marital property. However, if it was owned by one spouse prior to marriage or inherited, it may be deemed separate—unless marital funds were used for mortgage payments or significant improvements, which can complicate matters." },
+    { type: "paragraph", content: "The court will first classify the home as marital or separate property. If the house was acquired during the marriage, it's typically considered marital property. However, if it was owned by one spouse prior to marriage or inherited, it may be deemed separate-unless marital funds were used for mortgage payments or significant improvements, which can complicate matters." },
     { type: "paragraph", content: "Judges in Columbus, Ohio, will also consider factors such as the length of the marriage, the economic circumstances of each spouse, and the best interests of any minor children. For example, if one parent has primary custody, the court may favor allowing that parent and the children to remain in the home for stability, at least temporarily. However, this is not guaranteed, and financial realities often dictate the final outcome." },
     { type: "paragraph", content: "If you want to understand how local practices might impact your case, it's helpful to consult a firm like Borshchak Law Group, which has experience navigating Columbus, Ohio's family courts. Their expertise can help you anticipate challenges and develop a strategy that aligns with your goals." },
 
@@ -43,7 +43,7 @@ const post: BlogPostData = {
       "Buyout: Allows one spouse to keep the home, which can be beneficial for children's stability or emotional reasons. The buying spouse must qualify for a new mortgage and have enough funds for the buyout, which can be a financial strain.",
       "Co-Ownership: May be practical if selling immediately isn't possible or if children are close to graduating. However, it requires ongoing cooperation and clear agreements about expenses and responsibilities.",
     ]},
-    { type: "paragraph", content: "The right choice depends on your unique circumstances, including your finances, your children's needs, and your relationship with your ex-spouse. Weighing these factors carefully—and seeking professional advice—can help you avoid costly mistakes." },
+    { type: "paragraph", content: "The right choice depends on your unique circumstances, including your finances, your children's needs, and your relationship with your ex-spouse. Weighing these factors carefully-and seeking professional advice-can help you avoid costly mistakes." },
 
     { type: "heading", content: "Comparing Your House Division Options in Ohio Divorce" },
     { type: "table", headers: ["Option", "Pros", "Cons"], rows: [
@@ -53,7 +53,7 @@ const post: BlogPostData = {
     ]},
 
     { type: "heading", content: "Financial and Tax Implications of Each Option" },
-    { type: "paragraph", content: "Each method of dividing your home—selling, buyout, or co-ownership—comes with unique financial and tax consequences. Selling the home may trigger capital gains taxes if the profit exceeds IRS exclusions, though most divorcing couples are well within the $250,000 (single) or $500,000 (joint) exclusion. However, closing costs, realtor commissions, and moving expenses can eat into your proceeds." },
+    { type: "paragraph", content: "Each method of dividing your home-selling, buyout, or co-ownership-comes with unique financial and tax consequences. Selling the home may trigger capital gains taxes if the profit exceeds IRS exclusions, though most divorcing couples are well within the $250,000 (single) or $500,000 (joint) exclusion. However, closing costs, realtor commissions, and moving expenses can eat into your proceeds." },
     { type: "paragraph", content: "If you opt for a buyout, the spouse keeping the home must refinance the mortgage in their own name and provide the other spouse with their share of the equity. This can strain finances, especially if home values are high or interest rates have risen. It's important to update the deed and ensure all legal documents reflect the new ownership structure." },
     { type: "paragraph", content: "Co-ownership arrangements can be tricky. Both parties remain financially tied to the property, which can impact credit and borrowing ability. Deciding who claims mortgage interest and property tax deductions can also be complicated. Consulting a tax professional or financial advisor is highly recommended before finalizing any agreement." },
 
@@ -63,7 +63,7 @@ const post: BlogPostData = {
     { type: "list", items: [
       "Document all financial contributions to the home",
       "Keep communication open and respectful",
-      "Consult with professionals—attorneys, financial advisors, and real estate agents",
+      "Consult with professionals-attorneys, financial advisors, and real estate agents",
       "Plan for post-divorce housing needs for both spouses and any children",
     ]},
     { type: "paragraph", content: "Thoughtful preparation can prevent misunderstandings and costly mistakes, helping both parties transition more smoothly to their new lives." },
@@ -74,8 +74,8 @@ const post: BlogPostData = {
     { type: "paragraph", content: "Remember, the decisions you make about your home will impact your financial future for years to come. Don't hesitate to seek help when the stakes are this high." },
 
     { type: "heading", content: "Conclusion: Moving Forward with Confidence" },
-    { type: "paragraph", content: "Deciding what to do with your house during an Ohio divorce is one of the most significant—and emotionally charged—choices you'll face. Whether you decide to sell, arrange a buyout, or continue co-owning the property, it's vital to understand the legal, financial, and practical ramifications of each option. By educating yourself on Ohio's property division laws, preparing thoroughly, and seeking professional advice when needed, you can protect your interests and lay the groundwork for a stable future." },
-    { type: "paragraph", content: "Every situation is unique, and what works for one couple may not be right for another. Take the time to weigh your options, consider your long-term goals, and move forward with confidence—knowing you've made informed decisions for yourself and your family." },
+    { type: "paragraph", content: "Deciding what to do with your house during an Ohio divorce is one of the most significant-and emotionally charged-choices you'll face. Whether you decide to sell, arrange a buyout, or continue co-owning the property, it's vital to understand the legal, financial, and practical ramifications of each option. By educating yourself on Ohio's property division laws, preparing thoroughly, and seeking professional advice when needed, you can protect your interests and lay the groundwork for a stable future." },
+    { type: "paragraph", content: "Every situation is unique, and what works for one couple may not be right for another. Take the time to weigh your options, consider your long-term goals, and move forward with confidence-knowing you've made informed decisions for yourself and your family." },
   ],
 };
 

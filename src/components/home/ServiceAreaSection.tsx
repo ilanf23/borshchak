@@ -16,7 +16,7 @@ const ServiceAreaSection = () => {
           <div>
             <img
               src={countyMap}
-              alt="Map of the 7 Central Ohio counties served by Borshchak Law Group"
+              alt="Map of Central Ohio counties frequently served by Borshchak Law Group"
               className="w-full max-w-md mx-auto"
               loading="lazy"
             />
@@ -25,26 +25,23 @@ const ServiceAreaSection = () => {
           {/* Text */}
           <div>
             <p className="text-green font-medium tracking-wide uppercase text-sm mb-2">
-              Serving Central Ohio
+              Serving All of Ohio
             </p>
             <h2 className="heading-section mb-4">
-              Proudly Serving Families Across 7 Ohio Counties
+              Proudly Serving Families Across All 88 Ohio Counties
             </h2>
             <div className="space-y-4 text-body text-lg">
               <p>
-                Borshchak Law Group represents families throughout Central Ohio,
-                including Franklin, Delaware, Pickaway, Licking, Union, Madison,
-                and Fairfield counties. Whether you are in Columbus or the
-                surrounding communities, our team is ready to help.
+                Borshchak Law Group is licensed to practice in all 88 counties
+                in Ohio. Based in Central Ohio, we frequently represent families
+                in Franklin, Delaware, Pickaway, Licking, Union, Madison,
+                and Fairfield counties - but no matter where your case is filed,
+                our team is ready to help.
               </p>
               <p>
                 We understand that family law matters affect every part of your
-                life. No matter which county your case is filed in, you deserve
-                an attorney who knows the local courts and is prepared to fight
-                for your interests.
-              </p>
-              <p className="text-sm text-muted-foreground italic">
-                Borshchak Law Group is licensed and able to practice in all 88 counties in Ohio.
+                life. Wherever you are in Ohio, you deserve an attorney who knows
+                the courts and is prepared to fight for your interests.
               </p>
             </div>
             <a
