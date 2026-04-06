@@ -4,6 +4,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ConsultationProvider } from "@/contexts/ConsultationContext";
+import { ChatbotProvider } from "@/contexts/ChatbotContext";
+import ChatbotWidget from "@/components/Chatbot/ChatbotWidget";
 import ScrollToTop from "@/components/ScrollToTop";
 import Index from "./pages/Index";
 import Divorce from "./pages/Divorce";
@@ -44,8 +46,10 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ConsultationProvider>
-          <ScrollToTop />
-          <Routes>
+          <ChatbotProvider>
+            <ScrollToTop />
+            <ChatbotWidget />
+            <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/divorce" element={<Divorce />} />
             <Route path="/custody" element={<Custody />} />
@@ -77,7 +81,8 @@ const App = () => (
             <Route path="/press" element={<Press />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
-          </Routes>
+            </Routes>
+          </ChatbotProvider>
         </ConsultationProvider>
       </BrowserRouter>
     </TooltipProvider>
