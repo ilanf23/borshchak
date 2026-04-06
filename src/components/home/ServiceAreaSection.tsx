@@ -35,7 +35,7 @@ const ServiceAreaSection = () => {
                 Borshchak Law Group is licensed to practice in all 88 counties
                 in Ohio. Based in Central Ohio, we frequently represent families
                 in Franklin, Delaware, Pickaway, Licking, Union, Madison,
-                and Fairfield counties - but no matter where your case is filed,
+                and Fairfield counties — no matter where your case is filed in Ohio,
                 our team is ready to help.
               </p>
               <p>
