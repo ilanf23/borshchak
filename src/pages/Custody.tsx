@@ -575,7 +575,7 @@ const Custody = () => {
                   While a Guardian ad Litem does represent an added cost to the
                   proceedings, they can also be an invaluable resource. A GAL helps
                   resolve conflicts - large and small - throughout the case, which
-                  can actually reduce the amount of in-court litigation and
+                  may actually reduce the amount of in-court litigation and
                   ultimately lower overall costs for both parties.
                 </p>
               </div>

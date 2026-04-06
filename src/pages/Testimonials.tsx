@@ -54,9 +54,9 @@ const LiteYouTube = ({ videoId, title }: { videoId: string; title: string }) => 
 };
 
 const stats = [
-  { icon: Users, numValue: 20, suffix: "+", label: "Years of Experience", decimals: 0, color: "from-blue-500 to-blue-600", iconBg: "bg-blue-500/25", iconColor: "text-blue-400" },
+  { icon: Users, numValue: 16, suffix: "+", label: "Combined Years of Experience", decimals: 0, color: "from-blue-500 to-blue-600", iconBg: "bg-blue-500/25", iconColor: "text-blue-400" },
   { icon: Star, numValue: 150, suffix: "+", label: "5-Star Reviews", decimals: 0, color: "from-yellow-500 to-amber-500", iconBg: "bg-yellow-500/25", iconColor: "text-yellow-400" },
-  { icon: Scale, numValue: 3, suffix: "", label: "Family Law Attorneys", decimals: 0, color: "from-emerald-500 to-green-600", iconBg: "bg-emerald-500/25", iconColor: "text-emerald-400" },
+  { icon: Scale, numValue: 0, suffix: "", label: "A Full-Team Approach to Every Case", decimals: 0, color: "from-emerald-500 to-green-600", iconBg: "bg-emerald-500/25", iconColor: "text-emerald-400" },
   { icon: Heart, numValue: 100, suffix: "%", label: "Family Law Focus", decimals: 0, color: "from-rose-500 to-pink-600", iconBg: "bg-rose-500/25", iconColor: "text-rose-400" },
 ];
 
@@ -165,9 +165,11 @@ const Testimonials = () => {
                   <div className={`w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-4 ${stat.iconBg}`}>
                     <stat.icon className={`w-7 h-7 ${stat.iconColor}`} />
                   </div>
-                  <div className="font-playfair text-4xl md:text-5xl font-bold text-white mb-2 h-[1.2em] flex items-center justify-center">
-                    <CountUpNumber value={stat.numValue} decimals={stat.decimals} suffix={stat.suffix} />
-                  </div>
+                  {stat.numValue > 0 && (
+                    <div className="font-playfair text-4xl md:text-5xl font-bold text-white mb-2 h-[1.2em] flex items-center justify-center">
+                      <CountUpNumber value={stat.numValue} decimals={stat.decimals} suffix={stat.suffix} />
+                    </div>
+                  )}
                   <div className="text-sm md:text-base text-white/70 font-medium">
                     {stat.label}
                   </div>

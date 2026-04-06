@@ -28,7 +28,7 @@ const RecentBlogs = () => {
               <h2 className="heading-section">Insights & Legal Resources</h2>
             </div>
             <Link
-              to="/resources"
+              to="/blog"
               className="group inline-flex items-center gap-2 text-lg font-medium text-primary hover:text-green transition-colors shrink-0"
             >
               View all articles

@@ -194,7 +194,7 @@ const Header = () => {
             {[
               { to: "/why-us", label: "Why Us" },
               { to: "/testimonials", label: "Testimonials" },
-              { to: "/resources", label: "Blog" },
+              { to: "/blog", label: "Blog" },
               { to: "/contact", label: "Contact" },
             ].map(({ to, label }) => (
               <Link
@@ -314,7 +314,7 @@ const Header = () => {
                   <Link to="/testimonials" onClick={() => setIsOpen(false)} className="py-3 px-2 text-lg font-medium hover:bg-secondary rounded-md transition-colors">
                     Testimonials
                   </Link>
-                  <Link to="/resources" onClick={() => setIsOpen(false)} className="py-3 px-2 text-lg font-medium hover:bg-secondary rounded-md transition-colors">
+                  <Link to="/blog" onClick={() => setIsOpen(false)} className="py-3 px-2 text-lg font-medium hover:bg-secondary rounded-md transition-colors">
                     Blog
                   </Link>
                   <Link to="/contact" onClick={() => setIsOpen(false)} className="py-3 px-2 text-lg font-medium hover:bg-secondary rounded-md transition-colors">

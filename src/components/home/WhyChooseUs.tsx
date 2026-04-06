@@ -18,7 +18,7 @@ const items = [
     icon: MapPin,
     title: "Central Ohio Focused",
     description:
-      "From downtown Columbus to communities across Franklin, Delaware, Pickaway, Licking, Union, Madison, and Fairfield counties - we know these courts, these judges, and this community.",
+      "From downtown Columbus to communities across Franklin, Delaware, Pickaway, Licking, Union, Madison, and Fairfield counties — we know these courts, the court system, and this community.",
   },
 ];
 

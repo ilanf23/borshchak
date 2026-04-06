@@ -49,7 +49,7 @@ const services = [
   },
   {
     title: "Mediation",
-    description: "Mediation allows families to resolve disputes outside the courtroom. Our experienced mediators help you reach agreements that work for everyone involved.",
+    description: "Mediation allows families to resolve disputes outside the courtroom. Our experienced lawyers help you reach agreements that work for everyone involved.",
     href: "/mediation",
     icon: HeartHandshake,
   },

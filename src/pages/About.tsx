@@ -13,7 +13,6 @@ const About = () => {
   const approachAnim = useScrollAnimation();
   const whyHireAnim = useScrollAnimation();
   const teamAnim = useScrollAnimation();
-  const galAnim = useScrollAnimation();
   const ctaAnim = useScrollAnimation();
 
   return (
@@ -122,7 +121,7 @@ const About = () => {
             <ul className="space-y-3">
               <li className="flex items-start gap-3 text-body text-lg">
                 <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5 text-primary" />
-                Direct attorney involvement — never paralegal-handled
+                Direct attorney involvement on every case
               </li>
               <li className="flex items-start gap-3 text-body text-lg">
                 <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5 text-primary" />
@@ -130,7 +129,11 @@ const About = () => {
               </li>
               <li className="flex items-start gap-3 text-body text-lg">
                 <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5 text-primary" />
-                Free consultations with Hank & Keri
+                Free consultations with Attorney S & Attorney Reeves
+              </li>
+              <li className="flex items-start gap-3 text-body text-lg">
+                <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5 text-primary" />
+                We are conservative when it comes to our client's resources
               </li>
             </ul>
           </div>
@@ -144,7 +147,7 @@ const About = () => {
           >
             <div className="max-w-3xl mx-auto text-center mb-12">
               <h2 className="heading-section mb-4">
-                Why a Specialized Family Law Firm?
+                Why a Family Law Firm that Solely Focuses on Family Law?
               </h2>
               <p className="text-body text-lg">
                 General practice firms handle everything. We handle one thing — and we've dedicated our careers to it.
@@ -159,7 +162,7 @@ const About = () => {
                   <h3 className="heading-subsection text-lg">Experienced Representation</h3>
                 </div>
                 <p className="text-body text-base">
-                  Every case handled by a licensed family law attorney. No paralegals doing substantive work.
+                  Every case handled by a licensed family law attorney — from strategy through resolution.
                 </p>
               </div>
               <div className="card-bordered">
@@ -170,7 +173,7 @@ const About = () => {
                   <h3 className="heading-subsection text-lg">Strategic Negotiation</h3>
                 </div>
                 <p className="text-body text-base">
-                  Most cases resolve before trial. We know how to protect you at the table.
+                  Most cases resolve before trial. We know how to protect you at the table — and we work alongside a network of professionals including real estate agents, real estate appraisers, accoPAs, forensic accountants, former FBI agents, psychologists, and psychiatrists to ensure every position is backed by the right expertise.
                 </p>
               </div>
               <div className="card-bordered">
@@ -265,44 +268,6 @@ const About = () => {
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* SECTION 6 — GAL */}
-        <section className="bg-secondary/30 section-padding">
-          <div
-            ref={galAnim.ref}
-            className={`container max-w-5xl ${galAnim.className}`}
-          >
-            <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-3">
-              Important to Know
-            </p>
-            <h2 className="heading-section mb-4">
-              What Is a Guardian Ad Litem?
-            </h2>
-            <p className="text-body text-lg mb-10 max-w-3xl">
-              A GAL is a court-appointed neutral — often a licensed attorney — who investigates custody matters and recommends what is in the child's best interest.
-            </p>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="card-bordered">
-                <h3 className="heading-subsection text-xl mb-3">What They Do</h3>
-                <p className="text-body">
-                  Interviews parents, children, teachers, doctors. Files a written recommendation with the court carrying significant judicial weight.
-                </p>
-              </div>
-              <div className="card-bordered">
-                <h3 className="heading-subsection text-xl mb-3">When They're Appointed</h3>
-                <p className="text-body">
-                  High-conflict disputes, child safety concerns, allegations of abuse or neglect, or when the court determines it is in the child's best interest.
-                </p>
-              </div>
-              <div className="card-bordered">
-                <h3 className="heading-subsection text-xl mb-3">Cost vs. Value</h3>
-                <p className="text-body">
-                  A GAL adds cost but can reduce litigation. By resolving conflicts early, they often lower total legal costs for both parties.
-                </p>
-              </div>
             </div>
           </div>
         </section>

@@ -1,103 +1,30 @@
-import { Phone, ArrowRight, Calendar } from "lucide-react";
+import { useState, useRef, useMemo } from "react";
+import { Phone, ArrowRight, Calendar, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { allBlogPosts } from "@/data/blogPosts";
 
-import blogCustodyStateLines from "@/assets/blog-custody-state-lines.jpg";
-import blogQuestionsBeforeDivorce from "@/assets/blog-questions-before-divorce.jpg";
-import blogJudgesFairSettlements from "@/assets/blog-judges-fair-settlements.jpg";
-import blogMovingOutRisks from "@/assets/blog-moving-out-risks.jpg";
-import blogFilingOutOfState from "@/assets/blog-filing-out-of-state.jpg";
-import blogCollegeExpenses from "@/assets/blog-college-expenses.jpg";
-import blogInheritanceDivorce from "@/assets/blog-inheritance-divorce.jpg";
-import blogAlimonyDisputes from "@/assets/blog-alimony-disputes.jpg";
-import blogFastTrackDissolution from "@/assets/blog-fast-track-dissolution.jpg";
-import blogEvidenceEssentials from "@/assets/blog-evidence-essentials.jpg";
-
-const blogPosts = [
-  {
-    title: "Enforcing Ohio Child Custody Orders Across State Lines: UCCJEA Explained",
-    excerpt: "Navigating the complexities of child custody can be daunting for any parent, especially when life's circumstances take you across state lines.",
-    date: "February 10, 2026",
-    slug: "custody-state-lines",
-    category: "Child Custody",
-    image: blogCustodyStateLines,
-  },
-  {
-    title: "Essential Questions to Ask Before Filing for Divorce in Ohio",
-    excerpt: "Divorce is never an easy decision, and for small business owners, developers, and general readers in Ohio, the process can feel especially overwhelming.",
-    date: "February 10, 2026",
-    slug: "questions-before-divorce",
-    category: "Divorce",
-    image: blogQuestionsBeforeDivorce,
-  },
-  {
-    title: "Unveiling Ohio Judges' Approach: Key Factors in Fair Divorce Settlements",
-    excerpt: "Navigating a divorce can be one of the most challenging journeys in life, especially when it comes to achieving a fair settlement.",
-    date: "February 10, 2026",
-    slug: "judges-fair-settlements",
-    category: "Divorce",
-    image: blogJudgesFairSettlements,
-  },
-  {
-    title: "What Are the Legal Risks of Moving Out During an Ohio Divorce?",
-    excerpt: "Divorce is never easy, and the choices you make early in the process can have lasting legal consequences.",
-    date: "February 10, 2026",
-    slug: "moving-out-risks",
-    category: "Divorce",
-    image: blogMovingOutRisks,
-  },
-  {
-    title: "Can You File for Divorce in Ohio While Living Out of State? Residency Rules Explained",
-    excerpt: "Facing divorce is never easy, and the process can become even more complex if you no longer live in the state where you were married.",
-    date: "February 10, 2026",
-    slug: "filing-out-of-state",
-    category: "Divorce",
-    image: blogFilingOutOfState,
-  },
-  {
-    title: "How Divorce Impacts College Expenses for Children in Ohio: Legal Obligations and Agreements",
-    excerpt: "Navigating the financial landscape of divorce is never easy, especially when children's futures are at stake.",
-    date: "February 10, 2026",
-    slug: "college-expenses",
-    category: "Financial Matters",
-    image: blogCollegeExpenses,
-  },
-  {
-    title: "What Happens to Inheritance Money in an Ohio Divorce? Separate Property or Marital Asset?",
-    excerpt: "If you're going through a divorce in Ohio, understanding how inheritance is treated can protect your financial interests.",
-    date: "February 10, 2026",
-    slug: "inheritance-divorce",
-    category: "Financial Matters",
-    image: blogInheritanceDivorce,
-  },
-  {
-    title: "Ohio Courts and Alimony Disputes: Modification, Enforcement, and Key Legal Standards",
-    excerpt: "Alimony, also known as spousal support, is often one of the most contentious aspects of a divorce.",
-    date: "February 10, 2026",
-    slug: "alimony-disputes",
-    category: "Spousal Support",
-    image: blogAlimonyDisputes,
-  },
-  {
-    title: "Fast-Tracking Divorce in Ohio: Dissolution's 30-90 Day Path Under Key Conditions",
-    excerpt: "Navigating the end of a marriage can be daunting, especially when you want to resolve things quickly and amicably.",
-    date: "February 9, 2026",
-    slug: "fast-track-dissolution",
-    category: "Dissolution",
-    image: blogFastTrackDissolution,
-  },
-  {
-    title: "Key Evidence Essentials for Winning Your Ohio Divorce Case",
-    excerpt: "Divorce is never easy, especially when the stakes are high. Understanding the key evidence you need can make all the difference.",
-    date: "February 9, 2026",
-    slug: "evidence-essentials",
-    category: "Divorce",
-    image: blogEvidenceEssentials,
-  },
-];
+const POSTS_PER_PAGE = 10;
+const CATEGORIES = ["All", ...Array.from(new Set(allBlogPosts.map((p) => p.category)))];
 
 const Resources = () => {
+  const [page, setPage] = useState(0);
+  const [activeCategory, setActiveCategory] = useState("All");
+  const gridRef = useRef<HTMLDivElement>(null);
+
+  const filteredPosts = useMemo(
+    () => activeCategory === "All" ? allBlogPosts : allBlogPosts.filter((p) => p.category === activeCategory),
+    [activeCategory]
+  );
+  const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
+  const paginatedPosts = filteredPosts.slice(page * POSTS_PER_PAGE, (page + 1) * POSTS_PER_PAGE);
+
+  const goToPage = (newPage: number) => {
+    setPage(newPage);
+    gridRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -164,10 +91,27 @@ const Resources = () => {
         </section>
 
         {/* Blog Grid */}
-        <section className="section-padding">
+        <section className="section-padding" ref={gridRef}>
           <div className="container max-w-5xl">
+            {/* Category Filter */}
+            <div className="flex flex-wrap gap-2 mb-10">
+              {CATEGORIES.map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => { setActiveCategory(cat); setPage(0); }}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                    activeCategory === cat
+                      ? "bg-primary text-primary-foreground"
+                      : "bg-secondary text-foreground hover:bg-secondary/80"
+                  }`}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
+
             <div className="grid md:grid-cols-2 gap-8">
-              {blogPosts.map((post, index) => (
+              {paginatedPosts.map((post, index) => (
                 <Link
                   key={index}
                   to={`/blog/${post.slug}`}
@@ -204,6 +148,29 @@ const Resources = () => {
                   </div>
                 </Link>
               ))}
+            </div>
+
+            {/* Pagination */}
+            <div className="flex items-center justify-center gap-4 mt-12">
+              <button
+                onClick={() => goToPage(page - 1)}
+                disabled={page === 0}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-md text-sm font-medium transition-colors disabled:opacity-40 disabled:cursor-not-allowed hover:bg-secondary"
+              >
+                <ChevronLeft className="w-4 h-4" />
+                Previous
+              </button>
+              <span className="text-sm text-muted-foreground">
+                Page {page + 1} of {totalPages}
+              </span>
+              <button
+                onClick={() => goToPage(page + 1)}
+                disabled={page === totalPages - 1}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-md text-sm font-medium transition-colors disabled:opacity-40 disabled:cursor-not-allowed hover:bg-secondary"
+              >
+                Next
+                <ChevronRight className="w-4 h-4" />
+              </button>
             </div>
           </div>
         </section>

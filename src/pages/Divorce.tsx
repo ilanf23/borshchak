@@ -308,7 +308,7 @@ const Divorce = () => {
               Columbus, OH Divorce Lawyers
             </p>
             <h1
-              className="heading-hero mb-6 opacity-0 animate-fade-in"
+              className="heading-hero mb-6 opacity-0 animate-fade-in font-bold drop-shadow-lg"
               style={{
                 color: "hsl(var(--primary-foreground))",
                 animationDelay: "250ms",

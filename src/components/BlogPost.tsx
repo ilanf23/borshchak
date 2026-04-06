@@ -135,7 +135,7 @@ const BlogPost = ({ post }: BlogPostProps) => {
 
         {/* Back link */}
         <div className="container max-w-3xl pt-8">
-          <Link to="/resources" className="inline-flex items-center gap-2 text-sm font-medium hover:underline" style={{ color: "hsl(var(--trust-navy))" }}>
+          <Link to="/blog" className="inline-flex items-center gap-2 text-sm font-medium hover:underline" style={{ color: "hsl(var(--trust-navy))" }}>
             <ArrowLeft className="w-4 h-4" />
             Back to Blog
           </Link>

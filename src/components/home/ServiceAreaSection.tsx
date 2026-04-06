@@ -43,6 +43,9 @@ const ServiceAreaSection = () => {
                 an attorney who knows the local courts and is prepared to fight
                 for your interests.
               </p>
+              <p className="text-sm text-muted-foreground italic">
+                Borshchak Law Group is licensed and able to practice in all 88 counties in Ohio.
+              </p>
             </div>
             <a
               href="tel:+16143346851"
