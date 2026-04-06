@@ -96,8 +96,6 @@ const ChatbotWidget = () => {
           >
             <MessageCircle className="w-6 h-6" />
 
-            {/* Pulse ring */}
-            <span className="absolute inset-0 rounded-full bg-green animate-ping opacity-20 pointer-events-none" />
 
             {/* New-message badge */}
             {hasNewMessage && (
